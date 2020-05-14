@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-05-14T16:04:08.216Z</updated>
+  <updated>2020-05-14T19:09:31.146Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,54 +17,17 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Hello World</title>
-    <link href="http://yoursite.com/2020/05/15/hello-world/"/>
-    <id>http://yoursite.com/2020/05/15/hello-world/</id>
-    <published>2020-05-14T16:04:08.215Z</published>
-    <updated>2020-05-14T16:04:08.216Z</updated>
-    
-    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre><code class="hljs bash">$ hexo new <span class="hljs-string">"My New Post"</span></code></pre><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre><code class="hljs bash">$ hexo server</code></pre><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre><code class="hljs bash">$ hexo generate</code></pre><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre><code class="hljs bash">$ hexo deploy</code></pre><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
+    <title>theone</title>
+    <link href="http://yoursite.com/2020/05/15/theone/"/>
+    <id>http://yoursite.com/2020/05/15/theone/</id>
+    <published>2020-05-14T19:09:31.000Z</published>
+    <updated>2020-05-14T19:09:31.146Z</updated>
     
     <summary type="html">
-    
-      
-      
-        &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
-      
     
     </summary>
     
     
-    
-  </entry>
-  
-  <entry>
-    <title>thefirst</title>
-    <link href="http://yoursite.com/2017/03/27/thefirst/"/>
-    <id>http://yoursite.com/2017/03/27/thefirst/</id>
-    <published>2017-03-27T05:48:25.000Z</published>
-    <updated>2020-05-14T18:23:57.783Z</updated>
-    
-    <content type="html"><![CDATA[<h4 id="The-First-One"><a href="#The-First-One" class="headerlink" title="The First One"></a>The First One</h4><ol><li>let us begin!</li></ol>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h4 id=&quot;The-First-One&quot;&gt;&lt;a href=&quot;#The-First-One&quot; class=&quot;headerlink&quot; title=&quot;The First One&quot;&gt;&lt;/a&gt;The First One&lt;/h4&gt;&lt;ol&gt;
-&lt;li&gt;let us begin!&lt;/li&gt;
-&lt;
-      
-    
-    </summary>
-    
-    
-      <category term="Algorithm" scheme="http://yoursite.com/categories/Algorithm/"/>
-    
-    
-      <category term="标签1" scheme="http://yoursite.com/tags/%E6%A0%87%E7%AD%BE1/"/>
-    
-      <category term="标签2 (可选)" scheme="http://yoursite.com/tags/%E6%A0%87%E7%AD%BE2-%E5%8F%AF%E9%80%89/"/>
     
   </entry>
   
