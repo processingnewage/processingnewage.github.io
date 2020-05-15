@@ -158,14 +158,14 @@
     
     
     <div class="col-12 col-md-12 mx-auto index-info">
-      <a class="index-header" href="/2020/05/15/helloworld/">helloworld</a>
+      <a class="index-header" href="/2020/05/15/Python/socket%E7%BC%96%E7%A8%8B/socket_V--%E5%A4%9A%E4%B8%AA%E5%AE%A2%E6%88%B7%E7%AB%AF%E7%9A%84%E6%94%AF%E6%8C%81/">Python/socket编程/socket_V--多个客户端的支持</a>
 
-      <a href="/2020/05/15/helloworld/" class="index-excerpt">
+      <a href="/2020/05/15/Python/socket%E7%BC%96%E7%A8%8B/socket_V--%E5%A4%9A%E4%B8%AA%E5%AE%A2%E6%88%B7%E7%AB%AF%E7%9A%84%E6%94%AF%E6%8C%81/" class="index-excerpt">
         
         
           
         
-        <div></div>
+        <div>支持多个客户端上面的服务端代码 只能和一个客户端进行通信如果我们同时运行多个客户端，就会发现 后面的客户端程序不能和服务端连接成功。为什么呢？因为，服务端程序必须不停的对监听socket对象调用accept()方法，才能不断的接受新的客户端连接请求而且还需要运行额外的代码对多个客户端连接后，返回的多个数据传输socket对象进行数据的收发显然，我们上面的程序没有这样的处理因为缺省情况创建的sock</div>
       </a>
 
       <div class="index-btm post-metas">
@@ -176,11 +176,343 @@
         
         
         
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Python/">Python</a>
+            
+          </div>
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <div class="col-12 col-md-12 mx-auto index-info">
+      <a class="index-header" href="/2020/05/15/Python/socket%E7%BC%96%E7%A8%8B/socket_IV--%E5%BA%94%E7%94%A8%E6%B6%88%E6%81%AF%E6%A0%BC%E5%BC%8F/">Python/socket编程/socket_IV--应用消息格式</a>
+
+      <a href="/2020/05/15/Python/socket%E7%BC%96%E7%A8%8B/socket_IV--%E5%BA%94%E7%94%A8%E6%B6%88%E6%81%AF%E6%A0%BC%E5%BC%8F/" class="index-excerpt">
+        
+        
+          
+        
+        <div>应用消息格式上面的例子中，我们发送的消息就是要传递的内容， 比如字符串“hello world”实际上，在企业中开发的程序通讯，消息往往是有==格式定义==的。 消息的格式定义可以归入OSI网络模型的表示层比如: 定义的消息包括 消息头 和 消息体
+
+消息头存放消息的格式数据， 比如 消息的长度、类型、状态等等， 而消息体存放具体的传送数据
+对于使用TCP协议传输信息的程序来说，格式定义一定要明确</div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>&nbsp;2020-05-15
+          </div>
+        
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Python/">Python</a>
+            
+          </div>
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <div class="col-12 col-md-12 mx-auto index-info">
+      <a class="index-header" href="/2020/05/15/Python/socket%E7%BC%96%E7%A8%8B/socket_III--%E4%BB%80%E4%B9%88%E6%98%AF%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B/">Python/socket编程/socket_III--什么是三次握手</a>
+
+      <a href="/2020/05/15/Python/socket%E7%BC%96%E7%A8%8B/socket_III--%E4%BB%80%E4%B9%88%E6%98%AF%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B/" class="index-excerpt">
+        
+        
+          
+        
+        <div>深入理解TCP三次握手和四次挥手TCP协议是web开发最重要而又最基础的知识，三次握手，四次挥手你真的都弄明白了吗
+TCP连接和断开整体图
+TCP的三次握手1) 请求端（通常称为客户）发送一个 SYN 段指明客户打算连接的服务器的端口， 以及初始序号（ISN，在这个例子中为1415531521）。这个SYN段为报文段1。2) 服务器发回包含服务器的初始序号的 SYN报文段（报文段2）作为应答。同时</div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>&nbsp;2020-05-15
+          </div>
+        
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Python/">Python</a>
+            
+          </div>
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <div class="col-12 col-md-12 mx-auto index-info">
+      <a class="index-header" href="/2020/05/15/Python/socket%E7%BC%96%E7%A8%8B/socket_II--python%E4%B8%AD%E7%9A%84socket%E7%BC%96%E7%A8%8B/">Python/socket编程/socket_II--python中的socket编程</a>
+
+      <a href="/2020/05/15/Python/socket%E7%BC%96%E7%A8%8B/socket_II--python%E4%B8%AD%E7%9A%84socket%E7%BC%96%E7%A8%8B/" class="index-excerpt">
+        
+        
+          
+        
+        <div>Python语言中socket编程   要进行socket编程，发送网络消息，我们可以使用Python内置的socket库，目前的socket编程，使用的最多的就是通过TCP协议进行网络通讯的，TCP进行通讯的程序双方，分为==服务端==和==客户端==， TCP协议进行通讯的双方，是需要先建立一个==虚拟连接==，然后双方程序才能发送业务数据信息；   建立TCP虚拟连接是通过著名的三次握手进行</div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>&nbsp;2020-05-15
+          </div>
+        
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Python/">Python</a>
+            
+          </div>
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <div class="col-12 col-md-12 mx-auto index-info">
+      <a class="index-header" href="/2020/05/15/Python/socket%E7%BC%96%E7%A8%8B/socket_I--%E4%BB%80%E4%B9%88%E6%98%AFsocket%E7%BC%96%E7%A8%8B/">Python/socket编程/socket_I--什么是socket编程</a>
+
+      <a href="/2020/05/15/Python/socket%E7%BC%96%E7%A8%8B/socket_I--%E4%BB%80%E4%B9%88%E6%98%AFsocket%E7%BC%96%E7%A8%8B/" class="index-excerpt">
+        
+        
+          
+        
+        <div>什么是socket编程   现在的软件开发基本都需要网络通讯 , 不管是传统计算机软件, 还是手机软件，还是物联网嵌入系统软件，这些都要和其他网络系统进行通讯。   而当今网络世界 基本上 都是使用TCP/IP协议进行通讯的 , 任何应用，比如浏览网页、微信、支付宝、抖音或者我们开发的等等都是通过TCP/IP协议进行通讯的。==TCP/IP协议就是一种传输数据的方案==
+
+我们可以用 发快递 打比</div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>&nbsp;2020-05-15
+          </div>
+        
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Python/">Python</a>
+            
+          </div>
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <div class="col-12 col-md-12 mx-auto index-info">
+      <a class="index-header" href="/2020/05/15/Python/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/">Python/正则表达式</a>
+
+      <a href="/2020/05/15/Python/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/" class="index-excerpt">
+        
+        
+          
+        
+        <div>正则表达式有什么用？大家看一个例子一个文本文件里面存储了 一些市场职位信息，格式如下所示
+Python3 高级开发工程师 上海互教教育科技有限公司上海-浦东新区2万&#x2F;月02-18满员
+测试开发工程师（C++&#x2F;python） 上海墨鹍数码科技有限公司上海-浦东新区2.5万&#x2F;每月02-18未满员
+Python3 开发工程师 上海德拓信息技术股份有限公司上海-徐汇区1.3万</div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>&nbsp;2020-05-15
+          </div>
+        
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Python/">Python</a>
+            
+          </div>
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <div class="col-12 col-md-12 mx-auto index-info">
+      <a class="index-header" href="/2020/05/15/Python/Python%E8%A3%85%E9%A5%B0%E5%99%A8/">Python/Python装饰器</a>
+
+      <a href="/2020/05/15/Python/Python%E8%A3%85%E9%A5%B0%E5%99%A8/" class="index-excerpt">
+        
+        
+          
+        
+        <div>装饰器装饰器的定义装饰器 ，英文称之为decorator我们开发Python代码，会经常碰到装饰器Python中装饰器通常用来装饰函数、或者类的方法通常被装饰后的函数， 会在原有的函数基础上，增加一点功能比如 前面我们在学习到类里面的静态方法，就是使用了staticmethod 这个装饰器，被装饰的方法 就增加了一层含义，表示这个方法是个静态方法通常装饰器本身是也一个函数。 那么装饰器是怎么装饰另</div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>&nbsp;2020-05-15
+          </div>
+        
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Python/">Python</a>
+            
+          </div>
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <div class="col-12 col-md-12 mx-auto index-info">
+      <a class="index-header" href="/2020/05/15/Python/python%E5%A4%9A%E7%BA%BF%E7%A8%8B/">Python/python多线程</a>
+
+      <a href="/2020/05/15/Python/python%E5%A4%9A%E7%BA%BF%E7%A8%8B/" class="index-excerpt">
+        
+        
+          
+        
+        <div>多线程进程和线程的概念简单地说：进程就是运行着的程序我们写的python程序（或者其他应用程序比如画笔、qq等），运行起来，就称之为一个进程在windows下面打开任务管理器，里面显示了当前系统上运行着的进程可以看到，我们系统中有很多的进程运行着，比如qq、搜狗输入法等这些程序还没有运行的时候，它们的程序代码文件存储在磁盘中，就是那些扩展名为 .exe 文件双击它们，这些 .exe 文件就被OS加</div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>&nbsp;2020-05-15
+          </div>
+        
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Python/">Python</a>
+            
+          </div>
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <div class="col-12 col-md-12 mx-auto index-info">
+      <a class="index-header" href="/2020/05/15/Python/python%E5%88%B6%E4%BD%9C%E5%8F%AF%E6%89%A7%E8%A1%8C%E6%96%87%E4%BB%B6/">Python/python制作可执行文件</a>
+
+      <a href="/2020/05/15/Python/python%E5%88%B6%E4%BD%9C%E5%8F%AF%E6%89%A7%E8%A1%8C%E6%96%87%E4%BB%B6/" class="index-excerpt">
+        
+        
+          
+        
+        <div>Python制作可执行文件大家都知道Python代码的运行需要解释器如果我们编写了一个Python代码开发的工具，给别人使用的时候，我们需要让别人做如下两步：
+
+安装Python解释器
+在命令行运行python程序文件，比如： python xxx.py如果别人是一个非IT人士，使用这样的工具，就太麻烦了如果我们能直接让别人直接双击运行我们的程序就好了有几款工具可以把==解释器、Python代码 </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>&nbsp;2020-05-15
+          </div>
+        
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Python/">Python</a>
+            
+          </div>
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <div class="col-12 col-md-12 mx-auto index-info">
+      <a class="index-header" href="/2020/05/15/Others/%E5%85%B3%E4%BA%8E%E4%BF%AE%E6%94%B9UEFI%E5%90%AF%E5%8A%A8%E9%A1%B9%E7%9A%84%E9%97%AE%E9%A2%98/">Others/关于修改UEFI启动项的问题</a>
+
+      <a href="/2020/05/15/Others/%E5%85%B3%E4%BA%8E%E4%BF%AE%E6%94%B9UEFI%E5%90%AF%E5%8A%A8%E9%A1%B9%E7%9A%84%E9%97%AE%E9%A2%98/" class="index-excerpt">
+        
+        
+          
+        
+        <div>UEFI启动项的修改问题问题背景：本来电脑装了ubuntu和win10两个系统，默认进入的是ubuntu.由于本人的无知格式化了ubuntu的系统盘，使开机界面进入grub的命令界面，那么怎样用grub命令进入win10系统呢？之后怎么样更改使开机不再出现这样的界面？？
+解决方法：
+win+R 打开 diskpart 运行命令
+依次执行下述步骤找到EFI选项中Ubuntu启动项删除ubuntu文件</div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>&nbsp;2020-05-15
+          </div>
+        
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Others/">Others</a>
+            
+          </div>
+        
       </div>
     </div>
   </div>
 
 
+
+  <nav aria-label="navigation">
+    <span class="pagination" id="pagination">
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="iconfont icon-arrowright"></i></a>
+    </span>
+  </nav>
+  
+  <script>
+    for (ele of document.getElementById("pagination").getElementsByTagName("a")) {
+      ele.href += '#board';
+    }
+  </script>
 
 
 

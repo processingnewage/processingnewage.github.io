@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" type="image/png" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="">
+  <meta name="author" content="John Doe">
+  <meta name="keywords" content="">
+  <title>Python/socket编程/socket_IV--应用消息格式 - Hexo</title>
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
+<link  rel="stylesheet" href="https://cdn.staticfile.org/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/10.0.0/styles/github-gist.min.css" />
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_fmb4a04yx8h.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_pjno9b9zyxs.css">
+
+
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+<meta name="generator" content="Hexo 4.2.1"><link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+</head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>Fluid</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/">
+              <i class="iconfont icon-home-fill"></i>
+              Home</a>
+          </li>
+        
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/archives/">
+              <i class="iconfont icon-archive-fill"></i>
+              Archives</a>
+          </li>
+        
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/categories/">
+              <i class="iconfont icon-category-fill"></i>
+              Categories</a>
+          </li>
+        
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/tags/">
+              <i class="iconfont icon-tags-fill"></i>
+              Tags</a>
+          </li>
+        
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/about/">
+              <i class="iconfont icon-user-fill"></i>
+              About</a>
+          </li>
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="view intro-2" id="background" parallax=true
+         style="background: url('/img/default.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="container text-center white-text fadeInUp">
+            <span class="h2" id="subtitle">
+              
+            </span>
+
+            
+              
+                <div class="mt-3 post-meta">
+                  <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+                  <time datetime="2020-05-15 15:52">
+                    May 15, 2020 pm
+                  </time>
+                </div>
+              
+
+              <div class="mt-1">
+                
+                  
+                  <span class="post-meta mr-2">
+                    <i class="iconfont icon-chart"></i>
+                    1.6k 字
+                  </span>
+                
+
+                
+                  
+                  <span class="post-meta mr-2">
+                      <i class="iconfont icon-clock-fill"></i>
+                    
+                    
+                    17
+                     分钟
+                  </span>
+                
+
+                
+              </div>
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-md">
+      <div class="container nopadding-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <div class="post-content mx-auto" id="post">
+            
+            <article class="markdown-body">
+              <h4 id="应用消息格式"><a href="#应用消息格式" class="headerlink" title="应用消息格式"></a>应用消息格式</h4><p>上面的例子中，我们发送的消息就是要传递的内容， 比如字符串“hello world”<br>实际上，在企业中开发的程序通讯，消息往往是有==格式定义==的。 消息的格式定义可以归入OSI网络模型的表示层<br>比如: 定义的消息包括 消息头 和 消息体</p>
+<ul>
+<li>消息头存放消息的格式数据， 比如 消息的长度、类型、状态等等， 而消息体存放具体的传送数据</li>
+<li>对于使用TCP协议传输信息的程序来说，格式定义一定要明确规定消息的边界，因为TCP协议传输的是<strong>字节流（bytes stream）</strong>， 如果消息中没有指定边界或者长度，接收方就不知道一个完整的消息从字节流的哪里开始，到 哪里结束</li>
+<li>指定消息的边界有两种方式：<ul>
+<li>用特殊字节作为消息的结尾符号<br>可以用消息内容中不可能出现的字节串 （比如 FFFFFF） 作为消息的结尾字符</li>
+<li>在消息开头某个位置，直接指定消息的长度<br>比如在一个消息的最前面用2个字节表示本消息的长度</li>
+</ul>
+</li>
+</ul>
+<p>UDP协议通常不需要指定消息边界，因为UDP是<strong>数据报协议</strong>，应用程序从socket接收到的必定是发送方发送的完整消息</p>
+<h5 id="示例一"><a href="#示例一" class="headerlink" title="示例一"></a>示例一</h5><p>我们现在要开发一个实验室的工作站监控系统，包括</p>
+<ul>
+<li>安装在机房工作站上的 数据采集器 RUS，这个程序作为TCP服务端，获取资源使用数据，简称 RUS （Resource Usage Stat）</li>
+<li>安装在监控室的管理控制台 AT, 这个程序作为TCP客户端，向管理员显示资源使用数据，简称 AT （Admin Terminal）</li>
+</ul>
+<p>作为这个系统的设计者，你可以自行设计 RUS 和 AT 之间的数据传输规范，包括消息数据格式规范。</p>
+<p>下面是一种参考的规范：</p>
+<ul>
+<li><p>AT 和 RUS 之间采用 TCP 长连接方式进行通讯，如果中途出现连接断开，AT 作为 TCP 客户端必须进行重连</p>
+</li>
+<li><p>消息整体，每个消息都是UTF8编码的字符串，由消息头和消息体组成，消息头和消息体之间用一个换行符（UTF8编码后的字节为0A ）隔开<br>有如下类型的消息：</p>
+<ul>
+<li>控制命令<br>由 AT 发送给 RUS ， 下达管理控制命令。<br>比如：<ul>
+<li>pause 暂停数据采集</li>
+<li>resume 恢复数据采集<br>RUS接收到控制命令后，必须完成操作后必须回复响应消息, 告诉AT命令已经接收已经完成</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>数据上报<br>由RUS发送给AT，汇报采集的资源数据, AT接收到数据后, 应该回复一个接收汇报的响应消息</p>
+</li>
+<li><p>消息头<br>消息头只包含一个信息： 消息体的长度<br>消息头用十进制的字符串 表示一个整数的长度</p>
+</li>
+<li><p>消息体<br>消息体用json格式的字符串 表示数据信息，如下：</p>
+<p>数据上报 RUS -&gt; AT</p>
+<pre><code class="hljs python">&#123;
+    <span class="hljs-string">"type"</span> : <span class="hljs-string">"report"</span>,
+    <span class="hljs-string">"info"</span> : &#123;
+        <span class="hljs-string">"CPU Usage"</span> : <span class="hljs-string">"30%"</span>,
+        <span class="hljs-string">"Mem usage"</span> : <span class="hljs-string">"53%"</span>
+    &#125;
+&#125;</code></pre>
+<p> 数据上报响应 AT -&gt; RUS</p>
+<pre><code class="hljs json">&#123;
+    <span class="hljs-attr">"type"</span> : <span class="hljs-string">"report-ack"</span>
+&#125;</code></pre>
+<p> 暂停数据上报命令 AT -&gt; RUS</p>
+<pre><code class="hljs json">&#123;
+    <span class="hljs-attr">"type"</span> : <span class="hljs-string">"pause"</span>,
+    <span class="hljs-attr">"duration"</span> :  <span class="hljs-number">200</span>
+&#125;</code></pre>
+<p>其中 duration 表示暂停上报的时间，以秒为单位<br> 恢复数据上报命令 AT -&gt; RUS</p>
+</li>
+</ul>
+<pre><code class="hljs json">&#123;
+    <span class="hljs-attr">"type"</span> : <span class="hljs-string">"resume"</span>
+&#125;</code></pre>
+<p>   命令处理响应 RUS -&gt; AT</p>
+<pre><code class="hljs json">&#123;
+    <span class="hljs-attr">"type"</span> : <span class="hljs-string">"cmd-ack"</span>,
+    <span class="hljs-attr">"code"</span> :  <span class="hljs-number">200</span>,
+    <span class="hljs-attr">"info"</span> : <span class="hljs-string">"处理成功"</span>
+&#125;</code></pre>
+<p>其中code 是处理结果码，用200表示成功。 info 是处理结果文字描述</p>
+<h5 id="示例二"><a href="#示例二" class="headerlink" title="示例二"></a>示例二</h5><p>示例1中，我们给出的参考接口， 传递的消息都是放在一个大字符串里面，然后采用字符串编码为字节串进行传输的，这种接口设计的好处就是简单，便于发送时的字节编码操作：消息头和消息体分别进行UTF8编码，然后字节串拼接即可<br>接收方处理也简单，直接分离出消息头和消息体，分别进行UTF8解码即可<br>我们设计普通应用程序之间的通信，这样就很好，简单就是美，容易开发，容易维护<br>但是如果消息接口是在秒理万机的计算节点之间的通讯，这样的接口的缺点就暴露了：消息长，而且编解码耗费处理器资源比较大<br>典型的例子，就是通讯设备，比如4G核心网的业务处理节点，它们每秒往往要处理数以万计的认证、鉴权、计费等消息，采用上述方法会给设备带来巨大负担<br>首先，数据都用字符表示，其实是比较浪费带宽的做法<br>比如返回码用200这样的字符串表示，就会耗费3个字节，24个比特。如果处理结果只有成功和不成功，只需要1个bit即可，1表示成功，0表示不成功<br>其次， json这种复杂语法的编解码算法，需要程序代码进行各种复杂处理（参考一下Python json内置库的代码）是比较耗费CPU 资源的<br>可以定义更为简单的数据表达方式，比如像这样：</p>
+<ul>
+<li>消息头：开头2个字节表示消息的长度</li>
+<li>消息头：第3个字节表示 消息类型 ：0：暂停命令， 1 ：恢复命令 2：命令响应 3：统计上报 4：统计上报响应</li>
+<li>消息体：数据定义<br>可以使用类似 Radius/Diameter Attribute-Value Pairs （AVP） 的定义方法<br>Attribute： 使用一个字节，表示数据种类<br>比如<br>1： CPU 使用率 2： 内存使用率<br>Length： 使用一个字节，表示信息长度<br>Value： 表示具体的数据值<br>这样，前面的示例信息<pre><code class="hljs json">&#123;
+       <span class="hljs-attr">"CPU Usage"</span> : <span class="hljs-string">"30%"</span>,
+       <span class="hljs-attr">"Mem usage"</span> : <span class="hljs-string">"53%"</span>
+&#125;</code></pre>
+其中<br>“CPU Usage” : “30%” , 就像这样用16进制字节表示 01011E<br>“Mem usage” : “53%” , 就像这样用16进制字节表示 020135<br>合起来就是 01011E020135<br>对比一下，第一种编码方法<br>优点：更节省传输带宽，编码解码数据效率更高<br>缺点：对于人的可读性差，数据表示灵活性较差</li>
+</ul>
+
+            </article>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/Python/">Python</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">本博客所有文章除特别声明外，均采用 <a href="https://zh.wikipedia.org/wiki/Wikipedia:CC_BY-SA_3.0%E5%8D%8F%E8%AE%AE%E6%96%87%E6%9C%AC" target="_blank" rel="nofollow noopener noopener">CC BY-SA 3.0协议</a> 。转载请注明出处！</p>
+              
+              
+                <div class="post-prevnext row">
+                  <div class="post-prev col-6">
+                    
+                    
+                      <a href="/2020/05/15/Python/socket%E7%BC%96%E7%A8%8B/socket_V--%E5%A4%9A%E4%B8%AA%E5%AE%A2%E6%88%B7%E7%AB%AF%E7%9A%84%E6%94%AF%E6%8C%81/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">Python/socket编程/socket_V--多个客户端的支持</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </div>
+                  <div class="post-next col-6">
+                    
+                    
+                      <a href="/2020/05/15/Python/socket%E7%BC%96%E7%A8%8B/socket_III--%E4%BB%80%E4%B9%88%E6%98%AF%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B/">
+                        <span class="hidden-mobile">Python/socket编程/socket_III--什么是三次握手</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </div>
+                </div>
+              
+            </div>
+
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;TOC</p>
+  <div id="tocbot"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+  </main>
+
+  
+    <a id="scroll-top-button" href="#" role="button">
+      <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+    </a>
+  
+
+  
+    <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Search</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">keyword</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+  
+
+  
+
+  
+
+  <footer class="mt-5">
+  <div class="text-center py-3">
+    <div>
+      <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a>
+      <i class="iconfont icon-love"></i>
+      <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener">
+        <span>Fluid</span></a>
+    </div>
+    
+
+    
+
+    
+  </div>
+</footer>
+
+<!-- SCRIPTS -->
+<script  src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js" ></script>
+<script  src="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/js/bootstrap.min.js" ></script>
+<script  src="/js/main.js" ></script>
+
+
+  <script  src="/js/lazyload.js" ></script>
+
+
+
+  
+  <script  src="https://cdn.staticfile.org/tocbot/4.11.1/tocbot.min.js" ></script>
+  <script>
+    $(document).ready(function () {
+      var boardCtn = $('#board-ctn');
+      var boardTop = boardCtn.offset().top;
+
+      tocbot.init({
+        tocSelector: '#tocbot',
+        contentSelector: '.post-content',
+        headingSelector: 'h1,h2,h3,h4,h5,h6',
+        linkClass: 'tocbot-link',
+        activeLinkClass: 'tocbot-active-link',
+        listClass: 'tocbot-list',
+        isCollapsedClass: 'tocbot-is-collapsed',
+        collapsibleClass: 'tocbot-is-collapsible',
+        collapseDepth: 0,
+        scrollSmooth: true,
+        headingsOffset: -boardTop
+      });
+      if ($('.toc-list-item').length > 0) {
+        $('#toc').css('visibility', 'visible');
+      }
+    });
+  </script>
+
+
+
+
+
+  <script defer src="https://cdn.staticfile.org/clipboard.js/2.0.6/clipboard.min.js" ></script>
+  <script  src="/js/clipboard-use.js" ></script>
+
+
+
+
+
+
+<!-- Plugins -->
+
+
+
+  <script  src="https://cdn.staticfile.org/typed.js/2.0.11/typed.min.js" ></script>
+  <script>
+    var typed = new Typed('#subtitle', {
+      strings: [
+        '  ',
+        "Python/socket编程/socket_IV--应用消息格式&nbsp;",
+      ],
+      cursorChar: "_",
+      typeSpeed: 70,
+      loop: false,
+    });
+    typed.stop();
+    $(document).ready(function () {
+      $(".typed-cursor").addClass("h2");
+      typed.start();
+    });
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/anchor-js/4.2.2/anchor.min.js" ></script>
+  <script>
+    anchors.options = {
+      placement: "right",
+      visible: "hover",
+      
+    };
+    var el = "h1,h2,h3,h4,h5,h6".split(",");
+    var res = [];
+    for (item of el) {
+      res.push(".markdown-body > " + item)
+    }
+    anchors.add(res.join(", "))
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    var path = "/local-search.xml";
+    var inputArea = document.querySelector("#local-search-input");
+    inputArea.onclick = function () {
+      searchFunc(path, 'local-search-input', 'local-search-result');
+      this.onclick = null
+    }
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+  <script>
+    $('#post img:not(.no-zoom img, img[no-zoom]), img[zoom]').each(
+      function () {
+        var element = document.createElement('a');
+        $(element).attr('data-fancybox', 'images');
+        $(element).attr('href', $(this).attr('src'));
+        $(this).wrap(element);
+      }
+    );
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
