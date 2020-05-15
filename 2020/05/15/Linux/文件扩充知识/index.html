@@ -17,7 +17,7 @@
   <meta name="description" content="">
   <meta name="author" content="John Doe">
   <meta name="keywords" content="">
-  <title>Python/socket编程/socket_V--多个客户端的支持 - Hexo</title>
+  <title>Linux/文件扩充知识 - Hexo</title>
 
   <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
 <link  rel="stylesheet" href="https://cdn.staticfile.org/github-markdown-css/4.0.0/github-markdown.min.css" />
@@ -133,7 +133,7 @@
               
                 <div class="mt-3 post-meta">
                   <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-                  <time datetime="2020-05-15 15:52">
+                  <time datetime="2020-05-15 16:07">
                     May 15, 2020 pm
                   </time>
                 </div>
@@ -144,7 +144,7 @@
                   
                   <span class="post-meta mr-2">
                     <i class="iconfont icon-chart"></i>
-                    1k 字
+                    1.2k 字
                   </span>
                 
 
@@ -154,7 +154,7 @@
                       <i class="iconfont icon-clock-fill"></i>
                     
                     
-                    12
+                    15
                      分钟
                   </span>
                 
@@ -183,92 +183,145 @@
           <div class="post-content mx-auto" id="post">
             
             <article class="markdown-body">
-              <h4 id="支持多个客户端"><a href="#支持多个客户端" class="headerlink" title="支持多个客户端"></a>支持多个客户端</h4><p>上面的服务端代码 只能和一个客户端进行通信<br>如果我们同时运行多个客户端，就会发现 后面的客户端程序不能和服务端连接成功。为什么呢？<br>因为，服务端程序必须不停的对监听socket对象调用accept()方法，才能不断的接受新的客户端连接请求<br>而且还需要运行额外的代码对多个客户端连接后，返回的多个数据传输socket对象进行数据的收发<br>显然，我们上面的程序没有这样的处理<br>因为缺省情况创建的socket是阻塞式的，进行accpet调用时，如果没有客户端连接，程序就阻塞在此处，不再执行后续代码<br>同样的，调用recv方法，如果没有数据在本socket的接收缓冲，也会阻塞<br>所以，通常一个线程里面，没法不断地调用监听socket的accept方法，同时还能负责多个数据传输socket消息的收发<br>那么让一个服务端程序和多个客户端同时连接并通信呢？<br>聪明的你一定想到了，一个线程不行，就使用多个线程啊<br>我们修改服务端的代码，如下</p>
-<pre><code class="hljs python"><span class="hljs-comment">#  === TCP 服务端程序 server.py ， 支持多客户端 ===</span>
+              <h2 id="扩展补充"><a href="#扩展补充" class="headerlink" title="扩展补充"></a>扩展补充</h2><h3 id="一、Linux下如何获取帮助"><a href="#一、Linux下如何获取帮助" class="headerlink" title="一、Linux下如何获取帮助"></a>一、Linux下如何获取帮助</h3><ol>
+<li>简约求帮助（help）<blockquote>
+<p>help命令：知道该命令的含义，相关参数不知道可以使用help<br> 1）内部命令        help  命令<br> 2）外部命令        命令  –help<br> 3）如何判断一个命令是内部是外部    type  命令</p>
+</blockquote>
+<pre><code class="hljs powershell">内部命令：shell内置的命令，Bash自带的命令
+外部命令：第三方程序，软件带来的命令</code></pre></li>
+<li>详细求帮助（==man==）<br> <strong>man</strong><pre><code class="hljs"><span class="hljs-attribute">Usage</span>: man [OPTION...] [章节] 手册页...
 
-<span class="hljs-comment"># 导入socket 库</span>
-<span class="hljs-keyword">from</span> socket <span class="hljs-keyword">import</span> *
-<span class="hljs-keyword">from</span> threading <span class="hljs-keyword">import</span> Thread
+  -C, --config-file=文件   使用该用户设置文件
+  -d, --debug                输出调试信息
+  -D, --default              将所有选项都重置为默认值
+      --warnings[=警告]    开启 groff 的警告
 
-IP = <span class="hljs-string">''</span>
-PORT = <span class="hljs-number">50000</span>
-BUFLEN = <span class="hljs-number">512</span>
+ 主要运行模式：
+  -f, --whatis               等同于 whatis
+  -k, --apropos              等同于 apropos
+  -K, --global-apropos       search for text in all pages
+  -l, --local-file
+                             把“手册页”参数当成本地文件名来解读
+  -w, --where, --path, --location
+                             输出手册页的物理位置
+  -W, --where-cat, --location-cat
+                             输出 cat 文件的物理位置
 
-<span class="hljs-comment"># 这是新线程执行的函数，每个线程负责和一个客户端进行通信</span>
-<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">clientHandler</span><span class="hljs-params">(dataSocket,addr)</span>:</span>
-    <span class="hljs-keyword">while</span> <span class="hljs-literal">True</span>:
-        recved = dataSocket.recv(BUFLEN)
-        <span class="hljs-comment"># 当对方关闭连接的时候，返回空字符串</span>
-        <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> recved:
-            print(<span class="hljs-string">f'客户端<span class="hljs-subst">&#123;addr&#125;</span> 关闭了连接'</span> )
-            <span class="hljs-keyword">break</span>
+  -c, --catman               由 catman 使用，用来对过时的 cat
+                             页重新排版
+  -R, --recode=编码        output source page encoded in ENCODING
 
-        <span class="hljs-comment"># 读取的字节数据是bytes类型，需要解码为字符串</span>
-        info = recved.decode()
-        print(<span class="hljs-string">f'收到<span class="hljs-subst">&#123;addr&#125;</span>信息： <span class="hljs-subst">&#123;info&#125;</span>'</span>)
+ 寻找手册页：
+  -L, --locale=区域
+                             定义本次手册页搜索所采用的区域设置
+  -m, --systems=系统       use manual pages from other systems
+  -M, --manpath=路径       设置搜索手册页的路径为“路径”
 
-        dataSocket.send(<span class="hljs-string">f'服务端接收到了信息 <span class="hljs-subst">&#123;info&#125;</span>'</span>.encode())
+  -S, -s, --sections=列表  使用以半角冒号分隔的章节列表
 
-    dataSocket.close()
+  -e, --extension=扩展
+                             将搜索限制在扩展类型为“扩展”的手册页之内
 
-<span class="hljs-comment"># 实例化一个socket对象 用来监听客户端连接请求</span>
-listenSocket = socket(AF_INET, SOCK_STREAM)
+  -i, --ignore-case          查找手册页时不区分大小写字母
+                             (默认)
+  -I, --match-case           查找手册页时区分大小写字母。
 
-<span class="hljs-comment"># socket绑定地址和端口</span>
-listenSocket.bind((IP, PORT))
+      --regex                show all pages matching regex
+      --wildcard             show all pages matching wildcard
 
-listenSocket.listen(<span class="hljs-number">8</span>)
-print(<span class="hljs-string">f'服务端启动成功，在<span class="hljs-subst">&#123;PORT&#125;</span>端口等待客户端连接...'</span>)
+      --names-only           make --regex and --wildcard match page names only,
+                             not descriptions
 
-<span class="hljs-keyword">while</span> <span class="hljs-literal">True</span>:
-   <span class="hljs-comment"># 在循环中，一直接受新的连接请求</span>
-   dataSocket, addr = listenSocket.accept()     <span class="hljs-comment"># Establish connection with client.</span>
-   addr = str(addr)
-   print(<span class="hljs-string">f'一个客户端 <span class="hljs-subst">&#123;addr&#125;</span> 连接成功'</span> )
+  -a, --all                  寻找所有匹配的手册页
+  -u, --update               强制进行缓存一致性的检查
 
-   <span class="hljs-comment"># 创建新线程处理和这个客户端的消息收发</span>
-   th = Thread(target=clientHandler,args=(dataSocket,addr))
-   th.start()
+      --no-subpages          don't try subpages, e.g. 'man foo bar' =&gt; 'man
+                             foo-bar'
 
-listenSocket.close()</code></pre>
-<p>多线程方式有个缺点<br>如果一个服务端要同时处理大量的客户端连接，比如10000个，需要创建10000个线程<br>而操作系统通常不可能为一个进程分配这么多的线程<br>实际上，我们的服务端程序，大部分时间都是空闲的，都在等待连接请求，等待接受消息，根本不需要这么多的线程来处理<br>这种程序通常被称之为 IO bound 程序，也就是说程序的主要时间都是花费在 IO 上面<br>这种程序，其实一个线程就足够了<br>关键问题是，需要这一个线程 很好的分配 时间， 在有连接请求到来的时候，执行处理连接请求代码，有消息到达socket缓冲的时候，执行读取处理消息的代码<br>这种处理方式称之为异步IO<br>Python 3 新增了 asyncio 库， 我们可以使用该库来 实现 同时处理多个客户端数据收发<br>示例代码如下：</p>
-<pre><code class="hljs python"><span class="hljs-comment">#  === TCP 服务端程序 server.py 异步支持多客户端 ===</span>
-<span class="hljs-keyword">import</span> asyncio, socket
-IP = <span class="hljs-string">''</span>
-PORT = <span class="hljs-number">50000</span>
-BUFLEN = <span class="hljs-number">512</span>
+ 控制格式化的输出：
+  -P, --pager=PAGER          使用 PAGER 程序显示输出文本
+  -r, --prompt=字符串     给 less pager 提供一个提示行
 
-<span class="hljs-comment"># 定义处理数据收发的回调</span>
-<span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">handle_echo</span><span class="hljs-params">(reader, writer)</span>:</span>
-    addr = writer.get_extra_info(<span class="hljs-string">'peername'</span>)
-    <span class="hljs-keyword">while</span> <span class="hljs-literal">True</span>:
-        data = <span class="hljs-keyword">await</span> reader.read(<span class="hljs-number">100</span>)
-        <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> data:
-            print(<span class="hljs-string">f'客户端<span class="hljs-subst">&#123;addr&#125;</span>关闭了连接'</span>)
-            writer.close()
-            <span class="hljs-keyword">break</span>
+  -7, --ascii                显示某些 latin1 字符的 ASCII 翻译形式
+  -E, --encoding=编码      use selected output encoding
+      --no-hyphenation, --nh turn off hyphenation
+      --no-justification,                              --nj   turn off justification
+  -p, --preprocessor=字符串   字符串表示要运行哪些预处理器：
+                             e - [n]eqn, p - pic, t - tbl,
+g - grap, r - refer, v - vgrind
 
-        message = data.decode()
-        print(<span class="hljs-string">f'收到<span class="hljs-subst">&#123;addr&#125;</span>信息： <span class="hljs-subst">&#123;message&#125;</span>'</span>)
+  -t, --troff                使用 groff 对手册页排版
+  -T, --troff-device[=设备]   使用 groff 的指定设备
 
-        writer.write(data)
+  -H, --html[=浏览器]     使用 www-browser 或指定浏览器显示 HTML
+                             输出
+  -X, --gxditview[=分辨率]   使用 groff 并通过 gxditview (X11)
+                             来显示：
+                             -X = -TX75, -X100 = -TX100, -X100-12 = -TX100-12
+  -Z, --ditroff              使用 groff 并强制它生成 ditroff
 
-loop = asyncio.get_event_loop()
-coro = asyncio.start_server(handle_echo, IP, PORT, loop=loop)
-server = loop.run_until_complete(coro)
+  -?, --help                 give this help list
+      --usage                give a short usage message
+  -V, --version              print program version</code></pre>
+<strong>man</strong>手册页<pre><code class="hljs angelscript">man手册页分为下面几个部分：
 
-<span class="hljs-comment"># Serve requests until Ctrl+C is pressed</span>
-print(<span class="hljs-string">'服务端启动成功，在&#123;&#125;端口等待客户端连接...'</span>.format(server.sockets[<span class="hljs-number">0</span>].getsockname()[<span class="hljs-number">1</span>]))
-<span class="hljs-keyword">try</span>:
-    loop.run_forever()
-<span class="hljs-keyword">except</span> KeyboardInterrupt:
-    <span class="hljs-keyword">pass</span>
+<span class="hljs-number">1.</span> 普通命令
+<span class="hljs-number">2.</span> 内核提供的系统调用
+<span class="hljs-number">3.</span> 库调用（C库函数）
+<span class="hljs-number">4.</span> 特殊文件（大多在/dev目录下）和设备
+<span class="hljs-number">5.</span> 文件格式规范
+<span class="hljs-number">6.</span> 游戏
+<span class="hljs-number">7.</span> 杂项（及其规范）
+<span class="hljs-number">8.</span> 系统管理命令（通常需要root权限）和守护进程
+**man手册页通过名称和所属分类标识。有些不同分类的man手册页名字可能相同，比如 man(<span class="hljs-number">1</span>) 和 man(<span class="hljs-number">7</span>)，这时需要额外指明分类以访问需要的手册**
 
-<span class="hljs-comment"># Close the server</span>
-server.close()
-loop.run_until_complete(server.wait_closed())
-loop.close()</code></pre>
+格式:
+所有man手册页都按照以下标准格式组织：
 
+NAME - 手册叙述对象名称，及简要描述。
+SYNOPSIS - 命令参数格式，或者函数调用格式等。
+DESCRIPTION - 对叙述对象更加详细的描述。
+EXAMPLES - 由浅入深的使用示例。
+OPTIONS - 命令行或者函数调用参数的意义。
+EXIT STATUS - 不同返回（退出）代码的含义。
+FILES - 与叙述对象相关的文件。
+BUGS - 已知的bug。
+SEE ALSO - 相关内容列表。
+AUTHOR, HISTORY, COPYRIGHT, LICENSE, WARRANTY - 历史、版权、编者信息。</code></pre>
+
+
+</li>
+</ol>
+<ol start="3">
+<li>相关官方文档</li>
+</ol>
+<h3 id="二、Bash的标准输入输出"><a href="#二、Bash的标准输入输出" class="headerlink" title="二、Bash的标准输入输出"></a>二、Bash的标准输入输出</h3><ol>
+<li>名词解释</li>
+</ol>
+<ul>
+<li>标准输入 (stdin)    :    键盘上的输入        文件描述符 –&gt; 0</li>
+<li>标准输出 (stdout)    :    屏幕上正确的输出       文件描述符  –&gt; 1</li>
+<li>标准错误 (stderr)    :    屏幕上错误的输出      文件描述符  –&gt; 2</li>
+</ul>
+<ol start="2">
+<li>相关符号</li>
+</ol>
+<ul>
+<li>“&gt;”    标准输出重定向【==将屏幕上输出的正确结果放到另外一个地方去==】，==覆盖重定向==【覆盖原文件的内容】    1&gt; 或 &gt; : 标准输出重定向    2 &gt; :标准错误重定向</li>
+<li>“&gt;&gt;”     重定向追加【==在文件后追加内容==】，1&gt;&gt; : 标准输出追加，2&gt;&gt; : 标准错误追加</li>
+<li>”&lt;“        标准输入</li>
+<li>”&amp;&gt;“     标准输出 标准错误重定向</li>
+</ul>
+<p><strong>notes：</strong></p>
+<blockquote>
+<p>已知 l.sh 文件会输出两行内容    一行是hostname;    另一行是hello的错误信息    且此时 /tmp 目录为空</p>
+<blockquote>
+<p>执行    ./l.sh &gt; /tmp/1.log        将 l.sh <strong>文件的标准输出</strong>结果存放到新创建的  /tmp/1.log 文件中，且此时屏幕不输出已被存放的标准输出</p>
+</blockquote>
+</blockquote>
+<ol start="3">
+<li>echo命令</li>
+</ol>
 
             </article>
             <hr>
@@ -279,7 +332,7 @@ loop.close()</code></pre>
                   <div class="post-meta">
                     <i class="iconfont icon-tags"></i>
                     
-                      <a class="hover-with-bg" href="/tags/Python/">Python</a>
+                      <a class="hover-with-bg" href="/tags/Linux/">Linux</a>
                     
                   </div>
                 
@@ -292,9 +345,9 @@ loop.close()</code></pre>
                   <div class="post-prev col-6">
                     
                     
-                      <a href="/2020/05/15/Linux/Linux%E5%B8%B8%E7%94%A8%E7%BB%88%E7%AB%AF%E5%91%BD%E4%BB%A4/">
+                      <a href="/2020/05/15/Linux/%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C%20I/">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Linux/Linux常用终端命令</span>
+                        <span class="hidden-mobile">Linux/文件操作 I</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -302,8 +355,8 @@ loop.close()</code></pre>
                   <div class="post-next col-6">
                     
                     
-                      <a href="/2020/05/15/Python/socket%E7%BC%96%E7%A8%8B/socket_IV--%E5%BA%94%E7%94%A8%E6%B6%88%E6%81%AF%E6%A0%BC%E5%BC%8F/">
-                        <span class="hidden-mobile">Python/socket编程/socket_IV--应用消息格式</span>
+                      <a href="/2020/05/15/Linux/Linux%E5%B8%B8%E7%94%A8%E7%BB%88%E7%AB%AF%E5%91%BD%E4%BB%A4/">
+                        <span class="hidden-mobile">Linux/Linux常用终端命令</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
@@ -443,7 +496,7 @@ loop.close()</code></pre>
     var typed = new Typed('#subtitle', {
       strings: [
         '  ',
-        "Python/socket编程/socket_V--多个客户端的支持&nbsp;",
+        "Linux/文件扩充知识&nbsp;",
       ],
       cursorChar: "_",
       typeSpeed: 70,

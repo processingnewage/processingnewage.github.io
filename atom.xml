@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-05-15T08:01:04.093Z</updated>
+  <updated>2020-05-15T08:12:20.313Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,132 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Wireshark/wireshark网络分析</title>
+    <link href="http://yoursite.com/2020/05/15/Wireshark/wireshark%E7%BD%91%E7%BB%9C%E5%88%86%E6%9E%90/"/>
+    <id>http://yoursite.com/2020/05/15/Wireshark/wireshark%E7%BD%91%E7%BB%9C%E5%88%86%E6%9E%90/</id>
+    <published>2020-05-15T08:08:29.088Z</published>
+    <updated>2020-05-15T08:12:20.313Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="wireshark网络分析"><a href="#wireshark网络分析" class="headerlink" title="wireshark网络分析"></a>wireshark网络分析</h4><ol><li>wireshark入门<ol><li>功能: 网络流量捕获和分析</li><li>历史: Ethereal是wireshark前身，06年更名为wireshark</li><li>原理: 捕获二进制流量  转换wireshark组装数据包  分析捕获数据包, 分析协议等信息</li><li>优势: 开源免费  跨平台  可视化  功能强大</li><li>基本使用: 选择网卡  捕获流量数据  过滤数据包  保存数据包</li></ol></li></ol>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h4 id=&quot;wireshark网络分析&quot;&gt;&lt;a href=&quot;#wireshark网络分析&quot; class=&quot;headerlink&quot; title=&quot;wireshark网络分析&quot;&gt;&lt;/a&gt;wireshark网络分析&lt;/h4&gt;&lt;ol&gt;
+&lt;li&gt;wireshark入门&lt;ol&gt;
+&lt;li&gt;
+      
+    
+    </summary>
+    
+    
+    
+      <category term="Wireshark" scheme="http://yoursite.com/tags/Wireshark/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Linux/文件操作 II</title>
+    <link href="http://yoursite.com/2020/05/15/Linux/%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C%20II/"/>
+    <id>http://yoursite.com/2020/05/15/Linux/%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C%20II/</id>
+    <published>2020-05-15T08:07:39.271Z</published>
+    <updated>2020-05-15T08:11:29.639Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="文件之二"><a href="#文件之二" class="headerlink" title="文件之二"></a>文件之二</h3><p><strong>重要：Linux下，一切皆是文件！！！</strong></p><hr><p>命令行操作准备知识：</p><ol><li>所有的命令都需要在一个叫做终端的载体上执行</li><li>终端上所有命令都需要一个东西==翻译解析==一下，计算机才能理解并执行</li><li>这个翻译解析的东西叫做==SHELL解释器==，RedHat和Centos默认shell解释器叫bash</li><li>命令必须符合语法，否则会报错</li></ol><hr><pre><code class="hljs powershell">命令  【可选项】  参数（路径）ls <span class="hljs-literal">-l</span> /home命令：整条shell命令的主体选项：会影响或微调命令的行为，通常以 - ，--参数：命令作用的对象</code></pre><p><strong>一、判断文件类型（file）</strong></p><ol><li>常见文件类型<table><thead><tr><th>文件类型</th><th>描述</th></tr></thead><tbody><tr><td>字符设备（c）  /dev</td><td>所有输入输出的设备，如：键盘，鼠标，显示器，打印机等</td></tr><tr><td>块设备（b）/dev</td><td>所有存储设备称之为块设备文件，如:软盘，磁盘，光盘，U盘，磁带，光驱等</td></tr><tr><td>软链接设备（l）</td><td>类似于Windows下的快捷方式</td></tr><tr><td>目录文件（d）</td><td>相当于windows下的文件夹</td></tr><tr><td>普通文件（f或-）</td><td>类似于windows下记事本、word等，可以使用相关命令进行编辑、查看文件内容</td></tr><tr><td>管道文件（p）</td><td>简单理解为程序或进程之间通讯的一种方式</td></tr><tr><td>套接字文件（s）</td><td>简单理解为程序或进程之间通讯的一种方式</td></tr></tbody></table></li></ol><p><strong>用file命令判断文件类型</strong></p><ol start="2"><li>常见文件操作命令</li></ol><ul><li><strong>列出目录内容 ( ls )</strong><blockquote><p>常见选项<br>-a        all, 查看目录下所有文件,包括隐藏文件 [以点开头的文件称之为隐藏文件, 例如 .bash_history, .cache等]<br>-l        长列表显示<br>-h        human, 以人性化方式显示出来<br>-d        只列出目录名, 不列出其他内容, 查看目录本身, 不查看目录下的文件<br>-t        按修改时间排序<br>-r        逆序排列<br>-s/S    按文件大小排序<br>-i        显示文件的inode号(索引号)<br>-R            递归列出目录中的内容<br>-m          用逗号分隔显示内容</p></blockquote></li></ul><p><strong>修饰符可以叠加使用</strong></p><ul><li><p><strong>创建目录 ( mkdir )</strong></p><blockquote><p>常见选项<br>-p        级联创建<br>mkdir /test/        在根下创建test目录<br>mkdir ./test/        在当前目录下创建test目录<br>mkdir -p /test/yunwei/redhat<br>mkdir /tmp/test1  /tmp/test2  OR  mkdir test1 test2    创建多个目录<br>说明：如果创建的目录的上一级目录不存在，就需要加-p参数；-p在前面或后面都可以</p></blockquote></li><li><p><strong>创建文件 ( touch )</strong><br>注意：Linux下文件的==命名规则==</p></li></ul><ol><li>文件名==严/格区分大小写==</li><li>文件名==不能包含特殊符号==，如（/ 等）</li><li>文件名最多可达255个字符</li></ol><ul><li><p>创建一个新的文件（目标文件不存在）</p><blockquote><p>touch  /tmp/file1    在/tmp目录下创建file1文件<br>touch  file1         在当前目录下创建file1文件<br>touch file2  file3  file4    创建多个文件</p></blockquote></li><li><p>修改文件的时间（目标文件存在）</p><blockquote><p>指令格式同上； 在创建的文件存在时，修改文件的时间窗</p><blockquote><p>cat  file1    访问文件<br>stat  file1    显示文件信息 【大小 设备 权限 环境 ==最近访问==时间  ==最近更改==时间 ==最近改动==时间 创建时间】<br>echo hello python &gt; file1    在文件中写入信息<br>touch -a file1 -t “202010191835”    修改文件访问时间为2020年10月19号18点35分<br>touch -m file1 -t “202010191835”     修改文件更改时间为2020年10月19号18点35分<br><strong>无法修改最近改动时间</strong><br>ll（ls -s） 指令显示文件更改时间<br>touch -d “20201019” file1 OR  touch -d “11:23:45”  file1    一次性修改最近访问、更改时间</p></blockquote></blockquote></li><li><p><strong>查看文件内容</strong></p><ul><li>cat   一般查看小文件，从第一行到最后一行列出来<ul><li>常见选项 -n    显示行号<pre><code>-A      显示控制字符，如换行符，制表符等（Linux $和Windows ^M$）</code></pre></li></ul></li><li>tac  一般查看小文件，从最后一行到第一行列出来</li><li>more 和 less  一般查看大文件，==q==退出查看，可以搜索（直接输入/—；输入n向下匹配），建议less命令</li><li>head  默认查看文件的前10行，head -n 15 或 head -15表示查看前15行</li><li>tail  默认查看文件后10行，tail -n 15 或 tail -15表示查看后15行； -f表示动态查看</li><li>ldd  一般用来查看二进制的命令文件</li></ul></li><li><p><strong>拷贝文件（cp）</strong><br>注意：==本地==文件拷贝【本机路径之间的转移】<br>1）<strong>用法</strong><br>cp  [选项]   需要拷贝的文件 拷贝到哪里去         cp  ./file1  /tmp/    当前目录下的file1文件拷贝到/tmp目录下<br>2）<strong>常用选项</strong>                cp   ./file1    /temp/test1        当前目录下的file1文件拷贝到/tmp目录下并重命名为test1    </p><table><thead><tr><th><strong>选项</strong></th><th><strong>含义</strong></th></tr></thead><tbody><tr><td>-r</td><td>递归拷贝目录</td></tr><tr><td>-v</td><td>显示拷贝过程信息</td></tr><tr><td>-p</td><td>==文件==属性信息一起拷贝</td></tr><tr><td>-a</td><td>递归拷贝文件，包括目录及文件属性信息</td></tr></tbody></table></li><li><p><strong>移动或重命名文件（mv）</strong></p><blockquote><p>移动文件用法（不同路径下）：<br><strong>mv 需要移动的文件  移动到新的路径下</strong><br>注意： 文件路径不一样</p></blockquote></li></ul><blockquote><p>重命名用法（相同路径下）：<br><strong>mv  原来文件的名字  新文件的名字</strong><br>注意： 老文件和新文件的路径一样</p></blockquote><blockquote><p>mv     /root/file1    /tmp                移动/root/file1文件到/tmp目录下<br>mv    /tmp/file1  /tmp/test1              将/tmp目录下的file1文件重命名成test1</p></blockquote><ul><li><strong>删除文件（rm）</strong><blockquote><p>常用选项<br>-r        递归删除，一般用于删除目录<br>-f        直接删除，不提示<br>rm  file1        删除当前目录下的file1文件，有提示<br>rm -r dir1        删除当前目录下的dir1目录，有提示<br>rm  -f  /root/file1    强制删除/root/file1文件，不提示，直接删     </p></blockquote></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;文件之二&quot;&gt;&lt;a href=&quot;#文件之二&quot; class=&quot;headerlink&quot; title=&quot;文件之二&quot;&gt;&lt;/a&gt;文件之二&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;重要：Linux下，一切皆是文件！！！&lt;/strong&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;命令行操作准备知识：&lt;/p
+      
+    
+    </summary>
+    
+    
+    
+      <category term="Linux" scheme="http://yoursite.com/tags/Linux/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Linux/文件操作 I</title>
+    <link href="http://yoursite.com/2020/05/15/Linux/%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C%20I/"/>
+    <id>http://yoursite.com/2020/05/15/Linux/%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C%20I/</id>
+    <published>2020-05-15T08:07:39.261Z</published>
+    <updated>2020-05-15T08:11:48.865Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="文件之一"><a href="#文件之一" class="headerlink" title="文件之一"></a>文件之一</h3><p><strong>本辑主要包括目录树结构，文件的路径表示、切换和查看</strong><br>任务分解：<strong>文件基础</strong></p><ol><li>Linux系统目录树结构【如何管理和存放文件】</li><li>Linux系统文件基础操作，如创建、删除、查看等</li><li>桌面环境介绍【不同的发行版各不相同，较容易掌握】</li></ol><p>任务实施：</p><h3 id="一、目录树结构"><a href="#一、目录树结构" class="headerlink" title="一、目录树结构"></a>一、<strong>目录树结构</strong></h3><p><img src="https://img-blog.csdn.net/20160711104517618" srcset="/img/loading.gif" alt="目录树"></p><p><img src="https://pic1.zhimg.com/80/v2-090ca74a26bc7f466771f10edc051b40_1440w.jpg" srcset="/img/loading.gif" alt="目录树"></p><p><img src="https://www.runoob.com/wp-content/uploads/2014/06/003vPl7Rty6E8kZRlAEdc690.jpg" srcset="/img/loading.gif" alt="目录树"></p><p>下面，认识一下每一个目录及其作用：</p><h2 id="第一种认识"><a href="#第一种认识" class="headerlink" title="第一种认识"></a>第一种认识</h2><p><strong>bin目录</strong><br><img src="https://pic1.zhimg.com/v2-10d4a0f347643ef01f18faf95fffdac4_r.jpg" srcset="/img/loading.gif" alt="bin"><br>bin是binary的缩写，里面存放的是可执行的二进制文件，如ls、cat、mv、mkdir等，可用这个目录查看有哪些命令可以使用（虽然一般也不会这么做）</p><p><strong>boot目录</strong><br><img src="https://pic2.zhimg.com/80/v2-2007731a5602fce00e4fb82b3935cfc9_1440w.png" srcset="/img/loading.gif" alt="boot"><br>这个目录存放的是系统启动时使用的一些核心文件，不是专门研究Linux内核的，这个目录不需要关心</p><p><strong>dev目录</strong><br><img src="https://pic4.zhimg.com/80/v2-6a4d3e5fd87aa67ce0448d71da125233_1440w.png" srcset="/img/loading.gif" alt="dev"><br>dev是device的缩写，存放的是Linux的外部设备，在Linux中访问设备的方式和访问文件的方式是相同的</p><p><strong>etc目录</strong><br><img src="https://pic4.zhimg.com/80/v2-1a8a9a89ce98f3addc1e9bab72025923_1440w.png" srcset="/img/loading.gif" alt="etc"><br>etc目录是系统配置文件存放的目录，例如用户的账号密码配置、各种服务的初始配置等，一般来说这个目录下的各配置是可以让一般使用者查看的，但是只有root有权利修改。比较重要的配置有/etc/inittab、/etc/init.d、/etc/modprobe.conf、/etc/X11等，所有服务的启动脚本都是放在/etc/init.d中的</p><p><strong>home目录</strong><br>home目录初始是空的，这是系统预设的使用者家目录（home directory），在新增一个一般使用者账号时，预设的使用者家目录都会规范到这里来，这在之后用户操作的文章中会提到。比较重要的是，家目录有两种代号：</p><ul><li>~表示当前使用者的家目录</li><li>~username表示用户名为username的家目录</li></ul><p><strong>lib/lib64目录</strong><br><img src="https://pic1.zhimg.com/80/v2-5cbc49ea3876b59526e91200838b6c2c_1440w.png" srcset="/img/loading.gif" alt="lib/lib64"><br>lib目录和lib64目录放在一起说了，上面截取的是lib目录的图<br>lib目录中存放的是开机时会使用到的库函数以及在/bin和/sbin目录下的指令会调用的库函数，lib目录中比较重要的目录为/lib/modules目录，lib64目录下存放的是64位机使用到的库函数</p><p><strong>lost+found目录</strong><br>系统由于异常产生错误时，会将一些遗失的片段存放于此目录下</p><p><strong>medis目录和mnt目录</strong><br>这两个目录初始都是空的，作用差不多，放一起说<br>medis是媒体的意思，即/media目录下存放的是可移除的设备，如软碟、光碟、DVD等装置都在暂时挂载于此<br>/mnt目录早些时候和/media目录作用相同，不过现在通常用来挂在临时安装目录了，例如DBA可以利用/mnt目录挂载文件系统</p><p><strong>opt目录</strong><br>这个目录初始也是空的，用于存放给服务器额外安装的软件的存放路径，例如KDE桌面软件</p><p><strong>proc目录</strong><br><img src="https://pic2.zhimg.com/80/v2-142d4460563bdccb7a106a504765255d_1440w.png" srcset="/img/loading.gif" alt="proc"><br>proc目录存储了系统进程的相关信息，所有的数据都存储在内存中，不占内存，/proc目录中有两类数据：</p><ul><li>数字开头的表示具体的进程id</li><li>非数字开头的表示系统资源信息<br>例如/proc/cpuinfo表示cpu相关信息，/proc/version表示系统的版本信息</li></ul><p><strong>root目录</strong><br>root目录表示root用户的家目录</p><p><strong>sbin目录</strong><br><img src="https://pic3.zhimg.com/80/v2-d485d0d760d0f775a5e4b34ae423529a_1440w.png" srcset="/img/loading.gif" alt="sbin"><br>sbin目录中存放的是系统管理员使用的可执行命令，录入fdisk、shutdown、mount等，与bin目录不同的是，这几个目录是给系统管理员root使用的命令，一般用户只能查看而不能设置和使用</p><p><strong>srv目录</strong><br>srv初始是一个空目录，srv目录是服务启动之后需要访问的数据目录，如www服务需要访问的网页数据存放在/srv/www内</p><p><strong>sys目录</strong><br><img src="https://pic4.zhimg.com/80/v2-b1689d71776ea6e5ca377ed8d06fe3eb_1440w.png" srcset="/img/loading.gif" alt="sys"><br>sys目录和/proc目录很相似，数据也都在内存中而不在磁盘中，存放系统相关信息</p><p><strong>tmp目录</strong><br><img src="https://pic4.zhimg.com/80/v2-babf14b54381845aee09a266c49cdac3_1440w.png" srcset="/img/loading.gif" alt="tmp"><br>这是让一般使用者或者正在执行的程序暂时存放数据的地方，这是任何用户都能够存取的一个兖，所以需要定期清理一下，当然，重要的资料不建议放在此目录中</p><p><strong>var目录</strong><br><img src="https://pic2.zhimg.com/80/v2-4201e9a1a772e5e71d4b9e68a1df3955_1440w.png" srcset="/img/loading.gif" alt="var"><br>存放系统运行过程中经常变化的文件，例如随时更改的日志文件/var/log，邮件文件/var/spool/mail，进程id文件/var/run</p><h2 id="第二种认识"><a href="#第二种认识" class="headerlink" title="第二种认识"></a>第二种认识</h2><p>以下是对这些目录的解释：<br>/bin：<br>bin是Binary的缩写, 这个目录存放着最经常使用的命令<br>/boot：<br>这里存放的是启动Linux时使用的一些核心文件，包括一些连接文件以及镜像文件<br>/dev ：<br>dev是Device(设备)的缩写, 该目录下存放的是Linux的外部设备，在Linux中访问设备的方式和访问文件的方式是相同的<br>/etc：<br>这个目录用来存放所有的系统管理所需要的配置文件和子目录<br>/home：<br>用户的主目录，在Linux中，每个用户都有一个自己的目录，一般该目录名是以用户的账号命名的<br>/lib：<br>这个目录里存放着系统最基本的动态连接共享库，其作用类似于Windows里的DLL文件。几乎所有的应用程序都需要用到这些共享库<br>/lost+found：<br>这个目录一般情况下是空的，当系统非法关机后，这里就存放了一些文件<br>/media：<br>linux系统会自动识别一些设备，例如U盘、光驱等等，当识别后，linux会把识别的设备挂载到这个目录下<br>/mnt：<br>系统提供该目录是为了让用户临时挂载别的文件系统的，我们可以将光驱挂载在/mnt/上，然后进入该目录就可以查看光驱里的内容了<br>/opt：<br> 这是给主机额外安装软件所摆放的目录。比如你安装一个ORACLE数据库则就可以放到这个目录下。默认是空的<br>/proc：<br>这个目录是一个虚拟的目录，它是系统内存的映射，我们可以通过直接访问这个目录来获取系统信息。<br>这个目录的内容不在硬盘上而是在内存里，我们也可以直接修改里面的某些文件，比如可以通过下面的命令来屏蔽主机的ping命令，使别人无法ping你的机器：</p><pre><code class="hljs awk">echo <span class="hljs-number">1</span> &gt; <span class="hljs-regexp">/proc/</span>sys<span class="hljs-regexp">/net/i</span>pv4<span class="hljs-regexp">/icmp_echo_ignore_all</span></code></pre><p>/root：<br>该目录为系统管理员，也称作超级权限者的用户主目录<br>/sbin：<br>s就是Super User的意思，这里存放的是系统管理员使用的系统管理程序<br>/selinux：<br> 这个目录是Redhat/CentOS所特有的目录，Selinux是一个安全机制，类似于windows的防火墙，但是这套机制比较复杂，这个目录就是存放selinux相关的文件的<br>/srv：<br> 该目录存放一些服务启动之后需要提取的数据<br>/sys：<br>这是linux2.6内核的一个很大的变化。该目录下安装了2.6内核中新出现的一个文件系统 sysfs<br>sysfs文件系统集成了下面3种文件系统的信息：针对进程信息的proc文件系统、针对设备的devfs文件系统以及针对伪终端的devpts文件系统<br>该文件系统是内核设备树的一个直观反映<br>当一个内核对象被创建的时候，对应的文件和目录也在内核对象子系统中被创建<br>/tmp：<br>这个目录是用来存放一些临时文件的<br>/usr：<br>这是一个非常重要的目录，用户的很多应用程序和文件都放在这个目录下，类似于windows下的program files目录<br>/usr/bin：<br>系统用户使用的应用程序<br>/usr/sbin：<br>超级用户使用的比较高级的管理程序和系统守护程序<br>/usr/src：<br>内核源代码默认的放置目录<br>/var：<br>这个目录中存放着在不断扩充着的东西，我们习惯将那些经常被修改的目录放在这个目录下。包括各种日志文件<br>/run：<br>是一个临时文件系统，存储系统启动以来的信息。当系统重启时，这个目录下的文件应该被删掉或清除。如果你的系统上有 /var/run 目录，应该让它指向 run</p><h2 id="第三种认识"><a href="#第三种认识" class="headerlink" title="第三种认识"></a>第三种认识</h2><ul><li>/root    管理员root的家目录</li><li>/home    普通用户的默认家目录    /home/user1        /home/user2</li><li>/bin -&gt; /usr/bin    普通用户的命令【软链接的形式（类似于快捷方式）】    /usr/bin/date     /usr/bin/ls</li><li>/sbin -&gt; /usr/sbin    管理员使用的命令【软链接的形式（类似于快捷方式）】    /usr/sbin/shutdown</li><li>/usr/local    第三方源码包默认安装目录    类似于window下的C:\Program Files</li><li>/etc    系统和服务相关配置文件         /etc/passwd</li><li>/var    动态，可以变化的数据文件    日志文件（/var/log/xxx）</li><li>/tmp    临时文件存放目录    全局可写（系统或程序产生临时文件）</li><li>/dev    设备文件    /dev/sda    /dev/nvme0n1</li><li>/lib -&gt; /usr/lib    库文件        软链接文件</li><li>/lib64 -&gt; /usr/lib64    库文件        软链接文件</li><li>/proc   虚拟的文件系统    反映出来的是内核，进程信息或实时状态</li><li>/boot        系统内核，引导程序相关文件</li><li>/media    移动设备默认的挂载点【挂载外接设备】</li><li>/mnt        手工挂载设备的挂载点【挂载外接设备】</li></ul><p><strong>在 Linux 系统中，有几个目录是比较重要的，平时需要注意不要误删除或者随意更改内部文件</strong></p><ul><li><strong>/etc</strong>： 上边也提到了，这个是系统中的配置文件，如果你更改了该目录下的某个文件可能会导致系统不能启动</li><li><strong>/bin, /sbin,  /usr/bin,  /usr/sbin</strong>: 这是系统预设的执行文件的放置目录，比如 ls 就是在/bin/ls 目录下的<br>==值得提出的是== /bin, /usr/bin 是给系统用户使用的指令（除root外的通用户），而/sbin, /usr/sbin 则是给root使用的指令</li><li><strong>/var</strong>： 这是一个非常重要的目录，系统上跑了很多程序，那么每个程序都会有相应的日志产生，而这些日志就被记录到这个目录下，具体在/var/log 目录下，另外mail的预设放置也是在这里</li></ul><h2 id="笔记两篇"><a href="#笔记两篇" class="headerlink" title="笔记两篇"></a>笔记两篇</h2><ol><li><strong>在 Linux 或 Unix 操作系统中，所有的文件和目录都被组织成以一个根节点开始的倒置的树状结构</strong><br>文件系统的最顶层是由根目录开始的，系统使用 / 来表示根目录。在根目录之下的既可以是目录，也可以是文件，而每一个目录中又可以包含子目录文件。如此反复就可以构成一个庞大的文件系统<br>在Linux文件系统中有两个特殊的目录，一个用户所在的工作目录，也叫当前目录，可以使用一个点 . 来表示；另一个是当前目录的上一级目录，也叫父目录，可以使用两个点 .. 来表示</li></ol><ul><li>. ：代表当前的目录，也可以使用 ./ 来表示；</li><li>.. ：代表上一层目录，也可以 ../ 来代表。<br>如果一个目录或文件名以一个点 . 开始，表示这个目录或文件是一个隐藏目录或文件(如：.bashrc)。即以默认方式查找时，不显示该目录或文件</li></ul><ol start="2"><li><strong>系统启动必须：</strong></li></ol><ul><li>/boot：存放的启动Linux 时使用的内核文件，包括连接文件以及镜像文件</li><li>/etc：存放所有的系统需要的配置文件和子目录列表，更改目录下的文件可能会导致系统不能启动</li><li>/lib：存放基本代码库（比如c++库），其作用类似于Windows里的DLL文件。几乎所有的应用程序都需要用到这些共享库</li><li>/sys： 这是linux2.6内核的一个很大的变化。该目录下安装了2.6内核中新出现的一个文件系统 sysfs  ，sysfs文件系统集成了下面3种文件系统的信息：针对进程信息的proc文件系统、针对设备的devfs文件系统以及针对伪终端的devpts文件系统。该文件系统是内核设备树的一个直观反映。当一个内核对象被创建的时候，对应的文件和目录也在内核对象子系统中</li><li><em>指令集合：*</em></li><li>/bin：存放着最常用的程序和指令</li><li>/sbin：只有系统管理员能使用的程序和指令</li><li><em>外部文件管理：*</em></li><li>/dev ：Device(设备)的缩写, 存放的是Linux的外部设备。注意：在Linux中访问设备和访问文件的方式是相同的</li><li>/media：类windows的其他设备，例如U盘、光驱等等，识别后linux会把设备放到这个目录下</li><li>/mnt：临时挂载别的文件系统的，我们可以将光驱挂载在/mnt/上，然后进入该目录就可以查看光驱里的内容了</li><li><em>临时文件：*</em></li><li>/run：是一个临时文件系统，存储系统启动以来的信息。当系统重启时，这个目录下的文件应该被删掉或清除。如果你的系统上有 /var/run 目录，应该让它指向 run</li><li>/lost+found：一般情况下为空的，系统非法关机后，这里就存放一些文件</li><li>/tmp：这个目录是用来存放一些临时文件的</li><li><em>账户：*</em></li><li>/root：系统管理员的用户主目录</li><li>/home：用户的主目录，以用户的账号命名的</li><li>/usr：用户的很多应用程序和文件都放在这个目录下，类似于windows下的program files目录</li><li>/usr/bin：系统用户使用的应用程序与指令</li><li>/usr/sbin：超级用户使用的比较高级的管理程序和系统守护程序</li><li>/usr/src：内核源代码默认的放置目录<br>运行过程中要用：</li><li>/var：存放经常修改的数据，比如程序运行的日志文件（/var/log 目录下）</li><li>/proc：管理内存空间！虚拟的目录，是系统内存的映射，我们可以直接访问这个目录来，获取系统信息。这个目录的内容不在硬盘上而是在内存里，我们也可以直接修改里面的某些文件来做修改</li><li><em>扩展用的：*</em></li><li>/opt：默认是空的，我们安装额外软件可以放在这个里面</li><li>/srv：存放服务启动后需要提取的数据（不用服务器就是空）</li></ul><h3 id="二、文件路径表示方法"><a href="#二、文件路径表示方法" class="headerlink" title="二、文件路径表示方法"></a>二、文件路径表示方法</h3><ul><li>绝对路径<ul><li>一定是以“/”开头，是唯一一个绝对能够描述文件所在路径的方式</li><li>“/”根目录是Linux操作系统最顶级的目录，没有任何路径比它还要靠前</li><li>表示用户家目录：/home/user1/file 1</li></ul></li><li>相对路径<ul><li>路径是相对的，文件所在路径是相对于当前所在路径而言的 </li><li>当前路径使 . 或 ./ 表示；当前目录的上一级目录使用 .. 或 ../表示</li><li>当前用户家目录使用 ~ 表示；上次工作路径使用 - 表示</li></ul></li></ul><p><strong>路径切换和查看相关命令</strong></p><table><thead><tr><th>命令</th><th>含义</th><th>使用方法</th></tr></thead><tbody><tr><td>pwd</td><td>查看当前工作路径</td><td>pwd</td></tr><tr><td>cd</td><td>更改工作路径，切换路径（默认切换到当前用户家目录）</td><td>cd  新路径</td></tr></tbody></table>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;文件之一&quot;&gt;&lt;a href=&quot;#文件之一&quot; class=&quot;headerlink&quot; title=&quot;文件之一&quot;&gt;&lt;/a&gt;文件之一&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;本辑主要包括目录树结构，文件的路径表示、切换和查看&lt;/strong&gt;&lt;br&gt;任务分解：&lt;strong&gt;文件基
+      
+    
+    </summary>
+    
+    
+    
+      <category term="Linux" scheme="http://yoursite.com/tags/Linux/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Linux/文件扩充知识</title>
+    <link href="http://yoursite.com/2020/05/15/Linux/%E6%96%87%E4%BB%B6%E6%89%A9%E5%85%85%E7%9F%A5%E8%AF%86/"/>
+    <id>http://yoursite.com/2020/05/15/Linux/%E6%96%87%E4%BB%B6%E6%89%A9%E5%85%85%E7%9F%A5%E8%AF%86/</id>
+    <published>2020-05-15T08:07:39.258Z</published>
+    <updated>2020-05-15T08:12:01.338Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="扩展补充"><a href="#扩展补充" class="headerlink" title="扩展补充"></a>扩展补充</h2><h3 id="一、Linux下如何获取帮助"><a href="#一、Linux下如何获取帮助" class="headerlink" title="一、Linux下如何获取帮助"></a>一、Linux下如何获取帮助</h3><ol><li>简约求帮助（help）<blockquote><p>help命令：知道该命令的含义，相关参数不知道可以使用help<br> 1）内部命令        help  命令<br> 2）外部命令        命令  –help<br> 3）如何判断一个命令是内部是外部    type  命令</p></blockquote><pre><code class="hljs powershell">内部命令：shell内置的命令，Bash自带的命令外部命令：第三方程序，软件带来的命令</code></pre></li><li>详细求帮助（==man==）<br> <strong>man</strong><pre><code class="hljs"><span class="hljs-attribute">Usage</span>: man [OPTION...] [章节] 手册页...  -C, --config-file=文件   使用该用户设置文件  -d, --debug                输出调试信息  -D, --default              将所有选项都重置为默认值      --warnings[=警告]    开启 groff 的警告 主要运行模式：  -f, --whatis               等同于 whatis  -k, --apropos              等同于 apropos  -K, --global-apropos       search for text in all pages  -l, --local-file                             把“手册页”参数当成本地文件名来解读  -w, --where, --path, --location                             输出手册页的物理位置  -W, --where-cat, --location-cat                             输出 cat 文件的物理位置  -c, --catman               由 catman 使用，用来对过时的 cat                             页重新排版  -R, --recode=编码        output source page encoded in ENCODING 寻找手册页：  -L, --locale=区域                             定义本次手册页搜索所采用的区域设置  -m, --systems=系统       use manual pages from other systems  -M, --manpath=路径       设置搜索手册页的路径为“路径”  -S, -s, --sections=列表  使用以半角冒号分隔的章节列表  -e, --extension=扩展                             将搜索限制在扩展类型为“扩展”的手册页之内  -i, --ignore-case          查找手册页时不区分大小写字母                             (默认)  -I, --match-case           查找手册页时区分大小写字母。      --regex                show all pages matching regex      --wildcard             show all pages matching wildcard      --names-only           make --regex and --wildcard match page names only,                             not descriptions  -a, --all                  寻找所有匹配的手册页  -u, --update               强制进行缓存一致性的检查      --no-subpages          don't try subpages, e.g. 'man foo bar' =&gt; 'man                             foo-bar' 控制格式化的输出：  -P, --pager=PAGER          使用 PAGER 程序显示输出文本  -r, --prompt=字符串     给 less pager 提供一个提示行  -7, --ascii                显示某些 latin1 字符的 ASCII 翻译形式  -E, --encoding=编码      use selected output encoding      --no-hyphenation, --nh turn off hyphenation      --no-justification,                              --nj   turn off justification  -p, --preprocessor=字符串   字符串表示要运行哪些预处理器：                             e - [n]eqn, p - pic, t - tbl,g - grap, r - refer, v - vgrind  -t, --troff                使用 groff 对手册页排版  -T, --troff-device[=设备]   使用 groff 的指定设备  -H, --html[=浏览器]     使用 www-browser 或指定浏览器显示 HTML                             输出  -X, --gxditview[=分辨率]   使用 groff 并通过 gxditview (X11)                             来显示：                             -X = -TX75, -X100 = -TX100, -X100-12 = -TX100-12  -Z, --ditroff              使用 groff 并强制它生成 ditroff  -?, --help                 give this help list      --usage                give a short usage message  -V, --version              print program version</code></pre><strong>man</strong>手册页<pre><code class="hljs angelscript">man手册页分为下面几个部分：<span class="hljs-number">1.</span> 普通命令<span class="hljs-number">2.</span> 内核提供的系统调用<span class="hljs-number">3.</span> 库调用（C库函数）<span class="hljs-number">4.</span> 特殊文件（大多在/dev目录下）和设备<span class="hljs-number">5.</span> 文件格式规范<span class="hljs-number">6.</span> 游戏<span class="hljs-number">7.</span> 杂项（及其规范）<span class="hljs-number">8.</span> 系统管理命令（通常需要root权限）和守护进程**man手册页通过名称和所属分类标识。有些不同分类的man手册页名字可能相同，比如 man(<span class="hljs-number">1</span>) 和 man(<span class="hljs-number">7</span>)，这时需要额外指明分类以访问需要的手册**格式:所有man手册页都按照以下标准格式组织：NAME - 手册叙述对象名称，及简要描述。SYNOPSIS - 命令参数格式，或者函数调用格式等。DESCRIPTION - 对叙述对象更加详细的描述。EXAMPLES - 由浅入深的使用示例。OPTIONS - 命令行或者函数调用参数的意义。EXIT STATUS - 不同返回（退出）代码的含义。FILES - 与叙述对象相关的文件。BUGS - 已知的bug。SEE ALSO - 相关内容列表。AUTHOR, HISTORY, COPYRIGHT, LICENSE, WARRANTY - 历史、版权、编者信息。</code></pre></li></ol><ol start="3"><li>相关官方文档</li></ol><h3 id="二、Bash的标准输入输出"><a href="#二、Bash的标准输入输出" class="headerlink" title="二、Bash的标准输入输出"></a>二、Bash的标准输入输出</h3><ol><li>名词解释</li></ol><ul><li>标准输入 (stdin)    :    键盘上的输入        文件描述符 –&gt; 0</li><li>标准输出 (stdout)    :    屏幕上正确的输出       文件描述符  –&gt; 1</li><li>标准错误 (stderr)    :    屏幕上错误的输出      文件描述符  –&gt; 2</li></ul><ol start="2"><li>相关符号</li></ol><ul><li>“&gt;”    标准输出重定向【==将屏幕上输出的正确结果放到另外一个地方去==】，==覆盖重定向==【覆盖原文件的内容】    1&gt; 或 &gt; : 标准输出重定向    2 &gt; :标准错误重定向</li><li>“&gt;&gt;”     重定向追加【==在文件后追加内容==】，1&gt;&gt; : 标准输出追加，2&gt;&gt; : 标准错误追加</li><li>”&lt;“        标准输入</li><li>”&amp;&gt;“     标准输出 标准错误重定向</li></ul><p><strong>notes：</strong></p><blockquote><p>已知 l.sh 文件会输出两行内容    一行是hostname;    另一行是hello的错误信息    且此时 /tmp 目录为空</p><blockquote><p>执行    ./l.sh &gt; /tmp/1.log        将 l.sh <strong>文件的标准输出</strong>结果存放到新创建的  /tmp/1.log 文件中，且此时屏幕不输出已被存放的标准输出</p></blockquote></blockquote><ol start="3"><li>echo命令</li></ol>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;扩展补充&quot;&gt;&lt;a href=&quot;#扩展补充&quot; class=&quot;headerlink&quot; title=&quot;扩展补充&quot;&gt;&lt;/a&gt;扩展补充&lt;/h2&gt;&lt;h3 id=&quot;一、Linux下如何获取帮助&quot;&gt;&lt;a href=&quot;#一、Linux下如何获取帮助&quot; class=&quot;headerli
+      
+    
+    </summary>
+    
+    
+    
+      <category term="Linux" scheme="http://yoursite.com/tags/Linux/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Linux/Linux常用终端命令</title>
+    <link href="http://yoursite.com/2020/05/15/Linux/Linux%E5%B8%B8%E7%94%A8%E7%BB%88%E7%AB%AF%E5%91%BD%E4%BB%A4/"/>
+    <id>http://yoursite.com/2020/05/15/Linux/Linux%E5%B8%B8%E7%94%A8%E7%BB%88%E7%AB%AF%E5%91%BD%E4%BB%A4/</id>
+    <published>2020-05-15T08:07:39.236Z</published>
+    <updated>2020-05-15T08:11:13.147Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="描述Linux常用终端命令"><a href="#描述Linux常用终端命令" class="headerlink" title="描述Linux常用终端命令"></a>描述Linux常用终端命令</h3><ol><li><p>关机和重启</p><blockquote><p>shutdown  一分钟后关机<br>shutdown -h now / 10 / 30  现在 / 10min / 30min 后关机<br>shutdown -H<br>shutdown -c  取消关机  在任意终端中使用或者直接CTRL + c<br>reboot  立刻重启<br>shutdown -r 10  10min后重启<br>shutdown -c  取消重启</p></blockquote></li><li></li></ol>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;描述Linux常用终端命令&quot;&gt;&lt;a href=&quot;#描述Linux常用终端命令&quot; class=&quot;headerlink&quot; title=&quot;描述Linux常用终端命令&quot;&gt;&lt;/a&gt;描述Linux常用终端命令&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;关机和重启&lt;/p&gt;
+&lt;blockq
+      
+    
+    </summary>
+    
+    
+    
+      <category term="Linux" scheme="http://yoursite.com/tags/Linux/"/>
+    
+  </entry>
   
   <entry>
     <title>Python/socket编程/socket_V--多个客户端的支持</title>
@@ -367,30 +493,6 @@
       
         &lt;h2 id=&quot;工具-Typora常用语法&quot;&gt;&lt;a href=&quot;#工具-Typora常用语法&quot; class=&quot;headerlink&quot; title=&quot;工具-Typora常用语法&quot;&gt;&lt;/a&gt;工具-Typora常用语法&lt;/h2&gt;&lt;blockquote&gt;
 &lt;p&gt;Markdown（MD）作
-      
-    
-    </summary>
-    
-    
-    
-      <category term="Others" scheme="http://yoursite.com/tags/Others/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Others/80C51引脚功能</title>
-    <link href="http://yoursite.com/2020/05/15/Others/80C51%E5%BC%95%E8%84%9A%E5%8A%9F%E8%83%BD/"/>
-    <id>http://yoursite.com/2020/05/15/Others/80C51%E5%BC%95%E8%84%9A%E5%8A%9F%E8%83%BD/</id>
-    <published>2020-05-15T07:37:54.172Z</published>
-    <updated>2020-05-15T07:59:25.498Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="80C51单片机引脚图及引脚功能介绍"><a href="#80C51单片机引脚图及引脚功能介绍" class="headerlink" title="80C51单片机引脚图及引脚功能介绍"></a>80C51单片机引脚图及引脚功能介绍</h3><p>首先我们来介绍一下单片机的引脚图及引脚功能(如下图所示)， 引脚的具体功能将在下面详细介绍：<br><img src="https://file.elecfans.com/web1/M00/62/C0/o4YBAFuMmPmAYatAAACY-kJDecU841.jpg" srcset="/img/loading.gif" alt="1"><br>单片机的40个引脚大致可分为4类：电源、时钟、控制和I/O引脚<br><img src="https://wkretype.bdimg.com/retype/zoom/8ca137376c175f0e7%20cd13757?pn=4&o=jpg_6&md5sum=58dde2ab1adebceee656f03910dd1681&sign=31155fafe8&png=17305-122927&jpg=179642-396655" srcset="/img/loading.gif" alt=""></p><p><img src="https://wkretype.bdimg.com/retype/zoom/8ca137376c175f0e7cd13757?pn=5&o=jpg_6&md5sum=58dde2ab1adebceee656f03910dd1681&sign=31155fafe8&png=122928-231672&jpg=396656-701933" srcset="/img/loading.gif" alt=""></p><p><img src="https://wkretype.bdimg.com/retype/zoom/8ca137376c175f0e7cd13757?pn=6&o=jpg_6&md5sum=58dde2ab1adebceee656f03910dd1681&sign=31155fafe8&png=231673-338674&jpg=701934-911915" srcset="/img/loading.gif" alt=""></p><p><img src="https://wkretype.bdimg.com/retype/zoom/8ca137376c175f0e7cd13757?pn=7&o=jpg_6&md5sum=58dde2ab1adebceee656f03910dd1681&sign=31155fafe8&png=338675-447310&jpg=911916-1123457" srcset="/img/loading.gif" alt=""></p><p><img src="https://wkretype.bdimg.com/retype/zoom/8ca137376c175f0e7cd13757?pn=8&o=jpg_6&md5sum=58dde2ab1adebceee656f03910dd1681&sign=31155fafe8&png=447311-558351&jpg=1123458-1376426" srcset="/img/loading.gif" alt=""></p><p><img src="https://wkretype.bdimg.com/retype/zoom/8ca137376c175f0e7cd13757?pn=9&o=jpg_6&md5sum=58dde2ab1adebceee656f03910dd1681&sign=31155fafe8&png=558352-581233&jpg=1376427-1618772" srcset="/img/loading.gif" alt=""></p><p><img src="https://wkretype.bdimg.com/retype/zoom/8ca137376c175f0e7cd13757?pn=10&o=jpg_6&md5sum=58dde2ab1adebceee656f03910dd1681&sign=31155fafe8&png=581234-613072&jpg=1618773-1799635" srcset="/img/loading.gif" alt=""></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h3 id=&quot;80C51单片机引脚图及引脚功能介绍&quot;&gt;&lt;a href=&quot;#80C51单片机引脚图及引脚功能介绍&quot; class=&quot;headerlink&quot; title=&quot;80C51单片机引脚图及引脚功能介绍&quot;&gt;&lt;/a&gt;80C51单片机引脚图及引脚功能介绍&lt;/h3&gt;&lt;p&gt;首先我们来介
       
     
     </summary>
