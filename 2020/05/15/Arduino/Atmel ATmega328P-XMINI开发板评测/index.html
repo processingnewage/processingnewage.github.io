@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" type="image/png" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="">
+  <meta name="author" content="John Doe">
+  <meta name="keywords" content="">
+  <title>Arduino/Atmel ATmega328P-XMINI开发板评测 - Hexo</title>
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
+<link  rel="stylesheet" href="https://cdn.staticfile.org/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/10.0.0/styles/github-gist.min.css" />
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_fmb4a04yx8h.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_pjno9b9zyxs.css">
+
+
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+<meta name="generator" content="Hexo 4.2.1"><link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+</head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>processing</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/">
+              <i class="iconfont icon-home-fill"></i>
+              Home</a>
+          </li>
+        
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/archives/">
+              <i class="iconfont icon-archive-fill"></i>
+              Archives</a>
+          </li>
+        
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/categories/">
+              <i class="iconfont icon-category-fill"></i>
+              Categories</a>
+          </li>
+        
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/tags/">
+              <i class="iconfont icon-tags-fill"></i>
+              Tags</a>
+          </li>
+        
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/about/">
+              <i class="iconfont icon-user-fill"></i>
+              About</a>
+          </li>
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="view intro-2" id="background" parallax=true
+         style="background: url('/img/default.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="container text-center white-text fadeInUp">
+            <span class="h2" id="subtitle">
+              
+            </span>
+
+            
+              
+                <div class="mt-3 post-meta">
+                  <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+                  <time datetime="2020-05-15 23:08">
+                    May 15, 2020 pm
+                  </time>
+                </div>
+              
+
+              <div class="mt-1">
+                
+                  
+                  <span class="post-meta mr-2">
+                    <i class="iconfont icon-chart"></i>
+                    2k 字
+                  </span>
+                
+
+                
+                  
+                  <span class="post-meta mr-2">
+                      <i class="iconfont icon-clock-fill"></i>
+                    
+                    
+                    22
+                     分钟
+                  </span>
+                
+
+                
+              </div>
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-md">
+      <div class="container nopadding-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <div class="post-content mx-auto" id="post">
+            
+            <article class="markdown-body">
+              <h2 id="与Arduino“本是同根”——Atmel-ATmega328P-XMINI开发板评测"><a href="#与Arduino“本是同根”——Atmel-ATmega328P-XMINI开发板评测" class="headerlink" title="与Arduino“本是同根”——Atmel ATmega328P-XMINI开发板评测"></a>与Arduino“本是同根”——Atmel ATmega328P-XMINI开发板评测</h2><p>分享到：</p>
+<p>用“海纳百川”来形容市场确实有一定的道理，即使如今ARM Cortex-M系列的微控制器生态圈遍布全球，但是在差异化的细分市场中，其它架构的MCU产品终究占有不小的市场份额，以低功耗著称的Atmel AVR系列就是其中的一类，更是随着开源硬件Arduino的火热，AVR系列微控制器的热度又呈逐渐上升趋势。</p>
+<p>近日，爱板网就拿到了一款基于AVR微控制器的Atmel Xplained系列的mini评估板——<a href="https://www.eeboard.com/shop/?c=products&a=view&id=2591?evaluation" target="_blank" rel="noopener">ATmega328P-XMINI</a>，正如其名，板卡非常的迷你小巧，仅有小孩的一个巴掌大小（75mm*60mm）。</p>
+<p><a href="https://www.eeboard.com/wp-content/uploads/2014/10/atmega328p-7.jpg" target="_blank" rel="noopener"><img src="https://www.eeboard.com/wp-content/uploads/2014/10/atmega328p-7-500x279.jpg" srcset="/img/loading.gif" alt="atmega328p-7" title="atmega328p-7"></a></p>
+<p><em>ATmega328P-XMINI评估板</em></p>
+<p><a href="https://www.eeboard.com/shop/?c=products&a=view&id=2591?evaluation" target="_blank" rel="noopener">ATmega328P-XMINI评估板</a>采用4层板的设计，板卡搭载了Atmel常见的“资源组合模式”，即EDBG调试模块+微控制器+外设，不过，在此板卡上，外设资源基本可以“忽略”，倒是主MCU的信号脚都通过“洞洞板”引出，非常方便扩展。</p>
+<p><a href="https://www.eeboard.com/wp-content/uploads/2014/10/atmega328p-81.jpg" target="_blank" rel="noopener"><img src="https://www.eeboard.com/wp-content/uploads/2014/10/atmega328p-81-500x279.jpg" srcset="/img/loading.gif" alt="atmega328p-81" title="atmega328p-81"></a></p>
+<p><a href="https://www.eeboard.com/wp-content/uploads/2014/10/atmega328p-9.jpg" target="_blank" rel="noopener"><img src="https://www.eeboard.com/wp-content/uploads/2014/10/atmega328p-9-500x279.jpg" srcset="/img/loading.gif" alt="atmega328p-9" title="atmega328p-9"></a></p>
+<p><em>ATmega328P-XMINI评估板</em></p>
+<p>ATmega328P-XMINI板载资源：</p>
+<ul>
+<li>ATmega328p（<a href="http://www.datasheet5.com/pn-ATMEGA328P-15MZ-1636598?eeboard" target="_blank" rel="noopener">ATmega328p数据手册</a>） AVR微控制器</li>
+<li>EDBG模块：Atmega32u4（<a href="http://www.datasheet5.com/pn-ATMEGA32U4-16AU-1210888?eeboard" target="_blank" rel="noopener">Atmega32u4数据手册</a>）微控制器</li>
+<li>用户按键*1、用户LED*1、调试LED*1</li>
+<li>JTAG、Arduino R3、ISP接口（预留）</li>
+</ul>
+<p>除了用于基本调试的用户按键以及用户LED外，ATmega328P-XMINI评估板预留了与Arduino R3兼容的扩展接口，JTAG接口以及ISP接口，板卡同样搭载了Atmel特有的方便用户开发调试的EDBG模块，功能包括：</p>
+<ul>
+<li>Debug接口</li>
+<li>虚拟串口</li>
+<li>数据网关接口(DGI)</li>
+</ul>
+<p>用户只需一根mircoUSB线，即可轻松通过最新的免费IDE设计工具Atmel Studio6.2连接板卡实现编译、下载调试等操作。</p>
+<p>另外，相信大家注意到了，事实上这种“凸字形”外观的板卡大家并不陌生，这与爱板网不久前评测过的<a href="https://www.eeboard.com/evaluation/%E5%AE%8C%E5%85%A8%E8%87%AA%E7%94%B1diy%E7%9A%84%E8%BF%B7%E4%BD%A0%E8%AF%84%E4%BC%B0%E6%9D%BF-atmega168-xplained-mini%E8%AF%84%E6%B5%8B/2/" target="_blank" rel="noopener">Atmega168 Xplained Mini</a>可算是“隶属同门”，何其相似（如下图）。</p>
+<p><a href="https://www.eeboard.com/wp-content/uploads/2014/10/atmega328p-6.jpg" target="_blank" rel="noopener"><img src="https://www.eeboard.com/wp-content/uploads/2014/10/atmega328p-6-500x281.jpg" srcset="/img/loading.gif" alt="atmega328p-6" title="atmega328p-6"></a></p>
+<p><em>Atmega168 Xplained Mini评估板</em></p>
+<p>当然，仔细分辨的话这两者之间的区别也同样明显。之前的<a href="https://www.eeboard.com/evaluation/%E5%AE%8C%E5%85%A8%E8%87%AA%E7%94%B1diy%E7%9A%84%E8%BF%B7%E4%BD%A0%E8%AF%84%E4%BC%B0%E6%9D%BF-atmega168-xplained-mini%E8%AF%84%E6%B5%8B/2/" target="_blank" rel="noopener">Atmega168 Xplained Mini</a>在板卡的接口设计时采用了与电脑USB Host接口直连的设计（类似U盘接口），虽然这样做省去了额外的microUSB线，拿来即用，非常简单方便，但是在板卡实际的开发、评估的时，免不了需要在板卡上DIY、扩展、测试等，这时，如果板卡直连在电脑主机的USB上，会使这些操作变得非常麻烦，而且得小心翼翼的操作。而我们看到如今在ATmega328P-XMINI开发板上已经改回原来的microUSB接口，显然这样的设计更符合实际使用习惯，更为合理。</p>
+<p>除此之外，ATmega328P-XMINI开发板还在板卡的供电电路设计上做了优化：</p>
+<ul>
+<li>板卡微控制器仍旧采用microUSB的5V供电，不过在供电电路设计中加上了一个保持电流为500mA的保险丝</li>
+<li>为兼容Arduino R3的扩展接口中的3.3V电压信号，在microUSB接口处额外设计了3.3V电压输出的LDO电路</li>
+</ul>
+<p>清楚了解板卡这些硬件单元和外设功能，我们再重点来看看ATmega328P-XMINI板载的AVR微控制器ATmega328p-MU。（<a href="https://www.eeboard.com/evaluation/atmega328pxmini/2/" target="_blank" rel="noopener">下一页</a>）</p>
+<blockquote>
+<p><strong>推荐开发板</strong></p>
+<ul>
+<li><a href="http://url.eefocus.com/6n" target="_blank" rel="noopener">Atmel ATSTK600 最实用AVR/AVR32微控制器入门套件，包括ST板600主板以及JTAGICE调试器</a></li>
+<li><a href="http://url.eefocus.com/6n" target="_blank" rel="noopener">Arduino R3版入门开发套件  最流行开源硬件平台</a></li>
+</ul>
+</blockquote>
+<p><strong>ATmega328p-MU（[</strong>ATmega328p-MU数据手册<strong>](<a href="http://www.datasheet5.com/pn-ATMEGA328P-MU-1210923?eeboard)）微控制器" target="_blank" rel="noopener">http://www.datasheet5.com/pn-ATMEGA328P-MU-1210923?eeboard)）微控制器</a></strong></p>
+<p>ATmega328p-MU是一颗高性能、低功耗的“迷你”8位AVR微控制器（如下图），精简指令集架构，接近芯片级的封装，集成了32KB Flash，1KB EEPROM以及2KB RAM，最大可支持23个GPIO口的扩展，非常适合低功耗、小系统控制架构的白色小家电产品。</p>
+<p><a href="https://www.eeboard.com/wp-content/uploads/2014/10/atmega328p-11.jpg" target="_blank" rel="noopener"><img src="https://www.eeboard.com/wp-content/uploads/2014/10/atmega328p-11-500x281.jpg" srcset="/img/loading.gif" alt="atmega328p-11" title="atmega328p-11"></a></p>
+<p><a href="https://www.eeboard.com/wp-content/uploads/2014/10/atmega328p-13.jpg" target="_blank" rel="noopener"><img src="https://www.eeboard.com/wp-content/uploads/2014/10/atmega328p-13-500x358.jpg" srcset="/img/loading.gif" alt="atmega328p-13" title="atmega328p-13"></a></p>
+<p><em>ATmega328P-MU微控制器</em></p>
+<ul>
+<li>高性能、低功耗的8位AVR微控制器，RSIC架构，工作电压1.8V~5.5V，MLF封装</li>
+<li>集成USART、SPI、PWM、ADC、TWI、定时器、看门狗等，最大可支持扩展23个IO口</li>
+<li>集成内部晶体振荡，温度传感器，Atmel QTouch 库支持</li>
+<li>微控制器主频速度分级：0 - <a href="mailto:4MHz@1.8">4MHz@1.8</a> - 5.5V, 0 - <a href="mailto:10MHz@2.7">10MHz@2.7</a> - 5.5.V, 0 - 20MHz @ 4.5 - 5.5V</li>
+<li>功耗@1MHz, 1.8V：Active Mode（0.2mA）、Power-down Mode:（0.1µA）、Power-save Mode（ 0.75µA） (Including 32kHz RTC)</li>
+</ul>
+<p>ATmega328p-MU具有AVR微控制器的典型特性，精简指令集架构，适应宽工作电压范围，灵活的低功耗模式，支持Atmel特有的QTouch库，最大可支持23个IO口，作为一款8位的单片机，性能和功能都已经足够强大了。</p>
+<p>说实话，看到ATmega328P-XMINI评估板搭载这颗微控制器还是挺让人意外的，对于使用过Arduino开发板的朋友应该对这个型号的AVR微控制器并不陌生，比如笔者手上的这块Arduino开发板，搭载了基于Atmel ATMEGA328P-PU AVR微控制器，见下图</p>
+<p><a href="https://www.eeboard.com/wp-content/uploads/2014/10/atmega328p-12.jpg" target="_blank" rel="noopener"><img src="https://www.eeboard.com/wp-content/uploads/2014/10/atmega328p-12-500x281.jpg" srcset="/img/loading.gif" alt="atmega328p-12" title="atmega328p-12"></a></p>
+<p><em>Atmel ATMEGA328P-PU微控制器</em></p>
+<p>虽然封装工艺差别很大，型号也有相差，但是功能基本相同，唯一区别的就数ADC的通道数：</p>
+<ul>
+<li>ATmega328P-MU：8通道的10位ADC</li>
+<li>ATMEGA328P-PU：6通道的10位ADC</li>
+</ul>
+<p>不过，正如所见到的，Arduino开发板搭载的PDIP28封装的ATMEGA328P-PU更适合学习、开发之用，而高集成度的ATmega328P-MU才是一款真正倾向于产品化应用开发领域的MCU，总之一句话，熟悉Arduino的用户一定能快速上手Atmel ATmega328P-XMINI。</p>
+<p><strong>Atmel ATmega328P-XMINI应用与使用</strong></p>
+<p>如果你非常熟悉单片机应用市场，那么你就会发现低功耗的8位微控制器在系统控制简单的白色小家电领域非常的活跃，比如冰箱、洗衣机、电饭煲等的面板控制系统，再者，在这个人们越来越重视高质量生活的时代，楼宇控制的舒适性也一再被强调，比如下面的恒温调节器产品，同样可以通过低功耗的AVR系列微控制器实现。</p>
+<p><a href="https://www.eeboard.com/wp-content/uploads/2014/10/atmega328p-16.jpg" target="_blank" rel="noopener"><img src="https://www.eeboard.com/wp-content/uploads/2014/10/atmega328p-16-500x190.jpg" srcset="/img/loading.gif" alt="atmega328p-16" title="atmega328p-16"></a></p>
+<p><a href="https://www.eeboard.com/wp-content/uploads/2014/10/atmega328p-17.jpg" target="_blank" rel="noopener"><img src="https://www.eeboard.com/wp-content/uploads/2014/10/atmega328p-17-500x176.jpg" srcset="/img/loading.gif" alt="atmega328p-17" title="atmega328p-17"></a></p>
+<p><em>恒温调节器应用</em></p>
+<p>介绍完评估板和微控制器的一些特点后，再来实际上电体验一下板卡的功能。ATmega328P-XMINI出厂内置的是一个通过用户按键控制实现LED点亮或者熄灭的程序，在连接microUSB上电后，系统会自动执行初始化，然后运行内置程序，如下图</p>
+<p><a href="https://www.eeboard.com/wp-content/uploads/2014/10/atmega328p-141.jpg" target="_blank" rel="noopener"><img src="https://www.eeboard.com/wp-content/uploads/2014/10/atmega328p-141-500x279.jpg" srcset="/img/loading.gif" alt="atmega328p-141" title="atmega328p-141"></a></p>
+<p><em>ATmega328P-XMINI上电运行出厂程序</em></p>
+<p>要想对板卡进一步开发，那就必须配合IDE工具了。对于初次接触Atmel开发板的用户，爱板网推荐大家使用Atmel官网提供的免费强大的IDE设计工具Atmel Studio6.2，这不仅可以帮助用户快速上手Atmel的评估板，更包含了最新最全的官方例程资源，比如可支持最新的Xplained mini系列评估板，如下图</p>
+<p><a href="https://www.eeboard.com/wp-content/uploads/2014/10/atmega328p-18.jpg" target="_blank" rel="noopener"><img src="https://www.eeboard.com/wp-content/uploads/2014/10/atmega328p-18.jpg" srcset="/img/loading.gif" alt="atmega328p-18" title="atmega328p-18"></a></p>
+<p><a href="https://www.eeboard.com/wp-content/uploads/2014/10/atmega328p-20.jpg" target="_blank" rel="noopener"><img src="https://www.eeboard.com/wp-content/uploads/2014/10/atmega328p-20-500x256.jpg" srcset="/img/loading.gif" alt="atmega328p-20" title="atmega328p-20"></a></p>
+<p>以ATmega328P-XMINI为例，只需一根microUSB线即可连接Atmel Studio6.2，实现编译、下载、调试等功能的操作。具体的步骤在这就不再详细叙述了，可以参考爱板网关于<a href="https://www.eeboard.com/evaluation/%E5%AE%8C%E5%85%A8%E8%87%AA%E7%94%B1diy%E7%9A%84%E8%BF%B7%E4%BD%A0%E8%AF%84%E4%BC%B0%E6%9D%BF-atmega168-xplained-mini%E8%AF%84%E6%B5%8B/2/" target="_blank" rel="noopener">Atmega168 Xplained Mini板卡评测</a>的内容。</p>
+<p><strong>小结</strong></p>
+<p>介绍了Atmel ATmega328P-XMINI评估板以及ATMEGA328P-MU AVR微控制器的特点及应用，板载Atmel独有的EDBG模块省去了额外的硬件调试器，预留的原型区域提供给用户各种DIY的可能，接近芯片级封装的“迷你”AVR微控制器更是给Arduino用户提供了从开发到产品化的保障，加上强大的IDE设计工具Atmel Studio6.2，无论是学习、开发、DIY，Atmel ATmega328P-XMINI都能轻松胜任。</p>
+<p>参考资料</p>
+<ul>
+<li><a href="https://www.eeboard.com/shop/?c=products&a=view&id=2591?evaluation" target="_blank" rel="noopener">ATmega328P-XMINI 购买链接</a></li>
+<li><a href="https://www.eeboard.com/bbs/forum-113-1.html" target="_blank" rel="noopener">Atmel中文论坛</a></li>
+<li><a href="http://www.atmel.com/tools/ATMELSTUDIO.aspx" target="_blank" rel="noopener">Atmel Studio6.2设计工具</a></li>
+<li><a href="http://www.atmel.com/tools/MEGA328P-XMINI.aspx?tab=related" target="_blank" rel="noopener">Atmel Xplained Mini 开发板资料</a></li>
+<li><a href="http://www.atmel.com/devices/ATMEGA328P.aspx" target="_blank" rel="noopener">Atmel ATmega328p AVR微控制器资料</a></li>
+</ul>
+
+            </article>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/Arduino/">Arduino</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">本博客所有文章除特别声明外，均采用 <a href="https://zh.wikipedia.org/wiki/Wikipedia:CC_BY-SA_3.0%E5%8D%8F%E8%AE%AE%E6%96%87%E6%9C%AC" target="_blank" rel="nofollow noopener noopener">CC BY-SA 3.0协议</a> 。转载请注明出处！</p>
+              
+              
+                <div class="post-prevnext row">
+                  <div class="post-prev col-6">
+                    
+                    
+                      <a href="/2020/05/15/Arduino/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86+%E7%96%91%E9%9A%BE%E8%A7%A3%E7%AD%94/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">Arduino/基础知识+疑难解答</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </div>
+                  <div class="post-next col-6">
+                    
+                    
+                      <a href="/2020/05/15/Arduino/Arduino%E9%AB%98%E7%BA%A7%E6%95%99%E7%A8%8B/">
+                        <span class="hidden-mobile">Arduino/Arduino高级教程</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </div>
+                </div>
+              
+            </div>
+
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;TOC</p>
+  <div id="tocbot"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+  </main>
+
+  
+    <a id="scroll-top-button" href="#" role="button">
+      <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+    </a>
+  
+
+  
+    <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Search</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">keyword</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+  
+
+  
+
+  
+
+  <footer class="mt-5">
+  <div class="text-center py-3">
+    <div>
+      <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a>
+      <i class="iconfont icon-love"></i>
+      <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener">
+        <span>Fluid</span></a>
+    </div>
+    
+
+    
+
+    
+  </div>
+</footer>
+
+<!-- SCRIPTS -->
+<script  src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js" ></script>
+<script  src="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/js/bootstrap.min.js" ></script>
+<script  src="/js/main.js" ></script>
+
+
+  <script  src="/js/lazyload.js" ></script>
+
+
+
+  
+  <script  src="https://cdn.staticfile.org/tocbot/4.11.1/tocbot.min.js" ></script>
+  <script>
+    $(document).ready(function () {
+      var boardCtn = $('#board-ctn');
+      var boardTop = boardCtn.offset().top;
+
+      tocbot.init({
+        tocSelector: '#tocbot',
+        contentSelector: '.post-content',
+        headingSelector: 'h1,h2,h3,h4,h5,h6',
+        linkClass: 'tocbot-link',
+        activeLinkClass: 'tocbot-active-link',
+        listClass: 'tocbot-list',
+        isCollapsedClass: 'tocbot-is-collapsed',
+        collapsibleClass: 'tocbot-is-collapsible',
+        collapseDepth: 0,
+        scrollSmooth: true,
+        headingsOffset: -boardTop
+      });
+      if ($('.toc-list-item').length > 0) {
+        $('#toc').css('visibility', 'visible');
+      }
+    });
+  </script>
+
+
+
+
+
+  <script defer src="https://cdn.staticfile.org/clipboard.js/2.0.6/clipboard.min.js" ></script>
+  <script  src="/js/clipboard-use.js" ></script>
+
+
+
+
+
+
+<!-- Plugins -->
+
+
+
+  <script  src="https://cdn.staticfile.org/typed.js/2.0.11/typed.min.js" ></script>
+  <script>
+    var typed = new Typed('#subtitle', {
+      strings: [
+        '  ',
+        "Arduino/Atmel ATmega328P-XMINI开发板评测&nbsp;",
+      ],
+      cursorChar: "_",
+      typeSpeed: 70,
+      loop: false,
+    });
+    typed.stop();
+    $(document).ready(function () {
+      $(".typed-cursor").addClass("h2");
+      typed.start();
+    });
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/anchor-js/4.2.2/anchor.min.js" ></script>
+  <script>
+    anchors.options = {
+      placement: "right",
+      visible: "hover",
+      
+    };
+    var el = "h1,h2,h3,h4,h5,h6".split(",");
+    var res = [];
+    for (item of el) {
+      res.push(".markdown-body > " + item)
+    }
+    anchors.add(res.join(", "))
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    var path = "/local-search.xml";
+    var inputArea = document.querySelector("#local-search-input");
+    inputArea.onclick = function () {
+      searchFunc(path, 'local-search-input', 'local-search-result');
+      this.onclick = null
+    }
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+  <script>
+    $('#post img:not(.no-zoom img, img[no-zoom]), img[zoom]').each(
+      function () {
+        var element = document.createElement('a');
+        $(element).attr('data-fancybox', 'images');
+        $(element).attr('href', $(this).attr('src'));
+        $(this).wrap(element);
+      }
+    );
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
