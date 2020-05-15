@@ -183,7 +183,7 @@
           <div class="post-content mx-auto" id="post">
             
             <article class="markdown-body">
-              <h4 id="Python语言中socket编程"><a href="#Python语言中socket编程" class="headerlink" title="Python语言中socket编程"></a>Python语言中socket编程</h4><p>   要进行socket编程，发送网络消息，我们可以使用Python内置的socket库，目前的socket编程，使用的最多的就是通过TCP协议进行网络通讯的，TCP进行通讯的程序双方，分为==服务端==和==客户端==， TCP协议进行通讯的双方，是需要先建立一个==虚拟连接==，然后双方程序才能发送业务数据信息；<br>   建立TCP虚拟连接是通过著名的<strong>三次握手</strong>进行的；<br>具体三次握手的细节大家可以参考这篇文章 <a href="https://zhuanlan.zhihu.com/p/40499563【见下一章节】" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/40499563【见下一章节】</a><br>我们现在来看一个TCP协议进行通讯的 socket 服务端程序和客户端程序，<br><strong>下面是TCP服务端程序 server.py：</strong></p>
+              <h4 id="Python语言中socket编程"><a href="#Python语言中socket编程" class="headerlink" title="Python语言中socket编程"></a>Python语言中socket编程</h4><p>   要进行socket编程，发送网络消息，我们可以使用Python内置的socket库，目前的socket编程，使用的最多的就是通过TCP协议进行网络通讯的，TCP进行通讯的程序双方，分为<strong>服务端</strong>和<strong>客户端</strong>， TCP协议进行通讯的双方，是需要先建立一个<strong>虚拟连接</strong>，然后双方程序才能发送业务数据信息；<br>   建立TCP虚拟连接是通过著名的<strong>三次握手</strong>进行的；<br>具体三次握手的细节大家可以参考这篇文章 <a href="https://zhuanlan.zhihu.com/p/40499563" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/40499563</a>  【见下一章节】<br>我们现在来看一个TCP协议进行通讯的 socket 服务端程序和客户端程序，<br><strong>下面是TCP服务端程序 server.py：</strong></p>
 <pre><code class="hljs python"><span class="hljs-comment">#  === TCP 服务端程序 server.py ===</span>
 
 <span class="hljs-keyword">from</span> socket <span class="hljs-keyword">import</span> *  <span class="hljs-comment"># 导入socket 库</span>
@@ -227,7 +227,8 @@ print(<span class="hljs-string">'接受一个客户端连接:'</span>, addr)
 <span class="hljs-comment"># 服务端也调用close()关闭socket</span>
 dataSocket.close()
 listenSocket.close()</code></pre>
-<p>*<em>下面是TCP客户端程序 client.py:  *</em></p>
+
+<p><strong>下面是TCP客户端程序 client.py:</strong> </p>
 <pre><code class="hljs python"><span class="hljs-comment">#  === TCP 客户端程序 client.py ===</span>
 
 <span class="hljs-keyword">from</span> socket <span class="hljs-keyword">import</span> *
