@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+
+    
+
+    <!-- 渲染优化 -->
+    <meta name="renderer" content="webkit">
+    <meta name="force-rendering" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="HandheldFriendly" content="True" >
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!--icon-->
+
+    <link rel="shortcut icon" type='image/x-icon' href="/favicon.ico">
+
+
+    <!-- meta -->
+
+
+<title>Others/安装VirtualBox增强功能使得deepin全屏显示 | Hexo</title>
+
+
+    <meta name="keywords" content="Others">
+
+
+
+
+    <!-- OpenGraph -->
+ 
+    <meta name="description" content="「玩转deepin」如何安装VirtualBox增强功能使得deepin全屏显示？在Windows上通过Virtualbox安装deepin深度操作系统，安装完成后，为了让deepin可以在virtualbox中全屏显示，需要安装增强工具，但是不少同学点击安装增强工具后会出现无法安装的情况在【设备】中点击【安装增强功能】时，会跳出“未能加载虚拟光盘C:\Program Files\Oracle\V">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Others&#x2F;安装VirtualBox增强功能使得deepin全屏显示">
+<meta property="og:url" content="http://yoursite.com/2020/05/15/Others/%E5%AE%89%E8%A3%85VirtualBox%E5%A2%9E%E5%BC%BA%E5%8A%9F%E8%83%BD%E4%BD%BF%E5%BE%97deepin%E5%85%A8%E5%B1%8F%E6%98%BE%E7%A4%BA/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="「玩转deepin」如何安装VirtualBox增强功能使得deepin全屏显示？在Windows上通过Virtualbox安装deepin深度操作系统，安装完成后，为了让deepin可以在virtualbox中全屏显示，需要安装增强工具，但是不少同学点击安装增强工具后会出现无法安装的情况在【设备】中点击【安装增强功能】时，会跳出“未能加载虚拟光盘C:\Program Files\Oracle\V">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://p1.pstatp.com/large/pgc-image/7a800b36b5ab4a6fb7543f52a45ccfc2">
+<meta property="og:image" content="http://p3.pstatp.com/large/pgc-image/d91b81f1c9fd480e824de526656037c3">
+<meta property="og:image" content="http://p1.pstatp.com/large/pgc-image/7bf0d430dd9242498433b7dd53f4b8ff">
+<meta property="og:image" content="http://p9.pstatp.com/large/pgc-image/32e301e5c94e49188f693a20a58d7eaa">
+<meta property="og:image" content="http://p1.pstatp.com/large/pgc-image/4c75a5573e9142519a37b17678ad8bb9">
+<meta property="og:image" content="http://p1.pstatp.com/large/pgc-image/7dc47eb1a70b438a8b652076e0194929">
+<meta property="og:image" content="http://p3.pstatp.com/large/pgc-image/717c1ef9eb5d49788f6487a0130f6eae">
+<meta property="article:published_time" content="2020-05-15T07:37:54.210Z">
+<meta property="article:modified_time" content="2020-05-15T08:00:15.340Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="Others">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="http://p1.pstatp.com/large/pgc-image/7a800b36b5ab4a6fb7543f52a45ccfc2">
+
+
+    
+<link rel="stylesheet" href="/css/style/main.css">
+ 
+
+
+
+    
+    
+        <link rel="stylesheet" id="hl-default-theme" href="/css/highlight/default.css" media="none" onload="if(getComputedStyle(document.documentElement).getPropertyValue('--color-mode').indexOf('dark')===-1)this.media='all'">
+        
+    
+
+    
+    
+
+     
+
+    <!-- custom head -->
+
+<meta name="generator" content="Hexo 4.2.1"><link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+</head>
+
+    <body>
+        <div id="app">
+            <header class="header">
+    <div class="header__left">
+        <a href="/" class="button">
+            <span class="logo__text">
+                Demo
+            </span>
+        </a>
+    </div>
+    <div class="header__right">
+        
+            <div class="navbar__menus">
+                
+                    <a href="/" class="navbar-menu button">
+                        首页
+                    </a>
+                
+                    <a href="/tags/" class="navbar-menu button">
+                        标签
+                    </a>
+                
+                    <a href="/archives/" class="navbar-menu button">
+                        归档
+                    </a>
+                
+                    <a href="/friends/" class="navbar-menu button">
+                        友链
+                    </a>
+                
+                    <a href="/page/" class="navbar-menu button">
+                        Page
+                    </a>
+                
+            </div>
+        
+        
+        
+
+        
+        
+
+        
+
+        
+            <a class="dropdown-icon button" id="btn-dropdown">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width='24' height='24' fill="none" stroke="currentColor" stroke-width="0.7" stroke-linecap="round" stroke-linejoin="round">
+                    <path fill="currentColor" d="M3.314,4.8h13.372c0.41,0,0.743-0.333,0.743-0.743c0-0.41-0.333-0.743-0.743-0.743H3.314c-0.41,0-0.743,0.333-0.743,0.743C2.571,4.467,2.904,4.8,3.314,4.8z M16.686,15.2H3.314c-0.41,0-0.743,0.333-0.743,0.743s0.333,0.743,0.743,0.743h13.372c0.41,0,0.743-0.333,0.743-0.743S17.096,15.2,16.686,15.2z M16.686,9.257H3.314c-0.41,0-0.743,0.333-0.743,0.743s0.333,0.743,0.743,0.743h13.372c0.41,0,0.743-0.333,0.743-0.743S17.096,9.257,16.686,9.257z"></path>
+                </svg>
+            </a>
+            <div class="dropdown-menus" id="dropdown-menus">
+                
+                    <a href="/" class="dropdown-menu button">
+                        首页
+                    </a>
+                
+                    <a href="/tags/" class="dropdown-menu button">
+                        标签
+                    </a>
+                
+                    <a href="/archives/" class="dropdown-menu button">
+                        归档
+                    </a>
+                
+                    <a href="/friends/" class="dropdown-menu button">
+                        友链
+                    </a>
+                
+                    <a href="/page/" class="dropdown-menu button">
+                        Page
+                    </a>
+                
+            </div>
+        
+    </div>
+</header>
+
+
+            <main class="main">
+    
+
+<div class="post-title">
+    <h1 class="post-title__text">
+        Others/安装VirtualBox增强功能使得deepin全屏显示
+    </h1>
+    <div class="post-title__meta">
+        <a href="/archives/2020/05/" class="post-meta__date button">
+    2020-05-15
+</a>
+        
+ 
+        
+    
+    
+
+
+ 
+
+ 
+    </div>
+</div>
+
+
+
+<article class="post content-card">
+    <div class="post__header"></div>
+    <div class="post__content">
+        <h3 id="「玩转deepin」如何安装VirtualBox增强功能使得deepin全屏显示？"><a href="#「玩转deepin」如何安装VirtualBox增强功能使得deepin全屏显示？" class="headerlink" title="「玩转deepin」如何安装VirtualBox增强功能使得deepin全屏显示？"></a>「玩转deepin」如何安装VirtualBox增强功能使得deepin全屏显示？</h3><p>在Windows上通过Virtualbox安装deepin深度操作系统，安装完成后，为了让deepin可以在virtualbox中全屏显示，需要安装增强工具，但是不少同学点击安装增强工具后会出现无法安装的情况<br><img src="http://p1.pstatp.com/large/pgc-image/7a800b36b5ab4a6fb7543f52a45ccfc2" alt="picture1"><br>在【设备】中点击【安装增强功能】时，会跳出“未能加载虚拟光盘C:\Program Files\Oracle\VirtualBox\VBoxGuestAdditions.iso 到虚拟电脑Deepin.”的提示框，从而无法安装增强功能实现deepin全屏化的显示<br><img src="http://p3.pstatp.com/large/pgc-image/d91b81f1c9fd480e824de526656037c3" alt="picture2"><br>遇到这个问题该怎么处理呢？</p>
+<h6 id="安装步骤："><a href="#安装步骤：" class="headerlink" title="安装步骤："></a>安装步骤：</h6><p>一、首先检查安装的VBox的目录中有无增强工具的镜像文件（VBoxGuestAdditions.iso）<br>        <a href="https://w0.dk/~chlor/vboxguestadditions/" target="_blank" rel="noopener">下载地址</a><br>一般而言，官网下载的VBox安装后是可以找到的，打开VBoxGuestAdditions.iso镜像文件，找到 VBoxLinuxAdditions.run。（这个是安装增强的关键运行文件）<br><img src="http://p1.pstatp.com/large/pgc-image/7bf0d430dd9242498433b7dd53f4b8ff" alt="picture3"><br>二、在deepin服务其中的操作<br>（一）打开deepin的文件管理器查看刚刚寻找的文件：<br><img src="http://p9.pstatp.com/large/pgc-image/32e301e5c94e49188f693a20a58d7eaa" alt="picture4"><br>（二）运行VBoxLinuxAdditions.run文件</p>
+<ol>
+<li>终端运行：<br> 在deepin系统中运行VBoxLinuxAdditions.run文件，则可实现全屏化运行效果。ctrl+alt+t 打开 terminal窗口，输入如图命令，deepin是我的本机用户名，在操作时应参考你的本机名。<br>按照下图操作后，成功找到增强工具的运行文件，然后运行VBoxLinuxAdditions.run文件<br><img src="http://p1.pstatp.com/large/pgc-image/4c75a5573e9142519a37b17678ad8bb9" alt="picture5"><br>命令解释：ls 列出查看当前目录。cd ..回到上级目录 cd /文件夹名或者路径名/ 转到对应的目录文件<br>输入命令 sudo ./VBoxLinuxAdditions.run，运行结束后，重启virtualbox中的deepin系统即可实现全屏化运行</li>
+<li>界面运行：<br> 不太懂命令行的同学可以在deepin的系统盘中找到media文件夹—用户名文件夹（本用户名为deepin），打开后可以看到VBox_GAs_6.0.10，然后右击在终端中打开<br><img src="http://p1.pstatp.com/large/pgc-image/7dc47eb1a70b438a8b652076e0194929" alt="picture6"><br>在终端中打开后，进入终端页面，只需要输入sudo ./VBoxLinuxAdditions.run，回车，运行完成重启后可实现全屏化运行<br><img src="http://p3.pstatp.com/large/pgc-image/717c1ef9eb5d49788f6487a0130f6eae" alt="picture7"></li>
+</ol>
+
+    </div>
+     
+    <div class="post-footer__meta">
+    <p>
+        updated at 2020-05-15
+    </p>
+</div> 
+    <div class="post-meta__cats">
+    
+    
+        <a href="/tags/Others/" class="post-tags__link button"># Others</a>
+    
+</div> 
+</article>
+
+
+    <div class="nav">
+        <div class="nav__prev">
+            
+                <a href="/2020/05/15/Others/%E5%85%B3%E4%BA%8Ewin10%20c-c++%E7%BC%96%E8%AF%91%E7%8E%AF%E5%A2%83%E7%9A%84%E9%85%8D%E7%BD%AE/" class="nav__link">
+                    <div>
+                        <svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path d="M589.088 790.624L310.464 512l278.624-278.624 45.248 45.248L400.96 512l233.376 233.376z" fill="#808080"></path></svg>
+                    </div>
+                    <div>
+                        <div class="nav__label">
+                            Previous Post
+                        </div>
+                        <div class="nav__title">
+                            Others/关于win10 c-c++编译环境的配置
+                        </div>
+                    </div>
+                </a>
+            
+        </div>
+        <div class="nav__next">
+            
+                <a href="/2020/05/15/Others/win10%E5%AE%89%E8%A3%85elementary%20os%E6%93%8D%E4%BD%9C%E6%8C%87%E5%8D%97/" class="nav__link">
+                    <div>
+                        <div class="nav__label">
+                            Next Post
+                        </div>
+                        <div class="nav__title">
+                            Others/win10安装elementary os操作指南
+                        </div>
+                    </div>
+                    <div>
+                        <svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path d="M434.944 790.624l-45.248-45.248L623.04 512l-233.376-233.376 45.248-45.248L713.568 512z" fill="#808080"></path></svg>
+                    </div>
+                </a>
+            
+        </div>
+    </div>
+
+
+
+
+
+</main>
+
+            <footer class="footer">
+    
+
+
+    
+     
+ 
+
+ 
+    
+        
+        <p class="footer-copyright">
+            Copyright © 2020 <a href="/">Hexo</a>
+        </p>
+    
+    
+    <p>Powered by <a href="https://hexo.io" target="_blank">Hexo</a> | Theme - <a href="https://github.com/ChrAlpha/hexo-theme-cards" target="_blank">Cards</a></p>
+</footer>
+
+        </div>
+         
+
+ 
+
+ 
+
+ 
+
+  
+
+
+
+ 
+
+
+    
+ 
+
+ 
+
+ 
+
+ 
+
+
+
+
+    </body>
+</html>

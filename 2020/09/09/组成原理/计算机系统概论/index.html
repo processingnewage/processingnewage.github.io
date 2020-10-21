@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+
+    
+
+    <!-- 渲染优化 -->
+    <meta name="renderer" content="webkit">
+    <meta name="force-rendering" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="HandheldFriendly" content="True" >
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!--icon-->
+
+    <link rel="shortcut icon" type='image/x-icon' href="/favicon.ico">
+
+
+    <!-- meta -->
+
+
+<title>组成原理/计算机系统概论 | Hexo</title>
+
+
+
+
+
+    <!-- OpenGraph -->
+ 
+    <meta name="description" content="计算机组成原理之机器第一章：系统概论计算机系统的简介一、计算机的软硬件概念 现代计算机由软件和硬件两部分组成，软件分为系统软件和应用软件 常见的系统软件有：语言处理程序，操作系统，服务性程序，数据库管理系统，网络软件二、计算机系统的层次结构 系统复杂性的管理办法：抽象：高级的模型和低级的实体相对应，隐藏系统中不重要的细节 物理结构的抽象：physics  -&gt; Devices  -&gt;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="组成原理&#x2F;计算机系统概论">
+<meta property="og:url" content="http://yoursite.com/2020/09/09/%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E6%A6%82%E8%AE%BA/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="计算机组成原理之机器第一章：系统概论计算机系统的简介一、计算机的软硬件概念 现代计算机由软件和硬件两部分组成，软件分为系统软件和应用软件 常见的系统软件有：语言处理程序，操作系统，服务性程序，数据库管理系统，网络软件二、计算机系统的层次结构 系统复杂性的管理办法：抽象：高级的模型和低级的实体相对应，隐藏系统中不重要的细节 物理结构的抽象：physics  -&gt; Devices  -&gt;">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-09-09T10:32:39.103Z">
+<meta property="article:modified_time" content="2020-09-09T11:42:40.766Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary_large_image">
+
+
+    
+<link rel="stylesheet" href="/css/style/main.css">
+ 
+
+
+
+    
+    
+        <link rel="stylesheet" id="hl-default-theme" href="/css/highlight/default.css" media="none" onload="if(getComputedStyle(document.documentElement).getPropertyValue('--color-mode').indexOf('dark')===-1)this.media='all'">
+        
+    
+
+    
+    
+
+     
+
+    <!-- custom head -->
+
+<meta name="generator" content="Hexo 4.2.1"><link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+</head>
+
+    <body>
+        <div id="app">
+            <header class="header">
+    <div class="header__left">
+        <a href="/" class="button">
+            <span class="logo__text">
+                Demo
+            </span>
+        </a>
+    </div>
+    <div class="header__right">
+        
+            <div class="navbar__menus">
+                
+                    <a href="/" class="navbar-menu button">
+                        首页
+                    </a>
+                
+                    <a href="/tags/" class="navbar-menu button">
+                        标签
+                    </a>
+                
+                    <a href="/archives/" class="navbar-menu button">
+                        归档
+                    </a>
+                
+                    <a href="/friends/" class="navbar-menu button">
+                        友链
+                    </a>
+                
+                    <a href="/page/" class="navbar-menu button">
+                        Page
+                    </a>
+                
+            </div>
+        
+        
+        
+
+        
+        
+
+        
+
+        
+            <a class="dropdown-icon button" id="btn-dropdown">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width='24' height='24' fill="none" stroke="currentColor" stroke-width="0.7" stroke-linecap="round" stroke-linejoin="round">
+                    <path fill="currentColor" d="M3.314,4.8h13.372c0.41,0,0.743-0.333,0.743-0.743c0-0.41-0.333-0.743-0.743-0.743H3.314c-0.41,0-0.743,0.333-0.743,0.743C2.571,4.467,2.904,4.8,3.314,4.8z M16.686,15.2H3.314c-0.41,0-0.743,0.333-0.743,0.743s0.333,0.743,0.743,0.743h13.372c0.41,0,0.743-0.333,0.743-0.743S17.096,15.2,16.686,15.2z M16.686,9.257H3.314c-0.41,0-0.743,0.333-0.743,0.743s0.333,0.743,0.743,0.743h13.372c0.41,0,0.743-0.333,0.743-0.743S17.096,9.257,16.686,9.257z"></path>
+                </svg>
+            </a>
+            <div class="dropdown-menus" id="dropdown-menus">
+                
+                    <a href="/" class="dropdown-menu button">
+                        首页
+                    </a>
+                
+                    <a href="/tags/" class="dropdown-menu button">
+                        标签
+                    </a>
+                
+                    <a href="/archives/" class="dropdown-menu button">
+                        归档
+                    </a>
+                
+                    <a href="/friends/" class="dropdown-menu button">
+                        友链
+                    </a>
+                
+                    <a href="/page/" class="dropdown-menu button">
+                        Page
+                    </a>
+                
+            </div>
+        
+    </div>
+</header>
+
+
+            <main class="main">
+    
+
+<div class="post-title">
+    <h1 class="post-title__text">
+        组成原理/计算机系统概论
+    </h1>
+    <div class="post-title__meta">
+        <a href="/archives/2020/09/" class="post-meta__date button">
+    2020-09-09
+</a>
+        
+ 
+        
+    
+    
+
+
+ 
+
+ 
+    </div>
+</div>
+
+
+
+<article class="post content-card">
+    <div class="post__header"></div>
+    <div class="post__content">
+        <h3 id="计算机组成原理之机器"><a href="#计算机组成原理之机器" class="headerlink" title="计算机组成原理之机器"></a>计算机组成原理之机器</h3><h4 id="第一章：系统概论"><a href="#第一章：系统概论" class="headerlink" title="第一章：系统概论"></a>第一章：系统概论</h4><h5 id="计算机系统的简介"><a href="#计算机系统的简介" class="headerlink" title="计算机系统的简介"></a>计算机系统的简介</h5><h6 id="一、计算机的软硬件概念"><a href="#一、计算机的软硬件概念" class="headerlink" title="一、计算机的软硬件概念"></a>一、计算机的软硬件概念</h6><ul>
+<li>现代计算机由软件和硬件两部分组成，软件分为系统软件和应用软件</li>
+<li>常见的系统软件有：语言处理程序，操作系统，服务性程序，数据库管理系统，网络软件<h6 id="二、计算机系统的层次结构"><a href="#二、计算机系统的层次结构" class="headerlink" title="二、计算机系统的层次结构"></a>二、计算机系统的层次结构</h6></li>
+<li>系统复杂性的管理办法：抽象：高级的模型和低级的实体相对应，隐藏系统中不重要的细节</li>
+<li>物理结构的抽象：physics  -&gt; Devices  -&gt; Analog Circuits  -&gt;  DIgital Circuits  -&gt; Logic  -&gt; Micro-architecture  -&gt; Architecture  -&gt; OS  -&gt;  Application Software</li>
+<li>程序的抽象：微指令系统  -&gt;  机器语言  -&gt;  操作系统  -&gt;  汇编语言  -&gt;  高级语言<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">tips:</span><br><span class="line">计算机组成原理和计算机体系结构研究内容上的区别：</span><br><span class="line">计算机系统结构：定义计算机系统软硬件的交界面，定义功能的实现方法，提供上层软件编写时和硬件交互的接口，指的是程序员所见到的计算机系统的属性，概念性的结构与功能特性（指令系统，数据类型，寻址技术，IO原理等）</span><br><span class="line">计算机组成原理：实现计算机体系结构偶所体现的属性（具体指令的逻辑实现）</span><br></pre></td></tr></table></figure>
+<h5 id="计算机的基本组成"><a href="#计算机的基本组成" class="headerlink" title="计算机的基本组成"></a>计算机的基本组成</h5><h6 id="一、冯-诺伊曼计算机的特点"><a href="#一、冯-诺伊曼计算机的特点" class="headerlink" title="一、冯.诺伊曼计算机的特点"></a>一、冯.诺伊曼计算机的特点</h6></li>
+<li>计算机由五大部件组成<br>  1）运算器：算术运算和逻辑运算<br>  2）存储器：存放数据和程序<br>  3）控制器：指挥程序的运行<br>  4）输入输出：信息转换</li>
+<li>指令和数据以同等地位存储在存储器，可按地址寻访</li>
+<li>指令和数据用而二进制表示</li>
+<li>指令由操作码和地址码组成</li>
+<li><strong>程序存储</strong></li>
+<li>以运算器为中心<h6 id="二、冯-诺依曼架构的改进"><a href="#二、冯-诺依曼架构的改进" class="headerlink" title="二、冯.诺依曼架构的改进"></a>二、冯.诺依曼架构的改进</h6></li>
+<li>以存储器为核心</li>
+<li>现代计算机的硬件框图：<br>  运算器 ：ALU    控制器 ：CU）—&gt;  CPU    存储器：主存和辅存）     —-&gt;      主机<br>  输入设备        输出设备）   ——&gt;    I/O设备<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">tips:</span><br><span class="line">系统复杂性·管理的方法（3 y）</span><br><span class="line">层次化（Hierachy）:将被设计的系统划分为多个模块或子模块</span><br><span class="line">模块化（Modularity）:有明确定义（well-defined）的功能和接口</span><br><span class="line">规则性（Regularity）:模块更容易被重用</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h6 id="三、计算机工作的步骤"><a href="#三、计算机工作的步骤" class="headerlink" title="三、计算机工作的步骤"></a>三、计算机工作的步骤</h6><ul>
+<li><ol>
+<li>上机前的准备：<ul>
+<li>建立数学模型</li>
+<li>确定计算方法</li>
+<li>编制解题程序<ul>
+<li>程序：运算的全部步骤</li>
+<li>指令：每一个步骤    格式：操作码+地址码</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+</li>
+<li><ol start="2">
+<li>计算机的解题过程<br>1）存储器的基本组成<ul>
+<li>存储体-存储单元-存储元件</li>
+<li>存储单元：存放一串二进制代码</li>
+<li>存储字：存储单元中二进制代码的组合</li>
+<li>存储字长：存储单元中二进制代码的位数，每个存储单元赋予一个地址</li>
+<li>按地址寻址</li>
+<li>MAR：存储器地址寄存器，反映存储单元的个数</li>
+<li>MDR：存储器数据寄存器，反映存储字长<br>2）运算器的基本组成和工作过程</li>
+<li><h5 id="计算机硬件的主要技术指标"><a href="#计算机硬件的主要技术指标" class="headerlink" title="计算机硬件的主要技术指标"></a>计算机硬件的主要技术指标</h5></li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
+
+    </div>
+     
+    <div class="post-footer__meta">
+    <p>
+        updated at 2020-09-09
+    </p>
+</div> 
+    <div class="post-meta__cats">
+    
+    
+</div> 
+</article>
+
+
+    <div class="nav">
+        <div class="nav__prev">
+            
+                <a href="/2020/10/02/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E5%9F%BA%E7%A1%80/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E5%9F%BA%E7%A1%80_%E9%AB%98%E7%BA%A7%E7%A8%8B%E5%BA%8F%E8%AF%AD%E8%A8%80%E8%AE%BE%E8%AE%A1_%E7%AC%AC%E4%B8%80%E8%AF%BE_%E7%A8%8B%E5%BA%8F%E7%9A%84%E8%A1%A8%E7%A4%BA%E3%80%81%E8%BD%AC%E6%8D%A2%E4%B8%8E%E9%93%BE%E6%8E%A5/" class="nav__link">
+                    <div>
+                        <svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path d="M589.088 790.624L310.464 512l278.624-278.624 45.248 45.248L400.96 512l233.376 233.376z" fill="#808080"></path></svg>
+                    </div>
+                    <div>
+                        <div class="nav__label">
+                            Previous Post
+                        </div>
+                        <div class="nav__title">
+                            计算机系统基础/计算机系统基础_高级程序语言设计_第一课_程序的表示、转换与链接
+                        </div>
+                    </div>
+                </a>
+            
+        </div>
+        <div class="nav__next">
+            
+                <a href="/2020/09/09/%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AF%BE%E7%A8%8B%E7%AE%80%E4%BB%8B/" class="nav__link">
+                    <div>
+                        <div class="nav__label">
+                            Next Post
+                        </div>
+                        <div class="nav__title">
+                            组成原理/课程简介
+                        </div>
+                    </div>
+                    <div>
+                        <svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path d="M434.944 790.624l-45.248-45.248L623.04 512l-233.376-233.376 45.248-45.248L713.568 512z" fill="#808080"></path></svg>
+                    </div>
+                </a>
+            
+        </div>
+    </div>
+
+
+
+
+
+</main>
+
+            <footer class="footer">
+    
+
+
+    
+     
+ 
+
+ 
+    
+        
+        <p class="footer-copyright">
+            Copyright © 2020 <a href="/">Hexo</a>
+        </p>
+    
+    
+    <p>Powered by <a href="https://hexo.io" target="_blank">Hexo</a> | Theme - <a href="https://github.com/ChrAlpha/hexo-theme-cards" target="_blank">Cards</a></p>
+</footer>
+
+        </div>
+         
+
+ 
+
+ 
+
+ 
+
+  
+
+
+
+ 
+
+
+    
+ 
+
+ 
+
+ 
+
+ 
+
+
+
+
+    </body>
+</html>

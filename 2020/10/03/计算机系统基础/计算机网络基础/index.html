@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+
+    
+
+    <!-- 渲染优化 -->
+    <meta name="renderer" content="webkit">
+    <meta name="force-rendering" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="HandheldFriendly" content="True" >
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!--icon-->
+
+    <link rel="shortcut icon" type='image/x-icon' href="/favicon.ico">
+
+
+    <!-- meta -->
+
+
+<title>计算机系统基础/计算机网络基础 | Hexo</title>
+
+
+
+
+
+    <!-- OpenGraph -->
+ 
+    <meta name="description" content="计算机网络基础公网IP和局域网IP 你要寄送快递的时候，需要填省，市，县，然后是小区，门牌号  其中局域网IP就类似我们的小区门牌号，如果你在小区里说我家是12号楼1单元101，大家都知道你是这个地方，但是你要去别的小区说你是12号楼1单元101，他们肯定不知道你说的是你的小区，而会认为是他们的小区。所以局域网IP就是用于某一群体内部交互数据的，他的地址只在这个群体内部生效，拿出这个群体就失效了">
+<meta property="og:type" content="article">
+<meta property="og:title" content="计算机系统基础&#x2F;计算机网络基础">
+<meta property="og:url" content="http://yoursite.com/2020/10/03/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E5%9F%BA%E7%A1%80/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="计算机网络基础公网IP和局域网IP 你要寄送快递的时候，需要填省，市，县，然后是小区，门牌号  其中局域网IP就类似我们的小区门牌号，如果你在小区里说我家是12号楼1单元101，大家都知道你是这个地方，但是你要去别的小区说你是12号楼1单元101，他们肯定不知道你说的是你的小区，而会认为是他们的小区。所以局域网IP就是用于某一群体内部交互数据的，他的地址只在这个群体内部生效，拿出这个群体就失效了">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://pic3.zhimg.com/80/v2-cd702b4bea5d60825c21f550ace82bf2_1440w.jpg">
+<meta property="article:published_time" content="2020-10-03T15:28:20.684Z">
+<meta property="article:modified_time" content="2020-10-03T15:40:10.955Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://pic3.zhimg.com/80/v2-cd702b4bea5d60825c21f550ace82bf2_1440w.jpg">
+
+
+    
+<link rel="stylesheet" href="/css/style/main.css">
+ 
+
+
+
+    
+    
+        <link rel="stylesheet" id="hl-default-theme" href="/css/highlight/default.css" media="none" onload="if(getComputedStyle(document.documentElement).getPropertyValue('--color-mode').indexOf('dark')===-1)this.media='all'">
+        
+    
+
+    
+    
+
+     
+
+    <!-- custom head -->
+
+<meta name="generator" content="Hexo 4.2.1"><link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+</head>
+
+    <body>
+        <div id="app">
+            <header class="header">
+    <div class="header__left">
+        <a href="/" class="button">
+            <span class="logo__text">
+                Demo
+            </span>
+        </a>
+    </div>
+    <div class="header__right">
+        
+            <div class="navbar__menus">
+                
+                    <a href="/" class="navbar-menu button">
+                        首页
+                    </a>
+                
+                    <a href="/tags/" class="navbar-menu button">
+                        标签
+                    </a>
+                
+                    <a href="/archives/" class="navbar-menu button">
+                        归档
+                    </a>
+                
+                    <a href="/friends/" class="navbar-menu button">
+                        友链
+                    </a>
+                
+                    <a href="/page/" class="navbar-menu button">
+                        Page
+                    </a>
+                
+            </div>
+        
+        
+        
+
+        
+        
+
+        
+
+        
+            <a class="dropdown-icon button" id="btn-dropdown">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width='24' height='24' fill="none" stroke="currentColor" stroke-width="0.7" stroke-linecap="round" stroke-linejoin="round">
+                    <path fill="currentColor" d="M3.314,4.8h13.372c0.41,0,0.743-0.333,0.743-0.743c0-0.41-0.333-0.743-0.743-0.743H3.314c-0.41,0-0.743,0.333-0.743,0.743C2.571,4.467,2.904,4.8,3.314,4.8z M16.686,15.2H3.314c-0.41,0-0.743,0.333-0.743,0.743s0.333,0.743,0.743,0.743h13.372c0.41,0,0.743-0.333,0.743-0.743S17.096,15.2,16.686,15.2z M16.686,9.257H3.314c-0.41,0-0.743,0.333-0.743,0.743s0.333,0.743,0.743,0.743h13.372c0.41,0,0.743-0.333,0.743-0.743S17.096,9.257,16.686,9.257z"></path>
+                </svg>
+            </a>
+            <div class="dropdown-menus" id="dropdown-menus">
+                
+                    <a href="/" class="dropdown-menu button">
+                        首页
+                    </a>
+                
+                    <a href="/tags/" class="dropdown-menu button">
+                        标签
+                    </a>
+                
+                    <a href="/archives/" class="dropdown-menu button">
+                        归档
+                    </a>
+                
+                    <a href="/friends/" class="dropdown-menu button">
+                        友链
+                    </a>
+                
+                    <a href="/page/" class="dropdown-menu button">
+                        Page
+                    </a>
+                
+            </div>
+        
+    </div>
+</header>
+
+
+            <main class="main">
+    
+
+<div class="post-title">
+    <h1 class="post-title__text">
+        计算机系统基础/计算机网络基础
+    </h1>
+    <div class="post-title__meta">
+        <a href="/archives/2020/10/" class="post-meta__date button">
+    2020-10-03
+</a>
+        
+ 
+        
+    
+    
+
+
+ 
+
+ 
+    </div>
+</div>
+
+
+
+<article class="post content-card">
+    <div class="post__header"></div>
+    <div class="post__content">
+        <h1 id="计算机网络基础"><a href="#计算机网络基础" class="headerlink" title="计算机网络基础"></a>计算机网络基础</h1><h2 id="公网IP和局域网IP"><a href="#公网IP和局域网IP" class="headerlink" title="公网IP和局域网IP"></a>公网IP和局域网IP</h2><ul>
+<li><p>你要寄送快递的时候，需要填省，市，县，然后是小区，门牌号</p>
+</li>
+<li><p>其中局域网IP就类似我们的小区门牌号，如果你在小区里说我家是12号楼1单元101，大家都知道你是这个地方，但是你要去别的小区说你是12号楼1单元101，他们肯定不知道你说的是你的小区，而会认为是他们的小区。所以局域网IP就是用于某一群体内部交互数据的，他的地址只在这个群体内部生效，拿出这个群体就失效了</p>
+</li>
+<li><p>而如果是小区与小区之间交互数据的话，就必须要前缀小区的名字，先送到小区，再分给门牌号。这里举个例子吧，寄送到月亮湾小区的12号楼1单元101，那么需要先送到月亮湾，然后再分给12号楼1单元101</p>
+</li>
+<li><p>小区的名字是唯一的，全中国就这一个小区叫月亮湾，所以你说月亮湾，谁都能通过查询知道月亮湾在哪里，是哪个小区。那么这种你一说，大家都能知道位置和是什么的地址名称，就叫公网IP</p>
+</li>
+<li><p>也就是说公网IP相当于是可以直接访问的IP地址，相当于省市县这种全国唯一的地址，而局域网IP是在公网IP之下的门牌号</p>
+</li>
+<li><p>如下图，<strong>A公司的公网IP是117.48.202.168</strong>，<strong>B公司的公网IP是202.108.22.5</strong>。那A公司中的a电脑如果给自己公司的b电脑传输数据，他只需要打上192.168.1.2直接就能送过去，因为他们都在一个公网IP下，所以他们的门牌号是认识的，只需要局域网IP就可以寄送数据，<strong>但是如果A公司的a电脑要给B公司的c电脑送数据，就需要先将数据送给本公司公网IP下的117.48.202.168，然后交给B公司公网IP下的202.108.22.5，然后再交给192.168.1.3，直接发送给192.168.1.3的话就会发送到自家公司的c电脑上而不是B公司的c电脑了</strong><br><img src="https://pic3.zhimg.com/80/v2-cd702b4bea5d60825c21f550ace82bf2_1440w.jpg" alt="img"></p>
+</li>
+<li><p>所以这样也就是为什么，很多人搭建私有云盘的时候需要向运营商申请公网IP，因为如果你的私有云盘电脑没有公网IP，你是不能直接访问的。很多NAS厂商宣称自己的NAS不需要公网IP，那种本质上就是将你的数据先转发给拥有公网IP的云端，再转发给你，而不是你直接访问，这样其实访问速度会慢很多</p>
+</li>
+<li><p><strong>局域网可用的IP地址范围为:</strong><br>A类地址：10.0.0.0 - 10.255.255.255<br>B类地址：172.16.0.0 - 172.31.255.255<br>C类地址：192.168.0.0 -192.168.255.255<br>以上IP是都是属于局域网，但不一定是同一个局域网。要检测两台电脑是否在同一个局域网，可以再一台电脑上ping另外一台电脑的IP，能ping通的就是在同一个局域网中</p>
+</li>
+</ul>
+
+    </div>
+     
+    <div class="post-footer__meta">
+    <p>
+        updated at 2020-10-03
+    </p>
+</div> 
+    <div class="post-meta__cats">
+    
+    
+</div> 
+</article>
+
+
+    <div class="nav">
+        <div class="nav__prev">
+            
+                <a href="/2020/10/04/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/%E7%AC%AC%E4%B8%80%E8%AE%B2%E3%80%81%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E6%A6%82%E8%BF%B0/" class="nav__link">
+                    <div>
+                        <svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path d="M589.088 790.624L310.464 512l278.624-278.624 45.248 45.248L400.96 512l233.376 233.376z" fill="#808080"></path></svg>
+                    </div>
+                    <div>
+                        <div class="nav__label">
+                            Previous Post
+                        </div>
+                        <div class="nav__title">
+                            操作系统/第一讲、操作系统概述
+                        </div>
+                    </div>
+                </a>
+            
+        </div>
+        <div class="nav__next">
+            
+                <a href="/2020/10/03/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E5%9F%BA%E7%A1%80/%E8%AE%A1%E7%AE%97%E7%A1%AC%E4%BB%B6%E6%9E%B6%E6%9E%84/" class="nav__link">
+                    <div>
+                        <div class="nav__label">
+                            Next Post
+                        </div>
+                        <div class="nav__title">
+                            计算机系统基础/计算硬件架构
+                        </div>
+                    </div>
+                    <div>
+                        <svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path d="M434.944 790.624l-45.248-45.248L623.04 512l-233.376-233.376 45.248-45.248L713.568 512z" fill="#808080"></path></svg>
+                    </div>
+                </a>
+            
+        </div>
+    </div>
+
+
+
+
+
+</main>
+
+            <footer class="footer">
+    
+
+
+    
+     
+ 
+
+ 
+    
+        
+        <p class="footer-copyright">
+            Copyright © 2020 <a href="/">Hexo</a>
+        </p>
+    
+    
+    <p>Powered by <a href="https://hexo.io" target="_blank">Hexo</a> | Theme - <a href="https://github.com/ChrAlpha/hexo-theme-cards" target="_blank">Cards</a></p>
+</footer>
+
+        </div>
+         
+
+ 
+
+ 
+
+ 
+
+  
+
+
+
+ 
+
+
+    
+ 
+
+ 
+
+ 
+
+ 
+
+
+
+
+    </body>
+</html>

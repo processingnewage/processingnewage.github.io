@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+
+    
+
+    <!-- 渲染优化 -->
+    <meta name="renderer" content="webkit">
+    <meta name="force-rendering" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="HandheldFriendly" content="True" >
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!--icon-->
+
+    <link rel="shortcut icon" type='image/x-icon' href="/favicon.ico">
+
+
+    <!-- meta -->
+
+
+<title>Python/Python学习笔记/变量与数据类型 | Hexo</title>
+
+
+
+
+
+    <!-- OpenGraph -->
+ 
+    <meta name="description" content="变量与数据类型 变量：内存空间地址的别名  变量命名的基本原则：  必须以字母、下划线开头。其他字符只能是字母、数字、下划线 不能使用%、？之类的特殊符号，如空格、￥、&amp;、#等 大小写敏感 不能使用关键字   良好的编程习惯：  使用描述性的名字，见名知意 使用小写字母开头表示变量、全大写表示常量、大写字母开头表示自定义类型（class）ex:nick_name &#x3D; “python命名法”">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Python&#x2F;Python学习笔记&#x2F;变量与数据类型">
+<meta property="og:url" content="http://yoursite.com/2020/08/01/Python/Python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%8F%98%E9%87%8F%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="变量与数据类型 变量：内存空间地址的别名  变量命名的基本原则：  必须以字母、下划线开头。其他字符只能是字母、数字、下划线 不能使用%、？之类的特殊符号，如空格、￥、&amp;、#等 大小写敏感 不能使用关键字   良好的编程习惯：  使用描述性的名字，见名知意 使用小写字母开头表示变量、全大写表示常量、大写字母开头表示自定义类型（class）ex:nick_name &#x3D; “python命名法”">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-08-01T10:57:58.433Z">
+<meta property="article:modified_time" content="2020-08-07T14:27:37.648Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary_large_image">
+
+
+    
+<link rel="stylesheet" href="/css/style/main.css">
+ 
+
+
+
+    
+    
+        <link rel="stylesheet" id="hl-default-theme" href="/css/highlight/default.css" media="none" onload="if(getComputedStyle(document.documentElement).getPropertyValue('--color-mode').indexOf('dark')===-1)this.media='all'">
+        
+    
+
+    
+    
+
+     
+
+    <!-- custom head -->
+
+<meta name="generator" content="Hexo 4.2.1"><link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+</head>
+
+    <body>
+        <div id="app">
+            <header class="header">
+    <div class="header__left">
+        <a href="/" class="button">
+            <span class="logo__text">
+                Demo
+            </span>
+        </a>
+    </div>
+    <div class="header__right">
+        
+            <div class="navbar__menus">
+                
+                    <a href="/" class="navbar-menu button">
+                        首页
+                    </a>
+                
+                    <a href="/tags/" class="navbar-menu button">
+                        标签
+                    </a>
+                
+                    <a href="/archives/" class="navbar-menu button">
+                        归档
+                    </a>
+                
+                    <a href="/friends/" class="navbar-menu button">
+                        友链
+                    </a>
+                
+                    <a href="/page/" class="navbar-menu button">
+                        Page
+                    </a>
+                
+            </div>
+        
+        
+        
+
+        
+        
+
+        
+
+        
+            <a class="dropdown-icon button" id="btn-dropdown">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width='24' height='24' fill="none" stroke="currentColor" stroke-width="0.7" stroke-linecap="round" stroke-linejoin="round">
+                    <path fill="currentColor" d="M3.314,4.8h13.372c0.41,0,0.743-0.333,0.743-0.743c0-0.41-0.333-0.743-0.743-0.743H3.314c-0.41,0-0.743,0.333-0.743,0.743C2.571,4.467,2.904,4.8,3.314,4.8z M16.686,15.2H3.314c-0.41,0-0.743,0.333-0.743,0.743s0.333,0.743,0.743,0.743h13.372c0.41,0,0.743-0.333,0.743-0.743S17.096,15.2,16.686,15.2z M16.686,9.257H3.314c-0.41,0-0.743,0.333-0.743,0.743s0.333,0.743,0.743,0.743h13.372c0.41,0,0.743-0.333,0.743-0.743S17.096,9.257,16.686,9.257z"></path>
+                </svg>
+            </a>
+            <div class="dropdown-menus" id="dropdown-menus">
+                
+                    <a href="/" class="dropdown-menu button">
+                        首页
+                    </a>
+                
+                    <a href="/tags/" class="dropdown-menu button">
+                        标签
+                    </a>
+                
+                    <a href="/archives/" class="dropdown-menu button">
+                        归档
+                    </a>
+                
+                    <a href="/friends/" class="dropdown-menu button">
+                        友链
+                    </a>
+                
+                    <a href="/page/" class="dropdown-menu button">
+                        Page
+                    </a>
+                
+            </div>
+        
+    </div>
+</header>
+
+
+            <main class="main">
+    
+
+<div class="post-title">
+    <h1 class="post-title__text">
+        Python/Python学习笔记/变量与数据类型
+    </h1>
+    <div class="post-title__meta">
+        <a href="/archives/2020/08/" class="post-meta__date button">
+    2020-08-01
+</a>
+        
+ 
+        
+    
+    
+
+
+ 
+
+ 
+    </div>
+</div>
+
+
+
+<article class="post content-card">
+    <div class="post__header"></div>
+    <div class="post__content">
+        <h2 id="变量与数据类型"><a href="#变量与数据类型" class="headerlink" title="变量与数据类型"></a>变量与数据类型</h2><ul>
+<li><p>变量：内存空间地址的别名</p>
+</li>
+<li><p>变量命名的基本原则：</p>
+<ul>
+<li>必须以字母、下划线开头。其他字符只能是字母、数字、下划线</li>
+<li>不能使用%、？之类的特殊符号，如空格、￥、&amp;、#等</li>
+<li>大小写敏感</li>
+<li>不能使用关键字</li>
+</ul>
+</li>
+<li><p>良好的编程习惯：</p>
+<ul>
+<li>使用描述性的名字，见名知意</li>
+<li>使用小写字母开头表示变量、全大写表示常量、大写字母开头表示自定义类型（class）<br>ex:<br>nick_name = “python命名法”<br>nickName = “驼峰命名法”<br>NickName = “在python中表示一个新的自定义类型”<br>NICK_NAME = “全部字母大写，称为帕斯卡命名法，常用于命名常量”</li>
+</ul>
+</li>
+<li><p>python中没有常量机制！！！ 靠人为自觉执行    大写字母命名的量不去修改</p>
+</li>
+<li><p>数字类型：整数类型 int     浮点型 float    复数  complex（comp_num = 4 +3j）</p>
+</li>
+<li><p>标准数据类型：</p>
+<ul>
+<li>数字类型：Number</li>
+<li>字符串类型：String</li>
+<li>元组类型：Tuple</li>
+<li>列表类型：List</li>
+<li>集合类型：Set</li>
+<li>字典类型：Dictionary</li>
+</ul>
+</li>
+<li><p>input函数接受用户的输入，接受的类型一定是<strong>字符串类型</strong></p>
+</li>
+<li><p>强大的eval函数：python的解释器函数，可直接解析数据</p>
+</li>
+<li><p>不同进制的整数类型：二进制、八进制、十进制、十六进制（BODH）</p>
+</li>
+<li><p>Python要求所有浮点数必须带有小数部分，用于区分浮点数和整数类型</p>
+</li>
+<li><p>浮点数表示方法：</p>
+<ul>
+<li>十进制表示</li>
+<li>科学计数法：96e4、9.18e16、4.2e-3</li>
+</ul>
+</li>
+<li><p>浮点数的小问题：浮点型15位小数内为有效小数，一旦超过16位，就会存在误差</p>
+</li>
+<li><p>表示高精度小数：decimal模块</p>
+</li>
+<li><p>num = decimal.Decimal(‘3.1222222222313231221222222’) // 使用Decimal类型时必须使用单引号创建数字类型</p>
+</li>
+<li><p>自定义浮点数字的精度：decimal.getcontext().prec = 120  //  120位小数</p>
+</li>
+<li><p><strong>引用的本质是变量存储地址</strong></p>
+</li>
+<li><p>python采用基于值的内存管理方式，为不同的变量赋相同的值时，多个变量指向同一块内存地址</p>
+</li>
+<li><p>数字类型的操作：</p>
+</li>
+<li><p>基本算数运算符：由python解释器直接提供。不需要引用第三方库，也叫做内置操作符</p>
+</li>
+<li><p>复合算数运算符</p>
+<ul>
+<li>操作符：<ul>
+<li>+、-、*、/、%</li>
+<li>num1 // num2   地板除，求整商</li>
+<li>num1 ** num2  num1的num2次幂</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>在python，/除法表示和数学一致，除的结果一定为浮点数</p>
+</li>
+<li><p>在python中 ++/– 没有特定含义，不表示+1/-1操作，仅表示正负</p>
+</li>
+<li><p>特殊的格式化控制字符：\ 续行符    \r 回车回到行首    \b回退一格</p>
+</li>
+<li><p>格式化输出字符串：</p>
+<ul>
+<li>使用字符串format方法  &lt;模板字符串&gt;.format(&lt;逗号分隔的参数&gt;)</li>
+<li>格式控制字符串左对齐，数字右对齐 </li>
+</ul>
+</li>
+<li><p><strong>在python中求余和取模结果是不同的</strong></p>
+</li>
+</ul>
+
+    </div>
+     
+    <div class="post-footer__meta">
+    <p>
+        updated at 2020-08-07
+    </p>
+</div> 
+    <div class="post-meta__cats">
+    
+    
+</div> 
+</article>
+
+
+    <div class="nav">
+        <div class="nav__prev">
+            
+                <a href="/2020/08/02/Python/Python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E8%BF%90%E7%AE%97%E7%AC%A6%E5%92%8C%E4%B8%89%E7%A7%8D%E7%BB%93%E6%9E%84/" class="nav__link">
+                    <div>
+                        <svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path d="M589.088 790.624L310.464 512l278.624-278.624 45.248 45.248L400.96 512l233.376 233.376z" fill="#808080"></path></svg>
+                    </div>
+                    <div>
+                        <div class="nav__label">
+                            Previous Post
+                        </div>
+                        <div class="nav__title">
+                            Python/Python学习笔记/运算符和三种结构
+                        </div>
+                    </div>
+                </a>
+            
+        </div>
+        <div class="nav__next">
+            
+                <a href="/2020/07/03/Operating%20System/%E6%A6%82%E8%AE%BA_%E5%AF%BC%E8%AE%BA/" class="nav__link">
+                    <div>
+                        <div class="nav__label">
+                            Next Post
+                        </div>
+                        <div class="nav__title">
+                            Operating System/概论_导论
+                        </div>
+                    </div>
+                    <div>
+                        <svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path d="M434.944 790.624l-45.248-45.248L623.04 512l-233.376-233.376 45.248-45.248L713.568 512z" fill="#808080"></path></svg>
+                    </div>
+                </a>
+            
+        </div>
+    </div>
+
+
+
+
+
+</main>
+
+            <footer class="footer">
+    
+
+
+    
+     
+ 
+
+ 
+    
+        
+        <p class="footer-copyright">
+            Copyright © 2020 <a href="/">Hexo</a>
+        </p>
+    
+    
+    <p>Powered by <a href="https://hexo.io" target="_blank">Hexo</a> | Theme - <a href="https://github.com/ChrAlpha/hexo-theme-cards" target="_blank">Cards</a></p>
+</footer>
+
+        </div>
+         
+
+ 
+
+ 
+
+ 
+
+  
+
+
+
+ 
+
+
+    
+ 
+
+ 
+
+ 
+
+ 
+
+
+
+
+    </body>
+</html>

@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+
+    
+
+    <!-- 渲染优化 -->
+    <meta name="renderer" content="webkit">
+    <meta name="force-rendering" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="HandheldFriendly" content="True" >
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!--icon-->
+
+    <link rel="shortcut icon" type='image/x-icon' href="/favicon.ico">
+
+
+    <!-- meta -->
+
+
+<title>Python/socket编程/socket_II--python中的socket编程 | Hexo</title>
+
+
+    <meta name="keywords" content="Python">
+
+
+
+
+    <!-- OpenGraph -->
+ 
+    <meta name="description" content="Python语言中socket编程   要进行socket编程，发送网络消息，我们可以使用Python内置的socket库，目前的socket编程，使用的最多的就是通过TCP协议进行网络通讯的，TCP进行通讯的程序双方，分为服务端和客户端， TCP协议进行通讯的双方，是需要先建立一个虚拟连接，然后双方程序才能发送业务数据信息；   建立TCP虚拟连接是通过著名的三次握手进行的；具体三次握手的细节大">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Python&#x2F;socket编程&#x2F;socket_II--python中的socket编程">
+<meta property="og:url" content="http://yoursite.com/2020/05/15/Python/socket%E7%BC%96%E7%A8%8B/socket_II--python%E4%B8%AD%E7%9A%84socket%E7%BC%96%E7%A8%8B/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="Python语言中socket编程   要进行socket编程，发送网络消息，我们可以使用Python内置的socket库，目前的socket编程，使用的最多的就是通过TCP协议进行网络通讯的，TCP进行通讯的程序双方，分为服务端和客户端， TCP协议进行通讯的双方，是需要先建立一个虚拟连接，然后双方程序才能发送业务数据信息；   建立TCP虚拟连接是通过著名的三次握手进行的；具体三次握手的细节大">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-05-15T07:52:35.720Z">
+<meta property="article:modified_time" content="2020-05-15T09:21:19.902Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="Python">
+<meta name="twitter:card" content="summary_large_image">
+
+
+    
+<link rel="stylesheet" href="/css/style/main.css">
+ 
+
+
+
+    
+    
+        <link rel="stylesheet" id="hl-default-theme" href="/css/highlight/default.css" media="none" onload="if(getComputedStyle(document.documentElement).getPropertyValue('--color-mode').indexOf('dark')===-1)this.media='all'">
+        
+    
+
+    
+    
+
+     
+
+    <!-- custom head -->
+
+<meta name="generator" content="Hexo 4.2.1"><link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+</head>
+
+    <body>
+        <div id="app">
+            <header class="header">
+    <div class="header__left">
+        <a href="/" class="button">
+            <span class="logo__text">
+                Demo
+            </span>
+        </a>
+    </div>
+    <div class="header__right">
+        
+            <div class="navbar__menus">
+                
+                    <a href="/" class="navbar-menu button">
+                        首页
+                    </a>
+                
+                    <a href="/tags/" class="navbar-menu button">
+                        标签
+                    </a>
+                
+                    <a href="/archives/" class="navbar-menu button">
+                        归档
+                    </a>
+                
+                    <a href="/friends/" class="navbar-menu button">
+                        友链
+                    </a>
+                
+                    <a href="/page/" class="navbar-menu button">
+                        Page
+                    </a>
+                
+            </div>
+        
+        
+        
+
+        
+        
+
+        
+
+        
+            <a class="dropdown-icon button" id="btn-dropdown">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width='24' height='24' fill="none" stroke="currentColor" stroke-width="0.7" stroke-linecap="round" stroke-linejoin="round">
+                    <path fill="currentColor" d="M3.314,4.8h13.372c0.41,0,0.743-0.333,0.743-0.743c0-0.41-0.333-0.743-0.743-0.743H3.314c-0.41,0-0.743,0.333-0.743,0.743C2.571,4.467,2.904,4.8,3.314,4.8z M16.686,15.2H3.314c-0.41,0-0.743,0.333-0.743,0.743s0.333,0.743,0.743,0.743h13.372c0.41,0,0.743-0.333,0.743-0.743S17.096,15.2,16.686,15.2z M16.686,9.257H3.314c-0.41,0-0.743,0.333-0.743,0.743s0.333,0.743,0.743,0.743h13.372c0.41,0,0.743-0.333,0.743-0.743S17.096,9.257,16.686,9.257z"></path>
+                </svg>
+            </a>
+            <div class="dropdown-menus" id="dropdown-menus">
+                
+                    <a href="/" class="dropdown-menu button">
+                        首页
+                    </a>
+                
+                    <a href="/tags/" class="dropdown-menu button">
+                        标签
+                    </a>
+                
+                    <a href="/archives/" class="dropdown-menu button">
+                        归档
+                    </a>
+                
+                    <a href="/friends/" class="dropdown-menu button">
+                        友链
+                    </a>
+                
+                    <a href="/page/" class="dropdown-menu button">
+                        Page
+                    </a>
+                
+            </div>
+        
+    </div>
+</header>
+
+
+            <main class="main">
+    
+
+<div class="post-title">
+    <h1 class="post-title__text">
+        Python/socket编程/socket_II--python中的socket编程
+    </h1>
+    <div class="post-title__meta">
+        <a href="/archives/2020/05/" class="post-meta__date button">
+    2020-05-15
+</a>
+        
+ 
+        
+    
+    
+
+
+ 
+
+ 
+    </div>
+</div>
+
+
+
+<article class="post content-card">
+    <div class="post__header"></div>
+    <div class="post__content">
+        <h4 id="Python语言中socket编程"><a href="#Python语言中socket编程" class="headerlink" title="Python语言中socket编程"></a>Python语言中socket编程</h4><p>   要进行socket编程，发送网络消息，我们可以使用Python内置的socket库，目前的socket编程，使用的最多的就是通过TCP协议进行网络通讯的，TCP进行通讯的程序双方，分为<strong>服务端</strong>和<strong>客户端</strong>， TCP协议进行通讯的双方，是需要先建立一个<strong>虚拟连接</strong>，然后双方程序才能发送业务数据信息；<br>   建立TCP虚拟连接是通过著名的<strong>三次握手</strong>进行的；<br>具体三次握手的细节大家可以参考这篇文章 <a href="https://zhuanlan.zhihu.com/p/40499563" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/40499563</a>  【见下一章节】<br>我们现在来看一个TCP协议进行通讯的 socket 服务端程序和客户端程序，<br><strong>下面是TCP服务端程序 server.py：</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#  === TCP 服务端程序 server.py ===</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> socket <span class="keyword">import</span> *  <span class="comment"># 导入socket 库</span></span><br><span class="line"></span><br><span class="line">IP = <span class="string">''</span>    <span class="comment"># 主机地址为空字符串，表示绑定本机所有网络接口ip地址  等待客户端来连接</span></span><br><span class="line">PORT = <span class="number">50000</span>   <span class="comment"># 端口号</span></span><br><span class="line">BUFLEN = <span class="number">512</span>   <span class="comment"># 定义一次从socket缓冲区最多读入512个字节数据</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 实例化一个socket对象</span></span><br><span class="line"><span class="comment"># 参数 AF_INET 表示该socket网络层使用IP协议</span></span><br><span class="line"><span class="comment"># 参数 SOCK_STREAM 表示该socket传输层使用tcp协议</span></span><br><span class="line">listenSocket = socket(AF_INET, SOCK_STREAM)</span><br><span class="line"></span><br><span class="line">listenSocket.bind((IP, PORT))   <span class="comment"># socket绑定地址和端口</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 使socket处于监听状态，等待客户端的连接请求</span></span><br><span class="line"><span class="comment"># 参数 8 表示 最多接受多少个等待连接的客户端</span></span><br><span class="line">listenSocket.listen(<span class="number">8</span>)</span><br><span class="line">print(<span class="string">f'服务端启动成功，在<span class="subst">&#123;PORT&#125;</span>端口等待客户端连接...'</span>)</span><br><span class="line"></span><br><span class="line">dataSocket, addr = listenSocket.accept()</span><br><span class="line">print(<span class="string">'接受一个客户端连接:'</span>, addr)</span><br><span class="line"></span><br><span class="line"><span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">    <span class="comment"># 尝试读取对方发送的消息</span></span><br><span class="line">    <span class="comment"># BUFLEN 指定从接收缓冲里最多读取多少字节</span></span><br><span class="line">    recved = dataSocket.recv(BUFLEN)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 如果返回空bytes，表示对方关闭了连接</span></span><br><span class="line">    <span class="comment"># 退出循环，结束消息收发</span></span><br><span class="line">    <span class="keyword">if</span> <span class="keyword">not</span> recved:</span><br><span class="line">        <span class="keyword">break</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 读取的字节数据是bytes类型，需要解码为字符串</span></span><br><span class="line">    info = recved.decode()</span><br><span class="line">    print(<span class="string">f'收到对方信息： <span class="subst">&#123;info&#125;</span>'</span>)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 发送的数据类型必须是bytes，所以要编码</span></span><br><span class="line">    dataSocket.send(<span class="string">f'服务端接收到了信息 <span class="subst">&#123;info&#125;</span>'</span>.encode())</span><br><span class="line"></span><br><span class="line"><span class="comment"># 服务端也调用close()关闭socket</span></span><br><span class="line">dataSocket.close()</span><br><span class="line">listenSocket.close()</span><br></pre></td></tr></table></figure>
+
+<p><strong>下面是TCP客户端程序 client.py:</strong> </p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#  === TCP 客户端程序 client.py ===</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> socket <span class="keyword">import</span> *</span><br><span class="line"></span><br><span class="line">IP = <span class="string">'127.0.0.1'</span></span><br><span class="line">SERVER_PORT = <span class="number">50000</span></span><br><span class="line">BUFLEN = <span class="number">1024</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 实例化一个socket对象，指明协议</span></span><br><span class="line">dataSocket = socket(AF_INET, SOCK_STREAM)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 连接服务端socket</span></span><br><span class="line">dataSocket.connect((IP, SERVER_PORT))</span><br><span class="line"></span><br><span class="line"><span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">    <span class="comment"># 从终端读入用户输入的字符串</span></span><br><span class="line">    toSend = input(<span class="string">'&gt;&gt;&gt; '</span>)</span><br><span class="line">    <span class="keyword">if</span>  toSend ==<span class="string">'exit'</span>:</span><br><span class="line">        <span class="keyword">break</span></span><br><span class="line">    <span class="comment"># 发送消息，也要编码为 bytes</span></span><br><span class="line">    dataSocket.send(toSend.encode())</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 等待接收服务端的消息</span></span><br><span class="line">    recved = dataSocket.recv(BUFLEN)</span><br><span class="line">    <span class="comment"># 如果返回空bytes，表示对方关闭了连接</span></span><br><span class="line">    <span class="keyword">if</span> <span class="keyword">not</span> recved:</span><br><span class="line">        <span class="keyword">break</span></span><br><span class="line">    <span class="comment"># 打印读取的信息</span></span><br><span class="line">    print(recved.decode())</span><br><span class="line"></span><br><span class="line">dataSocket.close()</span><br></pre></td></tr></table></figure>
+<p><strong>上述代码先运行服务端，在运行客户端</strong></p>
+
+    </div>
+     
+    <div class="post-footer__meta">
+    <p>
+        updated at 2020-05-15
+    </p>
+</div> 
+    <div class="post-meta__cats">
+    
+    
+        <a href="/tags/Python/" class="post-tags__link button"># Python</a>
+    
+</div> 
+</article>
+
+
+    <div class="nav">
+        <div class="nav__prev">
+            
+                <a href="/2020/05/15/Python/socket%E7%BC%96%E7%A8%8B/socket_III--%E4%BB%80%E4%B9%88%E6%98%AF%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B/" class="nav__link">
+                    <div>
+                        <svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path d="M589.088 790.624L310.464 512l278.624-278.624 45.248 45.248L400.96 512l233.376 233.376z" fill="#808080"></path></svg>
+                    </div>
+                    <div>
+                        <div class="nav__label">
+                            Previous Post
+                        </div>
+                        <div class="nav__title">
+                            Python/socket编程/socket_III--什么是三次握手
+                        </div>
+                    </div>
+                </a>
+            
+        </div>
+        <div class="nav__next">
+            
+                <a href="/2020/05/15/Python/socket%E7%BC%96%E7%A8%8B/socket_I--%E4%BB%80%E4%B9%88%E6%98%AFsocket%E7%BC%96%E7%A8%8B/" class="nav__link">
+                    <div>
+                        <div class="nav__label">
+                            Next Post
+                        </div>
+                        <div class="nav__title">
+                            Python/socket编程/socket_I--什么是socket编程
+                        </div>
+                    </div>
+                    <div>
+                        <svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path d="M434.944 790.624l-45.248-45.248L623.04 512l-233.376-233.376 45.248-45.248L713.568 512z" fill="#808080"></path></svg>
+                    </div>
+                </a>
+            
+        </div>
+    </div>
+
+
+
+
+
+</main>
+
+            <footer class="footer">
+    
+
+
+    
+     
+ 
+
+ 
+    
+        
+        <p class="footer-copyright">
+            Copyright © 2020 <a href="/">Hexo</a>
+        </p>
+    
+    
+    <p>Powered by <a href="https://hexo.io" target="_blank">Hexo</a> | Theme - <a href="https://github.com/ChrAlpha/hexo-theme-cards" target="_blank">Cards</a></p>
+</footer>
+
+        </div>
+         
+
+ 
+
+ 
+
+ 
+
+  
+
+
+
+ 
+
+
+    
+ 
+
+ 
+
+ 
+
+ 
+
+
+
+
+    </body>
+</html>

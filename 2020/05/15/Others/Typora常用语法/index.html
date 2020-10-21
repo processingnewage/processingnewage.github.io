@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+
+    
+
+    <!-- 渲染优化 -->
+    <meta name="renderer" content="webkit">
+    <meta name="force-rendering" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="HandheldFriendly" content="True" >
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!--icon-->
+
+    <link rel="shortcut icon" type='image/x-icon' href="/favicon.ico">
+
+
+    <!-- meta -->
+
+
+<title>Others/Typora常用语法 | Hexo</title>
+
+
+    <meta name="keywords" content="Others">
+
+
+
+
+    <!-- OpenGraph -->
+ 
+    <meta name="description" content="工具-Typora常用语法 Markdown（MD）作为目前互联网写作相当流行的一种文档撰写语言格式，深受互联网编辑者的喜爱，由此周边一些基于MD的编辑工具也随之油然而生。 作为一款免费的MD编辑器：  Typora极简、跨平台、且十分直观，无论写作还是阅读，都能让人一目了然  Typora的单窗口展示，优雅的实现了编辑与预览的一体化，颠覆了很多MD编辑器使用时编辑与预览分窗口显示的模式  并且T">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Others&#x2F;Typora常用语法">
+<meta property="og:url" content="http://yoursite.com/2020/05/15/Others/Typora%E5%B8%B8%E7%94%A8%E8%AF%AD%E6%B3%95/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="工具-Typora常用语法 Markdown（MD）作为目前互联网写作相当流行的一种文档撰写语言格式，深受互联网编辑者的喜爱，由此周边一些基于MD的编辑工具也随之油然而生。 作为一款免费的MD编辑器：  Typora极简、跨平台、且十分直观，无论写作还是阅读，都能让人一目了然  Typora的单窗口展示，优雅的实现了编辑与预览的一体化，颠覆了很多MD编辑器使用时编辑与预览分窗口显示的模式  并且T">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://user-gold-cdn.xitu.io/2019/2/15/168f06d7d1a244d1?imageView2/0/w/1280/h/960/format/webp/ignore-error/1">
+<meta property="og:image" content="https://juejin.im/equation?tex=y%253Dax%5E2%252Bbx%252Bc">
+<meta property="og:image" content="https://user-gold-cdn.xitu.io/2019/2/14/168eb0695a58e2b3?imageView2/0/w/1280/h/960/format/webp/ignore-error/1">
+<meta property="og:image" content="https://user-gold-cdn.xitu.io/2019/2/14/168eb039e4446129?imageView2/0/w/1280/h/960/format/webp/ignore-error/1">
+<meta property="og:image" content="https://user-gold-cdn.xitu.io/2019/2/14/168eb08ef3588289?imageView2/0/w/1280/h/960/format/webp/ignore-error/1">
+<meta property="article:published_time" content="2020-05-15T07:37:54.183Z">
+<meta property="article:modified_time" content="2020-05-15T07:59:50.084Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="Others">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://user-gold-cdn.xitu.io/2019/2/15/168f06d7d1a244d1?imageView2/0/w/1280/h/960/format/webp/ignore-error/1">
+
+
+    
+<link rel="stylesheet" href="/css/style/main.css">
+ 
+
+
+
+    
+    
+        <link rel="stylesheet" id="hl-default-theme" href="/css/highlight/default.css" media="none" onload="if(getComputedStyle(document.documentElement).getPropertyValue('--color-mode').indexOf('dark')===-1)this.media='all'">
+        
+    
+
+    
+    
+
+     
+
+    <!-- custom head -->
+
+<meta name="generator" content="Hexo 4.2.1"><link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+</head>
+
+    <body>
+        <div id="app">
+            <header class="header">
+    <div class="header__left">
+        <a href="/" class="button">
+            <span class="logo__text">
+                Demo
+            </span>
+        </a>
+    </div>
+    <div class="header__right">
+        
+            <div class="navbar__menus">
+                
+                    <a href="/" class="navbar-menu button">
+                        首页
+                    </a>
+                
+                    <a href="/tags/" class="navbar-menu button">
+                        标签
+                    </a>
+                
+                    <a href="/archives/" class="navbar-menu button">
+                        归档
+                    </a>
+                
+                    <a href="/friends/" class="navbar-menu button">
+                        友链
+                    </a>
+                
+                    <a href="/page/" class="navbar-menu button">
+                        Page
+                    </a>
+                
+            </div>
+        
+        
+        
+
+        
+        
+
+        
+
+        
+            <a class="dropdown-icon button" id="btn-dropdown">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width='24' height='24' fill="none" stroke="currentColor" stroke-width="0.7" stroke-linecap="round" stroke-linejoin="round">
+                    <path fill="currentColor" d="M3.314,4.8h13.372c0.41,0,0.743-0.333,0.743-0.743c0-0.41-0.333-0.743-0.743-0.743H3.314c-0.41,0-0.743,0.333-0.743,0.743C2.571,4.467,2.904,4.8,3.314,4.8z M16.686,15.2H3.314c-0.41,0-0.743,0.333-0.743,0.743s0.333,0.743,0.743,0.743h13.372c0.41,0,0.743-0.333,0.743-0.743S17.096,15.2,16.686,15.2z M16.686,9.257H3.314c-0.41,0-0.743,0.333-0.743,0.743s0.333,0.743,0.743,0.743h13.372c0.41,0,0.743-0.333,0.743-0.743S17.096,9.257,16.686,9.257z"></path>
+                </svg>
+            </a>
+            <div class="dropdown-menus" id="dropdown-menus">
+                
+                    <a href="/" class="dropdown-menu button">
+                        首页
+                    </a>
+                
+                    <a href="/tags/" class="dropdown-menu button">
+                        标签
+                    </a>
+                
+                    <a href="/archives/" class="dropdown-menu button">
+                        归档
+                    </a>
+                
+                    <a href="/friends/" class="dropdown-menu button">
+                        友链
+                    </a>
+                
+                    <a href="/page/" class="dropdown-menu button">
+                        Page
+                    </a>
+                
+            </div>
+        
+    </div>
+</header>
+
+
+            <main class="main">
+    
+
+<div class="post-title">
+    <h1 class="post-title__text">
+        Others/Typora常用语法
+    </h1>
+    <div class="post-title__meta">
+        <a href="/archives/2020/05/" class="post-meta__date button">
+    2020-05-15
+</a>
+        
+ 
+        
+    
+    
+
+
+ 
+
+ 
+    </div>
+</div>
+
+
+
+<article class="post content-card">
+    <div class="post__header"></div>
+    <div class="post__content">
+        <h2 id="工具-Typora常用语法"><a href="#工具-Typora常用语法" class="headerlink" title="工具-Typora常用语法"></a>工具-Typora常用语法</h2><blockquote>
+<p>Markdown（MD）作为目前互联网写作相当流行的一种文档撰写语言格式，深受互联网编辑者的喜爱，由此周边一些基于MD的编辑工具也随之油然而生。</p>
+<p>作为一款免费的MD编辑器：</p>
+<ol>
+<li><p>Typora极简、跨平台、且十分直观，无论写作还是阅读，都能让人一目了然</p>
+</li>
+<li><p>Typora的单窗口展示，优雅的实现了编辑与预览的一体化，颠覆了很多MD编辑器使用时编辑与预览分窗口显示的模式</p>
+</li>
+<li><p>并且Typora还具有多格式导出功能，方便快捷</p>
+</li>
+</ol>
+<p>使用一段时间后，我也变成了Typora的青睐者，使写作编辑效率大大提高。</p>
+</blockquote>
+<p><img src="https://user-gold-cdn.xitu.io/2019/2/15/168f06d7d1a244d1?imageView2/0/w/1280/h/960/format/webp/ignore-error/1" alt=""></p>
+<h2 id="文字类标注"><a href="#文字类标注" class="headerlink" title="文字类标注"></a>文字类标注</h2><h3 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h3><blockquote>
+<p>标题是用<code>“#”</code>实现的，标题前面加一个<code>“#”</code>，代表一级标题；</p>
+<p>依次类推，标题前面加六个<code>“#”</code>代表六级标题；</p>
+<p>一共有六级标题，编辑各种文档完全够用。</p>
+</blockquote>
+<h3 id="下划线"><a href="#下划线" class="headerlink" title="下划线"></a>下划线</h3><blockquote>
+<p>快捷键 <code>Ctrl+u（或cmd+u）</code>，即可实现下划线功能 。</p>
+</blockquote>
+<h3 id="加粗强调"><a href="#加粗强调" class="headerlink" title="加粗强调"></a>加粗强调</h3><blockquote>
+<p>在要强调内容前后分别加<code>两个“*”</code> 号或者<code>两个“_”</code>号。</p>
+</blockquote>
+<h3 id="文字背景强调"><a href="#文字背景强调" class="headerlink" title="文字背景强调"></a>文字背景强调</h3><blockquote>
+<p>在要强调内容前后分别加一个 ` 号。</p>
+</blockquote>
+<h3 id="斜体"><a href="#斜体" class="headerlink" title="斜体"></a>斜体</h3><blockquote>
+<p>内容前后分别加<code>一个 “*”</code> 号。</p>
+</blockquote>
+<h3 id="删除线"><a href="#删除线" class="headerlink" title="删除线"></a>删除线</h3><blockquote>
+<p>先转化成英文输入法，再把内容前后分别加上 <code>两个“~”</code> 号。</p>
+</blockquote>
+<h3 id="高亮"><a href="#高亮" class="headerlink" title="高亮"></a>高亮</h3><blockquote>
+<p>内容前后分别加<code>两个“=”</code>。</p>
+</blockquote>
+<h3 id="上标"><a href="#上标" class="headerlink" title="上标"></a>上标</h3><blockquote>
+<p>上标使用<code>^</code>包裹，例如：<code>y^2^=4</code>将产生表达式</p>
+</blockquote>
+<h3 id="下标"><a href="#下标" class="headerlink" title="下标"></a>下标</h3><blockquote>
+<p>下标使用<code>~</code>包裹，例如：<code>H~2~O</code>将产生水的分子式。</p>
+</blockquote>
+<hr>
+<h2 id="列表-list"><a href="#列表-list" class="headerlink" title="列表 list"></a>列表 list</h2><h3 id="目录列表生成"><a href="#目录列表生成" class="headerlink" title="目录列表生成"></a>目录列表生成</h3><blockquote>
+<p>输入 <code>[toc]</code> 然后回车，将会产生一个目录，这个目录抽取了文章的所有标题，自动更新内容。</p>
+</blockquote>
+<h3 id="有序列表"><a href="#有序列表" class="headerlink" title="有序列表"></a>有序列表</h3><blockquote>
+<p>输入数字<code>“1”</code>+<code>“.”</code>+<code>空格</code> ， 自动开始有序列表。</p>
+<p>例如：</p>
+<blockquote>
+<p><code>1. 吃饭</code></p>
+<p><code>2. 睡觉</code></p>
+<p><code>3. 打豆豆</code></p>
+</blockquote>
+<p>生成内容：</p>
+<blockquote>
+<ol>
+<li>吃饭</li>
+<li>睡觉</li>
+<li>打豆豆</li>
+</ol>
+</blockquote>
+</blockquote>
+<h3 id="无序列表"><a href="#无序列表" class="headerlink" title="无序列表"></a>无序列表</h3><blockquote>
+<p>输入<code>“+”</code>或<code>“-”</code>或<code>“*”</code>+<code>空格</code>，自动开始无序列表。</p>
+<p>例如：</p>
+<blockquote>
+<p><code>- 吃饭</code></p>
+<p><code>- 睡觉</code></p>
+<p><code>- 打豆豆</code></p>
+</blockquote>
+<p>生成内容：</p>
+<blockquote>
+<ul>
+<li>吃饭</li>
+<li>睡觉</li>
+<li>打豆豆</li>
+</ul>
+</blockquote>
+</blockquote>
+<h3 id="任务列表"><a href="#任务列表" class="headerlink" title="任务列表"></a>任务列表</h3><blockquote>
+<p>使用如下的代码创建任务列表，在 <code>[]</code> 中输入 <code>x</code> 表示完成，也可以通过点击选择完成或者没完成。</p>
+<p>例如：</p>
+<blockquote>
+<p><code>- [ ] 吃饭</code></p>
+<p><code>- [ ] 睡觉</code></p>
+<p><code>- [x] 打豆豆</code></p>
+</blockquote>
+<p>生成内容：</p>
+<blockquote>
+<ul>
+<li>吃饭</li>
+<li>睡觉</li>
+<li>打豆豆</li>
+</ul>
+</blockquote>
+</blockquote>
+<h2 id="引用块"><a href="#引用块" class="headerlink" title="引用块"></a>引用块</h2><blockquote>
+<p>使用 <code>&gt;</code> 来插入块引用。</p>
+</blockquote>
+<h2 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h2><p>Ctrl+T（alt+cmd+T），在弹出的对话框中选择行列数，自动生成列表。 还可以很方便地对表格进行编辑。</p>
+<p>标题1</p>
+<p>标题2</p>
+<p>标题3</p>
+<p>标题4</p>
+<p>内容1-1</p>
+<p>内容2-1</p>
+<p>内容3-1</p>
+<p>内容4-1</p>
+<p>内容1-2</p>
+<p>内容2-2</p>
+<p>内容3-2</p>
+<p>内容4-2</p>
+<p>内容1-3</p>
+<p>内容2-3</p>
+<p>内容3-3</p>
+<p>内容4-3</p>
+<h2 id="分割线"><a href="#分割线" class="headerlink" title="分割线"></a>分割线</h2><blockquote>
+<p>输入三个或三个以上<code>*</code>（或<code>-</code>），再按回车键，即出现一条分割线。</p>
+<p>例如：<code>***</code>、<code>---</code></p>
+</blockquote>
+<hr>
+<hr>
+<h2 id="标注"><a href="#标注" class="headerlink" title="标注"></a>标注</h2><blockquote>
+<p>我们可以对某一个词语进行标注。把鼠标放在<code>注释</code>上，将会有提示内容。</p>
+<p>例如：</p>
+<blockquote>
+<p><code>某些人用过了才知道[^注释]</code></p>
+<p><code>[^注释]: Somebody that I used to know.</code></p>
+</blockquote>
+<p>生成内容：</p>
+<blockquote>
+<p>某些人用过了才知道<a href="#fn1">[1]</a></p>
+</blockquote>
+</blockquote>
+<h2 id="插入"><a href="#插入" class="headerlink" title="插入"></a>插入</h2><h3 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h3><ul>
+<li>插入本地图片：直接把图片拖入即可</li>
+<li>插入网络图片: <code>[图片标题](图片链接)</code>。</li>
+</ul>
+<h3 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h3><blockquote>
+<p>使用方法： <code>[链接提示]+(链接地址)</code>。</p>
+<p>例如： <code>[点此进入TYpora官网下载](https://typora.io/)</code></p>
+<p>生成内容：<a href="https://typora.io/" target="_blank" rel="noopener">点此进入TYpora官网下载</a></p>
+</blockquote>
+<h3 id="数学公式"><a href="#数学公式" class="headerlink" title="数学公式"></a>数学公式</h3><blockquote>
+<p>“$$”+回车。</p>
+<p>例如：</p>
+<blockquote>
+<p><code>$$</code></p>
+<p><code>y=ax^2+bx+c</code></p>
+<p><code>$$</code></p>
+<p>生成内容：</p>
+<p><img src="https://juejin.im/equation?tex=y%3Dax%5E2%2Bbx%2Bc" alt="y=ax^2+bx+c"></p>
+</blockquote>
+</blockquote>
+<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><ul>
+<li>行内代码：代码的两端各加一个 “ ` ” 号，（在Tab键上面，英文输入法）</li>
+<li>代码块：输入三个<code>“~”</code>，按回车键，即可选择编程语言。</li>
+</ul>
+<h2 id="输出文件格式"><a href="#输出文件格式" class="headerlink" title="输出文件格式"></a>输出文件格式</h2><blockquote>
+<p>Typora 的文件导入/导出功能使用 <a href="http://pandoc.org/installing.html" target="_blank" rel="noopener">Pandoc</a> 把 Markdown 源码转换成不同的文件格式，所以我们如果想使用文件导入/导出功能，必须先安装 Pandoc。</p>
+</blockquote>
+<hr>
+<h1 id="Typora-相关配置"><a href="#Typora-相关配置" class="headerlink" title="Typora 相关配置"></a>Typora 相关配置</h1><h2 id="md文件默认打开软件的配置"><a href="#md文件默认打开软件的配置" class="headerlink" title=".md文件默认打开软件的配置"></a>.md文件默认打开软件的配置</h2><blockquote>
+<ul>
+<li>找到一个<code>.md</code>格式的文件</li>
+<li>右键／显示简介／打开方式／选择Typora.app ／全部更改 (如下图)</li>
+</ul>
+<p><img src="https://user-gold-cdn.xitu.io/2019/2/14/168eb0695a58e2b3?imageView2/0/w/1280/h/960/format/webp/ignore-error/1" alt=""></p>
+</blockquote>
+<h2 id="下载Typora主题配置"><a href="#下载Typora主题配置" class="headerlink" title="下载Typora主题配置"></a>下载Typora主题配置</h2><blockquote>
+<ul>
+<li>在<a href="https://theme.typora.io/" target="_blank" rel="noopener">Typora官网</a>下载喜欢的主题</li>
+<li>打开typora的系统偏好设置／通用／打开主题文件夹，进入主题文件夹</li>
+<li>将刚下载好的主题解压缩，拷贝主题文件到<code>主题文件夹</code>这个目录 (如下图)</li>
+</ul>
+<p><img src="https://user-gold-cdn.xitu.io/2019/2/14/168eb039e4446129?imageView2/0/w/1280/h/960/format/webp/ignore-error/1" alt=""></p>
+</blockquote>
+<h2 id="允许Typora使用上标、下标等语法"><a href="#允许Typora使用上标、下标等语法" class="headerlink" title="允许Typora使用上标、下标等语法"></a>允许Typora使用上标、下标等语法</h2><blockquote>
+<p>打开Typora的系统偏好设置／Markdown／选中希望展示的语法规则</p>
+</blockquote>
+<p><img src="https://user-gold-cdn.xitu.io/2019/2/14/168eb08ef3588289?imageView2/0/w/1280/h/960/format/webp/ignore-error/1" alt=""></p>
+<h4 id="附"><a href="#附" class="headerlink" title="附"></a>附</h4><h2 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h2><ul>
+<li><a href="https://typora.io/" target="_blank" rel="noopener">Typora官网</a></li>
+<li><a href="http://pandoc.org/installing.html" target="_blank" rel="noopener">pandoc</a></li>
+</ul>
+<p><a href="http://www.markdown.cn/" target="_blank" rel="noopener">markdown</a> 还有很多优秀的功能，例如：<a href="https://mermaidjs.github.io/" target="_blank" rel="noopener">甘特图</a>、<a href="https://mermaidjs.github.io/" target="_blank" rel="noopener">UML 图表</a>、<a href="http://flowchart.js.org" target="_blank" rel="noopener">FLowchart流程图</a></p>
+
+    </div>
+     
+    <div class="post-footer__meta">
+    <p>
+        updated at 2020-05-15
+    </p>
+</div> 
+    <div class="post-meta__cats">
+    
+    
+        <a href="/tags/Others/" class="post-tags__link button"># Others</a>
+    
+</div> 
+</article>
+
+
+    <div class="nav">
+        <div class="nav__prev">
+            
+                <a href="/2020/05/15/Others/Typora%E4%B8%BB%E9%A2%98/" class="nav__link">
+                    <div>
+                        <svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path d="M589.088 790.624L310.464 512l278.624-278.624 45.248 45.248L400.96 512l233.376 233.376z" fill="#808080"></path></svg>
+                    </div>
+                    <div>
+                        <div class="nav__label">
+                            Previous Post
+                        </div>
+                        <div class="nav__title">
+                            Others/Typora主题
+                        </div>
+                    </div>
+                </a>
+            
+        </div>
+        <div class="nav__next">
+            
+                <a href="/2020/05/15/Others/80C51%E5%BC%95%E8%84%9A%E5%8A%9F%E8%83%BD/" class="nav__link">
+                    <div>
+                        <div class="nav__label">
+                            Next Post
+                        </div>
+                        <div class="nav__title">
+                            Others/80C51引脚功能
+                        </div>
+                    </div>
+                    <div>
+                        <svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path d="M434.944 790.624l-45.248-45.248L623.04 512l-233.376-233.376 45.248-45.248L713.568 512z" fill="#808080"></path></svg>
+                    </div>
+                </a>
+            
+        </div>
+    </div>
+
+
+
+
+
+</main>
+
+            <footer class="footer">
+    
+
+
+    
+     
+ 
+
+ 
+    
+        
+        <p class="footer-copyright">
+            Copyright © 2020 <a href="/">Hexo</a>
+        </p>
+    
+    
+    <p>Powered by <a href="https://hexo.io" target="_blank">Hexo</a> | Theme - <a href="https://github.com/ChrAlpha/hexo-theme-cards" target="_blank">Cards</a></p>
+</footer>
+
+        </div>
+         
+
+ 
+
+ 
+
+ 
+
+  
+
+
+
+ 
+
+
+    
+ 
+
+ 
+
+ 
+
+ 
+
+
+
+
+    </body>
+</html>

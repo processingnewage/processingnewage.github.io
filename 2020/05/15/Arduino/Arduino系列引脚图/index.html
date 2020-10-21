@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+
+    
+
+    <!-- 渲染优化 -->
+    <meta name="renderer" content="webkit">
+    <meta name="force-rendering" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="HandheldFriendly" content="True" >
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!--icon-->
+
+    <link rel="shortcut icon" type='image/x-icon' href="/favicon.ico">
+
+
+    <!-- meta -->
+
+
+<title>Arduino/Arduino系列引脚图 | Hexo</title>
+
+
+    <meta name="keywords" content="Arduino">
+
+
+
+
+    <!-- OpenGraph -->
+ 
+    <meta name="description" content="Arduino系列引脚图">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Arduino&#x2F;Arduino系列引脚图">
+<meta property="og:url" content="http://yoursite.com/2020/05/15/Arduino/Arduino%E7%B3%BB%E5%88%97%E5%BC%95%E8%84%9A%E5%9B%BE/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="Arduino系列引脚图">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://i.loli.net/2020/05/04/vZAJ3zfuUEOGs6o.png">
+<meta property="og:image" content="https://i.loli.net/2020/05/04/62cQZKfzOGRhLVy.png">
+<meta property="og:image" content="https://i.loli.net/2020/05/04/9S7MZJzdNeuAVPE.png">
+<meta property="og:image" content="https://i.loli.net/2020/05/04/cNLhvRzQkKoxj6q.png">
+<meta property="og:image" content="https://i.loli.net/2020/05/04/msW8dO2UYax9M1A.png">
+<meta property="og:image" content="https://i.loli.net/2020/05/04/FochmUtyvBKljSA.png">
+<meta property="og:image" content="https://i.loli.net/2020/05/04/ARtV73xJYOBuPhW.png">
+<meta property="og:image" content="https://i.loli.net/2020/05/04/vJYeVEfhPMBs2Rl.png">
+<meta property="og:image" content="https://i.loli.net/2020/05/04/orCHqYzA8B7ITJ3.png">
+<meta property="og:image" content="https://i.loli.net/2020/05/04/uvUzNlbhTVS5X8o.png">
+<meta property="og:image" content="https://i.loli.net/2020/05/04/Xbjau7xKwSyT2sN.png">
+<meta property="og:image" content="https://i.loli.net/2020/05/04/mFHhGq64MIreBov.png">
+<meta property="og:image" content="https://i.loli.net/2020/05/04/IVDGo1x32jz84Fe.png">
+<meta property="og:image" content="https://i.loli.net/2020/05/04/cXIey2L4zHoYEKQ.png">
+<meta property="og:image" content="https://i.loli.net/2020/05/04/lqXvrLCB7EAZ1uU.png">
+<meta property="og:image" content="https://i.loli.net/2020/05/04/Y9Jnsw4diAcaSDC.png">
+<meta property="og:image" content="https://i.loli.net/2020/05/04/t7GiVc9m3KOxupb.jpg">
+<meta property="og:image" content="https://i.loli.net/2020/05/04/YylFP3oJMUbDNRn.jpg">
+<meta property="og:image" content="https://i.loli.net/2020/05/04/1WROmwFTLchNjSu.jpg">
+<meta property="og:image" content="https://i.loli.net/2020/05/04/r8W1NgZbsBJm4vC.jpg">
+<meta property="og:image" content="https://i.loli.net/2020/05/04/ISo3QOcRlxgDmFf.jpg">
+<meta property="og:image" content="https://i.loli.net/2020/05/04/3t1kgzNlPAS6yTF.jpg">
+<meta property="og:image" content="https://i.loli.net/2020/05/04/sTjA7RdPOx1lIeS.jpg">
+<meta property="og:image" content="https://i.loli.net/2020/05/04/6y9VsXkBWegIMFc.jpg">
+<meta property="og:image" content="https://i.loli.net/2020/05/04/VkptfgyXRcO1wMq.jpg">
+<meta property="article:published_time" content="2020-05-15T15:08:52.707Z">
+<meta property="article:modified_time" content="2020-05-15T14:59:19.357Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="Arduino">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://i.loli.net/2020/05/04/vZAJ3zfuUEOGs6o.png">
+
+
+    
+<link rel="stylesheet" href="/css/style/main.css">
+ 
+
+
+
+    
+    
+        <link rel="stylesheet" id="hl-default-theme" href="/css/highlight/default.css" media="none" onload="if(getComputedStyle(document.documentElement).getPropertyValue('--color-mode').indexOf('dark')===-1)this.media='all'">
+        
+    
+
+    
+    
+
+     
+
+    <!-- custom head -->
+
+<meta name="generator" content="Hexo 4.2.1"><link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+</head>
+
+    <body>
+        <div id="app">
+            <header class="header">
+    <div class="header__left">
+        <a href="/" class="button">
+            <span class="logo__text">
+                Demo
+            </span>
+        </a>
+    </div>
+    <div class="header__right">
+        
+            <div class="navbar__menus">
+                
+                    <a href="/" class="navbar-menu button">
+                        首页
+                    </a>
+                
+                    <a href="/tags/" class="navbar-menu button">
+                        标签
+                    </a>
+                
+                    <a href="/archives/" class="navbar-menu button">
+                        归档
+                    </a>
+                
+                    <a href="/friends/" class="navbar-menu button">
+                        友链
+                    </a>
+                
+                    <a href="/page/" class="navbar-menu button">
+                        Page
+                    </a>
+                
+            </div>
+        
+        
+        
+
+        
+        
+
+        
+
+        
+            <a class="dropdown-icon button" id="btn-dropdown">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width='24' height='24' fill="none" stroke="currentColor" stroke-width="0.7" stroke-linecap="round" stroke-linejoin="round">
+                    <path fill="currentColor" d="M3.314,4.8h13.372c0.41,0,0.743-0.333,0.743-0.743c0-0.41-0.333-0.743-0.743-0.743H3.314c-0.41,0-0.743,0.333-0.743,0.743C2.571,4.467,2.904,4.8,3.314,4.8z M16.686,15.2H3.314c-0.41,0-0.743,0.333-0.743,0.743s0.333,0.743,0.743,0.743h13.372c0.41,0,0.743-0.333,0.743-0.743S17.096,15.2,16.686,15.2z M16.686,9.257H3.314c-0.41,0-0.743,0.333-0.743,0.743s0.333,0.743,0.743,0.743h13.372c0.41,0,0.743-0.333,0.743-0.743S17.096,9.257,16.686,9.257z"></path>
+                </svg>
+            </a>
+            <div class="dropdown-menus" id="dropdown-menus">
+                
+                    <a href="/" class="dropdown-menu button">
+                        首页
+                    </a>
+                
+                    <a href="/tags/" class="dropdown-menu button">
+                        标签
+                    </a>
+                
+                    <a href="/archives/" class="dropdown-menu button">
+                        归档
+                    </a>
+                
+                    <a href="/friends/" class="dropdown-menu button">
+                        友链
+                    </a>
+                
+                    <a href="/page/" class="dropdown-menu button">
+                        Page
+                    </a>
+                
+            </div>
+        
+    </div>
+</header>
+
+
+            <main class="main">
+    
+
+<div class="post-title">
+    <h1 class="post-title__text">
+        Arduino/Arduino系列引脚图
+    </h1>
+    <div class="post-title__meta">
+        <a href="/archives/2020/05/" class="post-meta__date button">
+    2020-05-15
+</a>
+        
+ 
+        
+    
+    
+
+
+ 
+
+ 
+    </div>
+</div>
+
+
+
+<article class="post content-card">
+    <div class="post__header"></div>
+    <div class="post__content">
+        <h3 id="Arduino系列引脚图"><a href="#Arduino系列引脚图" class="headerlink" title="Arduino系列引脚图"></a>Arduino系列引脚图</h3><ul>
+<li><img src="https://i.loli.net/2020/05/04/vZAJ3zfuUEOGs6o.png" alt="UNOV3PDF"></li>
+</ul>
+<ul>
+<li><img src="https://i.loli.net/2020/05/04/62cQZKfzOGRhLVy.png" alt="sparkfun_microview_328_pinout"></li>
+</ul>
+<ul>
+<li><img src="https://i.loli.net/2020/05/04/9S7MZJzdNeuAVPE.png" alt="attiny_generic_pinout_and_ISP_pins"></li>
+</ul>
+<ul>
+<li><img src="https://i.loli.net/2020/05/04/cNLhvRzQkKoxj6q.png" alt="atmega2560_pinout"></li>
+</ul>
+<ul>
+<li><img src="https://i.loli.net/2020/05/04/msW8dO2UYax9M1A.png" alt="atmega1248p_pinout_and_ISP_pins_v2"></li>
+</ul>
+<ul>
+<li><img src="https://i.loli.net/2020/05/04/FochmUtyvBKljSA.png" alt="atmega1248p_pinout_and_ISP_pins"></li>
+</ul>
+<ul>
+<li><img src="https://i.loli.net/2020/05/04/ARtV73xJYOBuPhW.png" alt="arduino_yun_pinout"></li>
+</ul>
+<ul>
+<li><img src="https://i.loli.net/2020/05/04/vJYeVEfhPMBs2Rl.png" alt="arduino_uno_and_atmega328_pinout"></li>
+</ul>
+<ul>
+<li><img src="https://i.loli.net/2020/05/04/orCHqYzA8B7ITJ3.png" alt="arduino_promini_pinout"></li>
+</ul>
+<ul>
+<li><img src="https://i.loli.net/2020/05/04/uvUzNlbhTVS5X8o.png" alt="arduino_mini_pinout"></li>
+</ul>
+<ul>
+<li><img src="https://i.loli.net/2020/05/04/Xbjau7xKwSyT2sN.png" alt="arduino_micro_pinout_and_ISP_pins"></li>
+</ul>
+<ul>
+<li><img src="https://i.loli.net/2020/05/04/mFHhGq64MIreBov.png" alt="arduino_mega_pinout_v2"></li>
+</ul>
+<ul>
+<li><img src="https://i.loli.net/2020/05/04/IVDGo1x32jz84Fe.png" alt="arduino_mega_pinout"></li>
+</ul>
+<ul>
+<li><img src="https://i.loli.net/2020/05/04/cXIey2L4zHoYEKQ.png" alt="arduino_leonardo_pinout_v2"></li>
+</ul>
+<ul>
+<li><img src="https://i.loli.net/2020/05/04/lqXvrLCB7EAZ1uU.png" alt="arduino_leonardo_pinout"></li>
+</ul>
+<ul>
+<li><img src="https://i.loli.net/2020/05/04/Y9Jnsw4diAcaSDC.png" alt="arduino_duemilanove_pinout"></li>
+</ul>
+<ul>
+<li><img src="https://i.loli.net/2020/05/04/t7GiVc9m3KOxupb.jpg" alt="145510zdy1adyryp11p33p"></li>
+</ul>
+<ul>
+<li><img src="https://i.loli.net/2020/05/04/YylFP3oJMUbDNRn.jpg" alt="145347mgy6pp6p4gayb1pi"></li>
+</ul>
+<ul>
+<li><img src="https://i.loli.net/2020/05/04/1WROmwFTLchNjSu.jpg" alt="145338izk7d4ytm8yymunm"></li>
+</ul>
+<ul>
+<li><img src="https://i.loli.net/2020/05/04/r8W1NgZbsBJm4vC.jpg" alt="145252on33nziubbb0tzt3"></li>
+</ul>
+<ul>
+<li><img src="https://i.loli.net/2020/05/04/ISo3QOcRlxgDmFf.jpg" alt="145235yezraasyhsuazlia"></li>
+</ul>
+<ul>
+<li><img src="https://i.loli.net/2020/05/04/3t1kgzNlPAS6yTF.jpg" alt="145224m99ux00wk0nfm4nv"></li>
+</ul>
+<ul>
+<li><img src="https://i.loli.net/2020/05/04/sTjA7RdPOx1lIeS.jpg" alt="145202dn1isx9aiz9ajaox"></li>
+</ul>
+<ul>
+<li><img src="https://i.loli.net/2020/05/04/6y9VsXkBWegIMFc.jpg" alt="144803tym6xy6ffef366y0"></li>
+</ul>
+<ul>
+<li><img src="https://i.loli.net/2020/05/04/VkptfgyXRcO1wMq.jpg" alt="144756debwza6wc1rltl1z"></li>
+</ul>
+
+    </div>
+     
+    <div class="post-footer__meta">
+    <p>
+        updated at 2020-05-15
+    </p>
+</div> 
+    <div class="post-meta__cats">
+    
+    
+        <a href="/tags/Arduino/" class="post-tags__link button"># Arduino</a>
+    
+</div> 
+</article>
+
+
+    <div class="nav">
+        <div class="nav__prev">
+            
+                <a href="/2020/05/15/Arduino/Arduino%E9%AB%98%E7%BA%A7%E6%95%99%E7%A8%8B/" class="nav__link">
+                    <div>
+                        <svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path d="M589.088 790.624L310.464 512l278.624-278.624 45.248 45.248L400.96 512l233.376 233.376z" fill="#808080"></path></svg>
+                    </div>
+                    <div>
+                        <div class="nav__label">
+                            Previous Post
+                        </div>
+                        <div class="nav__title">
+                            Arduino/Arduino高级教程
+                        </div>
+                    </div>
+                </a>
+            
+        </div>
+        <div class="nav__next">
+            
+                <a href="/2020/05/15/Arduino/Arduino%E7%9B%B8%E5%85%B3%E7%9F%A5%E8%AF%86/" class="nav__link">
+                    <div>
+                        <div class="nav__label">
+                            Next Post
+                        </div>
+                        <div class="nav__title">
+                            Arduino/Arduino相关知识
+                        </div>
+                    </div>
+                    <div>
+                        <svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path d="M434.944 790.624l-45.248-45.248L623.04 512l-233.376-233.376 45.248-45.248L713.568 512z" fill="#808080"></path></svg>
+                    </div>
+                </a>
+            
+        </div>
+    </div>
+
+
+
+
+
+</main>
+
+            <footer class="footer">
+    
+
+
+    
+     
+ 
+
+ 
+    
+        
+        <p class="footer-copyright">
+            Copyright © 2020 <a href="/">Hexo</a>
+        </p>
+    
+    
+    <p>Powered by <a href="https://hexo.io" target="_blank">Hexo</a> | Theme - <a href="https://github.com/ChrAlpha/hexo-theme-cards" target="_blank">Cards</a></p>
+</footer>
+
+        </div>
+         
+
+ 
+
+ 
+
+ 
+
+  
+
+
+
+ 
+
+
+    
+ 
+
+ 
+
+ 
+
+ 
+
+
+
+
+    </body>
+</html>

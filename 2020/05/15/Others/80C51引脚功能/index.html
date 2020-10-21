@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+
+    
+
+    <!-- 渲染优化 -->
+    <meta name="renderer" content="webkit">
+    <meta name="force-rendering" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="HandheldFriendly" content="True" >
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!--icon-->
+
+    <link rel="shortcut icon" type='image/x-icon' href="/favicon.ico">
+
+
+    <!-- meta -->
+
+
+<title>Others/80C51引脚功能 | Hexo</title>
+
+
+    <meta name="keywords" content="Others">
+
+
+
+
+    <!-- OpenGraph -->
+ 
+    <meta name="description" content="80C51单片机引脚图及引脚功能介绍首先我们来介绍一下单片机的引脚图及引脚功能(如下图所示)， 引脚的具体功能将在下面详细介绍：单片机的40个引脚大致可分为4类：电源、时钟、控制和I&#x2F;O引脚">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Others&#x2F;80C51引脚功能">
+<meta property="og:url" content="http://yoursite.com/2020/05/15/Others/80C51%E5%BC%95%E8%84%9A%E5%8A%9F%E8%83%BD/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="80C51单片机引脚图及引脚功能介绍首先我们来介绍一下单片机的引脚图及引脚功能(如下图所示)， 引脚的具体功能将在下面详细介绍：单片机的40个引脚大致可分为4类：电源、时钟、控制和I&#x2F;O引脚">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://file.elecfans.com/web1/M00/62/C0/o4YBAFuMmPmAYatAAACY-kJDecU841.jpg">
+<meta property="og:image" content="https://wkretype.bdimg.com/retype/zoom/8ca137376c175f0e7%20cd13757?pn=4&o=jpg_6&md5sum=58dde2ab1adebceee656f03910dd1681&sign=31155fafe8&png=17305-122927&jpg=179642-396655">
+<meta property="og:image" content="https://wkretype.bdimg.com/retype/zoom/8ca137376c175f0e7cd13757?pn=5&o=jpg_6&md5sum=58dde2ab1adebceee656f03910dd1681&sign=31155fafe8&png=122928-231672&jpg=396656-701933">
+<meta property="og:image" content="https://wkretype.bdimg.com/retype/zoom/8ca137376c175f0e7cd13757?pn=6&o=jpg_6&md5sum=58dde2ab1adebceee656f03910dd1681&sign=31155fafe8&png=231673-338674&jpg=701934-911915">
+<meta property="og:image" content="https://wkretype.bdimg.com/retype/zoom/8ca137376c175f0e7cd13757?pn=7&o=jpg_6&md5sum=58dde2ab1adebceee656f03910dd1681&sign=31155fafe8&png=338675-447310&jpg=911916-1123457">
+<meta property="og:image" content="https://wkretype.bdimg.com/retype/zoom/8ca137376c175f0e7cd13757?pn=8&o=jpg_6&md5sum=58dde2ab1adebceee656f03910dd1681&sign=31155fafe8&png=447311-558351&jpg=1123458-1376426">
+<meta property="og:image" content="https://wkretype.bdimg.com/retype/zoom/8ca137376c175f0e7cd13757?pn=9&o=jpg_6&md5sum=58dde2ab1adebceee656f03910dd1681&sign=31155fafe8&png=558352-581233&jpg=1376427-1618772">
+<meta property="og:image" content="https://wkretype.bdimg.com/retype/zoom/8ca137376c175f0e7cd13757?pn=10&o=jpg_6&md5sum=58dde2ab1adebceee656f03910dd1681&sign=31155fafe8&png=581234-613072&jpg=1618773-1799635">
+<meta property="article:published_time" content="2020-05-15T07:37:54.172Z">
+<meta property="article:modified_time" content="2020-05-15T07:59:25.498Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="Others">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://file.elecfans.com/web1/M00/62/C0/o4YBAFuMmPmAYatAAACY-kJDecU841.jpg">
+
+
+    
+<link rel="stylesheet" href="/css/style/main.css">
+ 
+
+
+
+    
+    
+        <link rel="stylesheet" id="hl-default-theme" href="/css/highlight/default.css" media="none" onload="if(getComputedStyle(document.documentElement).getPropertyValue('--color-mode').indexOf('dark')===-1)this.media='all'">
+        
+    
+
+    
+    
+
+     
+
+    <!-- custom head -->
+
+<meta name="generator" content="Hexo 4.2.1"><link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+</head>
+
+    <body>
+        <div id="app">
+            <header class="header">
+    <div class="header__left">
+        <a href="/" class="button">
+            <span class="logo__text">
+                Demo
+            </span>
+        </a>
+    </div>
+    <div class="header__right">
+        
+            <div class="navbar__menus">
+                
+                    <a href="/" class="navbar-menu button">
+                        首页
+                    </a>
+                
+                    <a href="/tags/" class="navbar-menu button">
+                        标签
+                    </a>
+                
+                    <a href="/archives/" class="navbar-menu button">
+                        归档
+                    </a>
+                
+                    <a href="/friends/" class="navbar-menu button">
+                        友链
+                    </a>
+                
+                    <a href="/page/" class="navbar-menu button">
+                        Page
+                    </a>
+                
+            </div>
+        
+        
+        
+
+        
+        
+
+        
+
+        
+            <a class="dropdown-icon button" id="btn-dropdown">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width='24' height='24' fill="none" stroke="currentColor" stroke-width="0.7" stroke-linecap="round" stroke-linejoin="round">
+                    <path fill="currentColor" d="M3.314,4.8h13.372c0.41,0,0.743-0.333,0.743-0.743c0-0.41-0.333-0.743-0.743-0.743H3.314c-0.41,0-0.743,0.333-0.743,0.743C2.571,4.467,2.904,4.8,3.314,4.8z M16.686,15.2H3.314c-0.41,0-0.743,0.333-0.743,0.743s0.333,0.743,0.743,0.743h13.372c0.41,0,0.743-0.333,0.743-0.743S17.096,15.2,16.686,15.2z M16.686,9.257H3.314c-0.41,0-0.743,0.333-0.743,0.743s0.333,0.743,0.743,0.743h13.372c0.41,0,0.743-0.333,0.743-0.743S17.096,9.257,16.686,9.257z"></path>
+                </svg>
+            </a>
+            <div class="dropdown-menus" id="dropdown-menus">
+                
+                    <a href="/" class="dropdown-menu button">
+                        首页
+                    </a>
+                
+                    <a href="/tags/" class="dropdown-menu button">
+                        标签
+                    </a>
+                
+                    <a href="/archives/" class="dropdown-menu button">
+                        归档
+                    </a>
+                
+                    <a href="/friends/" class="dropdown-menu button">
+                        友链
+                    </a>
+                
+                    <a href="/page/" class="dropdown-menu button">
+                        Page
+                    </a>
+                
+            </div>
+        
+    </div>
+</header>
+
+
+            <main class="main">
+    
+
+<div class="post-title">
+    <h1 class="post-title__text">
+        Others/80C51引脚功能
+    </h1>
+    <div class="post-title__meta">
+        <a href="/archives/2020/05/" class="post-meta__date button">
+    2020-05-15
+</a>
+        
+ 
+        
+    
+    
+
+
+ 
+
+ 
+    </div>
+</div>
+
+
+
+<article class="post content-card">
+    <div class="post__header"></div>
+    <div class="post__content">
+        <h3 id="80C51单片机引脚图及引脚功能介绍"><a href="#80C51单片机引脚图及引脚功能介绍" class="headerlink" title="80C51单片机引脚图及引脚功能介绍"></a>80C51单片机引脚图及引脚功能介绍</h3><p>首先我们来介绍一下单片机的引脚图及引脚功能(如下图所示)， 引脚的具体功能将在下面详细介绍：<br><img src="https://file.elecfans.com/web1/M00/62/C0/o4YBAFuMmPmAYatAAACY-kJDecU841.jpg" alt="1"><br>单片机的40个引脚大致可分为4类：电源、时钟、控制和I/O引脚<br><img src="https://wkretype.bdimg.com/retype/zoom/8ca137376c175f0e7%20cd13757?pn=4&o=jpg_6&md5sum=58dde2ab1adebceee656f03910dd1681&sign=31155fafe8&png=17305-122927&jpg=179642-396655" alt=""></p>
+<p><img src="https://wkretype.bdimg.com/retype/zoom/8ca137376c175f0e7cd13757?pn=5&o=jpg_6&md5sum=58dde2ab1adebceee656f03910dd1681&sign=31155fafe8&png=122928-231672&jpg=396656-701933" alt=""></p>
+<p><img src="https://wkretype.bdimg.com/retype/zoom/8ca137376c175f0e7cd13757?pn=6&o=jpg_6&md5sum=58dde2ab1adebceee656f03910dd1681&sign=31155fafe8&png=231673-338674&jpg=701934-911915" alt=""></p>
+<p><img src="https://wkretype.bdimg.com/retype/zoom/8ca137376c175f0e7cd13757?pn=7&o=jpg_6&md5sum=58dde2ab1adebceee656f03910dd1681&sign=31155fafe8&png=338675-447310&jpg=911916-1123457" alt=""></p>
+<p><img src="https://wkretype.bdimg.com/retype/zoom/8ca137376c175f0e7cd13757?pn=8&o=jpg_6&md5sum=58dde2ab1adebceee656f03910dd1681&sign=31155fafe8&png=447311-558351&jpg=1123458-1376426" alt=""></p>
+<p><img src="https://wkretype.bdimg.com/retype/zoom/8ca137376c175f0e7cd13757?pn=9&o=jpg_6&md5sum=58dde2ab1adebceee656f03910dd1681&sign=31155fafe8&png=558352-581233&jpg=1376427-1618772" alt=""></p>
+<p><img src="https://wkretype.bdimg.com/retype/zoom/8ca137376c175f0e7cd13757?pn=10&o=jpg_6&md5sum=58dde2ab1adebceee656f03910dd1681&sign=31155fafe8&png=581234-613072&jpg=1618773-1799635" alt=""></p>
+
+    </div>
+     
+    <div class="post-footer__meta">
+    <p>
+        updated at 2020-05-15
+    </p>
+</div> 
+    <div class="post-meta__cats">
+    
+    
+        <a href="/tags/Others/" class="post-tags__link button"># Others</a>
+    
+</div> 
+</article>
+
+
+    <div class="nav">
+        <div class="nav__prev">
+            
+                <a href="/2020/05/15/Others/Typora%E5%B8%B8%E7%94%A8%E8%AF%AD%E6%B3%95/" class="nav__link">
+                    <div>
+                        <svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path d="M589.088 790.624L310.464 512l278.624-278.624 45.248 45.248L400.96 512l233.376 233.376z" fill="#808080"></path></svg>
+                    </div>
+                    <div>
+                        <div class="nav__label">
+                            Previous Post
+                        </div>
+                        <div class="nav__title">
+                            Others/Typora常用语法
+                        </div>
+                    </div>
+                </a>
+            
+        </div>
+        <div class="nav__next">
+            
+                <a href="/2019/08/21/Python/Django/Django%20Web%E5%BC%80%E5%8F%91%E5%85%A5%E9%97%A8/%E7%AC%AC%E4%BA%8C%E7%AB%A0/my_site/html/form/" class="nav__link">
+                    <div>
+                        <div class="nav__label">
+                            Next Post
+                        </div>
+                        <div class="nav__title">
+                            Python/Django/Django Web开发入门/第二章/my_site/html/form
+                        </div>
+                    </div>
+                    <div>
+                        <svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path d="M434.944 790.624l-45.248-45.248L623.04 512l-233.376-233.376 45.248-45.248L713.568 512z" fill="#808080"></path></svg>
+                    </div>
+                </a>
+            
+        </div>
+    </div>
+
+
+
+
+
+</main>
+
+            <footer class="footer">
+    
+
+
+    
+     
+ 
+
+ 
+    
+        
+        <p class="footer-copyright">
+            Copyright © 2020 <a href="/">Hexo</a>
+        </p>
+    
+    
+    <p>Powered by <a href="https://hexo.io" target="_blank">Hexo</a> | Theme - <a href="https://github.com/ChrAlpha/hexo-theme-cards" target="_blank">Cards</a></p>
+</footer>
+
+        </div>
+         
+
+ 
+
+ 
+
+ 
+
+  
+
+
+
+ 
+
+
+    
+ 
+
+ 
+
+ 
+
+ 
+
+
+
+
+    </body>
+</html>
