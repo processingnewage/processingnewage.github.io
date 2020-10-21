@@ -1,301 +1,443 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-    <meta charset="utf-8">
-
-    
-
-    <!-- 渲染优化 -->
-    <meta name="renderer" content="webkit">
-    <meta name="force-rendering" content="webkit">
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
-    <meta name="HandheldFriendly" content="True" >
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
-    <!--icon-->
-
-    <link rel="shortcut icon" type='image/x-icon' href="/favicon.ico">
-
-
-    <!-- meta -->
-
-
-<title>Others/80C51引脚功能 | Hexo</title>
-
-
-    <meta name="keywords" content="Others">
 
 
 
 
-    <!-- OpenGraph -->
- 
-    <meta name="description" content="80C51单片机引脚图及引脚功能介绍首先我们来介绍一下单片机的引脚图及引脚功能(如下图所示)， 引脚的具体功能将在下面详细介绍：单片机的40个引脚大致可分为4类：电源、时钟、控制和I&#x2F;O引脚">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Others&#x2F;80C51引脚功能">
-<meta property="og:url" content="http://yoursite.com/2020/05/15/Others/80C51%E5%BC%95%E8%84%9A%E5%8A%9F%E8%83%BD/index.html">
-<meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="80C51单片机引脚图及引脚功能介绍首先我们来介绍一下单片机的引脚图及引脚功能(如下图所示)， 引脚的具体功能将在下面详细介绍：单片机的40个引脚大致可分为4类：电源、时钟、控制和I&#x2F;O引脚">
-<meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://file.elecfans.com/web1/M00/62/C0/o4YBAFuMmPmAYatAAACY-kJDecU841.jpg">
-<meta property="og:image" content="https://wkretype.bdimg.com/retype/zoom/8ca137376c175f0e7%20cd13757?pn=4&o=jpg_6&md5sum=58dde2ab1adebceee656f03910dd1681&sign=31155fafe8&png=17305-122927&jpg=179642-396655">
-<meta property="og:image" content="https://wkretype.bdimg.com/retype/zoom/8ca137376c175f0e7cd13757?pn=5&o=jpg_6&md5sum=58dde2ab1adebceee656f03910dd1681&sign=31155fafe8&png=122928-231672&jpg=396656-701933">
-<meta property="og:image" content="https://wkretype.bdimg.com/retype/zoom/8ca137376c175f0e7cd13757?pn=6&o=jpg_6&md5sum=58dde2ab1adebceee656f03910dd1681&sign=31155fafe8&png=231673-338674&jpg=701934-911915">
-<meta property="og:image" content="https://wkretype.bdimg.com/retype/zoom/8ca137376c175f0e7cd13757?pn=7&o=jpg_6&md5sum=58dde2ab1adebceee656f03910dd1681&sign=31155fafe8&png=338675-447310&jpg=911916-1123457">
-<meta property="og:image" content="https://wkretype.bdimg.com/retype/zoom/8ca137376c175f0e7cd13757?pn=8&o=jpg_6&md5sum=58dde2ab1adebceee656f03910dd1681&sign=31155fafe8&png=447311-558351&jpg=1123458-1376426">
-<meta property="og:image" content="https://wkretype.bdimg.com/retype/zoom/8ca137376c175f0e7cd13757?pn=9&o=jpg_6&md5sum=58dde2ab1adebceee656f03910dd1681&sign=31155fafe8&png=558352-581233&jpg=1376427-1618772">
-<meta property="og:image" content="https://wkretype.bdimg.com/retype/zoom/8ca137376c175f0e7cd13757?pn=10&o=jpg_6&md5sum=58dde2ab1adebceee656f03910dd1681&sign=31155fafe8&png=581234-613072&jpg=1618773-1799635">
-<meta property="article:published_time" content="2020-05-15T07:37:54.172Z">
-<meta property="article:modified_time" content="2020-05-15T07:59:25.498Z">
-<meta property="article:author" content="John Doe">
-<meta property="article:tag" content="Others">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://file.elecfans.com/web1/M00/62/C0/o4YBAFuMmPmAYatAAACY-kJDecU841.jpg">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" type="image/png" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="">
+  <meta name="author" content="John Doe">
+  <meta name="keywords" content="">
+  <title>Others/80C51引脚功能 - Hexo</title>
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
+<link  rel="stylesheet" href="https://cdn.staticfile.org/github-markdown-css/4.0.0/github-markdown.min.css" />
 
 
-    
-<link rel="stylesheet" href="/css/style/main.css">
- 
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/10.0.0/styles/github-gist.min.css" />
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_fmb4a04yx8h.css">
 
 
 
-    
-    
-        <link rel="stylesheet" id="hl-default-theme" href="/css/highlight/default.css" media="none" onload="if(getComputedStyle(document.documentElement).getPropertyValue('--color-mode').indexOf('dark')===-1)this.media='all'">
-        
-    
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_pjno9b9zyxs.css">
 
-    
-    
 
-     
 
-    <!-- custom head -->
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
 
 <meta name="generator" content="Hexo 4.2.1"><link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
 </head>
 
-    <body>
-        <div id="app">
-            <header class="header">
-    <div class="header__left">
-        <a href="/" class="button">
-            <span class="logo__text">
-                Demo
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>processing</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/">
+              <i class="iconfont icon-home-fill"></i>
+              Home</a>
+          </li>
+        
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/archives/">
+              <i class="iconfont icon-archive-fill"></i>
+              Archives</a>
+          </li>
+        
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/categories/">
+              <i class="iconfont icon-category-fill"></i>
+              Categories</a>
+          </li>
+        
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/tags/">
+              <i class="iconfont icon-tags-fill"></i>
+              Tags</a>
+          </li>
+        
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/about/">
+              <i class="iconfont icon-user-fill"></i>
+              About</a>
+          </li>
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="view intro-2" id="background" parallax=true
+         style="background: url('/img/default.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="container text-center white-text fadeInUp">
+            <span class="h2" id="subtitle">
+              
             </span>
-        </a>
+
+            
+              
+                <div class="mt-3 post-meta">
+                  <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+                  <time datetime="2020-05-15 15:37">
+                    May 15, 2020 pm
+                  </time>
+                </div>
+              
+
+              <div class="mt-1">
+                
+                  
+                  <span class="post-meta mr-2">
+                    <i class="iconfont icon-chart"></i>
+                    80 字
+                  </span>
+                
+
+                
+                  
+                  <span class="post-meta mr-2">
+                      <i class="iconfont icon-clock-fill"></i>
+                    
+                    
+                    1
+                     分钟
+                  </span>
+                
+
+                
+              </div>
+            
+          </div>
+
+          
+        </div>
+      </div>
     </div>
-    <div class="header__right">
-        
-            <div class="navbar__menus">
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-md">
+      <div class="container nopadding-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <div class="post-content mx-auto" id="post">
+            
+            <article class="markdown-body">
+              <h3 id="80C51单片机引脚图及引脚功能介绍"><a href="#80C51单片机引脚图及引脚功能介绍" class="headerlink" title="80C51单片机引脚图及引脚功能介绍"></a>80C51单片机引脚图及引脚功能介绍</h3><p>首先我们来介绍一下单片机的引脚图及引脚功能(如下图所示)， 引脚的具体功能将在下面详细介绍：<br><img src="https://file.elecfans.com/web1/M00/62/C0/o4YBAFuMmPmAYatAAACY-kJDecU841.jpg" srcset="/img/loading.gif" alt="1"><br>单片机的40个引脚大致可分为4类：电源、时钟、控制和I/O引脚<br><img src="https://wkretype.bdimg.com/retype/zoom/8ca137376c175f0e7%20cd13757?pn=4&o=jpg_6&md5sum=58dde2ab1adebceee656f03910dd1681&sign=31155fafe8&png=17305-122927&jpg=179642-396655" srcset="/img/loading.gif" alt=""></p>
+<p><img src="https://wkretype.bdimg.com/retype/zoom/8ca137376c175f0e7cd13757?pn=5&o=jpg_6&md5sum=58dde2ab1adebceee656f03910dd1681&sign=31155fafe8&png=122928-231672&jpg=396656-701933" srcset="/img/loading.gif" alt=""></p>
+<p><img src="https://wkretype.bdimg.com/retype/zoom/8ca137376c175f0e7cd13757?pn=6&o=jpg_6&md5sum=58dde2ab1adebceee656f03910dd1681&sign=31155fafe8&png=231673-338674&jpg=701934-911915" srcset="/img/loading.gif" alt=""></p>
+<p><img src="https://wkretype.bdimg.com/retype/zoom/8ca137376c175f0e7cd13757?pn=7&o=jpg_6&md5sum=58dde2ab1adebceee656f03910dd1681&sign=31155fafe8&png=338675-447310&jpg=911916-1123457" srcset="/img/loading.gif" alt=""></p>
+<p><img src="https://wkretype.bdimg.com/retype/zoom/8ca137376c175f0e7cd13757?pn=8&o=jpg_6&md5sum=58dde2ab1adebceee656f03910dd1681&sign=31155fafe8&png=447311-558351&jpg=1123458-1376426" srcset="/img/loading.gif" alt=""></p>
+<p><img src="https://wkretype.bdimg.com/retype/zoom/8ca137376c175f0e7cd13757?pn=9&o=jpg_6&md5sum=58dde2ab1adebceee656f03910dd1681&sign=31155fafe8&png=558352-581233&jpg=1376427-1618772" srcset="/img/loading.gif" alt=""></p>
+<p><img src="https://wkretype.bdimg.com/retype/zoom/8ca137376c175f0e7cd13757?pn=10&o=jpg_6&md5sum=58dde2ab1adebceee656f03910dd1681&sign=31155fafe8&png=581234-613072&jpg=1618773-1799635" srcset="/img/loading.gif" alt=""></p>
+
+            </article>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
                 
-                    <a href="/" class="navbar-menu button">
-                        首页
-                    </a>
                 
-                    <a href="/tags/" class="navbar-menu button">
-                        标签
-                    </a>
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/Others/">Others</a>
+                    
+                  </div>
                 
-                    <a href="/archives/" class="navbar-menu button">
-                        归档
-                    </a>
-                
-                    <a href="/friends/" class="navbar-menu button">
-                        友链
-                    </a>
-                
-                    <a href="/page/" class="navbar-menu button">
-                        Page
-                    </a>
-                
+              </div>
+              
+                <p class="note note-warning">本博客所有文章除特别声明外，均采用 <a href="https://zh.wikipedia.org/wiki/Wikipedia:CC_BY-SA_3.0%E5%8D%8F%E8%AE%AE%E6%96%87%E6%9C%AC" target="_blank" rel="nofollow noopener noopener">CC BY-SA 3.0协议</a> 。转载请注明出处！</p>
+              
+              
+                <div class="post-prevnext row">
+                  <div class="post-prev col-6">
+                    
+                    
+                      <a href="/2020/05/15/Others/Typora%E5%B8%B8%E7%94%A8%E8%AF%AD%E6%B3%95/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">Others/Typora常用语法</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </div>
+                  <div class="post-next col-6">
+                    
+                    
+                      <a href="/2019/08/21/Python/Django/Django%20Web%E5%BC%80%E5%8F%91%E5%85%A5%E9%97%A8/%E7%AC%AC%E4%BA%8C%E7%AB%A0/my_site/html/form/">
+                        <span class="hidden-mobile">Python/Django/Django Web开发入门/第二章/my_site/html/form</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </div>
+                </div>
+              
             </div>
-        
-        
-        
 
-        
-        
-
-        
-
-        
-            <a class="dropdown-icon button" id="btn-dropdown">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width='24' height='24' fill="none" stroke="currentColor" stroke-width="0.7" stroke-linecap="round" stroke-linejoin="round">
-                    <path fill="currentColor" d="M3.314,4.8h13.372c0.41,0,0.743-0.333,0.743-0.743c0-0.41-0.333-0.743-0.743-0.743H3.314c-0.41,0-0.743,0.333-0.743,0.743C2.571,4.467,2.904,4.8,3.314,4.8z M16.686,15.2H3.314c-0.41,0-0.743,0.333-0.743,0.743s0.333,0.743,0.743,0.743h13.372c0.41,0,0.743-0.333,0.743-0.743S17.096,15.2,16.686,15.2z M16.686,9.257H3.314c-0.41,0-0.743,0.333-0.743,0.743s0.333,0.743,0.743,0.743h13.372c0.41,0,0.743-0.333,0.743-0.743S17.096,9.257,16.686,9.257z"></path>
-                </svg>
-            </a>
-            <div class="dropdown-menus" id="dropdown-menus">
-                
-                    <a href="/" class="dropdown-menu button">
-                        首页
-                    </a>
-                
-                    <a href="/tags/" class="dropdown-menu button">
-                        标签
-                    </a>
-                
-                    <a href="/archives/" class="dropdown-menu button">
-                        归档
-                    </a>
-                
-                    <a href="/friends/" class="dropdown-menu button">
-                        友链
-                    </a>
-                
-                    <a href="/page/" class="dropdown-menu button">
-                        Page
-                    </a>
-                
-            </div>
-        
+            
+          </div>
+        </div>
+      </div>
     </div>
-</header>
-
-
-            <main class="main">
     
-
-<div class="post-title">
-    <h1 class="post-title__text">
-        Others/80C51引脚功能
-    </h1>
-    <div class="post-title__meta">
-        <a href="/archives/2020/05/" class="post-meta__date button">
-    2020-05-15
-</a>
-        
- 
-        
-    
-    
-
-
- 
-
- 
-    </div>
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;TOC</p>
+  <div id="tocbot"></div>
 </div>
 
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
 
 
-<article class="post content-card">
-    <div class="post__header"></div>
-    <div class="post__content">
-        <h3 id="80C51单片机引脚图及引脚功能介绍"><a href="#80C51单片机引脚图及引脚功能介绍" class="headerlink" title="80C51单片机引脚图及引脚功能介绍"></a>80C51单片机引脚图及引脚功能介绍</h3><p>首先我们来介绍一下单片机的引脚图及引脚功能(如下图所示)， 引脚的具体功能将在下面详细介绍：<br><img src="https://file.elecfans.com/web1/M00/62/C0/o4YBAFuMmPmAYatAAACY-kJDecU841.jpg" alt="1"><br>单片机的40个引脚大致可分为4类：电源、时钟、控制和I/O引脚<br><img src="https://wkretype.bdimg.com/retype/zoom/8ca137376c175f0e7%20cd13757?pn=4&o=jpg_6&md5sum=58dde2ab1adebceee656f03910dd1681&sign=31155fafe8&png=17305-122927&jpg=179642-396655" alt=""></p>
-<p><img src="https://wkretype.bdimg.com/retype/zoom/8ca137376c175f0e7cd13757?pn=5&o=jpg_6&md5sum=58dde2ab1adebceee656f03910dd1681&sign=31155fafe8&png=122928-231672&jpg=396656-701933" alt=""></p>
-<p><img src="https://wkretype.bdimg.com/retype/zoom/8ca137376c175f0e7cd13757?pn=6&o=jpg_6&md5sum=58dde2ab1adebceee656f03910dd1681&sign=31155fafe8&png=231673-338674&jpg=701934-911915" alt=""></p>
-<p><img src="https://wkretype.bdimg.com/retype/zoom/8ca137376c175f0e7cd13757?pn=7&o=jpg_6&md5sum=58dde2ab1adebceee656f03910dd1681&sign=31155fafe8&png=338675-447310&jpg=911916-1123457" alt=""></p>
-<p><img src="https://wkretype.bdimg.com/retype/zoom/8ca137376c175f0e7cd13757?pn=8&o=jpg_6&md5sum=58dde2ab1adebceee656f03910dd1681&sign=31155fafe8&png=447311-558351&jpg=1123458-1376426" alt=""></p>
-<p><img src="https://wkretype.bdimg.com/retype/zoom/8ca137376c175f0e7cd13757?pn=9&o=jpg_6&md5sum=58dde2ab1adebceee656f03910dd1681&sign=31155fafe8&png=558352-581233&jpg=1376427-1618772" alt=""></p>
-<p><img src="https://wkretype.bdimg.com/retype/zoom/8ca137376c175f0e7cd13757?pn=10&o=jpg_6&md5sum=58dde2ab1adebceee656f03910dd1681&sign=31155fafe8&png=581234-613072&jpg=1618773-1799635" alt=""></p>
+    
+  </main>
 
+  
+    <a id="scroll-top-button" href="#" role="button">
+      <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+    </a>
+  
+
+  
+    <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Search</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">keyword</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
     </div>
-     
-    <div class="post-footer__meta">
-    <p>
-        updated at 2020-05-15
-    </p>
-</div> 
-    <div class="post-meta__cats">
-    
-    
-        <a href="/tags/Others/" class="post-tags__link button"># Others</a>
-    
-</div> 
-</article>
-
-
-    <div class="nav">
-        <div class="nav__prev">
-            
-                <a href="/2020/05/15/Others/Typora%E5%B8%B8%E7%94%A8%E8%AF%AD%E6%B3%95/" class="nav__link">
-                    <div>
-                        <svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path d="M589.088 790.624L310.464 512l278.624-278.624 45.248 45.248L400.96 512l233.376 233.376z" fill="#808080"></path></svg>
-                    </div>
-                    <div>
-                        <div class="nav__label">
-                            Previous Post
-                        </div>
-                        <div class="nav__title">
-                            Others/Typora常用语法
-                        </div>
-                    </div>
-                </a>
-            
-        </div>
-        <div class="nav__next">
-            
-                <a href="/2019/08/21/Python/Django/Django%20Web%E5%BC%80%E5%8F%91%E5%85%A5%E9%97%A8/%E7%AC%AC%E4%BA%8C%E7%AB%A0/my_site/html/form/" class="nav__link">
-                    <div>
-                        <div class="nav__label">
-                            Next Post
-                        </div>
-                        <div class="nav__title">
-                            Python/Django/Django Web开发入门/第二章/my_site/html/form
-                        </div>
-                    </div>
-                    <div>
-                        <svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path d="M434.944 790.624l-45.248-45.248L623.04 512l-233.376-233.376 45.248-45.248L713.568 512z" fill="#808080"></path></svg>
-                    </div>
-                </a>
-            
-        </div>
-    </div>
-
-
-
-
-
-</main>
-
-            <footer class="footer">
-    
-
-
-    
-     
- 
-
- 
-    
-        
-        <p class="footer-copyright">
-            Copyright © 2020 <a href="/">Hexo</a>
-        </p>
-    
-    
-    <p>Powered by <a href="https://hexo.io" target="_blank">Hexo</a> | Theme - <a href="https://github.com/ChrAlpha/hexo-theme-cards" target="_blank">Cards</a></p>
-</footer>
-
-        </div>
-         
-
- 
-
- 
-
- 
+  </div>
+</div>
+  
 
   
 
+  
 
-
- 
-
+  <footer class="mt-5">
+  <div class="text-center py-3">
+    <div>
+      <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a>
+      <i class="iconfont icon-love"></i>
+      <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener">
+        <span>Fluid</span></a>
+    </div>
+    
 
     
- 
 
- 
+    
+  </div>
+</footer>
 
- 
+<!-- SCRIPTS -->
+<script  src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js" ></script>
+<script  src="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/js/bootstrap.min.js" ></script>
+<script  src="/js/main.js" ></script>
 
- 
+
+  <script  src="/js/lazyload.js" ></script>
+
+
+
+  
+  <script  src="https://cdn.staticfile.org/tocbot/4.11.1/tocbot.min.js" ></script>
+  <script>
+    $(document).ready(function () {
+      var boardCtn = $('#board-ctn');
+      var boardTop = boardCtn.offset().top;
+
+      tocbot.init({
+        tocSelector: '#tocbot',
+        contentSelector: '.post-content',
+        headingSelector: 'h1,h2,h3,h4,h5,h6',
+        linkClass: 'tocbot-link',
+        activeLinkClass: 'tocbot-active-link',
+        listClass: 'tocbot-list',
+        isCollapsedClass: 'tocbot-is-collapsed',
+        collapsibleClass: 'tocbot-is-collapsible',
+        collapseDepth: 0,
+        scrollSmooth: true,
+        headingsOffset: -boardTop
+      });
+      if ($('.toc-list-item').length > 0) {
+        $('#toc').css('visibility', 'visible');
+      }
+    });
+  </script>
 
 
 
 
-    </body>
+
+  <script defer src="https://cdn.staticfile.org/clipboard.js/2.0.6/clipboard.min.js" ></script>
+  <script  src="/js/clipboard-use.js" ></script>
+
+
+
+
+
+
+<!-- Plugins -->
+
+
+
+  <script  src="https://cdn.staticfile.org/typed.js/2.0.11/typed.min.js" ></script>
+  <script>
+    var typed = new Typed('#subtitle', {
+      strings: [
+        '  ',
+        "Others/80C51引脚功能&nbsp;",
+      ],
+      cursorChar: "_",
+      typeSpeed: 70,
+      loop: false,
+    });
+    typed.stop();
+    $(document).ready(function () {
+      $(".typed-cursor").addClass("h2");
+      typed.start();
+    });
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/anchor-js/4.2.2/anchor.min.js" ></script>
+  <script>
+    anchors.options = {
+      placement: "right",
+      visible: "hover",
+      
+    };
+    var el = "h1,h2,h3,h4,h5,h6".split(",");
+    var res = [];
+    for (item of el) {
+      res.push(".markdown-body > " + item)
+    }
+    anchors.add(res.join(", "))
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    var path = "/local-search.xml";
+    var inputArea = document.querySelector("#local-search-input");
+    inputArea.onclick = function () {
+      searchFunc(path, 'local-search-input', 'local-search-result');
+      this.onclick = null
+    }
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+  <script>
+    $('#post img:not(.no-zoom img, img[no-zoom]), img[zoom]').each(
+      function () {
+        var element = document.createElement('a');
+        $(element).attr('data-fancybox', 'images');
+        $(element).attr('href', $(this).attr('src'));
+        $(this).wrap(element);
+      }
+    );
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
 </html>

@@ -1,466 +1,755 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-    <meta charset="utf-8">
-
-    
-
-    <!-- 渲染优化 -->
-    <meta name="renderer" content="webkit">
-    <meta name="force-rendering" content="webkit">
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
-    <meta name="HandheldFriendly" content="True" >
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
-    <!--icon-->
-
-    <link rel="shortcut icon" type='image/x-icon' href="/favicon.ico">
-
-
-    <!-- meta -->
-
-
-<title>Hexo</title>
 
 
 
 
 
-    <!-- OpenGraph -->
- 
-    <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/page/2/index.html">
-<meta property="og:site_name" content="Hexo">
-<meta property="og:locale" content="en_US">
-<meta property="article:author" content="John Doe">
-<meta name="twitter:card" content="summary_large_image">
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" type="image/png" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="">
+  <meta name="author" content="John Doe">
+  <meta name="keywords" content="">
+  <title>Hexo</title>
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
+<link  rel="stylesheet" href="https://cdn.staticfile.org/github-markdown-css/4.0.0/github-markdown.min.css" />
 
 
-    
-<link rel="stylesheet" href="/css/style/main.css">
- 
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/10.0.0/styles/github-gist.min.css" />
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_fmb4a04yx8h.css">
 
 
 
-    
-    
-    
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_pjno9b9zyxs.css">
 
-     
 
-    <!-- custom head -->
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
 
 <meta name="generator" content="Hexo 4.2.1"><link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
 </head>
 
-    <body>
-        <div id="app">
-            <header class="header">
-    <div class="header__left">
-        <a href="/" class="button">
-            <span class="logo__text">
-                Demo
+
+<body>
+  <header style="height: 100vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>processing</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/">
+              <i class="iconfont icon-home-fill"></i>
+              Home</a>
+          </li>
+        
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/archives/">
+              <i class="iconfont icon-archive-fill"></i>
+              Archives</a>
+          </li>
+        
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/categories/">
+              <i class="iconfont icon-category-fill"></i>
+              Categories</a>
+          </li>
+        
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/tags/">
+              <i class="iconfont icon-tags-fill"></i>
+              Tags</a>
+          </li>
+        
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/about/">
+              <i class="iconfont icon-user-fill"></i>
+              About</a>
+          </li>
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="view intro-2" id="background" parallax=true
+         style="background: url('/images/4.jpg') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.2)">
+          <div class="container text-center white-text fadeInUp">
+            <span class="h2" id="subtitle">
+              
             </span>
-        </a>
-    </div>
-    <div class="header__right">
-        
-            <div class="navbar__menus">
-                
-                    <a href="/" class="navbar-menu button">
-                        首页
-                    </a>
-                
-                    <a href="/tags/" class="navbar-menu button">
-                        标签
-                    </a>
-                
-                    <a href="/archives/" class="navbar-menu button">
-                        归档
-                    </a>
-                
-                    <a href="/friends/" class="navbar-menu button">
-                        友链
-                    </a>
-                
-                    <a href="/page/" class="navbar-menu button">
-                        Page
-                    </a>
-                
-            </div>
-        
-        
-        
 
-        
-        
-
-        
-
-        
-            <a class="dropdown-icon button" id="btn-dropdown">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width='24' height='24' fill="none" stroke="currentColor" stroke-width="0.7" stroke-linecap="round" stroke-linejoin="round">
-                    <path fill="currentColor" d="M3.314,4.8h13.372c0.41,0,0.743-0.333,0.743-0.743c0-0.41-0.333-0.743-0.743-0.743H3.314c-0.41,0-0.743,0.333-0.743,0.743C2.571,4.467,2.904,4.8,3.314,4.8z M16.686,15.2H3.314c-0.41,0-0.743,0.333-0.743,0.743s0.333,0.743,0.743,0.743h13.372c0.41,0,0.743-0.333,0.743-0.743S17.096,15.2,16.686,15.2z M16.686,9.257H3.314c-0.41,0-0.743,0.333-0.743,0.743s0.333,0.743,0.743,0.743h13.372c0.41,0,0.743-0.333,0.743-0.743S17.096,9.257,16.686,9.257z"></path>
-                </svg>
-            </a>
-            <div class="dropdown-menus" id="dropdown-menus">
-                
-                    <a href="/" class="dropdown-menu button">
-                        首页
-                    </a>
-                
-                    <a href="/tags/" class="dropdown-menu button">
-                        标签
-                    </a>
-                
-                    <a href="/archives/" class="dropdown-menu button">
-                        归档
-                    </a>
-                
-                    <a href="/friends/" class="dropdown-menu button">
-                        友链
-                    </a>
-                
-                    <a href="/page/" class="dropdown-menu button">
-                        Page
-                    </a>
-                
-            </div>
-        
-    </div>
-</header>
-
-
-    <div class="cover">
-        <div class="cover__logo">
             
-                <h1>Demo</h1>
-            
+          </div>
+
+          
+            <div class="scroll-down-bar">
+              <i class="iconfont icon-arrowdown"></i>
+            </div>
+          
         </div>
-        
-        
-            <div class="cover__intro">
-                <p>Hi, nice to meet you!</p>
- 
-            </div>
-        
+      </div>
     </div>
+  </header>
 
-            <main class="main">
+  <main>
     
-    <div class="post-list">
+      <div class="container nopadding-md">
+        <div class="py-5" id="board"
+          style=margin-top:0>
+          
+          <div class="container">
+            <div class="row">
+              <div class="col-12 col-md-10 m-auto">
+                
+
+
+  <div class="row mx-auto index-card">
+    
+    
+    <div class="col-12 col-md-12 mx-auto index-info">
+      <a class="index-header" href="/2020/08/15/Linux/Linux%E5%AD%A6%E4%B9%A0%E5%A4%A7%E7%BA%B2/">Linux/Linux学习大纲</a>
+
+      <a href="/2020/08/15/Linux/Linux%E5%AD%A6%E4%B9%A0%E5%A4%A7%E7%BA%B2/" class="index-excerpt">
         
-            
-                <div class='post-entry content-card'>
-                    <div class="post-entry__header"></div>
-<div class="post-entry__content">
-    <h2 class="post-entry__title">
-        Linux/Linux学习大纲
-    </h2>
-    
-</div>
-<div class="post-entry__meta">
-    <a href="/archives/2020/08/" class="post-meta__date button">
-    2020-08-15
-</a>
-    
- 
-</div>
-<div class="post-entry__tags">
-    
-</div> 
-<a href="/2020/08/15/Linux/Linux%E5%AD%A6%E4%B9%A0%E5%A4%A7%E7%BA%B2/" class="post-entry__link">Link</a>
-                </div>
-            
-                <div class='post-entry content-card'>
-                    <div class="post-entry__header"></div>
-<div class="post-entry__content">
-    <h2 class="post-entry__title">
-        Python/Python学习笔记/运算符和三种结构
-    </h2>
-    
-</div>
-<div class="post-entry__meta">
-    <a href="/archives/2020/08/" class="post-meta__date button">
-    2020-08-02
-</a>
-    
- 
-</div>
-<div class="post-entry__tags">
-    
-</div> 
-<a href="/2020/08/02/Python/Python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E8%BF%90%E7%AE%97%E7%AC%A6%E5%92%8C%E4%B8%89%E7%A7%8D%E7%BB%93%E6%9E%84/" class="post-entry__link">Link</a>
-                </div>
-            
-                <div class='post-entry content-card'>
-                    <div class="post-entry__header"></div>
-<div class="post-entry__content">
-    <h2 class="post-entry__title">
-        Python/Python学习笔记/变量与数据类型
-    </h2>
-    
-</div>
-<div class="post-entry__meta">
-    <a href="/archives/2020/08/" class="post-meta__date button">
-    2020-08-01
-</a>
-    
- 
-</div>
-<div class="post-entry__tags">
-    
-</div> 
-<a href="/2020/08/01/Python/Python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%8F%98%E9%87%8F%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/" class="post-entry__link">Link</a>
-                </div>
-            
-                <div class='post-entry content-card'>
-                    <div class="post-entry__header"></div>
-<div class="post-entry__content">
-    <h2 class="post-entry__title">
-        Operating System/概论_导论
-    </h2>
-    
-</div>
-<div class="post-entry__meta">
-    <a href="/archives/2020/07/" class="post-meta__date button">
-    2020-07-03
-</a>
-    
- 
-</div>
-<div class="post-entry__tags">
-    
-</div> 
-<a href="/2020/07/03/Operating%20System/%E6%A6%82%E8%AE%BA_%E5%AF%BC%E8%AE%BA/" class="post-entry__link">Link</a>
-                </div>
-            
-                <div class='post-entry content-card'>
-                    <div class="post-entry__header"></div>
-<div class="post-entry__content">
-    <h2 class="post-entry__title">
-        Operating System/操作系统概念_全书组织架构
-    </h2>
-    
-</div>
-<div class="post-entry__meta">
-    <a href="/archives/2020/07/" class="post-meta__date button">
-    2020-07-03
-</a>
-    
- 
-</div>
-<div class="post-entry__tags">
-    
-</div> 
-<a href="/2020/07/03/Operating%20System/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E6%A6%82%E5%BF%B5_%E5%85%A8%E4%B9%A6%E7%BB%84%E7%BB%87%E6%9E%B6%E6%9E%84/" class="post-entry__link">Link</a>
-                </div>
-            
-                <div class='post-entry content-card'>
-                    <div class="post-entry__header"></div>
-<div class="post-entry__content">
-    <h2 class="post-entry__title">
-        front/HTML
-    </h2>
-    
-</div>
-<div class="post-entry__meta">
-    <a href="/archives/2020/06/" class="post-meta__date button">
-    2020-06-04
-</a>
-    
- 
-</div>
-<div class="post-entry__tags">
-    
-</div> 
-<a href="/2020/06/04/front/HTML/" class="post-entry__link">Link</a>
-                </div>
-            
-                <div class='post-entry content-card'>
-                    <div class="post-entry__header"></div>
-<div class="post-entry__content">
-    <h2 class="post-entry__title">
-        Arduino/基础知识+疑难解答
-    </h2>
-    
-</div>
-<div class="post-entry__meta">
-    <a href="/archives/2020/05/" class="post-meta__date button">
-    2020-05-15
-</a>
-    
- 
-</div>
-<div class="post-entry__tags">
-    
-        <a href="/tags/Arduino/" class="post-tags__link button"># Arduino</a>
-    
-</div> 
-<a href="/2020/05/15/Arduino/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86+%E7%96%91%E9%9A%BE%E8%A7%A3%E7%AD%94/" class="post-entry__link">Link</a>
-                </div>
-            
-                <div class='post-entry content-card'>
-                    <div class="post-entry__header"></div>
-<div class="post-entry__content">
-    <h2 class="post-entry__title">
-        Arduino/Atmel ATmega328P-XMINI开发板评测
-    </h2>
-    
-</div>
-<div class="post-entry__meta">
-    <a href="/archives/2020/05/" class="post-meta__date button">
-    2020-05-15
-</a>
-    
- 
-</div>
-<div class="post-entry__tags">
-    
-        <a href="/tags/Arduino/" class="post-tags__link button"># Arduino</a>
-    
-</div> 
-<a href="/2020/05/15/Arduino/Atmel%20ATmega328P-XMINI%E5%BC%80%E5%8F%91%E6%9D%BF%E8%AF%84%E6%B5%8B/" class="post-entry__link">Link</a>
-                </div>
-            
-                <div class='post-entry content-card'>
-                    <div class="post-entry__header"></div>
-<div class="post-entry__content">
-    <h2 class="post-entry__title">
-        Arduino/Arduino高级教程
-    </h2>
-    
-</div>
-<div class="post-entry__meta">
-    <a href="/archives/2020/05/" class="post-meta__date button">
-    2020-05-15
-</a>
-    
- 
-</div>
-<div class="post-entry__tags">
-    
-        <a href="/tags/Arduino/" class="post-tags__link button"># Arduino</a>
-    
-</div> 
-<a href="/2020/05/15/Arduino/Arduino%E9%AB%98%E7%BA%A7%E6%95%99%E7%A8%8B/" class="post-entry__link">Link</a>
-                </div>
-            
-                <div class='post-entry content-card'>
-                    <div class="post-entry__header"></div>
-<div class="post-entry__content">
-    <h2 class="post-entry__title">
-        Arduino/Arduino系列引脚图
-    </h2>
-    
-</div>
-<div class="post-entry__meta">
-    <a href="/archives/2020/05/" class="post-meta__date button">
-    2020-05-15
-</a>
-    
- 
-</div>
-<div class="post-entry__tags">
-    
-        <a href="/tags/Arduino/" class="post-tags__link button"># Arduino</a>
-    
-</div> 
-<a href="/2020/05/15/Arduino/Arduino%E7%B3%BB%E5%88%97%E5%BC%95%E8%84%9A%E5%9B%BE/" class="post-entry__link">Link</a>
-                </div>
-            
         
+          
+        
+        <div>第一章：Linux介绍…….
+第二章：VMware虚拟化部署…….
+第三章：Linux系统入门目录介绍及常用命令
+Linux目录结构
+Linux基本命令：  1）清屏：clear 快捷键 CTRL + L        2）帮助：man    3）进入目录：cd  4）列出当前目录内容：ls [-a -l -d]    5）显示主机名：hostname     6）显示日期时间：date [-s </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>&nbsp;2020-08-15
+          </div>
+        
+        
+        
+      </div>
     </div>
+  </div>
+
+  <div class="row mx-auto index-card">
     
-        <div class="nav">
-            <div class="nav__prev">
-                
-                    <a href="/" class="nav__link">
-                        <div>
-                            <svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path d="M589.088 790.624L310.464 512l278.624-278.624 45.248 45.248L400.96 512l233.376 233.376z" fill="#808080"></path></svg>
-                        </div>
-                        <div>
-                            <div class="nav__label">
-                                Previous
-                            </div>
-                            <div class="nav__title">
-                                Page 1
-                            </div>
-                        </div>
-                    </a>
-                
-            </div>
-            <div class="nav__next">
-                
-                    <a href="/page/3/" class="nav__link">
-                        <div>
-                            <div class="nav__label">
-                                Next
-                            </div>
-                            <div class="nav__title">
-                                Page 3
-                            </div>
-                        </div>
-                        <div>
-                            <svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path d="M434.944 790.624l-45.248-45.248L623.04 512l-233.376-233.376 45.248-45.248L713.568 512z" fill="#808080"></path></svg>
-                        </div>
-                    </a>
-                
-            </div>
-        </div>
     
+    <div class="col-12 col-md-12 mx-auto index-info">
+      <a class="index-header" href="/2020/08/02/Python/Python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E8%BF%90%E7%AE%97%E7%AC%A6%E5%92%8C%E4%B8%89%E7%A7%8D%E7%BB%93%E6%9E%84/">Python/Python学习笔记/运算符和三种结构</a>
 
-
-</main>
-
-            <footer class="footer">
-    
-
-
-    
-     
- 
-
- 
-    
+      <a href="/2020/08/02/Python/Python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E8%BF%90%E7%AE%97%E7%AC%A6%E5%92%8C%E4%B8%89%E7%A7%8D%E7%BB%93%E6%9E%84/" class="index-excerpt">
         
-        <p class="footer-copyright">
-            Copyright © 2020 <a href="/">Hexo</a>
-        </p>
-    
-    
-    <p>Powered by <a href="https://hexo.io" target="_blank">Hexo</a> | Theme - <a href="https://github.com/ChrAlpha/hexo-theme-cards" target="_blank">Cards</a></p>
-</footer>
+        
+          
+        
+        <div>运算符与三种结构
+运算符：赋值、算数、关系、逻辑
+表达式：符号与操作数的组合
+布尔类型建议使用is开头：istrue / isfalse
+补充点：python中，0、空字符串和None为false，其他数值和非空字符串为True
+多向if-elif-else结构
+逻辑运算符（布尔运算符) and or  not
+自增自减运算符无效
+顺序结构
+选择结构
+循环结构（无do_while循环）
 
+</div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>&nbsp;2020-08-02
+          </div>
+        
+        
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <div class="col-12 col-md-12 mx-auto index-info">
+      <a class="index-header" href="/2020/08/01/Python/Python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%8F%98%E9%87%8F%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/">Python/Python学习笔记/变量与数据类型</a>
+
+      <a href="/2020/08/01/Python/Python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%8F%98%E9%87%8F%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/" class="index-excerpt">
+        
+        
+          
+        
+        <div>变量与数据类型
+变量：内存空间地址的别名
+
+变量命名的基本原则：
+
+必须以字母、下划线开头。其他字符只能是字母、数字、下划线
+不能使用%、？之类的特殊符号，如空格、￥、&amp;、#等
+大小写敏感
+不能使用关键字
+
+
+良好的编程习惯：
+
+使用描述性的名字，见名知意
+使用小写字母开头表示变量、全大写表示常量、大写字母开头表示自定义类型（class）ex:nick_name = “python命名法”</div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>&nbsp;2020-08-01
+          </div>
+        
+        
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <div class="col-12 col-md-12 mx-auto index-info">
+      <a class="index-header" href="/2020/07/03/Operating%20System/%E6%A6%82%E8%AE%BA_%E5%AF%BC%E8%AE%BA/">Operating System/概论_导论</a>
+
+      <a href="/2020/07/03/Operating%20System/%E6%A6%82%E8%AE%BA_%E5%AF%BC%E8%AE%BA/" class="index-excerpt">
+        
+        
+          
+        
+        <div>概论操作系统
+</div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>&nbsp;2020-07-03
+          </div>
+        
+        
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <div class="col-12 col-md-12 mx-auto index-info">
+      <a class="index-header" href="/2020/07/03/Operating%20System/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E6%A6%82%E5%BF%B5_%E5%85%A8%E4%B9%A6%E7%BB%84%E7%BB%87%E6%9E%B6%E6%9E%84/">Operating System/操作系统概念_全书组织架构</a>
+
+      <a href="/2020/07/03/Operating%20System/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E6%A6%82%E5%BF%B5_%E5%85%A8%E4%B9%A6%E7%BB%84%E7%BB%87%E6%9E%B6%E6%9E%84/" class="index-excerpt">
+        
+        
+          
+        
+        <div>第一部分  概论第一章  导论第二章  操作系统结构第二部分  进程管理第三章  进程第四章  多线程编程第五章  进程调度第六章  同步第七章  死锁第三部分  内存管理第八章  内存管理策略第九章  虚拟内存管理第四部分  存储管理第十章  文件系统第十一章  文件系统实现第十二章  大容量存储结构第十三章  I/O系统第五部分  保护与安全第十四章  系统保护第十五章  系统安全第六部分  </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>&nbsp;2020-07-03
+          </div>
+        
+        
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <div class="col-12 col-md-12 mx-auto index-info">
+      <a class="index-header" href="/2020/06/04/front/HTML/">front/HTML</a>
+
+      <a href="/2020/06/04/front/HTML/" class="index-excerpt">
+        
+        
+          
+        
+        <div>&lt;!--HTML标签是成对的--&gt;
+&lt;!--HTML标签是成对的--&gt;
+&lt;!--HTML标签是成对的--&gt;
+
+&lt;!DOCTYPE html&gt;
+&lt;!--兼容以前的html版本 --&gt;
+&lt;html&gt;
+&lt;!--html语言开始标签--&gt;
+&lt;head&gt;
+    &lt;!--网页标题标签--&gt;
+    &</div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>&nbsp;2020-06-04
+          </div>
+        
+        
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <div class="col-12 col-md-12 mx-auto index-info">
+      <a class="index-header" href="/2020/05/15/Arduino/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86+%E7%96%91%E9%9A%BE%E8%A7%A3%E7%AD%94/">Arduino/基础知识+疑难解答</a>
+
+      <a href="/2020/05/15/Arduino/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86+%E7%96%91%E9%9A%BE%E8%A7%A3%E7%AD%94/" class="index-excerpt">
+        
+        
+          
+        
+        <div>【基础知识】
+
+电路知识之电阻的功能
+简单介绍下蓝牙2.0,2.1,3.0,4.0的区别
+自动极性转换电路和防反接电路  
+
+【疑难解答】
+
+Arduino无法安装驱动找不到指定文件问题的解决方法
+[入门] 如何加载库文件？如何加载库文件？
+编译出错 - 多半因为库有问题
+如何加载库文件？
+编译出错 - 多半因为库有问题
+如何卸载（替换）库文件？
+高版本1.6.* Arduino IDE不兼容SP</div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>&nbsp;2020-05-15
+          </div>
+        
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Arduino/">Arduino</a>
+            
+          </div>
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <div class="col-12 col-md-12 mx-auto index-info">
+      <a class="index-header" href="/2020/05/15/Arduino/Atmel%20ATmega328P-XMINI%E5%BC%80%E5%8F%91%E6%9D%BF%E8%AF%84%E6%B5%8B/">Arduino/Atmel ATmega328P-XMINI开发板评测</a>
+
+      <a href="/2020/05/15/Arduino/Atmel%20ATmega328P-XMINI%E5%BC%80%E5%8F%91%E6%9D%BF%E8%AF%84%E6%B5%8B/" class="index-excerpt">
+        
+        
+          
+        
+        <div>与Arduino“本是同根”——Atmel ATmega328P-XMINI开发板评测分享到：
+用“海纳百川”来形容市场确实有一定的道理，即使如今ARM Cortex-M系列的微控制器生态圈遍布全球，但是在差异化的细分市场中，其它架构的MCU产品终究占有不小的市场份额，以低功耗著称的Atmel AVR系列就是其中的一类，更是随着开源硬件Arduino的火热，AVR系列微控制器的热度又呈逐渐上升趋势</div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>&nbsp;2020-05-15
+          </div>
+        
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Arduino/">Arduino</a>
+            
+          </div>
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <div class="col-12 col-md-12 mx-auto index-info">
+      <a class="index-header" href="/2020/05/15/Arduino/Arduino%E9%AB%98%E7%BA%A7%E6%95%99%E7%A8%8B/">Arduino/Arduino高级教程</a>
+
+      <a href="/2020/05/15/Arduino/Arduino%E9%AB%98%E7%BA%A7%E6%95%99%E7%A8%8B/" class="index-excerpt">
+        
+        
+          
+        
+        <div>【Mind+】Arduino Uno入门系列教程
+
+Arduino Uno入门系列教程资源汇总
+
+Arduino Uno入门 项目一 HELLO WORLD
+
+Arduino Uno入门 项目二 S.O.S.
+
+Arduino Uno入门 项目三 神奇的按钮
+
+Arduino Uno入门 项目四 简易入侵检测仪
+
+Arduino Uno入门 项目五 可调灯
+
+Arduino Uno入门 项目六 智</div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>&nbsp;2020-05-15
+          </div>
+        
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Arduino/">Arduino</a>
+            
+          </div>
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <div class="col-12 col-md-12 mx-auto index-info">
+      <a class="index-header" href="/2020/05/15/Arduino/Arduino%E7%B3%BB%E5%88%97%E5%BC%95%E8%84%9A%E5%9B%BE/">Arduino/Arduino系列引脚图</a>
+
+      <a href="/2020/05/15/Arduino/Arduino%E7%B3%BB%E5%88%97%E5%BC%95%E8%84%9A%E5%9B%BE/" class="index-excerpt">
+        
+        
+          
+        
+        <div>Arduino系列引脚图
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>&nbsp;2020-05-15
+          </div>
+        
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Arduino/">Arduino</a>
+            
+          </div>
+        
+      </div>
+    </div>
+  </div>
+
+
+
+  <nav aria-label="navigation">
+    <span class="pagination" id="pagination">
+      <a class="extend prev" rel="prev" href="/"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/3/"><i class="iconfont icon-arrowright"></i></a>
+    </span>
+  </nav>
+  
+  <script>
+    for (ele of document.getElementById("pagination").getElementsByTagName("a")) {
+      ele.href += '#board';
+    }
+  </script>
+
+
+
+              </div>
+            </div>
+          </div>
         </div>
-         
+      </div>
+    
+  </main>
 
- 
+  
+    <a id="scroll-top-button" href="#" role="button">
+      <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+    </a>
+  
 
- 
-
- 
+  
+    <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Search</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">keyword</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+  
 
   
 
+  
 
-
- 
-
+  <footer class="mt-5">
+  <div class="text-center py-3">
+    <div>
+      <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a>
+      <i class="iconfont icon-love"></i>
+      <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener">
+        <span>Fluid</span></a>
+    </div>
+    
 
     
- 
 
- 
+    
+  </div>
+</footer>
 
- 
+<!-- SCRIPTS -->
+<script  src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js" ></script>
+<script  src="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/js/bootstrap.min.js" ></script>
+<script  src="/js/main.js" ></script>
 
- 
+
+  <script  src="/js/lazyload.js" ></script>
 
 
 
 
-    </body>
+
+  <script defer src="https://cdn.staticfile.org/clipboard.js/2.0.6/clipboard.min.js" ></script>
+  <script  src="/js/clipboard-use.js" ></script>
+
+
+
+
+
+
+<!-- Plugins -->
+
+
+
+  <script  src="https://cdn.staticfile.org/typed.js/2.0.11/typed.min.js" ></script>
+  <script>
+    var typed = new Typed('#subtitle', {
+      strings: [
+        '  ',
+        "Get busy living, or get busy dying&nbsp;",
+      ],
+      cursorChar: "_",
+      typeSpeed: 70,
+      loop: false,
+    });
+    typed.stop();
+    $(document).ready(function () {
+      $(".typed-cursor").addClass("h2");
+      typed.start();
+    });
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/anchor-js/4.2.2/anchor.min.js" ></script>
+  <script>
+    anchors.options = {
+      placement: "right",
+      visible: "hover",
+      
+    };
+    var el = "h1,h2,h3,h4,h5,h6".split(",");
+    var res = [];
+    for (item of el) {
+      res.push(".markdown-body > " + item)
+    }
+    anchors.add(res.join(", "))
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    var path = "/local-search.xml";
+    var inputArea = document.querySelector("#local-search-input");
+    inputArea.onclick = function () {
+      searchFunc(path, 'local-search-input', 'local-search-result');
+      this.onclick = null
+    }
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
 </html>

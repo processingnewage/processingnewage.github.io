@@ -1,391 +1,597 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-    <meta charset="utf-8">
-
-    
-
-    <!-- 渲染优化 -->
-    <meta name="renderer" content="webkit">
-    <meta name="force-rendering" content="webkit">
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
-    <meta name="HandheldFriendly" content="True" >
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
-    <!--icon-->
-
-    <link rel="shortcut icon" type='image/x-icon' href="/favicon.ico">
-
-
-    <!-- meta -->
-
-
-<title>Hexo</title>
 
 
 
 
 
-    <!-- OpenGraph -->
- 
-    <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/page/5/index.html">
-<meta property="og:site_name" content="Hexo">
-<meta property="og:locale" content="en_US">
-<meta property="article:author" content="John Doe">
-<meta name="twitter:card" content="summary_large_image">
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" type="image/png" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="">
+  <meta name="author" content="John Doe">
+  <meta name="keywords" content="">
+  <title>Hexo</title>
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
+<link  rel="stylesheet" href="https://cdn.staticfile.org/github-markdown-css/4.0.0/github-markdown.min.css" />
 
 
-    
-<link rel="stylesheet" href="/css/style/main.css">
- 
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/10.0.0/styles/github-gist.min.css" />
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_fmb4a04yx8h.css">
 
 
 
-    
-    
-    
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_pjno9b9zyxs.css">
 
-     
 
-    <!-- custom head -->
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
 
 <meta name="generator" content="Hexo 4.2.1"><link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
 </head>
 
-    <body>
-        <div id="app">
-            <header class="header">
-    <div class="header__left">
-        <a href="/" class="button">
-            <span class="logo__text">
-                Demo
+
+<body>
+  <header style="height: 100vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>processing</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/">
+              <i class="iconfont icon-home-fill"></i>
+              Home</a>
+          </li>
+        
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/archives/">
+              <i class="iconfont icon-archive-fill"></i>
+              Archives</a>
+          </li>
+        
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/categories/">
+              <i class="iconfont icon-category-fill"></i>
+              Categories</a>
+          </li>
+        
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/tags/">
+              <i class="iconfont icon-tags-fill"></i>
+              Tags</a>
+          </li>
+        
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/about/">
+              <i class="iconfont icon-user-fill"></i>
+              About</a>
+          </li>
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="view intro-2" id="background" parallax=true
+         style="background: url('/images/4.jpg') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.2)">
+          <div class="container text-center white-text fadeInUp">
+            <span class="h2" id="subtitle">
+              
             </span>
-        </a>
-    </div>
-    <div class="header__right">
-        
-            <div class="navbar__menus">
-                
-                    <a href="/" class="navbar-menu button">
-                        首页
-                    </a>
-                
-                    <a href="/tags/" class="navbar-menu button">
-                        标签
-                    </a>
-                
-                    <a href="/archives/" class="navbar-menu button">
-                        归档
-                    </a>
-                
-                    <a href="/friends/" class="navbar-menu button">
-                        友链
-                    </a>
-                
-                    <a href="/page/" class="navbar-menu button">
-                        Page
-                    </a>
-                
-            </div>
-        
-        
-        
 
-        
-        
-
-        
-
-        
-            <a class="dropdown-icon button" id="btn-dropdown">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width='24' height='24' fill="none" stroke="currentColor" stroke-width="0.7" stroke-linecap="round" stroke-linejoin="round">
-                    <path fill="currentColor" d="M3.314,4.8h13.372c0.41,0,0.743-0.333,0.743-0.743c0-0.41-0.333-0.743-0.743-0.743H3.314c-0.41,0-0.743,0.333-0.743,0.743C2.571,4.467,2.904,4.8,3.314,4.8z M16.686,15.2H3.314c-0.41,0-0.743,0.333-0.743,0.743s0.333,0.743,0.743,0.743h13.372c0.41,0,0.743-0.333,0.743-0.743S17.096,15.2,16.686,15.2z M16.686,9.257H3.314c-0.41,0-0.743,0.333-0.743,0.743s0.333,0.743,0.743,0.743h13.372c0.41,0,0.743-0.333,0.743-0.743S17.096,9.257,16.686,9.257z"></path>
-                </svg>
-            </a>
-            <div class="dropdown-menus" id="dropdown-menus">
-                
-                    <a href="/" class="dropdown-menu button">
-                        首页
-                    </a>
-                
-                    <a href="/tags/" class="dropdown-menu button">
-                        标签
-                    </a>
-                
-                    <a href="/archives/" class="dropdown-menu button">
-                        归档
-                    </a>
-                
-                    <a href="/friends/" class="dropdown-menu button">
-                        友链
-                    </a>
-                
-                    <a href="/page/" class="dropdown-menu button">
-                        Page
-                    </a>
-                
-            </div>
-        
-    </div>
-</header>
-
-
-    <div class="cover">
-        <div class="cover__logo">
             
-                <h1>Demo</h1>
-            
+          </div>
+
+          
+            <div class="scroll-down-bar">
+              <i class="iconfont icon-arrowdown"></i>
+            </div>
+          
         </div>
-        
-        
-            <div class="cover__intro">
-                <p>Hi, nice to meet you!</p>
- 
-            </div>
-        
+      </div>
     </div>
+  </header>
 
-            <main class="main">
+  <main>
     
-    <div class="post-list">
+      <div class="container nopadding-md">
+        <div class="py-5" id="board"
+          style=margin-top:0>
+          
+          <div class="container">
+            <div class="row">
+              <div class="col-12 col-md-10 m-auto">
+                
+
+
+  <div class="row mx-auto index-card">
+    
+    
+    <div class="col-12 col-md-12 mx-auto index-info">
+      <a class="index-header" href="/2020/05/15/Others/%E5%AE%89%E8%A3%85VirtualBox%E5%A2%9E%E5%BC%BA%E5%8A%9F%E8%83%BD%E4%BD%BF%E5%BE%97deepin%E5%85%A8%E5%B1%8F%E6%98%BE%E7%A4%BA/">Others/安装VirtualBox增强功能使得deepin全屏显示</a>
+
+      <a href="/2020/05/15/Others/%E5%AE%89%E8%A3%85VirtualBox%E5%A2%9E%E5%BC%BA%E5%8A%9F%E8%83%BD%E4%BD%BF%E5%BE%97deepin%E5%85%A8%E5%B1%8F%E6%98%BE%E7%A4%BA/" class="index-excerpt">
         
-            
-                <div class='post-entry content-card'>
-                    <div class="post-entry__header"></div>
-<div class="post-entry__content">
-    <h2 class="post-entry__title">
-        Others/安装VirtualBox增强功能使得deepin全屏显示
-    </h2>
-    
-</div>
-<div class="post-entry__meta">
-    <a href="/archives/2020/05/" class="post-meta__date button">
-    2020-05-15
-</a>
-    
- 
-</div>
-<div class="post-entry__tags">
-    
-        <a href="/tags/Others/" class="post-tags__link button"># Others</a>
-    
-</div> 
-<a href="/2020/05/15/Others/%E5%AE%89%E8%A3%85VirtualBox%E5%A2%9E%E5%BC%BA%E5%8A%9F%E8%83%BD%E4%BD%BF%E5%BE%97deepin%E5%85%A8%E5%B1%8F%E6%98%BE%E7%A4%BA/" class="post-entry__link">Link</a>
-                </div>
-            
-                <div class='post-entry content-card'>
-                    <div class="post-entry__header"></div>
-<div class="post-entry__content">
-    <h2 class="post-entry__title">
-        Others/win10安装elementary os操作指南
-    </h2>
-    
-</div>
-<div class="post-entry__meta">
-    <a href="/archives/2020/05/" class="post-meta__date button">
-    2020-05-15
-</a>
-    
- 
-</div>
-<div class="post-entry__tags">
-    
-        <a href="/tags/Others/" class="post-tags__link button"># Others</a>
-    
-</div> 
-<a href="/2020/05/15/Others/win10%E5%AE%89%E8%A3%85elementary%20os%E6%93%8D%E4%BD%9C%E6%8C%87%E5%8D%97/" class="post-entry__link">Link</a>
-                </div>
-            
-                <div class='post-entry content-card'>
-                    <div class="post-entry__header"></div>
-<div class="post-entry__content">
-    <h2 class="post-entry__title">
-        Others/Typora主题
-    </h2>
-    
-</div>
-<div class="post-entry__meta">
-    <a href="/archives/2020/05/" class="post-meta__date button">
-    2020-05-15
-</a>
-    
- 
-</div>
-<div class="post-entry__tags">
-    
-        <a href="/tags/Others/" class="post-tags__link button"># Others</a>
-    
-</div> 
-<a href="/2020/05/15/Others/Typora%E4%B8%BB%E9%A2%98/" class="post-entry__link">Link</a>
-                </div>
-            
-                <div class='post-entry content-card'>
-                    <div class="post-entry__header"></div>
-<div class="post-entry__content">
-    <h2 class="post-entry__title">
-        Others/Typora常用语法
-    </h2>
-    
-</div>
-<div class="post-entry__meta">
-    <a href="/archives/2020/05/" class="post-meta__date button">
-    2020-05-15
-</a>
-    
- 
-</div>
-<div class="post-entry__tags">
-    
-        <a href="/tags/Others/" class="post-tags__link button"># Others</a>
-    
-</div> 
-<a href="/2020/05/15/Others/Typora%E5%B8%B8%E7%94%A8%E8%AF%AD%E6%B3%95/" class="post-entry__link">Link</a>
-                </div>
-            
-                <div class='post-entry content-card'>
-                    <div class="post-entry__header"></div>
-<div class="post-entry__content">
-    <h2 class="post-entry__title">
-        Others/80C51引脚功能
-    </h2>
-    
-</div>
-<div class="post-entry__meta">
-    <a href="/archives/2020/05/" class="post-meta__date button">
-    2020-05-15
-</a>
-    
- 
-</div>
-<div class="post-entry__tags">
-    
-        <a href="/tags/Others/" class="post-tags__link button"># Others</a>
-    
-</div> 
-<a href="/2020/05/15/Others/80C51%E5%BC%95%E8%84%9A%E5%8A%9F%E8%83%BD/" class="post-entry__link">Link</a>
-                </div>
-            
-                <div class='post-entry content-card'>
-                    <div class="post-entry__header"></div>
-<div class="post-entry__content">
-    <h2 class="post-entry__title">
-        Python/Django/Django Web开发入门/第二章/my_site/html/form
-    </h2>
-    
-</div>
-<div class="post-entry__meta">
-    <a href="/archives/2019/08/" class="post-meta__date button">
-    2019-08-21
-</a>
-    
- 
-</div>
-<div class="post-entry__tags">
-    
-</div> 
-<a href="/2019/08/21/Python/Django/Django%20Web%E5%BC%80%E5%8F%91%E5%85%A5%E9%97%A8/%E7%AC%AC%E4%BA%8C%E7%AB%A0/my_site/html/form/" class="post-entry__link">Link</a>
-                </div>
-            
-                <div class='post-entry content-card'>
-                    <div class="post-entry__header"></div>
-<div class="post-entry__content">
-    <h2 class="post-entry__title">
-        Python/Django/Django Web开发入门/第一章/my_site/html/form
-    </h2>
-    
-</div>
-<div class="post-entry__meta">
-    <a href="/archives/2019/08/" class="post-meta__date button">
-    2019-08-21
-</a>
-    
- 
-</div>
-<div class="post-entry__tags">
-    
-</div> 
-<a href="/2019/08/21/Python/Django/Django%20Web%E5%BC%80%E5%8F%91%E5%85%A5%E9%97%A8/%E7%AC%AC%E4%B8%80%E7%AB%A0/my_site/html/form/" class="post-entry__link">Link</a>
-                </div>
-            
         
+          
+        
+        <div>「玩转deepin」如何安装VirtualBox增强功能使得deepin全屏显示？在Windows上通过Virtualbox安装deepin深度操作系统，安装完成后，为了让deepin可以在virtualbox中全屏显示，需要安装增强工具，但是不少同学点击安装增强工具后会出现无法安装的情况在【设备】中点击【安装增强功能】时，会跳出“未能加载虚拟光盘C:\Program Files\Oracle\V</div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>&nbsp;2020-05-15
+          </div>
+        
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Others/">Others</a>
+            
+          </div>
+        
+      </div>
     </div>
+  </div>
+
+  <div class="row mx-auto index-card">
     
-        <div class="nav">
-            <div class="nav__prev">
-                
-                    <a href="/page/4/" class="nav__link">
-                        <div>
-                            <svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path d="M589.088 790.624L310.464 512l278.624-278.624 45.248 45.248L400.96 512l233.376 233.376z" fill="#808080"></path></svg>
-                        </div>
-                        <div>
-                            <div class="nav__label">
-                                Previous
-                            </div>
-                            <div class="nav__title">
-                                Page 4
-                            </div>
-                        </div>
-                    </a>
-                
-            </div>
-            <div class="nav__next">
-                
-            </div>
-        </div>
     
+    <div class="col-12 col-md-12 mx-auto index-info">
+      <a class="index-header" href="/2020/05/15/Others/win10%E5%AE%89%E8%A3%85elementary%20os%E6%93%8D%E4%BD%9C%E6%8C%87%E5%8D%97/">Others/win10安装elementary os操作指南</a>
 
-
-</main>
-
-            <footer class="footer">
-    
-
-
-    
-     
- 
-
- 
-    
+      <a href="/2020/05/15/Others/win10%E5%AE%89%E8%A3%85elementary%20os%E6%93%8D%E4%BD%9C%E6%8C%87%E5%8D%97/" class="index-excerpt">
         
-        <p class="footer-copyright">
-            Copyright © 2020 <a href="/">Hexo</a>
-        </p>
-    
-    
-    <p>Powered by <a href="https://hexo.io" target="_blank">Hexo</a> | Theme - <a href="https://github.com/ChrAlpha/hexo-theme-cards" target="_blank">Cards</a></p>
-</footer>
+        
+          
+        
+        <div>关于在WIN10 OS下安装elementary OS双系统的实践纲要：
+什么是elementary os
+安装双系统的前期准备
+安装流程
+安装过程中可能出现的问题
+elementary os的配置问题
 
+
+内容如下：
+
+elementary OS是一个基于==Ubuntu==的桌面Linux发行版。它采用自有的基于GNOME的名为Pantheon的桌面环境。 这个桌面环境出众的原因是它深度集成了</div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>&nbsp;2020-05-15
+          </div>
+        
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Others/">Others</a>
+            
+          </div>
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <div class="col-12 col-md-12 mx-auto index-info">
+      <a class="index-header" href="/2020/05/15/Others/Typora%E4%B8%BB%E9%A2%98/">Others/Typora主题</a>
+
+      <a href="/2020/05/15/Others/Typora%E4%B8%BB%E9%A2%98/" class="index-excerpt">
+        
+        
+          
+        
+        <div>Typora更换主题在Typora中默认内置的主题有如下几种：Typora默认主题
+但是，我们还可以选择更多主题：帮助-更多主题
+打开帮助页面后，点击home返回主页：帮助页面
+然后点击themes（主题），得到themes预览页面：
+主页面
+主题预览页面
+我们可以随便选择一个主题，这里我们选择Vue主题，打开lavender页面，点击download，然后解压文件夹。接着我们打开Typora，点</div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>&nbsp;2020-05-15
+          </div>
+        
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Others/">Others</a>
+            
+          </div>
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <div class="col-12 col-md-12 mx-auto index-info">
+      <a class="index-header" href="/2020/05/15/Others/Typora%E5%B8%B8%E7%94%A8%E8%AF%AD%E6%B3%95/">Others/Typora常用语法</a>
+
+      <a href="/2020/05/15/Others/Typora%E5%B8%B8%E7%94%A8%E8%AF%AD%E6%B3%95/" class="index-excerpt">
+        
+        
+          
+        
+        <div>工具-Typora常用语法
+Markdown（MD）作为目前互联网写作相当流行的一种文档撰写语言格式，深受互联网编辑者的喜爱，由此周边一些基于MD的编辑工具也随之油然而生。
+作为一款免费的MD编辑器：
+
+Typora极简、跨平台、且十分直观，无论写作还是阅读，都能让人一目了然
+
+Typora的单窗口展示，优雅的实现了编辑与预览的一体化，颠覆了很多MD编辑器使用时编辑与预览分窗口显示的模式
+
+并且T</div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>&nbsp;2020-05-15
+          </div>
+        
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Others/">Others</a>
+            
+          </div>
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <div class="col-12 col-md-12 mx-auto index-info">
+      <a class="index-header" href="/2020/05/15/Others/80C51%E5%BC%95%E8%84%9A%E5%8A%9F%E8%83%BD/">Others/80C51引脚功能</a>
+
+      <a href="/2020/05/15/Others/80C51%E5%BC%95%E8%84%9A%E5%8A%9F%E8%83%BD/" class="index-excerpt">
+        
+        
+          
+        
+        <div>80C51单片机引脚图及引脚功能介绍首先我们来介绍一下单片机的引脚图及引脚功能(如下图所示)， 引脚的具体功能将在下面详细介绍：单片机的40个引脚大致可分为4类：电源、时钟、控制和I/O引脚
+
+
+
+
+
+
+</div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>&nbsp;2020-05-15
+          </div>
+        
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Others/">Others</a>
+            
+          </div>
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <div class="col-12 col-md-12 mx-auto index-info">
+      <a class="index-header" href="/2019/08/21/Python/Django/Django%20Web%E5%BC%80%E5%8F%91%E5%85%A5%E9%97%A8/%E7%AC%AC%E4%BA%8C%E7%AB%A0/my_site/html/form/">Python/Django/Django Web开发入门/第二章/my_site/html/form</a>
+
+      <a href="/2019/08/21/Python/Django/Django%20Web%E5%BC%80%E5%8F%91%E5%85%A5%E9%97%A8/%E7%AC%AC%E4%BA%8C%E7%AB%A0/my_site/html/form/" class="index-excerpt">
+        
+        
+          
+        
+        <div>
+
+   
+
+    
+    
+    
+
+    
+
+    
+
+
+
+
+</div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>&nbsp;2019-08-21
+          </div>
+        
+        
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <div class="col-12 col-md-12 mx-auto index-info">
+      <a class="index-header" href="/2019/08/21/Python/Django/Django%20Web%E5%BC%80%E5%8F%91%E5%85%A5%E9%97%A8/%E7%AC%AC%E4%B8%80%E7%AB%A0/my_site/html/form/">Python/Django/Django Web开发入门/第一章/my_site/html/form</a>
+
+      <a href="/2019/08/21/Python/Django/Django%20Web%E5%BC%80%E5%8F%91%E5%85%A5%E9%97%A8/%E7%AC%AC%E4%B8%80%E7%AB%A0/my_site/html/form/" class="index-excerpt">
+        
+        
+          
+        
+        <div>
+
+
+
+    
+    
+    
+    
+
+
+
+
+</div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>&nbsp;2019-08-21
+          </div>
+        
+        
+        
+      </div>
+    </div>
+  </div>
+
+
+
+  <nav aria-label="navigation">
+    <span class="pagination" id="pagination">
+      <a class="extend prev" rel="prev" href="/page/4/"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><span class="page-number current">5</span>
+    </span>
+  </nav>
+  
+  <script>
+    for (ele of document.getElementById("pagination").getElementsByTagName("a")) {
+      ele.href += '#board';
+    }
+  </script>
+
+
+
+              </div>
+            </div>
+          </div>
         </div>
-         
+      </div>
+    
+  </main>
 
- 
+  
+    <a id="scroll-top-button" href="#" role="button">
+      <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+    </a>
+  
 
- 
-
- 
+  
+    <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Search</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">keyword</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+  
 
   
 
+  
 
-
- 
-
+  <footer class="mt-5">
+  <div class="text-center py-3">
+    <div>
+      <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a>
+      <i class="iconfont icon-love"></i>
+      <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener">
+        <span>Fluid</span></a>
+    </div>
+    
 
     
- 
 
- 
+    
+  </div>
+</footer>
 
- 
+<!-- SCRIPTS -->
+<script  src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js" ></script>
+<script  src="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/js/bootstrap.min.js" ></script>
+<script  src="/js/main.js" ></script>
 
- 
+
+  <script  src="/js/lazyload.js" ></script>
 
 
 
 
-    </body>
+
+  <script defer src="https://cdn.staticfile.org/clipboard.js/2.0.6/clipboard.min.js" ></script>
+  <script  src="/js/clipboard-use.js" ></script>
+
+
+
+
+
+
+<!-- Plugins -->
+
+
+
+  <script  src="https://cdn.staticfile.org/typed.js/2.0.11/typed.min.js" ></script>
+  <script>
+    var typed = new Typed('#subtitle', {
+      strings: [
+        '  ',
+        "Get busy living, or get busy dying&nbsp;",
+      ],
+      cursorChar: "_",
+      typeSpeed: 70,
+      loop: false,
+    });
+    typed.stop();
+    $(document).ready(function () {
+      $(".typed-cursor").addClass("h2");
+      typed.start();
+    });
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/anchor-js/4.2.2/anchor.min.js" ></script>
+  <script>
+    anchors.options = {
+      placement: "right",
+      visible: "hover",
+      
+    };
+    var el = "h1,h2,h3,h4,h5,h6".split(",");
+    var res = [];
+    for (item of el) {
+      res.push(".markdown-body > " + item)
+    }
+    anchors.add(res.join(", "))
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    var path = "/local-search.xml";
+    var inputArea = document.querySelector("#local-search-input");
+    inputArea.onclick = function () {
+      searchFunc(path, 'local-search-input', 'local-search-result');
+      this.onclick = null
+    }
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
 </html>

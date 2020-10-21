@@ -1,186 +1,189 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-    <meta charset="utf-8">
-
-    
-
-    <!-- 渲染优化 -->
-    <meta name="renderer" content="webkit">
-    <meta name="force-rendering" content="webkit">
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
-    <meta name="HandheldFriendly" content="True" >
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
-    <!--icon-->
-
-    <link rel="shortcut icon" type='image/x-icon' href="/favicon.ico">
-
-
-    <!-- meta -->
-
-
-<title>计算机系统基础/计算机系统基础_高级程序语言设计_第一课_程序的表示、转换与链接 | Hexo</title>
 
 
 
 
 
-    <!-- OpenGraph -->
- 
-    <meta name="description" content="程序的表示、转换与链接一、计算机系统概述1. 为什么要学习计算机系统基础 程序执行结果不仅依赖于高级语言语法和语义，还与其他的方面有关，理解程序的执行结果要从系统层面考虑；“系统思维”，站在“计算机系统”的角度考虑问题 程序执行结果不仅取决于算法、程序编写，而且取决于语言处理系统、操作系统，ISA，微体系结构；ISA（指令集体系结构）是计算机软硬件的中间层，指令集是对计算机硬件功能的抽象，功能转换">
-<meta property="og:type" content="article">
-<meta property="og:title" content="计算机系统基础&#x2F;计算机系统基础_高级程序语言设计_第一课_程序的表示、转换与链接">
-<meta property="og:url" content="http://yoursite.com/2020/10/02/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E5%9F%BA%E7%A1%80/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E5%9F%BA%E7%A1%80_%E9%AB%98%E7%BA%A7%E7%A8%8B%E5%BA%8F%E8%AF%AD%E8%A8%80%E8%AE%BE%E8%AE%A1_%E7%AC%AC%E4%B8%80%E8%AF%BE_%E7%A8%8B%E5%BA%8F%E7%9A%84%E8%A1%A8%E7%A4%BA%E3%80%81%E8%BD%AC%E6%8D%A2%E4%B8%8E%E9%93%BE%E6%8E%A5/index.html">
-<meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="程序的表示、转换与链接一、计算机系统概述1. 为什么要学习计算机系统基础 程序执行结果不仅依赖于高级语言语法和语义，还与其他的方面有关，理解程序的执行结果要从系统层面考虑；“系统思维”，站在“计算机系统”的角度考虑问题 程序执行结果不仅取决于算法、程序编写，而且取决于语言处理系统、操作系统，ISA，微体系结构；ISA（指令集体系结构）是计算机软硬件的中间层，指令集是对计算机硬件功能的抽象，功能转换">
-<meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://i.loli.net/2020/10/02/3E5RVjYKGhtxaMc.png">
-<meta property="og:image" content="https://i.loli.net/2020/10/02/FYCprKlQRxctXhO.png">
-<meta property="og:image" content="https://i.loli.net/2020/10/02/L3sTrNk9zRp1yEQ.jpg">
-<meta property="og:image" content="https://i.loli.net/2020/10/02/Fgs372wkz5NV9HW.jpg">
-<meta property="og:image" content="https://i.loli.net/2020/10/02/4TKIYwDdjNn8Cmv.jpg">
-<meta property="og:image" content="https://i.loli.net/2020/10/02/CzosnjibQI2Gqrm.jpg">
-<meta property="og:image" content="https://i.loli.net/2020/10/02/CFJxkKRcbqhS7jf.png">
-<meta property="og:image" content="https://i.loli.net/2020/10/02/gAVfYINm1kLJWdv.png">
-<meta property="article:published_time" content="2020-10-02T11:14:51.607Z">
-<meta property="article:modified_time" content="2020-10-05T16:27:19.970Z">
-<meta property="article:author" content="John Doe">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://i.loli.net/2020/10/02/3E5RVjYKGhtxaMc.png">
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" type="image/png" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="">
+  <meta name="author" content="John Doe">
+  <meta name="keywords" content="">
+  <title>计算机系统基础/计算机系统基础_高级程序语言设计_第一课_程序的表示、转换与链接 - Hexo</title>
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
+<link  rel="stylesheet" href="https://cdn.staticfile.org/github-markdown-css/4.0.0/github-markdown.min.css" />
 
 
-    
-<link rel="stylesheet" href="/css/style/main.css">
- 
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/10.0.0/styles/github-gist.min.css" />
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_fmb4a04yx8h.css">
 
 
 
-    
-    
-        <link rel="stylesheet" id="hl-default-theme" href="/css/highlight/default.css" media="none" onload="if(getComputedStyle(document.documentElement).getPropertyValue('--color-mode').indexOf('dark')===-1)this.media='all'">
-        
-    
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_pjno9b9zyxs.css">
 
-    
-    
 
-     
 
-    <!-- custom head -->
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
 
 <meta name="generator" content="Hexo 4.2.1"><link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
 </head>
 
-    <body>
-        <div id="app">
-            <header class="header">
-    <div class="header__left">
-        <a href="/" class="button">
-            <span class="logo__text">
-                Demo
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>processing</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/">
+              <i class="iconfont icon-home-fill"></i>
+              Home</a>
+          </li>
+        
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/archives/">
+              <i class="iconfont icon-archive-fill"></i>
+              Archives</a>
+          </li>
+        
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/categories/">
+              <i class="iconfont icon-category-fill"></i>
+              Categories</a>
+          </li>
+        
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/tags/">
+              <i class="iconfont icon-tags-fill"></i>
+              Tags</a>
+          </li>
+        
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/about/">
+              <i class="iconfont icon-user-fill"></i>
+              About</a>
+          </li>
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="view intro-2" id="background" parallax=true
+         style="background: url('/img/default.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="container text-center white-text fadeInUp">
+            <span class="h2" id="subtitle">
+              
             </span>
-        </a>
+
+            
+              
+                <div class="mt-3 post-meta">
+                  <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+                  <time datetime="2020-10-02 19:14">
+                    October 2, 2020 pm
+                  </time>
+                </div>
+              
+
+              <div class="mt-1">
+                
+                  
+                  <span class="post-meta mr-2">
+                    <i class="iconfont icon-chart"></i>
+                    2.1k 字
+                  </span>
+                
+
+                
+                  
+                  <span class="post-meta mr-2">
+                      <i class="iconfont icon-clock-fill"></i>
+                    
+                    
+                    21
+                     分钟
+                  </span>
+                
+
+                
+              </div>
+            
+          </div>
+
+          
+        </div>
+      </div>
     </div>
-    <div class="header__right">
-        
-            <div class="navbar__menus">
-                
-                    <a href="/" class="navbar-menu button">
-                        首页
-                    </a>
-                
-                    <a href="/tags/" class="navbar-menu button">
-                        标签
-                    </a>
-                
-                    <a href="/archives/" class="navbar-menu button">
-                        归档
-                    </a>
-                
-                    <a href="/friends/" class="navbar-menu button">
-                        友链
-                    </a>
-                
-                    <a href="/page/" class="navbar-menu button">
-                        Page
-                    </a>
-                
-            </div>
-        
-        
-        
+  </header>
 
-        
-        
-
-        
-
-        
-            <a class="dropdown-icon button" id="btn-dropdown">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width='24' height='24' fill="none" stroke="currentColor" stroke-width="0.7" stroke-linecap="round" stroke-linejoin="round">
-                    <path fill="currentColor" d="M3.314,4.8h13.372c0.41,0,0.743-0.333,0.743-0.743c0-0.41-0.333-0.743-0.743-0.743H3.314c-0.41,0-0.743,0.333-0.743,0.743C2.571,4.467,2.904,4.8,3.314,4.8z M16.686,15.2H3.314c-0.41,0-0.743,0.333-0.743,0.743s0.333,0.743,0.743,0.743h13.372c0.41,0,0.743-0.333,0.743-0.743S17.096,15.2,16.686,15.2z M16.686,9.257H3.314c-0.41,0-0.743,0.333-0.743,0.743s0.333,0.743,0.743,0.743h13.372c0.41,0,0.743-0.333,0.743-0.743S17.096,9.257,16.686,9.257z"></path>
-                </svg>
-            </a>
-            <div class="dropdown-menus" id="dropdown-menus">
-                
-                    <a href="/" class="dropdown-menu button">
-                        首页
-                    </a>
-                
-                    <a href="/tags/" class="dropdown-menu button">
-                        标签
-                    </a>
-                
-                    <a href="/archives/" class="dropdown-menu button">
-                        归档
-                    </a>
-                
-                    <a href="/friends/" class="dropdown-menu button">
-                        友链
-                    </a>
-                
-                    <a href="/page/" class="dropdown-menu button">
-                        Page
-                    </a>
-                
-            </div>
-        
-    </div>
-</header>
-
-
-            <main class="main">
+  <main>
     
+      
 
-<div class="post-title">
-    <h1 class="post-title__text">
-        计算机系统基础/计算机系统基础_高级程序语言设计_第一课_程序的表示、转换与链接
-    </h1>
-    <div class="post-title__meta">
-        <a href="/archives/2020/10/" class="post-meta__date button">
-    2020-10-02
-</a>
-        
- 
-        
-    
-    
-
-
- 
-
- 
-    </div>
-</div>
-
-
-
-<article class="post content-card">
-    <div class="post__header"></div>
-    <div class="post__content">
-        <h2 id="程序的表示、转换与链接"><a href="#程序的表示、转换与链接" class="headerlink" title="程序的表示、转换与链接"></a>程序的表示、转换与链接</h2><h3 id="一、计算机系统概述"><a href="#一、计算机系统概述" class="headerlink" title="一、计算机系统概述"></a>一、计算机系统概述</h3><h4 id="1-为什么要学习计算机系统基础"><a href="#1-为什么要学习计算机系统基础" class="headerlink" title="1. 为什么要学习计算机系统基础"></a>1. 为什么要学习计算机系统基础</h4><ol>
+<div class="container-fluid">
+  <div class="row">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-md">
+      <div class="container nopadding-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <div class="post-content mx-auto" id="post">
+            
+            <article class="markdown-body">
+              <h2 id="程序的表示、转换与链接"><a href="#程序的表示、转换与链接" class="headerlink" title="程序的表示、转换与链接"></a>程序的表示、转换与链接</h2><h3 id="一、计算机系统概述"><a href="#一、计算机系统概述" class="headerlink" title="一、计算机系统概述"></a>一、计算机系统概述</h3><h4 id="1-为什么要学习计算机系统基础"><a href="#1-为什么要学习计算机系统基础" class="headerlink" title="1. 为什么要学习计算机系统基础"></a>1. 为什么要学习计算机系统基础</h4><ol>
 <li>程序执行结果不仅依赖于高级语言语法和语义，还与其他的方面有关，理解程序的执行结果要从系统层面考虑；“系统思维”，站在“计算机系统”的角度考虑问题</li>
 <li>程序执行结果不仅取决于算法、程序编写，而且取决于语言处理系统、操作系统，ISA，微体系结构；ISA（指令集体系结构）是计算机软硬件的中间层，<strong>指令集是对计算机硬件功能的抽象</strong>，<strong>功能转换：下层是上层的实现，上层是下层的抽象，底层为上层提供支撑环境</strong></li>
 <li>计算机系统抽象层：<strong>应用（问题）—&gt;   算法   —&gt;   编程（语言）—&gt;   OS/VM  —&gt;  ISA  —&gt;   微体系结构   —&gt;   功能部件   —&gt;   电路   —&gt;   器件</strong><h4 id="2-冯-诺伊曼结构的主要思想"><a href="#2-冯-诺伊曼结构的主要思想" class="headerlink" title="2. 冯. 诺伊曼结构的主要思想"></a>2. 冯. 诺伊曼结构的主要思想</h4></li>
@@ -198,7 +201,7 @@
 </ul>
 </li>
 <li>内部以二进制表示指令和数据，每条指令由操作码和地址码组成，操作码指出操作类型，地址码指出操作数的地址，由指令组成程序</li>
-<li>采取”存储程序“工作方式<br><img src="https://i.loli.net/2020/10/02/3E5RVjYKGhtxaMc.png" alt="image-20201002200950423"><br><img src="https://i.loli.net/2020/10/02/FYCprKlQRxctXhO.png" alt="image-20201002201227463"></li>
+<li>采取”存储程序“工作方式<br><img src="https://i.loli.net/2020/10/02/3E5RVjYKGhtxaMc.png" srcset="/img/loading.gif" alt="image-20201002200950423"><br><img src="https://i.loli.net/2020/10/02/FYCprKlQRxctXhO.png" srcset="/img/loading.gif" alt="image-20201002201227463"></li>
 </ul>
 </li>
 <li>计算机是如何工作的：<ul>
@@ -257,7 +260,7 @@
 </ul>
 </li>
 </ol>
-<p><img src="https://i.loli.net/2020/10/02/L3sTrNk9zRp1yEQ.jpg" alt="Screenshot_20201002_205239_com.netease.edu.ucmooc"><br><img src="https://i.loli.net/2020/10/02/Fgs372wkz5NV9HW.jpg" alt="Screenshot_20201002_210111_com.netease.edu.ucmooc"><br><img src="https://i.loli.net/2020/10/02/4TKIYwDdjNn8Cmv.jpg" alt="Screenshot_20201002_205619_com.netease.edu.ucmooc"></p>
+<p><img src="https://i.loli.net/2020/10/02/L3sTrNk9zRp1yEQ.jpg" srcset="/img/loading.gif" alt="Screenshot_20201002_205239_com.netease.edu.ucmooc"><br><img src="https://i.loli.net/2020/10/02/Fgs372wkz5NV9HW.jpg" srcset="/img/loading.gif" alt="Screenshot_20201002_210111_com.netease.edu.ucmooc"><br><img src="https://i.loli.net/2020/10/02/4TKIYwDdjNn8Cmv.jpg" srcset="/img/loading.gif" alt="Screenshot_20201002_205619_com.netease.edu.ucmooc"></p>
 <h4 id="4-编程语言和计算机系统层次"><a href="#4-编程语言和计算机系统层次" class="headerlink" title="4. 编程语言和计算机系统层次"></a>4. 编程语言和计算机系统层次</h4><ol>
 <li>第一代程序设计语言：机器语言（1GL）<strong>应用程序—&gt;指令集体系结构—&gt;计算机硬件</strong></li>
 <li>第二代程序设计语言：汇编语言（2GL）<strong>应用程序—&gt;汇编程序—&gt;操作系统—&gt;指令集体系结构—&gt;计算机硬件</strong></li>
@@ -267,9 +270,9 @@
 <li>notes：语言的发展是一个不断“抽象”的过程，因而，相应的计算机系统也不断有新的层次出现</li>
 <li><strong>语言处理系统</strong>包括：各种语言处理程序（如编译、汇编、链接）、运行时系统（如库函数、调试、优化等功能），<strong>操作系统</strong>包括人机交互界面、提供服务功能的内核例程</li>
 <li>回顾：计算机系统抽象层的转换</li>
-<li><img src="https://i.loli.net/2020/10/02/CzosnjibQI2Gqrm.jpg" alt="Screenshot_20201002_214324_com.netease.edu.ucmooc"></li>
-<li><strong>什么是ISA</strong><br><img src="https://i.loli.net/2020/10/02/CFJxkKRcbqhS7jf.png" alt="image-20201002223750980"></li>
-<li><strong>ISA和计算机组成之间的关系</strong>：ISA是计算机硬件功能的抽象<br><img src="https://i.loli.net/2020/10/02/gAVfYINm1kLJWdv.png" alt="image-20201002224138800"><h4 id="5-本课程内容"><a href="#5-本课程内容" class="headerlink" title="5. 本课程内容"></a>5. 本课程内容</h4></li>
+<li><img src="https://i.loli.net/2020/10/02/CzosnjibQI2Gqrm.jpg" srcset="/img/loading.gif" alt="Screenshot_20201002_214324_com.netease.edu.ucmooc"></li>
+<li><strong>什么是ISA</strong><br><img src="https://i.loli.net/2020/10/02/CFJxkKRcbqhS7jf.png" srcset="/img/loading.gif" alt="image-20201002223750980"></li>
+<li><strong>ISA和计算机组成之间的关系</strong>：ISA是计算机硬件功能的抽象<br><img src="https://i.loli.net/2020/10/02/gAVfYINm1kLJWdv.png" srcset="/img/loading.gif" alt="image-20201002224138800"><h4 id="5-本课程内容"><a href="#5-本课程内容" class="headerlink" title="5. 本课程内容"></a>5. 本课程内容</h4></li>
 <li>表示：（Representation）<ul>
 <li>不同数据类型（包括有无符号整数、浮点数、数组、结构等）在寄存器或存储器中如何表示和存储</li>
 <li>指令如何表示和编码（译码）</li>
@@ -290,109 +293,246 @@
 <li></li>
 </ol>
 <h4 id="2-定点数的编码表示"><a href="#2-定点数的编码表示" class="headerlink" title="2. 定点数的编码表示"></a>2. 定点数的编码表示</h4><h4 id="3-C语言中的整数"><a href="#3-C语言中的整数" class="headerlink" title="3. C语言中的整数"></a>3. C语言中的整数</h4><h4 id="4-浮点数的编码表示"><a href="#4-浮点数的编码表示" class="headerlink" title="4. 浮点数的编码表示"></a>4. 浮点数的编码表示</h4><h4 id="5-非数值数据的编码表示"><a href="#5-非数值数据的编码表示" class="headerlink" title="5. 非数值数据的编码表示"></a>5. 非数值数据的编码表示</h4><h4 id="6-数据宽度和存储容量的单位"><a href="#6-数据宽度和存储容量的单位" class="headerlink" title="6. 数据宽度和存储容量的单位"></a>6. 数据宽度和存储容量的单位</h4><h4 id="7-数据存储时的字节排列"><a href="#7-数据存储时的字节排列" class="headerlink" title="7. 数据存储时的字节排列"></a>7. 数据存储时的字节排列</h4><h3 id="三、运算电路基础"><a href="#三、运算电路基础" class="headerlink" title="三、运算电路基础"></a>三、运算电路基础</h3><h4 id="1-数字逻辑电路基础"><a href="#1-数字逻辑电路基础" class="headerlink" title="1. 数字逻辑电路基础"></a>1. 数字逻辑电路基础</h4><h4 id="2-从C表达式到逻辑电路"><a href="#2-从C表达式到逻辑电路" class="headerlink" title="2. 从C表达式到逻辑电路"></a>2. 从C表达式到逻辑电路</h4><h4 id="3-C语言中的各种运算"><a href="#3-C语言中的各种运算" class="headerlink" title="3. C语言中的各种运算"></a>3. C语言中的各种运算</h4><h4 id="4-整数加减运算"><a href="#4-整数加减运算" class="headerlink" title="4. 整数加减运算"></a>4. 整数加减运算</h4><h3 id="四、乘除运算及浮点数运算"><a href="#四、乘除运算及浮点数运算" class="headerlink" title="四、乘除运算及浮点数运算"></a>四、乘除运算及浮点数运算</h3><h4 id="1-整数乘法运算"><a href="#1-整数乘法运算" class="headerlink" title="1. 整数乘法运算"></a>1. 整数乘法运算</h4><h4 id="2-整数除法运算"><a href="#2-整数除法运算" class="headerlink" title="2.  整数除法运算"></a>2.  整数除法运算</h4><h4 id="3-浮点数运算"><a href="#3-浮点数运算" class="headerlink" title="3. 浮点数运算"></a>3. 浮点数运算</h4><h3 id="五、IA-32指令系统概述"><a href="#五、IA-32指令系统概述" class="headerlink" title="五、IA-32指令系统概述"></a>五、IA-32指令系统概述</h3><h4 id="1-程序转换概述"><a href="#1-程序转换概述" class="headerlink" title="1. 程序转换概述"></a>1. 程序转换概述</h4><h4 id="2-IA-32指令系统概述"><a href="#2-IA-32指令系统概述" class="headerlink" title="2. IA-32指令系统概述"></a>2. IA-32指令系统概述</h4>
+            </article>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                
+              </div>
+              
+                <p class="note note-warning">本博客所有文章除特别声明外，均采用 <a href="https://zh.wikipedia.org/wiki/Wikipedia:CC_BY-SA_3.0%E5%8D%8F%E8%AE%AE%E6%96%87%E6%9C%AC" target="_blank" rel="nofollow noopener noopener">CC BY-SA 3.0协议</a> 。转载请注明出处！</p>
+              
+              
+                <div class="post-prevnext row">
+                  <div class="post-prev col-6">
+                    
+                    
+                      <a href="/2020/10/02/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E5%9F%BA%E7%A1%80/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E5%9F%BA%E7%A1%80_%E9%AB%98%E7%BA%A7%E7%A8%8B%E5%BA%8F%E8%AF%AD%E8%A8%80%E8%AE%BE%E8%AE%A1_%E7%AC%AC%E5%9B%9B%E8%AF%BE_%E7%BC%96%E7%A8%8B%E4%B8%8E%E8%B0%83%E8%AF%95%E5%AE%9E%E8%B7%B5/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">计算机系统基础/计算机系统基础_高级程序语言设计_第四课_编程与调试实践</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </div>
+                  <div class="post-next col-6">
+                    
+                    
+                      <a href="/2020/09/09/%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E6%A6%82%E8%AE%BA/">
+                        <span class="hidden-mobile">组成原理/计算机系统概论</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </div>
+                </div>
+              
+            </div>
+
+            
+          </div>
+        </div>
+      </div>
     </div>
-     
-    <div class="post-footer__meta">
-    <p>
-        updated at 2020-10-06
-    </p>
-</div> 
-    <div class="post-meta__cats">
     
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;TOC</p>
+  <div id="tocbot"></div>
+</div>
+
+      </div>
     
-</div> 
-</article>
+  </div>
+</div>
+
+<!-- Custom -->
 
 
-    <div class="nav">
-        <div class="nav__prev">
-            
-                <a href="/2020/10/02/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E5%9F%BA%E7%A1%80/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E5%9F%BA%E7%A1%80_%E9%AB%98%E7%BA%A7%E7%A8%8B%E5%BA%8F%E8%AF%AD%E8%A8%80%E8%AE%BE%E8%AE%A1_%E7%AC%AC%E5%9B%9B%E8%AF%BE_%E7%BC%96%E7%A8%8B%E4%B8%8E%E8%B0%83%E8%AF%95%E5%AE%9E%E8%B7%B5/" class="nav__link">
-                    <div>
-                        <svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path d="M589.088 790.624L310.464 512l278.624-278.624 45.248 45.248L400.96 512l233.376 233.376z" fill="#808080"></path></svg>
-                    </div>
-                    <div>
-                        <div class="nav__label">
-                            Previous Post
-                        </div>
-                        <div class="nav__title">
-                            计算机系统基础/计算机系统基础_高级程序语言设计_第四课_编程与调试实践
-                        </div>
-                    </div>
-                </a>
-            
+    
+  </main>
+
+  
+    <a id="scroll-top-button" href="#" role="button">
+      <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+    </a>
+  
+
+  
+    <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Search</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">keyword</label>
         </div>
-        <div class="nav__next">
-            
-                <a href="/2020/09/09/%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E6%A6%82%E8%AE%BA/" class="nav__link">
-                    <div>
-                        <div class="nav__label">
-                            Next Post
-                        </div>
-                        <div class="nav__title">
-                            组成原理/计算机系统概论
-                        </div>
-                    </div>
-                    <div>
-                        <svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path d="M434.944 790.624l-45.248-45.248L623.04 512l-233.376-233.376 45.248-45.248L713.568 512z" fill="#808080"></path></svg>
-                    </div>
-                </a>
-            
-        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
     </div>
-
-
-
-
-
-</main>
-
-            <footer class="footer">
-    
-
-
-    
-     
- 
-
- 
-    
-        
-        <p class="footer-copyright">
-            Copyright © 2020 <a href="/">Hexo</a>
-        </p>
-    
-    
-    <p>Powered by <a href="https://hexo.io" target="_blank">Hexo</a> | Theme - <a href="https://github.com/ChrAlpha/hexo-theme-cards" target="_blank">Cards</a></p>
-</footer>
-
-        </div>
-         
-
- 
-
- 
-
- 
+  </div>
+</div>
+  
 
   
 
+  
 
-
- 
-
+  <footer class="mt-5">
+  <div class="text-center py-3">
+    <div>
+      <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a>
+      <i class="iconfont icon-love"></i>
+      <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener">
+        <span>Fluid</span></a>
+    </div>
+    
 
     
- 
 
- 
+    
+  </div>
+</footer>
 
- 
+<!-- SCRIPTS -->
+<script  src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js" ></script>
+<script  src="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/js/bootstrap.min.js" ></script>
+<script  src="/js/main.js" ></script>
 
- 
+
+  <script  src="/js/lazyload.js" ></script>
+
+
+
+  
+  <script  src="https://cdn.staticfile.org/tocbot/4.11.1/tocbot.min.js" ></script>
+  <script>
+    $(document).ready(function () {
+      var boardCtn = $('#board-ctn');
+      var boardTop = boardCtn.offset().top;
+
+      tocbot.init({
+        tocSelector: '#tocbot',
+        contentSelector: '.post-content',
+        headingSelector: 'h1,h2,h3,h4,h5,h6',
+        linkClass: 'tocbot-link',
+        activeLinkClass: 'tocbot-active-link',
+        listClass: 'tocbot-list',
+        isCollapsedClass: 'tocbot-is-collapsed',
+        collapsibleClass: 'tocbot-is-collapsible',
+        collapseDepth: 0,
+        scrollSmooth: true,
+        headingsOffset: -boardTop
+      });
+      if ($('.toc-list-item').length > 0) {
+        $('#toc').css('visibility', 'visible');
+      }
+    });
+  </script>
 
 
 
 
-    </body>
+
+  <script defer src="https://cdn.staticfile.org/clipboard.js/2.0.6/clipboard.min.js" ></script>
+  <script  src="/js/clipboard-use.js" ></script>
+
+
+
+
+
+
+<!-- Plugins -->
+
+
+
+  <script  src="https://cdn.staticfile.org/typed.js/2.0.11/typed.min.js" ></script>
+  <script>
+    var typed = new Typed('#subtitle', {
+      strings: [
+        '  ',
+        "计算机系统基础/计算机系统基础_高级程序语言设计_第一课_程序的表示、转换与链接&nbsp;",
+      ],
+      cursorChar: "_",
+      typeSpeed: 70,
+      loop: false,
+    });
+    typed.stop();
+    $(document).ready(function () {
+      $(".typed-cursor").addClass("h2");
+      typed.start();
+    });
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/anchor-js/4.2.2/anchor.min.js" ></script>
+  <script>
+    anchors.options = {
+      placement: "right",
+      visible: "hover",
+      
+    };
+    var el = "h1,h2,h3,h4,h5,h6".split(",");
+    var res = [];
+    for (item of el) {
+      res.push(".markdown-body > " + item)
+    }
+    anchors.add(res.join(", "))
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    var path = "/local-search.xml";
+    var inputArea = document.querySelector("#local-search-input");
+    inputArea.onclick = function () {
+      searchFunc(path, 'local-search-input', 'local-search-result');
+      this.onclick = null
+    }
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+  <script>
+    $('#post img:not(.no-zoom img, img[no-zoom]), img[zoom]').each(
+      function () {
+        var element = document.createElement('a');
+        $(element).attr('data-fancybox', 'images');
+        $(element).attr('href', $(this).attr('src'));
+        $(this).wrap(element);
+      }
+    );
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
 </html>

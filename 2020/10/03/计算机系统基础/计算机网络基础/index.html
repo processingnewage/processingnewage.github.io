@@ -1,179 +1,189 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-    <meta charset="utf-8">
-
-    
-
-    <!-- 渲染优化 -->
-    <meta name="renderer" content="webkit">
-    <meta name="force-rendering" content="webkit">
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
-    <meta name="HandheldFriendly" content="True" >
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
-    <!--icon-->
-
-    <link rel="shortcut icon" type='image/x-icon' href="/favicon.ico">
-
-
-    <!-- meta -->
-
-
-<title>计算机系统基础/计算机网络基础 | Hexo</title>
 
 
 
 
 
-    <!-- OpenGraph -->
- 
-    <meta name="description" content="计算机网络基础公网IP和局域网IP 你要寄送快递的时候，需要填省，市，县，然后是小区，门牌号  其中局域网IP就类似我们的小区门牌号，如果你在小区里说我家是12号楼1单元101，大家都知道你是这个地方，但是你要去别的小区说你是12号楼1单元101，他们肯定不知道你说的是你的小区，而会认为是他们的小区。所以局域网IP就是用于某一群体内部交互数据的，他的地址只在这个群体内部生效，拿出这个群体就失效了">
-<meta property="og:type" content="article">
-<meta property="og:title" content="计算机系统基础&#x2F;计算机网络基础">
-<meta property="og:url" content="http://yoursite.com/2020/10/03/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E5%9F%BA%E7%A1%80/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80/index.html">
-<meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="计算机网络基础公网IP和局域网IP 你要寄送快递的时候，需要填省，市，县，然后是小区，门牌号  其中局域网IP就类似我们的小区门牌号，如果你在小区里说我家是12号楼1单元101，大家都知道你是这个地方，但是你要去别的小区说你是12号楼1单元101，他们肯定不知道你说的是你的小区，而会认为是他们的小区。所以局域网IP就是用于某一群体内部交互数据的，他的地址只在这个群体内部生效，拿出这个群体就失效了">
-<meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://pic3.zhimg.com/80/v2-cd702b4bea5d60825c21f550ace82bf2_1440w.jpg">
-<meta property="article:published_time" content="2020-10-03T15:28:20.684Z">
-<meta property="article:modified_time" content="2020-10-03T15:40:10.955Z">
-<meta property="article:author" content="John Doe">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://pic3.zhimg.com/80/v2-cd702b4bea5d60825c21f550ace82bf2_1440w.jpg">
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" type="image/png" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="">
+  <meta name="author" content="John Doe">
+  <meta name="keywords" content="">
+  <title>计算机系统基础/计算机网络基础 - Hexo</title>
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
+<link  rel="stylesheet" href="https://cdn.staticfile.org/github-markdown-css/4.0.0/github-markdown.min.css" />
 
 
-    
-<link rel="stylesheet" href="/css/style/main.css">
- 
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/10.0.0/styles/github-gist.min.css" />
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_fmb4a04yx8h.css">
 
 
 
-    
-    
-        <link rel="stylesheet" id="hl-default-theme" href="/css/highlight/default.css" media="none" onload="if(getComputedStyle(document.documentElement).getPropertyValue('--color-mode').indexOf('dark')===-1)this.media='all'">
-        
-    
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_pjno9b9zyxs.css">
 
-    
-    
 
-     
 
-    <!-- custom head -->
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
 
 <meta name="generator" content="Hexo 4.2.1"><link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
 </head>
 
-    <body>
-        <div id="app">
-            <header class="header">
-    <div class="header__left">
-        <a href="/" class="button">
-            <span class="logo__text">
-                Demo
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>processing</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/">
+              <i class="iconfont icon-home-fill"></i>
+              Home</a>
+          </li>
+        
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/archives/">
+              <i class="iconfont icon-archive-fill"></i>
+              Archives</a>
+          </li>
+        
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/categories/">
+              <i class="iconfont icon-category-fill"></i>
+              Categories</a>
+          </li>
+        
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/tags/">
+              <i class="iconfont icon-tags-fill"></i>
+              Tags</a>
+          </li>
+        
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/about/">
+              <i class="iconfont icon-user-fill"></i>
+              About</a>
+          </li>
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="view intro-2" id="background" parallax=true
+         style="background: url('/img/default.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="container text-center white-text fadeInUp">
+            <span class="h2" id="subtitle">
+              
             </span>
-        </a>
+
+            
+              
+                <div class="mt-3 post-meta">
+                  <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+                  <time datetime="2020-10-03 23:28">
+                    October 3, 2020 pm
+                  </time>
+                </div>
+              
+
+              <div class="mt-1">
+                
+                  
+                  <span class="post-meta mr-2">
+                    <i class="iconfont icon-chart"></i>
+                    808 字
+                  </span>
+                
+
+                
+                  
+                  <span class="post-meta mr-2">
+                      <i class="iconfont icon-clock-fill"></i>
+                    
+                    
+                    8
+                     分钟
+                  </span>
+                
+
+                
+              </div>
+            
+          </div>
+
+          
+        </div>
+      </div>
     </div>
-    <div class="header__right">
-        
-            <div class="navbar__menus">
-                
-                    <a href="/" class="navbar-menu button">
-                        首页
-                    </a>
-                
-                    <a href="/tags/" class="navbar-menu button">
-                        标签
-                    </a>
-                
-                    <a href="/archives/" class="navbar-menu button">
-                        归档
-                    </a>
-                
-                    <a href="/friends/" class="navbar-menu button">
-                        友链
-                    </a>
-                
-                    <a href="/page/" class="navbar-menu button">
-                        Page
-                    </a>
-                
-            </div>
-        
-        
-        
+  </header>
 
-        
-        
-
-        
-
-        
-            <a class="dropdown-icon button" id="btn-dropdown">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width='24' height='24' fill="none" stroke="currentColor" stroke-width="0.7" stroke-linecap="round" stroke-linejoin="round">
-                    <path fill="currentColor" d="M3.314,4.8h13.372c0.41,0,0.743-0.333,0.743-0.743c0-0.41-0.333-0.743-0.743-0.743H3.314c-0.41,0-0.743,0.333-0.743,0.743C2.571,4.467,2.904,4.8,3.314,4.8z M16.686,15.2H3.314c-0.41,0-0.743,0.333-0.743,0.743s0.333,0.743,0.743,0.743h13.372c0.41,0,0.743-0.333,0.743-0.743S17.096,15.2,16.686,15.2z M16.686,9.257H3.314c-0.41,0-0.743,0.333-0.743,0.743s0.333,0.743,0.743,0.743h13.372c0.41,0,0.743-0.333,0.743-0.743S17.096,9.257,16.686,9.257z"></path>
-                </svg>
-            </a>
-            <div class="dropdown-menus" id="dropdown-menus">
-                
-                    <a href="/" class="dropdown-menu button">
-                        首页
-                    </a>
-                
-                    <a href="/tags/" class="dropdown-menu button">
-                        标签
-                    </a>
-                
-                    <a href="/archives/" class="dropdown-menu button">
-                        归档
-                    </a>
-                
-                    <a href="/friends/" class="dropdown-menu button">
-                        友链
-                    </a>
-                
-                    <a href="/page/" class="dropdown-menu button">
-                        Page
-                    </a>
-                
-            </div>
-        
-    </div>
-</header>
-
-
-            <main class="main">
+  <main>
     
+      
 
-<div class="post-title">
-    <h1 class="post-title__text">
-        计算机系统基础/计算机网络基础
-    </h1>
-    <div class="post-title__meta">
-        <a href="/archives/2020/10/" class="post-meta__date button">
-    2020-10-03
-</a>
-        
- 
-        
-    
-    
-
-
- 
-
- 
-    </div>
-</div>
-
-
-
-<article class="post content-card">
-    <div class="post__header"></div>
-    <div class="post__content">
-        <h1 id="计算机网络基础"><a href="#计算机网络基础" class="headerlink" title="计算机网络基础"></a>计算机网络基础</h1><h2 id="公网IP和局域网IP"><a href="#公网IP和局域网IP" class="headerlink" title="公网IP和局域网IP"></a>公网IP和局域网IP</h2><ul>
+<div class="container-fluid">
+  <div class="row">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-md">
+      <div class="container nopadding-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <div class="post-content mx-auto" id="post">
+            
+            <article class="markdown-body">
+              <h1 id="计算机网络基础"><a href="#计算机网络基础" class="headerlink" title="计算机网络基础"></a>计算机网络基础</h1><h2 id="公网IP和局域网IP"><a href="#公网IP和局域网IP" class="headerlink" title="公网IP和局域网IP"></a>公网IP和局域网IP</h2><ul>
 <li><p>你要寄送快递的时候，需要填省，市，县，然后是小区，门牌号</p>
 </li>
 <li><p>其中局域网IP就类似我们的小区门牌号，如果你在小区里说我家是12号楼1单元101，大家都知道你是这个地方，但是你要去别的小区说你是12号楼1单元101，他们肯定不知道你说的是你的小区，而会认为是他们的小区。所以局域网IP就是用于某一群体内部交互数据的，他的地址只在这个群体内部生效，拿出这个群体就失效了</p>
@@ -184,7 +194,7 @@
 </li>
 <li><p>也就是说公网IP相当于是可以直接访问的IP地址，相当于省市县这种全国唯一的地址，而局域网IP是在公网IP之下的门牌号</p>
 </li>
-<li><p>如下图，<strong>A公司的公网IP是117.48.202.168</strong>，<strong>B公司的公网IP是202.108.22.5</strong>。那A公司中的a电脑如果给自己公司的b电脑传输数据，他只需要打上192.168.1.2直接就能送过去，因为他们都在一个公网IP下，所以他们的门牌号是认识的，只需要局域网IP就可以寄送数据，<strong>但是如果A公司的a电脑要给B公司的c电脑送数据，就需要先将数据送给本公司公网IP下的117.48.202.168，然后交给B公司公网IP下的202.108.22.5，然后再交给192.168.1.3，直接发送给192.168.1.3的话就会发送到自家公司的c电脑上而不是B公司的c电脑了</strong><br><img src="https://pic3.zhimg.com/80/v2-cd702b4bea5d60825c21f550ace82bf2_1440w.jpg" alt="img"></p>
+<li><p>如下图，<strong>A公司的公网IP是117.48.202.168</strong>，<strong>B公司的公网IP是202.108.22.5</strong>。那A公司中的a电脑如果给自己公司的b电脑传输数据，他只需要打上192.168.1.2直接就能送过去，因为他们都在一个公网IP下，所以他们的门牌号是认识的，只需要局域网IP就可以寄送数据，<strong>但是如果A公司的a电脑要给B公司的c电脑送数据，就需要先将数据送给本公司公网IP下的117.48.202.168，然后交给B公司公网IP下的202.108.22.5，然后再交给192.168.1.3，直接发送给192.168.1.3的话就会发送到自家公司的c电脑上而不是B公司的c电脑了</strong><br><img src="https://pic3.zhimg.com/80/v2-cd702b4bea5d60825c21f550ace82bf2_1440w.jpg" srcset="/img/loading.gif" alt="img"></p>
 </li>
 <li><p>所以这样也就是为什么，很多人搭建私有云盘的时候需要向运营商申请公网IP，因为如果你的私有云盘电脑没有公网IP，你是不能直接访问的。很多NAS厂商宣称自己的NAS不需要公网IP，那种本质上就是将你的数据先转发给拥有公网IP的云端，再转发给你，而不是你直接访问，这样其实访问速度会慢很多</p>
 </li>
@@ -192,109 +202,246 @@
 </li>
 </ul>
 
+            </article>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                
+              </div>
+              
+                <p class="note note-warning">本博客所有文章除特别声明外，均采用 <a href="https://zh.wikipedia.org/wiki/Wikipedia:CC_BY-SA_3.0%E5%8D%8F%E8%AE%AE%E6%96%87%E6%9C%AC" target="_blank" rel="nofollow noopener noopener">CC BY-SA 3.0协议</a> 。转载请注明出处！</p>
+              
+              
+                <div class="post-prevnext row">
+                  <div class="post-prev col-6">
+                    
+                    
+                      <a href="/2020/10/04/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/%E7%AC%AC%E4%B8%80%E8%AE%B2%E3%80%81%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E6%A6%82%E8%BF%B0/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">操作系统/第一讲、操作系统概述</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </div>
+                  <div class="post-next col-6">
+                    
+                    
+                      <a href="/2020/10/03/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E5%9F%BA%E7%A1%80/%E8%AE%A1%E7%AE%97%E7%A1%AC%E4%BB%B6%E6%9E%B6%E6%9E%84/">
+                        <span class="hidden-mobile">计算机系统基础/计算硬件架构</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </div>
+                </div>
+              
+            </div>
+
+            
+          </div>
+        </div>
+      </div>
     </div>
-     
-    <div class="post-footer__meta">
-    <p>
-        updated at 2020-10-03
-    </p>
-</div> 
-    <div class="post-meta__cats">
     
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;TOC</p>
+  <div id="tocbot"></div>
+</div>
+
+      </div>
     
-</div> 
-</article>
+  </div>
+</div>
+
+<!-- Custom -->
 
 
-    <div class="nav">
-        <div class="nav__prev">
-            
-                <a href="/2020/10/04/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/%E7%AC%AC%E4%B8%80%E8%AE%B2%E3%80%81%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E6%A6%82%E8%BF%B0/" class="nav__link">
-                    <div>
-                        <svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path d="M589.088 790.624L310.464 512l278.624-278.624 45.248 45.248L400.96 512l233.376 233.376z" fill="#808080"></path></svg>
-                    </div>
-                    <div>
-                        <div class="nav__label">
-                            Previous Post
-                        </div>
-                        <div class="nav__title">
-                            操作系统/第一讲、操作系统概述
-                        </div>
-                    </div>
-                </a>
-            
+    
+  </main>
+
+  
+    <a id="scroll-top-button" href="#" role="button">
+      <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+    </a>
+  
+
+  
+    <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Search</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">keyword</label>
         </div>
-        <div class="nav__next">
-            
-                <a href="/2020/10/03/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E5%9F%BA%E7%A1%80/%E8%AE%A1%E7%AE%97%E7%A1%AC%E4%BB%B6%E6%9E%B6%E6%9E%84/" class="nav__link">
-                    <div>
-                        <div class="nav__label">
-                            Next Post
-                        </div>
-                        <div class="nav__title">
-                            计算机系统基础/计算硬件架构
-                        </div>
-                    </div>
-                    <div>
-                        <svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path d="M434.944 790.624l-45.248-45.248L623.04 512l-233.376-233.376 45.248-45.248L713.568 512z" fill="#808080"></path></svg>
-                    </div>
-                </a>
-            
-        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
     </div>
-
-
-
-
-
-</main>
-
-            <footer class="footer">
-    
-
-
-    
-     
- 
-
- 
-    
-        
-        <p class="footer-copyright">
-            Copyright © 2020 <a href="/">Hexo</a>
-        </p>
-    
-    
-    <p>Powered by <a href="https://hexo.io" target="_blank">Hexo</a> | Theme - <a href="https://github.com/ChrAlpha/hexo-theme-cards" target="_blank">Cards</a></p>
-</footer>
-
-        </div>
-         
-
- 
-
- 
-
- 
+  </div>
+</div>
+  
 
   
 
+  
 
-
- 
-
+  <footer class="mt-5">
+  <div class="text-center py-3">
+    <div>
+      <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a>
+      <i class="iconfont icon-love"></i>
+      <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener">
+        <span>Fluid</span></a>
+    </div>
+    
 
     
- 
 
- 
+    
+  </div>
+</footer>
 
- 
+<!-- SCRIPTS -->
+<script  src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js" ></script>
+<script  src="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/js/bootstrap.min.js" ></script>
+<script  src="/js/main.js" ></script>
 
- 
+
+  <script  src="/js/lazyload.js" ></script>
+
+
+
+  
+  <script  src="https://cdn.staticfile.org/tocbot/4.11.1/tocbot.min.js" ></script>
+  <script>
+    $(document).ready(function () {
+      var boardCtn = $('#board-ctn');
+      var boardTop = boardCtn.offset().top;
+
+      tocbot.init({
+        tocSelector: '#tocbot',
+        contentSelector: '.post-content',
+        headingSelector: 'h1,h2,h3,h4,h5,h6',
+        linkClass: 'tocbot-link',
+        activeLinkClass: 'tocbot-active-link',
+        listClass: 'tocbot-list',
+        isCollapsedClass: 'tocbot-is-collapsed',
+        collapsibleClass: 'tocbot-is-collapsible',
+        collapseDepth: 0,
+        scrollSmooth: true,
+        headingsOffset: -boardTop
+      });
+      if ($('.toc-list-item').length > 0) {
+        $('#toc').css('visibility', 'visible');
+      }
+    });
+  </script>
 
 
 
 
-    </body>
+
+  <script defer src="https://cdn.staticfile.org/clipboard.js/2.0.6/clipboard.min.js" ></script>
+  <script  src="/js/clipboard-use.js" ></script>
+
+
+
+
+
+
+<!-- Plugins -->
+
+
+
+  <script  src="https://cdn.staticfile.org/typed.js/2.0.11/typed.min.js" ></script>
+  <script>
+    var typed = new Typed('#subtitle', {
+      strings: [
+        '  ',
+        "计算机系统基础/计算机网络基础&nbsp;",
+      ],
+      cursorChar: "_",
+      typeSpeed: 70,
+      loop: false,
+    });
+    typed.stop();
+    $(document).ready(function () {
+      $(".typed-cursor").addClass("h2");
+      typed.start();
+    });
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/anchor-js/4.2.2/anchor.min.js" ></script>
+  <script>
+    anchors.options = {
+      placement: "right",
+      visible: "hover",
+      
+    };
+    var el = "h1,h2,h3,h4,h5,h6".split(",");
+    var res = [];
+    for (item of el) {
+      res.push(".markdown-body > " + item)
+    }
+    anchors.add(res.join(", "))
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    var path = "/local-search.xml";
+    var inputArea = document.querySelector("#local-search-input");
+    inputArea.onclick = function () {
+      searchFunc(path, 'local-search-input', 'local-search-result');
+      this.onclick = null
+    }
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+  <script>
+    $('#post img:not(.no-zoom img, img[no-zoom]), img[zoom]').each(
+      function () {
+        var element = document.createElement('a');
+        $(element).attr('data-fancybox', 'images');
+        $(element).attr('href', $(this).attr('src'));
+        $(this).wrap(element);
+      }
+    );
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
 </html>

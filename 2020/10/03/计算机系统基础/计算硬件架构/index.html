@@ -1,199 +1,202 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-    <meta charset="utf-8">
-
-    
-
-    <!-- 渲染优化 -->
-    <meta name="renderer" content="webkit">
-    <meta name="force-rendering" content="webkit">
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
-    <meta name="HandheldFriendly" content="True" >
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
-    <!--icon-->
-
-    <link rel="shortcut icon" type='image/x-icon' href="/favicon.ico">
-
-
-    <!-- meta -->
-
-
-<title>计算机系统基础/计算硬件架构 | Hexo</title>
 
 
 
 
 
-    <!-- OpenGraph -->
- 
-    <meta name="description" content="深度了解计算机的硬件架构 操作系统作为软件，首先要能在计算机硬件上运行，并完成其第一要务：对硬件进行管理和控制。要想深入理解操作系统，就需要了解支撑操作系统运行的硬件环境，即了解处理器体系结构和机器指令集，来探索CPU对操作系统的影响，以及操作系统如何通过各种操作来管理硬件的。当前的硬件和CPU有很多种，在细节上有很大的不同，如果一开始就陷入硬件细节，不利于同学对OS和计算机硬件之间的关系建立一个">
-<meta property="og:type" content="article">
-<meta property="og:title" content="计算机系统基础&#x2F;计算硬件架构">
-<meta property="og:url" content="http://yoursite.com/2020/10/03/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E5%9F%BA%E7%A1%80/%E8%AE%A1%E7%AE%97%E7%A1%AC%E4%BB%B6%E6%9E%B6%E6%9E%84/index.html">
-<meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="深度了解计算机的硬件架构 操作系统作为软件，首先要能在计算机硬件上运行，并完成其第一要务：对硬件进行管理和控制。要想深入理解操作系统，就需要了解支撑操作系统运行的硬件环境，即了解处理器体系结构和机器指令集，来探索CPU对操作系统的影响，以及操作系统如何通过各种操作来管理硬件的。当前的硬件和CPU有很多种，在细节上有很大的不同，如果一开始就陷入硬件细节，不利于同学对OS和计算机硬件之间的关系建立一个">
-<meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://pic1.zhimg.com/80/v2-4f13d448791a5b7e90ef0b0bee19774c_1440w.jpg">
-<meta property="og:image" content="https://pic2.zhimg.com/80/v2-fee8c16a8df4422184785e26ae9a8909_1440w.jpg">
-<meta property="og:image" content="https://pic3.zhimg.com/80/v2-f6b440ae54d16616d6e9f093726d496a_1440w.jpg">
-<meta property="og:image" content="https://pic1.zhimg.com/80/v2-6f832bac4f05de49b1e1308449063a4c_1440w.jpg">
-<meta property="og:image" content="https://pic2.zhimg.com/80/v2-00f829cb8d9e2c475e09fbfc7c6f5c55_1440w.jpg">
-<meta property="og:image" content="https://pic2.zhimg.com/80/v2-9fa0543c14e7b2ad79561eb85c8fd671_1440w.jpg">
-<meta property="og:image" content="https://pic3.zhimg.com/80/v2-4fc7e37b11a6c393e39f2c38ba812846_1440w.jpg">
-<meta property="og:image" content="https://pic3.zhimg.com/80/v2-87c7e447f4870d61d0bcef74cd723576_1440w.jpg">
-<meta property="article:published_time" content="2020-10-03T14:25:55.976Z">
-<meta property="article:modified_time" content="2020-10-03T15:28:02.901Z">
-<meta property="article:author" content="John Doe">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://pic1.zhimg.com/80/v2-4f13d448791a5b7e90ef0b0bee19774c_1440w.jpg">
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" type="image/png" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="">
+  <meta name="author" content="John Doe">
+  <meta name="keywords" content="">
+  <title>计算机系统基础/计算硬件架构 - Hexo</title>
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
+<link  rel="stylesheet" href="https://cdn.staticfile.org/github-markdown-css/4.0.0/github-markdown.min.css" />
 
 
-    
-<link rel="stylesheet" href="/css/style/main.css">
- 
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/10.0.0/styles/github-gist.min.css" />
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_fmb4a04yx8h.css">
 
 
 
-    
-    
-        <link rel="stylesheet" id="hl-default-theme" href="/css/highlight/default.css" media="none" onload="if(getComputedStyle(document.documentElement).getPropertyValue('--color-mode').indexOf('dark')===-1)this.media='all'">
-        
-    
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_pjno9b9zyxs.css">
 
-    
-    
 
-     
 
-    <!-- custom head -->
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
 
 <meta name="generator" content="Hexo 4.2.1"><link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
 </head>
 
-    <body>
-        <div id="app">
-            <header class="header">
-    <div class="header__left">
-        <a href="/" class="button">
-            <span class="logo__text">
-                Demo
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>processing</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/">
+              <i class="iconfont icon-home-fill"></i>
+              Home</a>
+          </li>
+        
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/archives/">
+              <i class="iconfont icon-archive-fill"></i>
+              Archives</a>
+          </li>
+        
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/categories/">
+              <i class="iconfont icon-category-fill"></i>
+              Categories</a>
+          </li>
+        
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/tags/">
+              <i class="iconfont icon-tags-fill"></i>
+              Tags</a>
+          </li>
+        
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/about/">
+              <i class="iconfont icon-user-fill"></i>
+              About</a>
+          </li>
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="view intro-2" id="background" parallax=true
+         style="background: url('/img/default.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="container text-center white-text fadeInUp">
+            <span class="h2" id="subtitle">
+              
             </span>
-        </a>
+
+            
+              
+                <div class="mt-3 post-meta">
+                  <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+                  <time datetime="2020-10-03 22:25">
+                    October 3, 2020 pm
+                  </time>
+                </div>
+              
+
+              <div class="mt-1">
+                
+                  
+                  <span class="post-meta mr-2">
+                    <i class="iconfont icon-chart"></i>
+                    2.8k 字
+                  </span>
+                
+
+                
+                  
+                  <span class="post-meta mr-2">
+                      <i class="iconfont icon-clock-fill"></i>
+                    
+                    
+                    31
+                     分钟
+                  </span>
+                
+
+                
+              </div>
+            
+          </div>
+
+          
+        </div>
+      </div>
     </div>
-    <div class="header__right">
-        
-            <div class="navbar__menus">
-                
-                    <a href="/" class="navbar-menu button">
-                        首页
-                    </a>
-                
-                    <a href="/tags/" class="navbar-menu button">
-                        标签
-                    </a>
-                
-                    <a href="/archives/" class="navbar-menu button">
-                        归档
-                    </a>
-                
-                    <a href="/friends/" class="navbar-menu button">
-                        友链
-                    </a>
-                
-                    <a href="/page/" class="navbar-menu button">
-                        Page
-                    </a>
-                
-            </div>
-        
-        
-        
+  </header>
 
-        
-        
-
-        
-
-        
-            <a class="dropdown-icon button" id="btn-dropdown">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width='24' height='24' fill="none" stroke="currentColor" stroke-width="0.7" stroke-linecap="round" stroke-linejoin="round">
-                    <path fill="currentColor" d="M3.314,4.8h13.372c0.41,0,0.743-0.333,0.743-0.743c0-0.41-0.333-0.743-0.743-0.743H3.314c-0.41,0-0.743,0.333-0.743,0.743C2.571,4.467,2.904,4.8,3.314,4.8z M16.686,15.2H3.314c-0.41,0-0.743,0.333-0.743,0.743s0.333,0.743,0.743,0.743h13.372c0.41,0,0.743-0.333,0.743-0.743S17.096,15.2,16.686,15.2z M16.686,9.257H3.314c-0.41,0-0.743,0.333-0.743,0.743s0.333,0.743,0.743,0.743h13.372c0.41,0,0.743-0.333,0.743-0.743S17.096,9.257,16.686,9.257z"></path>
-                </svg>
-            </a>
-            <div class="dropdown-menus" id="dropdown-menus">
-                
-                    <a href="/" class="dropdown-menu button">
-                        首页
-                    </a>
-                
-                    <a href="/tags/" class="dropdown-menu button">
-                        标签
-                    </a>
-                
-                    <a href="/archives/" class="dropdown-menu button">
-                        归档
-                    </a>
-                
-                    <a href="/friends/" class="dropdown-menu button">
-                        友链
-                    </a>
-                
-                    <a href="/page/" class="dropdown-menu button">
-                        Page
-                    </a>
-                
-            </div>
-        
-    </div>
-</header>
-
-
-            <main class="main">
+  <main>
     
+      
 
-<div class="post-title">
-    <h1 class="post-title__text">
-        计算机系统基础/计算硬件架构
-    </h1>
-    <div class="post-title__meta">
-        <a href="/archives/2020/10/" class="post-meta__date button">
-    2020-10-03
-</a>
-        
- 
-        
-    
-    
-
-
- 
-
- 
-    </div>
-</div>
-
-
-
-<article class="post content-card">
-    <div class="post__header"></div>
-    <div class="post__content">
-        <h1 id="深度了解计算机的硬件架构"><a href="#深度了解计算机的硬件架构" class="headerlink" title="深度了解计算机的硬件架构"></a>深度了解计算机的硬件架构</h1><ul>
+<div class="container-fluid">
+  <div class="row">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-md">
+      <div class="container nopadding-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <div class="post-content mx-auto" id="post">
+            
+            <article class="markdown-body">
+              <h1 id="深度了解计算机的硬件架构"><a href="#深度了解计算机的硬件架构" class="headerlink" title="深度了解计算机的硬件架构"></a>深度了解计算机的硬件架构</h1><ul>
 <li>操作系统作为软件，首先要能在计算机硬件上运行，并完成其第一要务：对硬件进行管理和控制。要想深入理解操作系统，就需要了解支撑操作系统运行的硬件环境，即<strong>了解处理器体系结构和机器指令集</strong>，来探索CPU对操作系统的影响，以及操作系统如何通过各种操作来管理硬件的。当前的硬件和CPU有很多种，在细节上有很大的不同，如果一开始就陷入硬件细节，不利于同学对OS和计算机硬件之间的关系建立一个比较全面和概览性的理解。所以，我们将先简单介绍一个抽象的简化计算机系统，然后在逐步进入到某一具体CPU，即RISC-V的硬件细节中<h2 id="一般计算机硬件架构"><a href="#一般计算机硬件架构" class="headerlink" title="一般计算机硬件架构"></a>一般计算机硬件架构</h2></li>
-<li>这里介绍一下运行操作系统的基本计算机硬件架构。一台计算机可抽象一台以<strong>图灵机（Turing Machine）</strong>为理想模型，以<strong>冯诺依曼架构（ Von Neumann Architecture）</strong>为实现模型的电子设备，包括CPU、memory和 I/O 设备。CPU(中央处理器，也称处理器) 执行操作系统中的指令，完成相关计算和读写内存，物理内存保存了操作系统中的指令和需要处理的数据，外部设备用于实现操作系统的输入（键盘、硬盘），输出（显示器、并口、串口），计时（时钟）永久存储（硬盘）。操作系统除了能在计算机上运行外，还要管好计算机。下面将简要介绍计算机硬件以及操作系统大致要完成的事情<br><img src="https://pic1.zhimg.com/80/v2-4f13d448791a5b7e90ef0b0bee19774c_1440w.jpg" alt="img"></li>
+<li>这里介绍一下运行操作系统的基本计算机硬件架构。一台计算机可抽象一台以<strong>图灵机（Turing Machine）</strong>为理想模型，以<strong>冯诺依曼架构（ Von Neumann Architecture）</strong>为实现模型的电子设备，包括CPU、memory和 I/O 设备。CPU(中央处理器，也称处理器) 执行操作系统中的指令，完成相关计算和读写内存，物理内存保存了操作系统中的指令和需要处理的数据，外部设备用于实现操作系统的输入（键盘、硬盘），输出（显示器、并口、串口），计时（时钟）永久存储（硬盘）。操作系统除了能在计算机上运行外，还要管好计算机。下面将简要介绍计算机硬件以及操作系统大致要完成的事情<br><img src="https://pic1.zhimg.com/80/v2-4f13d448791a5b7e90ef0b0bee19774c_1440w.jpg" srcset="/img/loading.gif" alt="img"></li>
 </ul>
 <h2 id="CPU"><a href="#CPU" class="headerlink" title="CPU"></a>CPU</h2><ul>
 <li>CPU是计算机系统的核心，目前存在各种8位，16位，32位，64位的CPU，应用在从嵌入式系统到巨型机等不同的场合中。CPU从一加电开始，<strong>从某设定好的内存地址开始，取指令，执行指令，并周而复始地运行</strong>。取指令的过程即从某寄存器（比如，程序计数器【PC】）中获取一个内存地址，从这个内存地址中读入指令，执行机器指令，不断重复，CPU运行期间会有分支和调用指令来修改程序计数器，实现地址跳转，否则程序计数器就自动加１，让CPU从下一个内存地址单元取指令，并继续执行</li>
 <li>由于CPU执行速度很快（x86 CPU可达到2GHZ以上的时钟频率，RISC-V CPU可达到1.5 GHZ的时钟频率），如果当前可以运行的程序太少，则会出现CPU无事可做的情况，导致计算机系统效率太低。这时就需要操作系统来帮忙了，我们需要操作系统除了能管理硬件外，还能管理应用程序，让它们能够按一定的顺序和优先级来依次使用CPU，充分发挥CPU的效能。操作系统管一个程序比较容易，但如果管理多个程序的运行，就需要考虑如何分配CPU资源的问题，如何避免程序执行期间发生“冲突”的问题等，这是操作系统需要完成的重要功能之一</li>
 </ul>
-<h2 id="memory"><a href="#memory" class="headerlink" title="memory"></a>memory</h2><p><img src="https://pic2.zhimg.com/80/v2-fee8c16a8df4422184785e26ae9a8909_1440w.jpg" alt="img"><br><img src="https://pic3.zhimg.com/80/v2-f6b440ae54d16616d6e9f093726d496a_1440w.jpg" alt="img"></p>
+<h2 id="memory"><a href="#memory" class="headerlink" title="memory"></a>memory</h2><p><img src="https://pic2.zhimg.com/80/v2-fee8c16a8df4422184785e26ae9a8909_1440w.jpg" srcset="/img/loading.gif" alt="img"><br><img src="https://pic3.zhimg.com/80/v2-f6b440ae54d16616d6e9f093726d496a_1440w.jpg" srcset="/img/loading.gif" alt="img"></p>
 <ul>
 <li><strong>计算机中有多种多层次的存放数据和指令代码的硬件存储单元</strong>，比如在CPU内的<strong>寄存器（register）</strong>、<strong>高速缓存(cache)</strong>、内存（memory）、<strong>硬盘</strong>、<strong>磁带</strong>等。寄存器位于CPU内部，其访问速度最快但成本昂贵，在对于传统的CISC（复杂指令集计算机，如Intel 80386处理器）中一般只有几个到十个左右的通用寄存器，而对于RISC（精简指令集计算机，如RISC-V），则可能有几十个以上通用寄存器（GPRs）；高速缓存（cache） 一般也在CPU内部，cache是内存和寄存器在速度和大小上的折衷，比寄存器慢2~10倍，容量也有限，量级大约几百KB到几十MB不等；再接下来就是内存了，内存位于CPU外，比寄存器慢10倍以上，但容量大，目前一般以几百兆B到几百GB不等；硬盘容量更大，但一般比寄存器要慢1000倍以上，不过掉电后其存储的数据不会丢失</li>
 <li>由于寄存器、cache、内存、硬盘在读写速度和容量上的巨大差异，所以需要<strong>操作系统来协调数据的访问</strong>，<strong>尽量主动协助应用软件，把最近访问的数据放到寄存器或cache中（实际上操作系统不能直接控制cache的读写），把经常访问的数据放在内存中，把不常用的数据放到硬盘上，</strong>这样可以达到让多个运行的应用程序“感觉”到它可以使用很大的空间，也可有很快的访问速度。如何让在运行中的每个程序都能够得到“足够大”的内存空间，且程序间相互不能破坏对方的内存“领地”，且建立他们之间的“数据共享”通道，这是操作系统需要完成的重要功能之一</li>
 </ul>
-<h2 id="I-O"><a href="#I-O" class="headerlink" title="I/O"></a>I/O</h2><p><img src="https://pic1.zhimg.com/80/v2-6f832bac4f05de49b1e1308449063a4c_1440w.jpg" alt="img"></p>
+<h2 id="I-O"><a href="#I-O" class="headerlink" title="I/O"></a>I/O</h2><p><img src="https://pic1.zhimg.com/80/v2-6f832bac4f05de49b1e1308449063a4c_1440w.jpg" srcset="/img/loading.gif" alt="img"></p>
 <ul>
 <li><p>CPU处理的数据需要有来源和输出，这里的来源和输出就是各种外设，如大家日常使用计算机用到的键盘、鼠标、显示器、声卡、GPU、U盘、硬盘、SSD存储、打印机、网卡、摄像头等。上图中给出了PC计算机的一些外设硬件。应用程序如果直接访问外设，会有代码实现复杂，可移植性差，无法有效并发等问题，所以<strong>操作系统给应用程序提供了简单的访问接口，让应用程序不需要了解硬件细节</strong>。具体访问外设的苦活累活都交给操作系统来完成了，这就是操作系统中外设驱动程序的主要功能</p>
 </li>
@@ -234,7 +237,7 @@
 </ul>
 <p>举例来说，<code>RV32IMA</code>表示支持基本整数操作和原子操作的32位RISC-V指令集。对于一般在用户态执行的应用程序，只需要上述用户态指令集就基本足够了。但如果是像操作系统这样的软件，需要控制整个计算机硬件，则只使用用户态指令集是不够的，还需要在处于内核特权级的CPU状态下执行特权指令集</p>
 <h3 id="Privileged-ISA"><a href="#Privileged-ISA" class="headerlink" title="Privileged ISA"></a>Privileged ISA</h3></li>
-<li><p><strong>Software Stacks</strong><br>RISC-V在设计时就考虑了硬件虚拟化的需求，三种典型RISC-V系统的结构如下<br><img src="https://pic2.zhimg.com/80/v2-00f829cb8d9e2c475e09fbfc7c6f5c55_1440w.jpg" alt="img"></p>
+<li><p><strong>Software Stacks</strong><br>RISC-V在设计时就考虑了硬件虚拟化的需求，三种典型RISC-V系统的结构如下<br><img src="https://pic2.zhimg.com/80/v2-00f829cb8d9e2c475e09fbfc7c6f5c55_1440w.jpg" srcset="/img/loading.gif" alt="img"></p>
 <p>上图中各个英文缩写对应的全称如下</p>
 <ul>
 <li>ABI: Application Binary Interface</li>
@@ -246,128 +249,280 @@
 </ul>
 <p>RISC-V通过各层之间的Binary Interface实现了对下一层的抽象，方便了虚拟机的实现以及OS在不同RISC-V架构间的移植。采用了图中第二种结构，<a href="https://link.zhihu.com/?target=https%3A//github.com/riscv/riscv-pk">bbl</a>在其中充当了SEE的角色</p>
 </li>
-<li><p>Privilege Levels<br>RISC-V共有4种不同的特权级，与x86不同的是，RISC-V中特权级对应数字越小，权限越低<br><img src="https://pic2.zhimg.com/80/v2-9fa0543c14e7b2ad79561eb85c8fd671_1440w.jpg" alt="img"><br>一个RISC-V的实现并不要求同时支持这四种特权级，可接受的特权级组合如下<br><img src="https://pic3.zhimg.com/80/v2-4fc7e37b11a6c393e39f2c38ba812846_1440w.jpg" alt="img"></p>
+<li><p>Privilege Levels<br>RISC-V共有4种不同的特权级，与x86不同的是，RISC-V中特权级对应数字越小，权限越低<br><img src="https://pic2.zhimg.com/80/v2-9fa0543c14e7b2ad79561eb85c8fd671_1440w.jpg" srcset="/img/loading.gif" alt="img"><br>一个RISC-V的实现并不要求同时支持这四种特权级，可接受的特权级组合如下<br><img src="https://pic3.zhimg.com/80/v2-4fc7e37b11a6c393e39f2c38ba812846_1440w.jpg" srcset="/img/loading.gif" alt="img"></p>
 <p>目前官方的<a href="https://link.zhihu.com/?target=https%3A//github.com/riscv/riscv-isa-sim">Spike</a>模拟器只部分实现了3个特权级</p>
 </li>
-<li><p><strong>Control and Status Registers</strong><br>RISC-V中各个特权级都有单独的Control and Status Registers (CSRs)，其中应当注意的有以下几个<br><img src="https://pic3.zhimg.com/80/v2-87c7e447f4870d61d0bcef74cd723576_1440w.jpg" alt="img"></p>
+<li><p><strong>Control and Status Registers</strong><br>RISC-V中各个特权级都有单独的Control and Status Registers (CSRs)，其中应当注意的有以下几个<br><img src="https://pic3.zhimg.com/80/v2-87c7e447f4870d61d0bcef74cd723576_1440w.jpg" srcset="/img/loading.gif" alt="img"></p>
 <p>继续阅读前，读者应当查阅<a href="https://link.zhihu.com/?target=https%3A//riscv.org/specifications/privileged-isa">Privileged Spec 1.9.1</a>以熟悉以上CSR的功能和用途</p>
 </li>
 <li><p><strong>CSR Instructions</strong></p>
 <p>RISC-V ISA中提供了一些修改CSR的原子操作，下面介绍之后常用到的<code>csrrw</code>指令</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># Atomic Read &amp; Write Bit</span><br><span class="line">cssrw rd, csr, rs</span><br></pre></td></tr></table></figure>
+<pre><code class="hljs text"># Atomic Read &amp; Write Bit
+cssrw rd, csr, rs</code></pre>
 
 <p>语义上等价的C++函数如下</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">cssrw</span><span class="params">(<span class="keyword">unsigned</span> <span class="keyword">int</span>&amp; rd, <span class="keyword">unsigned</span> <span class="keyword">int</span>&amp; csr, <span class="keyword">unsigned</span> <span class="keyword">int</span>&amp; rs)</span> </span>&#123;</span><br><span class="line">  <span class="keyword">unsigned</span> <span class="keyword">int</span> tmp = rs;</span><br><span class="line">  rd = csr;</span><br><span class="line">  csr = tmp;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<pre><code class="hljs c++"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">cssrw</span><span class="hljs-params">(<span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">int</span>&amp; rd, <span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">int</span>&amp; csr, <span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">int</span>&amp; rs)</span> </span>&#123;
+  <span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">int</span> tmp = rs;
+  rd = csr;
+  csr = tmp;
+&#125;</code></pre>
 
 <p>几种有趣的用法如下</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"># csr &#x3D; rs</span><br><span class="line">cssrw x0, csr, rs</span><br><span class="line"></span><br><span class="line"># csr &#x3D; 0</span><br><span class="line">cssrw x0, csr, x0</span><br><span class="line"></span><br><span class="line"># rd &#x3D; csr, csr &#x3D; 0</span><br><span class="line">cssrw rd, csr, x0</span><br><span class="line"></span><br><span class="line"># swap rd and csr</span><br><span class="line">cssrw rd, csr, rd</span><br></pre></td></tr></table></figure>
+<pre><code class="hljs text"># csr &#x3D; rs
+cssrw x0, csr, rs
+
+# csr &#x3D; 0
+cssrw x0, csr, x0
+
+# rd &#x3D; csr, csr &#x3D; 0
+cssrw rd, csr, x0
+
+# swap rd and csr
+cssrw rd, csr, rd</code></pre>
 
 </li>
 </ul>
 
+            </article>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                
+              </div>
+              
+                <p class="note note-warning">本博客所有文章除特别声明外，均采用 <a href="https://zh.wikipedia.org/wiki/Wikipedia:CC_BY-SA_3.0%E5%8D%8F%E8%AE%AE%E6%96%87%E6%9C%AC" target="_blank" rel="nofollow noopener noopener">CC BY-SA 3.0协议</a> 。转载请注明出处！</p>
+              
+              
+                <div class="post-prevnext row">
+                  <div class="post-prev col-6">
+                    
+                    
+                      <a href="/2020/10/03/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E5%9F%BA%E7%A1%80/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">计算机系统基础/计算机网络基础</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </div>
+                  <div class="post-next col-6">
+                    
+                    
+                      <a href="/2020/10/02/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E5%9F%BA%E7%A1%80/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E5%9F%BA%E7%A1%80_%E9%AB%98%E7%BA%A7%E7%A8%8B%E5%BA%8F%E8%AF%AD%E8%A8%80%E8%AE%BE%E8%AE%A1_%E7%AC%AC%E5%9B%9B%E8%AF%BE_%E7%BC%96%E7%A8%8B%E4%B8%8E%E8%B0%83%E8%AF%95%E5%AE%9E%E8%B7%B5/">
+                        <span class="hidden-mobile">计算机系统基础/计算机系统基础_高级程序语言设计_第四课_编程与调试实践</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </div>
+                </div>
+              
+            </div>
+
+            
+          </div>
+        </div>
+      </div>
     </div>
-     
-    <div class="post-footer__meta">
-    <p>
-        updated at 2020-10-03
-    </p>
-</div> 
-    <div class="post-meta__cats">
     
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;TOC</p>
+  <div id="tocbot"></div>
+</div>
+
+      </div>
     
-</div> 
-</article>
+  </div>
+</div>
+
+<!-- Custom -->
 
 
-    <div class="nav">
-        <div class="nav__prev">
-            
-                <a href="/2020/10/03/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E5%9F%BA%E7%A1%80/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80/" class="nav__link">
-                    <div>
-                        <svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path d="M589.088 790.624L310.464 512l278.624-278.624 45.248 45.248L400.96 512l233.376 233.376z" fill="#808080"></path></svg>
-                    </div>
-                    <div>
-                        <div class="nav__label">
-                            Previous Post
-                        </div>
-                        <div class="nav__title">
-                            计算机系统基础/计算机网络基础
-                        </div>
-                    </div>
-                </a>
-            
+    
+  </main>
+
+  
+    <a id="scroll-top-button" href="#" role="button">
+      <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+    </a>
+  
+
+  
+    <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Search</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">keyword</label>
         </div>
-        <div class="nav__next">
-            
-                <a href="/2020/10/02/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E5%9F%BA%E7%A1%80/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E5%9F%BA%E7%A1%80_%E9%AB%98%E7%BA%A7%E7%A8%8B%E5%BA%8F%E8%AF%AD%E8%A8%80%E8%AE%BE%E8%AE%A1_%E7%AC%AC%E5%9B%9B%E8%AF%BE_%E7%BC%96%E7%A8%8B%E4%B8%8E%E8%B0%83%E8%AF%95%E5%AE%9E%E8%B7%B5/" class="nav__link">
-                    <div>
-                        <div class="nav__label">
-                            Next Post
-                        </div>
-                        <div class="nav__title">
-                            计算机系统基础/计算机系统基础_高级程序语言设计_第四课_编程与调试实践
-                        </div>
-                    </div>
-                    <div>
-                        <svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path d="M434.944 790.624l-45.248-45.248L623.04 512l-233.376-233.376 45.248-45.248L713.568 512z" fill="#808080"></path></svg>
-                    </div>
-                </a>
-            
-        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
     </div>
-
-
-
-
-
-</main>
-
-            <footer class="footer">
-    
-
-
-    
-     
- 
-
- 
-    
-        
-        <p class="footer-copyright">
-            Copyright © 2020 <a href="/">Hexo</a>
-        </p>
-    
-    
-    <p>Powered by <a href="https://hexo.io" target="_blank">Hexo</a> | Theme - <a href="https://github.com/ChrAlpha/hexo-theme-cards" target="_blank">Cards</a></p>
-</footer>
-
-        </div>
-         
-
- 
-
- 
-
- 
+  </div>
+</div>
+  
 
   
 
+  
 
-
- 
-
+  <footer class="mt-5">
+  <div class="text-center py-3">
+    <div>
+      <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a>
+      <i class="iconfont icon-love"></i>
+      <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener">
+        <span>Fluid</span></a>
+    </div>
+    
 
     
- 
 
- 
+    
+  </div>
+</footer>
 
- 
+<!-- SCRIPTS -->
+<script  src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js" ></script>
+<script  src="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/js/bootstrap.min.js" ></script>
+<script  src="/js/main.js" ></script>
 
- 
+
+  <script  src="/js/lazyload.js" ></script>
+
+
+
+  
+  <script  src="https://cdn.staticfile.org/tocbot/4.11.1/tocbot.min.js" ></script>
+  <script>
+    $(document).ready(function () {
+      var boardCtn = $('#board-ctn');
+      var boardTop = boardCtn.offset().top;
+
+      tocbot.init({
+        tocSelector: '#tocbot',
+        contentSelector: '.post-content',
+        headingSelector: 'h1,h2,h3,h4,h5,h6',
+        linkClass: 'tocbot-link',
+        activeLinkClass: 'tocbot-active-link',
+        listClass: 'tocbot-list',
+        isCollapsedClass: 'tocbot-is-collapsed',
+        collapsibleClass: 'tocbot-is-collapsible',
+        collapseDepth: 0,
+        scrollSmooth: true,
+        headingsOffset: -boardTop
+      });
+      if ($('.toc-list-item').length > 0) {
+        $('#toc').css('visibility', 'visible');
+      }
+    });
+  </script>
 
 
 
 
-    </body>
+
+  <script defer src="https://cdn.staticfile.org/clipboard.js/2.0.6/clipboard.min.js" ></script>
+  <script  src="/js/clipboard-use.js" ></script>
+
+
+
+
+
+
+<!-- Plugins -->
+
+
+
+  <script  src="https://cdn.staticfile.org/typed.js/2.0.11/typed.min.js" ></script>
+  <script>
+    var typed = new Typed('#subtitle', {
+      strings: [
+        '  ',
+        "计算机系统基础/计算硬件架构&nbsp;",
+      ],
+      cursorChar: "_",
+      typeSpeed: 70,
+      loop: false,
+    });
+    typed.stop();
+    $(document).ready(function () {
+      $(".typed-cursor").addClass("h2");
+      typed.start();
+    });
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/anchor-js/4.2.2/anchor.min.js" ></script>
+  <script>
+    anchors.options = {
+      placement: "right",
+      visible: "hover",
+      
+    };
+    var el = "h1,h2,h3,h4,h5,h6".split(",");
+    var res = [];
+    for (item of el) {
+      res.push(".markdown-body > " + item)
+    }
+    anchors.add(res.join(", "))
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    var path = "/local-search.xml";
+    var inputArea = document.querySelector("#local-search-input");
+    inputArea.onclick = function () {
+      searchFunc(path, 'local-search-input', 'local-search-result');
+      this.onclick = null
+    }
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+  <script>
+    $('#post img:not(.no-zoom img, img[no-zoom]), img[zoom]').each(
+      function () {
+        var element = document.createElement('a');
+        $(element).attr('data-fancybox', 'images');
+        $(element).attr('href', $(this).attr('src'));
+        $(this).wrap(element);
+      }
+    );
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
 </html>
