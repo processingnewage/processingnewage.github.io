@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2021-03-13T09:27:01.572Z</updated>
+  <updated>2021-03-13T09:38:41.059Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,26 +21,23 @@
     <link href="http://yoursite.com/2021/03/13/CC++/stack%E5%92%8Cheap/"/>
     <id>http://yoursite.com/2021/03/13/CC++/stack%E5%92%8Cheap/</id>
     <published>2021-03-13T07:02:26.244Z</published>
-    <updated>2021-03-13T09:27:01.572Z</updated>
+    <updated>2021-03-13T09:38:41.059Z</updated>
     
-    <content type="html"><![CDATA[<pre><code class="hljs subunit">title: date: <span class="hljs-keyword">tags:</span> C/C++</code></pre><ol><li><p>Q：为什么不都设成栈？这样不就不用自己释放内存了（c++）这样要省好多力气呀。我疑惑的是，用c++的时候，什么时候用堆合适什么时候用栈合适。因为平时写作业除非老师要求，用栈感觉完全够了，并没有遇到用堆比用栈更有优势的情况，所以就很疑惑。（我知道有一种情况是如果程序结束之后仍然想要访问那一段数据就要用堆，这个比较好理解，因为堆需要手动释放）</p><p>A：<img src="stack%E5%92%8Cheap.assets/image-20210313151230205.png" srcset="/img/loading.gif" alt="image-20210313151230205"></p><p><img src="stack%E5%92%8Cheap.assets/image-20210313152659429.png" srcset="/img/loading.gif" alt="image-20210313152659429"></p><p><img src="stack%E5%92%8Cheap.assets/image-20210313152755853.png" srcset="/img/loading.gif" alt="image-20210313152755853"></p><ul><li><strong>补充链接</strong>：<a href="http://c.biancheng.net/c/stack/" target="_blank" rel="noopener">http://c.biancheng.net/c/stack/</a></li></ul></li></ol><ul><li><strong>C/C++ 内存结构主要分为 常量池、静态区、全局区、堆、栈</strong><ul><li>不同的区域有不同的特点：根据程序的需要选择不同的存储模型达到最高的存储和执行效率</li></ul></li></ul>]]></content>
+    <content type="html"><![CDATA[<ol><li><p>Q：为什么不都设成栈？这样不就不用自己释放内存了（c++）这样要省好多力气呀。我疑惑的是，用c++的时候，什么时候用堆合适什么时候用栈合适。因为平时写作业除非老师要求，用栈感觉完全够了，并没有遇到用堆比用栈更有优势的情况，所以就很疑惑。（我知道有一种情况是如果程序结束之后仍然想要访问那一段数据就要用堆，这个比较好理解，因为堆需要手动释放）</p><p>A：<img src="stack%E5%92%8Cheap.assets/image-20210313151230205.png" srcset="/img/loading.gif" alt="image-20210313151230205"></p><p><img src="stack%E5%92%8Cheap.assets/image-20210313152659429.png" srcset="/img/loading.gif" alt="image-20210313152659429"></p><p><img src="stack%E5%92%8Cheap.assets/image-20210313152755853.png" srcset="/img/loading.gif" alt="image-20210313152755853"></p><ul><li><strong>补充链接</strong>：<a href="http://c.biancheng.net/c/stack/" target="_blank" rel="noopener">http://c.biancheng.net/c/stack/</a></li></ul></li></ol><ul><li><strong>C/C++ 内存结构主要分为 常量池、静态区、全局区、堆、栈</strong><ul><li>不同的区域有不同的特点：根据程序的需要选择不同的存储模型达到最高的存储和执行效率</li></ul></li></ul>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;pre&gt;&lt;code class=&quot;hljs subunit&quot;&gt;title: 
-date: 
-&lt;span class=&quot;hljs-keyword&quot;&gt;tags:&lt;/span&gt; C/C++&lt;/code&gt;&lt;/pre&gt;
-
-
-&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;Q：为什么不都设成栈？这样不就不用自己释
+        &lt;ol&gt;
+&lt;li&gt;&lt;p&gt;Q：为什么不都设成栈？这样不就不用自己释放内存了（c++）这样要省好多力气呀。我疑惑的是，用c++的时候，什么时候用堆合适什么时候用栈合适。因为平时写作业除非老师要求，用栈感觉完全够了，并没有遇到用堆比用栈更有优势的情况，所以就很疑惑。（我知道有一种情况是
       
     
     </summary>
     
     
+    
+      <category term="C/C++" scheme="http://yoursite.com/tags/C-C/"/>
     
   </entry>
   
@@ -49,24 +46,24 @@ date:
     <link href="http://yoursite.com/2021/03/12/Java/%E4%BA%92%E6%8D%A2%E9%97%AE%E9%A2%98%E4%BC%98%E5%8C%96/"/>
     <id>http://yoursite.com/2021/03/12/Java/%E4%BA%92%E6%8D%A2%E9%97%AE%E9%A2%98%E4%BC%98%E5%8C%96/</id>
     <published>2021-03-12T12:15:00.298Z</published>
-    <updated>2021-03-13T09:31:10.268Z</updated>
+    <updated>2021-03-13T09:42:24.437Z</updated>
     
-    <content type="html"><![CDATA[<pre><code class="hljs subunit">title:date: <span class="hljs-keyword">tags:</span> java</code></pre><pre><code class="hljs text">互换问题：交换两个数（或任意变量类型）</code></pre><pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">exchange</span></span>&#123;<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;<span class="hljs-keyword">int</span> num1 = <span class="hljs-number">12</span>;<span class="hljs-keyword">int</span> num2 = <span class="hljs-number">5</span>;System.out.println(<span class="hljs-string">"num1 = "</span> + num1 + <span class="hljs-string">", num2 = "</span> + num2);<span class="hljs-comment">// version1：定义临时变量的方式（recommended）</span><span class="hljs-keyword">int</span> temp = num1;num1 = num2;num2 = temp;<span class="hljs-comment">// version2：不使用临时变量</span><span class="hljs-comment">// 弊端：1. 相加操作可能超出存储范围2. 有局限性：只适用于数值类型</span>num1 = num1 + num2;num2 = num1 - num2;num1 = num1 - num2;<span class="hljs-comment">// version3：使用位运算符</span><span class="hljs-comment">// 局限性：只能用于数值类型</span>num1 = num1 ^ num2;num2 = num1 ^ num2;num1 = num1 ^ num2;System.out.println(<span class="hljs-string">"num1 = "</span> + num1 + <span class="hljs-string">", num2 = "</span> + num2);&#125;&#125;</code></pre>]]></content>
+    <content type="html"><![CDATA[<pre><code class="hljs text">互换问题：交换两个数（或任意变量类型）</code></pre><pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">exchange</span></span>&#123;<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;<span class="hljs-keyword">int</span> num1 = <span class="hljs-number">12</span>;<span class="hljs-keyword">int</span> num2 = <span class="hljs-number">5</span>;System.out.println(<span class="hljs-string">"num1 = "</span> + num1 + <span class="hljs-string">", num2 = "</span> + num2);<span class="hljs-comment">// version1：定义临时变量的方式（recommended）</span><span class="hljs-keyword">int</span> temp = num1;num1 = num2;num2 = temp;<span class="hljs-comment">// version2：不使用临时变量</span><span class="hljs-comment">// 弊端：1. 相加操作可能超出存储范围2. 有局限性：只适用于数值类型</span>num1 = num1 + num2;num2 = num1 - num2;num1 = num1 - num2;<span class="hljs-comment">// version3：使用位运算符</span><span class="hljs-comment">// 局限性：只能用于数值类型</span>num1 = num1 ^ num2;num2 = num1 ^ num2;num1 = num1 ^ num2;System.out.println(<span class="hljs-string">"num1 = "</span> + num1 + <span class="hljs-string">", num2 = "</span> + num2);&#125;&#125;</code></pre>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;pre&gt;&lt;code class=&quot;hljs subunit&quot;&gt;title:
-date: 
-&lt;span class=&quot;hljs-keyword&quot;&gt;tags:&lt;/span&gt; java&lt;/code&gt;&lt;/pre&gt;
+        &lt;pre&gt;&lt;code class=&quot;hljs text&quot;&gt;互换问题：交换两个数（或任意变量类型）&lt;/code&gt;&lt;/pre&gt;
 
-&lt;pre&gt;&lt;code class=&quot;hljs text&quot;&gt;互换问题：交
+&lt;pre&gt;&lt;code class=&quot;hljs java&quot;&gt;&lt;span class=&quot;hljs-class&quot;&gt;&lt;span class=&quot;hljs-keywo
       
     
     </summary>
     
     
+    
+      <category term="java" scheme="http://yoursite.com/tags/java/"/>
     
   </entry>
   
@@ -75,24 +72,25 @@ date:
     <link href="http://yoursite.com/2021/03/12/Java/%E8%B4%A8%E6%95%B0%E9%97%AE%E9%A2%98%E4%BC%98%E5%8C%96/"/>
     <id>http://yoursite.com/2021/03/12/Java/%E8%B4%A8%E6%95%B0%E9%97%AE%E9%A2%98%E4%BC%98%E5%8C%96/</id>
     <published>2021-03-12T11:44:15.870Z</published>
-    <updated>2021-03-13T09:31:38.443Z</updated>
+    <updated>2021-03-13T09:42:17.911Z</updated>
     
-    <content type="html"><![CDATA[<pre><code class="hljs subunit">title: date: <span class="hljs-keyword">tags:</span> java</code></pre><pre><code class="hljs text">质数问题：输出一定数字范围内的所有质数质数（素数）：除了1和本身之外没有其他因数的自然数</code></pre><pre><code class="hljs java"><span class="hljs-comment">// version1</span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">PrimaryNumber</span></span>&#123;<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span></span>&#123;<span class="hljs-keyword">boolean</span> isFlag = <span class="hljs-keyword">true</span>;<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = <span class="hljs-number">2</span>; i &lt;= <span class="hljs-number">100</span>; i++)&#123;<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> j = <span class="hljs-number">2</span>; j &lt; i; j++)&#123;<span class="hljs-keyword">if</span>(i % j == <span class="hljs-number">0</span>)&#123;isFlag = <span class="hljs-keyword">false</span>;&#125;&#125;<span class="hljs-keyword">if</span>(isFlag == <span class="hljs-keyword">true</span>)&#123;System.out.println(i);&#125;<span class="hljs-comment">//重置isFlag</span>isFlag = <span class="hljs-keyword">true</span>;&#125;&#125;&#125;</code></pre><pre><code class="hljs java"><span class="hljs-comment">// version2</span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">PrimaryNumber</span></span>&#123;<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span></span>&#123;<span class="hljs-keyword">boolean</span> isFlag = <span class="hljs-keyword">true</span>;<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = <span class="hljs-number">2</span>; i &lt;= <span class="hljs-number">100</span>; i++)&#123;<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> j = <span class="hljs-number">2</span>; j &lt; i; j++)&#123;<span class="hljs-keyword">if</span>(i % j == <span class="hljs-number">0</span>)&#123;isFlag = <span class="hljs-keyword">false</span>;                    <span class="hljs-keyword">break</span>;<span class="hljs-comment">// 优化1：添加break后，当存在一个数使得条件成立时，即退出当前循环，对非质数有效</span>&#125;&#125;<span class="hljs-keyword">if</span>(isFlag == <span class="hljs-keyword">true</span>)&#123;System.out.println(i);&#125;<span class="hljs-comment">//重置isFlag</span>isFlag = <span class="hljs-keyword">true</span>;&#125;&#125;&#125;</code></pre><pre><code class="hljs java"><span class="hljs-comment">// version3</span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">PrimaryNumber</span></span>&#123;<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span></span>&#123;<span class="hljs-keyword">boolean</span> isFlag = <span class="hljs-keyword">true</span>;<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = <span class="hljs-number">2</span>; i &lt;= <span class="hljs-number">100</span>; i++)&#123;<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> j = <span class="hljs-number">2</span>; j &lt;= Math.sqrt(i); j++)&#123;<span class="hljs-comment">// 优化2：求因子只需开根号求左半边，对质数、非质数均有效</span><span class="hljs-keyword">if</span>(i % j == <span class="hljs-number">0</span>)&#123;isFlag = <span class="hljs-keyword">false</span>;                    <span class="hljs-keyword">break</span>;<span class="hljs-comment">// 优化1</span>&#125;&#125;<span class="hljs-keyword">if</span>(isFlag == <span class="hljs-keyword">true</span>)&#123;System.out.println(i);&#125;<span class="hljs-comment">//重置isFlag</span>isFlag = <span class="hljs-keyword">true</span>;&#125;&#125;&#125;</code></pre><pre><code class="hljs java"><span class="hljs-comment">// version4</span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">PrimaryNumber</span></span>&#123;<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span></span>&#123;label:<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = <span class="hljs-number">2</span>; i &lt;= <span class="hljs-number">100</span>; i++)&#123;<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> j = <span class="hljs-number">2</span>; j &lt; Math.sqrt(i); j++)&#123;<span class="hljs-keyword">if</span>(i % j == <span class="hljs-number">0</span>)&#123;<span class="hljs-keyword">continue</span> label;<span class="hljs-comment">// 优化3：利用标号实现转移，直接跳过内层循环</span>&#125;&#125;            System.out.println(i);&#125;&#125;&#125;</code></pre>]]></content>
+    <content type="html"><![CDATA[<pre><code class="hljs text">质数问题：输出一定数字范围内的所有质数质数（素数）：除了1和本身之外没有其他因数的自然数</code></pre><pre><code class="hljs java"><span class="hljs-comment">// version1</span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">PrimaryNumber</span></span>&#123;<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span></span>&#123;<span class="hljs-keyword">boolean</span> isFlag = <span class="hljs-keyword">true</span>;<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = <span class="hljs-number">2</span>; i &lt;= <span class="hljs-number">100</span>; i++)&#123;<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> j = <span class="hljs-number">2</span>; j &lt; i; j++)&#123;<span class="hljs-keyword">if</span>(i % j == <span class="hljs-number">0</span>)&#123;isFlag = <span class="hljs-keyword">false</span>;&#125;&#125;<span class="hljs-keyword">if</span>(isFlag == <span class="hljs-keyword">true</span>)&#123;System.out.println(i);&#125;<span class="hljs-comment">//重置isFlag</span>isFlag = <span class="hljs-keyword">true</span>;&#125;&#125;&#125;</code></pre><pre><code class="hljs java"><span class="hljs-comment">// version2</span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">PrimaryNumber</span></span>&#123;<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span></span>&#123;<span class="hljs-keyword">boolean</span> isFlag = <span class="hljs-keyword">true</span>;<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = <span class="hljs-number">2</span>; i &lt;= <span class="hljs-number">100</span>; i++)&#123;<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> j = <span class="hljs-number">2</span>; j &lt; i; j++)&#123;<span class="hljs-keyword">if</span>(i % j == <span class="hljs-number">0</span>)&#123;isFlag = <span class="hljs-keyword">false</span>;                    <span class="hljs-keyword">break</span>;<span class="hljs-comment">// 优化1：添加break后，当存在一个数使得条件成立时，即退出当前循环，对非质数有效</span>&#125;&#125;<span class="hljs-keyword">if</span>(isFlag == <span class="hljs-keyword">true</span>)&#123;System.out.println(i);&#125;<span class="hljs-comment">//重置isFlag</span>isFlag = <span class="hljs-keyword">true</span>;&#125;&#125;&#125;</code></pre><pre><code class="hljs java"><span class="hljs-comment">// version3</span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">PrimaryNumber</span></span>&#123;<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span></span>&#123;<span class="hljs-keyword">boolean</span> isFlag = <span class="hljs-keyword">true</span>;<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = <span class="hljs-number">2</span>; i &lt;= <span class="hljs-number">100</span>; i++)&#123;<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> j = <span class="hljs-number">2</span>; j &lt;= Math.sqrt(i); j++)&#123;<span class="hljs-comment">// 优化2：求因子只需开根号求左半边，对质数、非质数均有效</span><span class="hljs-keyword">if</span>(i % j == <span class="hljs-number">0</span>)&#123;isFlag = <span class="hljs-keyword">false</span>;                    <span class="hljs-keyword">break</span>;<span class="hljs-comment">// 优化1</span>&#125;&#125;<span class="hljs-keyword">if</span>(isFlag == <span class="hljs-keyword">true</span>)&#123;System.out.println(i);&#125;<span class="hljs-comment">//重置isFlag</span>isFlag = <span class="hljs-keyword">true</span>;&#125;&#125;&#125;</code></pre><pre><code class="hljs java"><span class="hljs-comment">// version4</span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">PrimaryNumber</span></span>&#123;<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span></span>&#123;label:<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = <span class="hljs-number">2</span>; i &lt;= <span class="hljs-number">100</span>; i++)&#123;<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> j = <span class="hljs-number">2</span>; j &lt; Math.sqrt(i); j++)&#123;<span class="hljs-keyword">if</span>(i % j == <span class="hljs-number">0</span>)&#123;<span class="hljs-keyword">continue</span> label;<span class="hljs-comment">// 优化3：利用标号实现转移，直接跳过内层循环</span>&#125;&#125;            System.out.println(i);&#125;&#125;&#125;</code></pre>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;pre&gt;&lt;code class=&quot;hljs subunit&quot;&gt;title: 
-date: 
-&lt;span class=&quot;hljs-keyword&quot;&gt;tags:&lt;/span&gt; java&lt;/code&gt;&lt;/pre&gt;
+        &lt;pre&gt;&lt;code class=&quot;hljs text&quot;&gt;质数问题：输出一定数字范围内的所有质数
+质数（素数）：除了1和本身之外没有其他因数的自然数&lt;/code&gt;&lt;/pre&gt;
 
-&lt;pre&gt;&lt;code class=&quot;hljs text&quot;&gt;质数问题：
+&lt;pre&gt;&lt;code class=&quot;hljs java&quot;&gt;&lt;span class=&quot;hljs-comm
       
     
     </summary>
     
     
+    
+      <category term="java" scheme="http://yoursite.com/tags/java/"/>
     
   </entry>
   
@@ -101,26 +99,26 @@ date:
     <link href="http://yoursite.com/2021/03/12/Java/notes/"/>
     <id>http://yoursite.com/2021/03/12/Java/notes/</id>
     <published>2021-03-12T07:53:57.757Z</published>
-    <updated>2021-03-13T09:30:16.882Z</updated>
+    <updated>2021-03-13T09:42:33.881Z</updated>
     
-    <content type="html"><![CDATA[<pre><code class="hljs subunit">title: date: <span class="hljs-keyword">tags:</span> java</code></pre><ol><li><p>WT运行Java时注意：</p><p>直接输入 java HelloWorld 即可，java ./HelloWorld 和 java HelloWorld.class 都是错误的！ </p></li><li><p>WT或power shell或CMD运行java文件时，输出中文或中文注释出现乱码的情况：</p><p>Windows平台终端默认是GBK编码，java文件中默认使用Unicode编码，所以会出现中文乱码的错误，将java文件编码格式默认改为GBK编码即可解决问题</p></li></ol>]]></content>
+    <content type="html"><![CDATA[<ol><li><p>WT运行Java时注意：</p><p>直接输入 java HelloWorld 即可，java ./HelloWorld 和 java HelloWorld.class 都是错误的！ </p></li><li><p>WT或power shell或CMD运行java文件时，输出中文或中文注释出现乱码的情况：</p><p>Windows平台终端默认是GBK编码，java文件中默认使用Unicode编码，所以会出现中文乱码的错误，将java文件编码格式默认改为GBK编码即可解决问题</p></li></ol>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;pre&gt;&lt;code class=&quot;hljs subunit&quot;&gt;title: 
-date: 
-&lt;span class=&quot;hljs-keyword&quot;&gt;tags:&lt;/span&gt; java&lt;/code&gt;&lt;/pre&gt;
-
-&lt;ol&gt;
+        &lt;ol&gt;
 &lt;li&gt;&lt;p&gt;WT运行Java时注意：&lt;/p&gt;
-&lt;p&gt;直接
+&lt;p&gt;直接输入 java HelloWorld 即可，java ./HelloWorld 和 java HelloWorld.class 都是错误的！ &lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;WT或power shell或CM
       
     
     </summary>
     
     
+    
+      <category term="java" scheme="http://yoursite.com/tags/java/"/>
     
   </entry>
   
@@ -129,24 +127,15 @@ date:
     <link href="http://yoursite.com/2021/03/06/Java/object-orient/"/>
     <id>http://yoursite.com/2021/03/06/Java/object-orient/</id>
     <published>2021-03-06T07:56:06.660Z</published>
-    <updated>2021-03-13T09:30:43.884Z</updated>
-    
-    <content type="html"><![CDATA[<pre><code class="hljs subunit">title:date: <span class="hljs-keyword">tags:</span> java</code></pre>]]></content>
+    <updated>2021-03-13T09:42:41.167Z</updated>
     
     <summary type="html">
-    
-      
-      
-        &lt;pre&gt;&lt;code class=&quot;hljs subunit&quot;&gt;title:
-date: 
-&lt;span class=&quot;hljs-keyword&quot;&gt;tags:&lt;/span&gt; java&lt;/code&gt;&lt;/pre&gt;
-
-
-      
     
     </summary>
     
     
+    
+      <category term="java" scheme="http://yoursite.com/tags/java/"/>
     
   </entry>
   
@@ -155,24 +144,22 @@ date:
     <link href="http://yoursite.com/2021/02/08/OS/2-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%BB%93%E6%9E%84/"/>
     <id>http://yoursite.com/2021/02/08/OS/2-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%BB%93%E6%9E%84/</id>
     <published>2021-02-08T14:16:50.701Z</published>
-    <updated>2021-03-13T09:33:44.390Z</updated>
+    <updated>2021-03-13T09:43:53.795Z</updated>
     
-    <content type="html"><![CDATA[<pre><code class="hljs subunit">title: date: <span class="hljs-keyword">tags:</span> OS</code></pre><h2 id="第二讲：操作系统结构"><a href="#第二讲：操作系统结构" class="headerlink" title="第二讲：操作系统结构"></a>第二讲：操作系统结构</h2><h3 id="2-1"><a href="#2-1" class="headerlink" title="2.1"></a>2.1</h3><h3 id="2-2"><a href="#2-2" class="headerlink" title="2.2"></a>2.2</h3><p>​    </p>]]></content>
+    <content type="html"><![CDATA[<h2 id="第二讲：操作系统结构"><a href="#第二讲：操作系统结构" class="headerlink" title="第二讲：操作系统结构"></a>第二讲：操作系统结构</h2><h3 id="2-1"><a href="#2-1" class="headerlink" title="2.1"></a>2.1</h3><h3 id="2-2"><a href="#2-2" class="headerlink" title="2.2"></a>2.2</h3><p>​    </p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;pre&gt;&lt;code class=&quot;hljs subunit&quot;&gt;title: 
-date: 
-&lt;span class=&quot;hljs-keyword&quot;&gt;tags:&lt;/span&gt; OS&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&quot;第二讲：操作系统结构&quot;&gt;&lt;a href=&quot;#第二讲：操作
+        &lt;h2 id=&quot;第二讲：操作系统结构&quot;&gt;&lt;a href=&quot;#第二讲：操作系统结构&quot; class=&quot;headerlink&quot; title=&quot;第二讲：操作系统结构&quot;&gt;&lt;/a&gt;第二讲：操作系统结构&lt;/h2&gt;&lt;h3 id=&quot;2-1&quot;&gt;&lt;a href=&quot;#2-1&quot; class=&quot;header
       
     
     </summary>
     
     
+    
+      <category term="OS" scheme="http://yoursite.com/tags/OS/"/>
     
   </entry>
   
@@ -181,24 +168,22 @@ date:
     <link href="http://yoursite.com/2021/02/06/%E5%B5%8C%E5%85%A5%E5%BC%8F/51%E5%8D%95%E7%89%87%E6%9C%BA%E7%9A%84IO%E5%8F%A3/"/>
     <id>http://yoursite.com/2021/02/06/%E5%B5%8C%E5%85%A5%E5%BC%8F/51%E5%8D%95%E7%89%87%E6%9C%BA%E7%9A%84IO%E5%8F%A3/</id>
     <published>2021-02-06T14:05:19.159Z</published>
-    <updated>2021-03-13T09:35:00.854Z</updated>
+    <updated>2021-03-13T09:44:10.686Z</updated>
     
-    <content type="html"><![CDATA[<pre><code class="hljs subunit">title: date: <span class="hljs-keyword">tags:</span> 嵌入式</code></pre><h3 id="51单片机的IO口"><a href="#51单片机的IO口" class="headerlink" title="51单片机的IO口"></a>51单片机的IO口</h3><h4 id="双向口与准双向口："><a href="#双向口与准双向口：" class="headerlink" title="双向口与准双向口："></a>双向口与准双向口：</h4><pre><code class="hljs python"><span class="hljs-comment"># 准双向口是指P1、2、3有固定的内部上拉电阻，当用做输入时被拉高，当外部拉低时（低电平）会拉电流电流（source current, 这里拉电流是电流从单片机往外走），而P0则是真双向口，因为作为输入时它是悬浮的。</span><span class="hljs-comment"># C51的说明书上说：”Because Ports 1, 2, and 3 have fixed internal pullups, they are sometimes called quasi-bidirectional ports. When configured as inputs, they pull high and source current (IIL) when externally pulled low. Port 0, on the other hand, is considered truly bidirectional, because it floats when configured as an input. "</span><span class="hljs-comment"># “准”就是“基本上的意思”，也就是“准双向口”不是真正的双向口。</span><span class="hljs-comment"># 其实重点在P0口。P0口是双向指的是它被用作地址/数据端口时，只有在这个时候，P0口才处于两个开关管推挽状态，当两个开关管都关闭时，才会出现高阻状态．当P0口用于一般I/O口时，内部接Vcc的那个开关管是与引脚（端口）脱离联系的，这个时候，只有拉地的那个开关管起作用，P0口作为输出，是必须外接上拉电阻的，不然就无法输出高电平；</span><span class="hljs-comment"># 如果P0口作为输入，则必须先对端口写1，使拉地的开关管断开，这个时候，如果不接上拉电阻，则是高阻状态，就是一个双向口，如果接上拉电阻，则本身输出高电平，对输入信号的逻辑无影响（注意是对逻辑无影响，对实际参数有无影响我不确定，但是我认为是有的）。</span><span class="hljs-comment"># 双向与准双向，根本原则是双向包含了高阻这个状态，而不在于是否需要先写1或者不写，P1~P3口因为有内部上拉电阻，因此无论如何不是双向；P0口内部无上拉电阻，在处于数据/地址功能时，自动完成3态的转换，是双向，处于一般I/O口时，如果不接外部上拉，而且先向端口写了1，那么就处于高阻状态，此时，它也是一个人为的双向口，这与它处于地址/数据功能时的自动双向有区别，以及与P1~P3处于输入时输出锁存器为1是有区别的跟I2C总线上那种漏极开路或者集电极开路结构差不多. 通过上拉电阻(或者下拉电阻)来提供一种电平的驱动.</span>当作为输入使用时，就将开关断开，这样就只剩下上拉(或者下拉)电阻，因而阻抗比较高，可以由其它设备驱动该IO口。==准双向口在做为输入使用时，实际上还是一种输出状态==。只是该输出状态的内阻比较大而已。而真正的双向IO口，有方向控制寄存器，作为输入使用时输出部分被断开。<span class="hljs-comment"># 双向口与准双向口的区别为双向口有高阻态，输入为真正的外部信号，准双向口内部有上拉，故高电平为内部给出不是真正的外部信号！软件做处理时都要先向口写“1”！</span><span class="hljs-comment"># P0口为真正的双向口，其余为准双向口！说明一点：51的基础是8031，8031的I/O口只有P1口！而P0及P2口为外扩存储器，P3为多功能口！51后来增加了其余口的I/O口功能！</span></code></pre><h4 id="单片机应用原理篇之并行IO口结构（P1口）-https-www-bilibili-com-video-BV1Ep4y1Q7C8"><a href="#单片机应用原理篇之并行IO口结构（P1口）-https-www-bilibili-com-video-BV1Ep4y1Q7C8" class="headerlink" title="单片机应用原理篇之并行IO口结构（P1口）[https://www.bilibili.com/video/BV1Ep4y1Q7C8/]"></a>单片机应用原理篇之并行IO口结构（P1口）[<a href="https://www.bilibili.com/video/BV1Ep4y1Q7C8/]" target="_blank" rel="noopener">https://www.bilibili.com/video/BV1Ep4y1Q7C8/]</a></h4><h4 id="单片机应用原理篇之并行IO口结构（P3口）-https-www-bilibili-com-video-BV1a5411s7E8"><a href="#单片机应用原理篇之并行IO口结构（P3口）-https-www-bilibili-com-video-BV1a5411s7E8" class="headerlink" title="单片机应用原理篇之并行IO口结构（P3口）[https://www.bilibili.com/video/BV1a5411s7E8/]"></a>单片机应用原理篇之并行IO口结构（P3口）[<a href="https://www.bilibili.com/video/BV1a5411s7E8/]" target="_blank" rel="noopener">https://www.bilibili.com/video/BV1a5411s7E8/]</a></h4><h4 id="单片机应用原理篇之并行口IO的结构（P0口和P2口-https-www-bilibili-com-video-BV1E5411s7go"><a href="#单片机应用原理篇之并行口IO的结构（P0口和P2口-https-www-bilibili-com-video-BV1E5411s7go" class="headerlink" title="单片机应用原理篇之并行口IO的结构（P0口和P2口)[https://www.bilibili.com/video/BV1E5411s7go/]"></a>单片机应用原理篇之并行口IO的结构（P0口和P2口)[<a href="https://www.bilibili.com/video/BV1E5411s7go/]" target="_blank" rel="noopener">https://www.bilibili.com/video/BV1E5411s7go/]</a></h4>]]></content>
+    <content type="html"><![CDATA[<h3 id="51单片机的IO口"><a href="#51单片机的IO口" class="headerlink" title="51单片机的IO口"></a>51单片机的IO口</h3><h4 id="双向口与准双向口："><a href="#双向口与准双向口：" class="headerlink" title="双向口与准双向口："></a>双向口与准双向口：</h4><pre><code class="hljs python"><span class="hljs-comment"># 准双向口是指P1、2、3有固定的内部上拉电阻，当用做输入时被拉高，当外部拉低时（低电平）会拉电流电流（source current, 这里拉电流是电流从单片机往外走），而P0则是真双向口，因为作为输入时它是悬浮的。</span><span class="hljs-comment"># C51的说明书上说：”Because Ports 1, 2, and 3 have fixed internal pullups, they are sometimes called quasi-bidirectional ports. When configured as inputs, they pull high and source current (IIL) when externally pulled low. Port 0, on the other hand, is considered truly bidirectional, because it floats when configured as an input. "</span><span class="hljs-comment"># “准”就是“基本上的意思”，也就是“准双向口”不是真正的双向口。</span><span class="hljs-comment"># 其实重点在P0口。P0口是双向指的是它被用作地址/数据端口时，只有在这个时候，P0口才处于两个开关管推挽状态，当两个开关管都关闭时，才会出现高阻状态．当P0口用于一般I/O口时，内部接Vcc的那个开关管是与引脚（端口）脱离联系的，这个时候，只有拉地的那个开关管起作用，P0口作为输出，是必须外接上拉电阻的，不然就无法输出高电平；</span><span class="hljs-comment"># 如果P0口作为输入，则必须先对端口写1，使拉地的开关管断开，这个时候，如果不接上拉电阻，则是高阻状态，就是一个双向口，如果接上拉电阻，则本身输出高电平，对输入信号的逻辑无影响（注意是对逻辑无影响，对实际参数有无影响我不确定，但是我认为是有的）。</span><span class="hljs-comment"># 双向与准双向，根本原则是双向包含了高阻这个状态，而不在于是否需要先写1或者不写，P1~P3口因为有内部上拉电阻，因此无论如何不是双向；P0口内部无上拉电阻，在处于数据/地址功能时，自动完成3态的转换，是双向，处于一般I/O口时，如果不接外部上拉，而且先向端口写了1，那么就处于高阻状态，此时，它也是一个人为的双向口，这与它处于地址/数据功能时的自动双向有区别，以及与P1~P3处于输入时输出锁存器为1是有区别的跟I2C总线上那种漏极开路或者集电极开路结构差不多. 通过上拉电阻(或者下拉电阻)来提供一种电平的驱动.</span>当作为输入使用时，就将开关断开，这样就只剩下上拉(或者下拉)电阻，因而阻抗比较高，可以由其它设备驱动该IO口。==准双向口在做为输入使用时，实际上还是一种输出状态==。只是该输出状态的内阻比较大而已。而真正的双向IO口，有方向控制寄存器，作为输入使用时输出部分被断开。<span class="hljs-comment"># 双向口与准双向口的区别为双向口有高阻态，输入为真正的外部信号，准双向口内部有上拉，故高电平为内部给出不是真正的外部信号！软件做处理时都要先向口写“1”！</span><span class="hljs-comment"># P0口为真正的双向口，其余为准双向口！说明一点：51的基础是8031，8031的I/O口只有P1口！而P0及P2口为外扩存储器，P3为多功能口！51后来增加了其余口的I/O口功能！</span></code></pre><h4 id="单片机应用原理篇之并行IO口结构（P1口）-https-www-bilibili-com-video-BV1Ep4y1Q7C8"><a href="#单片机应用原理篇之并行IO口结构（P1口）-https-www-bilibili-com-video-BV1Ep4y1Q7C8" class="headerlink" title="单片机应用原理篇之并行IO口结构（P1口）[https://www.bilibili.com/video/BV1Ep4y1Q7C8/]"></a>单片机应用原理篇之并行IO口结构（P1口）[<a href="https://www.bilibili.com/video/BV1Ep4y1Q7C8/]" target="_blank" rel="noopener">https://www.bilibili.com/video/BV1Ep4y1Q7C8/]</a></h4><h4 id="单片机应用原理篇之并行IO口结构（P3口）-https-www-bilibili-com-video-BV1a5411s7E8"><a href="#单片机应用原理篇之并行IO口结构（P3口）-https-www-bilibili-com-video-BV1a5411s7E8" class="headerlink" title="单片机应用原理篇之并行IO口结构（P3口）[https://www.bilibili.com/video/BV1a5411s7E8/]"></a>单片机应用原理篇之并行IO口结构（P3口）[<a href="https://www.bilibili.com/video/BV1a5411s7E8/]" target="_blank" rel="noopener">https://www.bilibili.com/video/BV1a5411s7E8/]</a></h4><h4 id="单片机应用原理篇之并行口IO的结构（P0口和P2口-https-www-bilibili-com-video-BV1E5411s7go"><a href="#单片机应用原理篇之并行口IO的结构（P0口和P2口-https-www-bilibili-com-video-BV1E5411s7go" class="headerlink" title="单片机应用原理篇之并行口IO的结构（P0口和P2口)[https://www.bilibili.com/video/BV1E5411s7go/]"></a>单片机应用原理篇之并行口IO的结构（P0口和P2口)[<a href="https://www.bilibili.com/video/BV1E5411s7go/]" target="_blank" rel="noopener">https://www.bilibili.com/video/BV1E5411s7go/]</a></h4>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;pre&gt;&lt;code class=&quot;hljs subunit&quot;&gt;title: 
-date: 
-&lt;span class=&quot;hljs-keyword&quot;&gt;tags:&lt;/span&gt; 嵌入式&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&quot;51单片机的IO口&quot;&gt;&lt;a href=&quot;#51单片机的
+        &lt;h3 id=&quot;51单片机的IO口&quot;&gt;&lt;a href=&quot;#51单片机的IO口&quot; class=&quot;headerlink&quot; title=&quot;51单片机的IO口&quot;&gt;&lt;/a&gt;51单片机的IO口&lt;/h3&gt;&lt;h4 id=&quot;双向口与准双向口：&quot;&gt;&lt;a href=&quot;#双向口与准双向口：&quot; class
       
     
     </summary>
     
     
+    
+      <category term="嵌入式" scheme="http://yoursite.com/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F/"/>
     
   </entry>
   
@@ -207,24 +192,23 @@ date:
     <link href="http://yoursite.com/2021/02/06/Java/basic/"/>
     <id>http://yoursite.com/2021/02/06/Java/basic/</id>
     <published>2021-02-06T09:49:20.532Z</published>
-    <updated>2021-03-13T09:29:43.331Z</updated>
+    <updated>2021-03-13T09:42:50.995Z</updated>
     
-    <content type="html"><![CDATA[<pre><code class="hljs subunit">title: date: <span class="hljs-keyword">tags:</span> java</code></pre><h3 id="java基础语法"><a href="#java基础语法" class="headerlink" title="java基础语法"></a>java基础语法</h3><ol><li><p>一个 Java 程序可以认为是<strong>一系列对象的集合，而这些对象通过调用彼此的方法来协同工作</strong>。</p></li><li><p>编写 Java 程序时，应注意以下几点：</p><ul><li><strong>大小写敏感</strong>：Java 是大小写敏感的，这就意味着标识符 Hello 与 hello 是不同的。</li><li><strong>类名</strong>：对于所有的类来说，类名的首字母应该大写。如果类名由若干单词组成，那么每个单词的首字母应该大写，例如 <strong>MyFirstJavaClass</strong> （python相同）。</li><li><strong>方法名</strong>：所有的方法名都应该以小写字母开头。如果方法名含有若干单词，则后面的每个单词首字母大写。（小驼峰）</li><li><strong>源文件名</strong>：源文件名必须和类名相同（大驼峰）。<strong>当保存文件的时候，你应该使用类名作为文件名保存（切记 Java 是大小写敏感的），文件名的后缀为 **.java</strong>。（如果文件名和类名不相同则会导致编译错误）。</li><li><strong>主方法入口</strong>：所有的 Java 程序由 <strong>public static void main(String[] args)</strong> 方法开始执行。</li></ul></li><li><p>Java 所有的组成部分都需要名字。类名、变量名以及方法名都被称为标识符。</p><p>关于 Java 标识符，有以下几点需要注意：</p><ul><li><p>所有的标识符都应该以字母（A-Z 或者 a-z）,美元符（$）、或者下划线（_）开始</p></li><li><p>首字符之后可以是字母（A-Z 或者 a-z）,美元符（$）、下划线（_）或数字的任何字符组合</p></li><li><p>关键字不能用作标识符</p></li><li><p>标识符是大小写敏感的</p></li><li><p>合法标识符举例：age、$salary、_value、__1_value</p></li><li><p>非法标识符举例：123abc、-salary</p></li></ul></li><li><p>像其他语言一样，Java可以使用修饰符来修饰类中方法和属性。主要有两类修饰符：</p><ul><li>访问控制修饰符 : default, public , protected, private</li><li>非访问控制修饰符 : final, abstract, static, synchronized</li></ul></li><li><p>Java 变量<br> Java 中主要有如下几种类型的变量</p><ul><li>局部变量<ul><li>类变量（静态变量）</li><li>成员变量（非静态变量）</li></ul></li></ul></li><li><p>Java 数组</p><pre><code>数组是储存在堆上的对象，可以保存多个同类型变量。</code></pre></li><li><p>Java 枚举</p><pre><code>Java 5.0引入了枚举，枚举限制变量只能是预先设定好的值。使用枚举可以减少代码中的 bug。例如，我们为果汁店设计一个程序，它将限制果汁j为小杯、中杯、大杯。这就意味着它不允许顾客点除了这三种尺寸外的果汁。</code></pre></li><li></li></ol>]]></content>
+    <content type="html"><![CDATA[<h3 id="java基础语法"><a href="#java基础语法" class="headerlink" title="java基础语法"></a>java基础语法</h3><ol><li><p>一个 Java 程序可以认为是<strong>一系列对象的集合，而这些对象通过调用彼此的方法来协同工作</strong>。</p></li><li><p>编写 Java 程序时，应注意以下几点：</p><ul><li><strong>大小写敏感</strong>：Java 是大小写敏感的，这就意味着标识符 Hello 与 hello 是不同的。</li><li><strong>类名</strong>：对于所有的类来说，类名的首字母应该大写。如果类名由若干单词组成，那么每个单词的首字母应该大写，例如 <strong>MyFirstJavaClass</strong> （python相同）。</li><li><strong>方法名</strong>：所有的方法名都应该以小写字母开头。如果方法名含有若干单词，则后面的每个单词首字母大写。（小驼峰）</li><li><strong>源文件名</strong>：源文件名必须和类名相同（大驼峰）。<strong>当保存文件的时候，你应该使用类名作为文件名保存（切记 Java 是大小写敏感的），文件名的后缀为 **.java</strong>。（如果文件名和类名不相同则会导致编译错误）。</li><li><strong>主方法入口</strong>：所有的 Java 程序由 <strong>public static void main(String[] args)</strong> 方法开始执行。</li></ul></li><li><p>Java 所有的组成部分都需要名字。类名、变量名以及方法名都被称为标识符。</p><p>关于 Java 标识符，有以下几点需要注意：</p><ul><li><p>所有的标识符都应该以字母（A-Z 或者 a-z）,美元符（$）、或者下划线（_）开始</p></li><li><p>首字符之后可以是字母（A-Z 或者 a-z）,美元符（$）、下划线（_）或数字的任何字符组合</p></li><li><p>关键字不能用作标识符</p></li><li><p>标识符是大小写敏感的</p></li><li><p>合法标识符举例：age、$salary、_value、__1_value</p></li><li><p>非法标识符举例：123abc、-salary</p></li></ul></li><li><p>像其他语言一样，Java可以使用修饰符来修饰类中方法和属性。主要有两类修饰符：</p><ul><li>访问控制修饰符 : default, public , protected, private</li><li>非访问控制修饰符 : final, abstract, static, synchronized</li></ul></li><li><p>Java 变量<br> Java 中主要有如下几种类型的变量</p><ul><li>局部变量<ul><li>类变量（静态变量）</li><li>成员变量（非静态变量）</li></ul></li></ul></li><li><p>Java 数组</p><pre><code>数组是储存在堆上的对象，可以保存多个同类型变量。</code></pre></li><li><p>Java 枚举</p><pre><code>Java 5.0引入了枚举，枚举限制变量只能是预先设定好的值。使用枚举可以减少代码中的 bug。例如，我们为果汁店设计一个程序，它将限制果汁j为小杯、中杯、大杯。这就意味着它不允许顾客点除了这三种尺寸外的果汁。</code></pre></li><li></li></ol>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;pre&gt;&lt;code class=&quot;hljs subunit&quot;&gt;title: 
-date: 
-&lt;span class=&quot;hljs-keyword&quot;&gt;tags:&lt;/span&gt; java&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&quot;java基础语法&quot;&gt;&lt;a href=&quot;#java基础
+        &lt;h3 id=&quot;java基础语法&quot;&gt;&lt;a href=&quot;#java基础语法&quot; class=&quot;headerlink&quot; title=&quot;java基础语法&quot;&gt;&lt;/a&gt;java基础语法&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;一个 Java 程序可以认为是&lt;strong&gt;一系列对象的集合，而这些对象
       
     
     </summary>
     
     
+    
+      <category term="java" scheme="http://yoursite.com/tags/java/"/>
     
   </entry>
   
@@ -233,24 +217,22 @@ date:
     <link href="http://yoursite.com/2021/02/06/CC++/%E5%AF%BC%E8%AF%BB/"/>
     <id>http://yoursite.com/2021/02/06/CC++/%E5%AF%BC%E8%AF%BB/</id>
     <published>2021-02-06T06:34:42.672Z</published>
-    <updated>2021-03-13T09:27:18.123Z</updated>
+    <updated>2021-03-13T09:41:51.379Z</updated>
     
-    <content type="html"><![CDATA[<pre><code class="hljs subunit">title: date: <span class="hljs-keyword">tags:</span> C/C++</code></pre><h4 id="导读"><a href="#导读" class="headerlink" title="导读"></a>导读</h4><h5 id="C语言知识结构"><a href="#C语言知识结构" class="headerlink" title="C语言知识结构"></a>C语言知识结构</h5><p><img src="https://upload-images.jianshu.io/upload_images/145902-6bc811053fdf809e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1200/format/webp" srcset="/img/loading.gif" alt="img"></p><h5 id="C基础思维导图"><a href="#C基础思维导图" class="headerlink" title="C基础思维导图"></a><strong>C基础思维导图</strong></h5><p><img src="http://www.noobdream.com/media/upload/2019/10/02/c.png" srcset="/img/loading.gif" alt="img"></p><h5 id="C进阶思维导图"><a href="#C进阶思维导图" class="headerlink" title="C进阶思维导图"></a><strong>C进阶思维导图</strong></h5><p><img src="http://www.noobdream.com/media/upload/2019/10/02/cpp.png" srcset="/img/loading.gif" alt="img"></p>]]></content>
+    <content type="html"><![CDATA[<h4 id="导读"><a href="#导读" class="headerlink" title="导读"></a>导读</h4><h5 id="C语言知识结构"><a href="#C语言知识结构" class="headerlink" title="C语言知识结构"></a>C语言知识结构</h5><p><img src="https://upload-images.jianshu.io/upload_images/145902-6bc811053fdf809e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1200/format/webp" srcset="/img/loading.gif" alt="img"></p><h5 id="C基础思维导图"><a href="#C基础思维导图" class="headerlink" title="C基础思维导图"></a><strong>C基础思维导图</strong></h5><p><img src="http://www.noobdream.com/media/upload/2019/10/02/c.png" srcset="/img/loading.gif" alt="img"></p><h5 id="C进阶思维导图"><a href="#C进阶思维导图" class="headerlink" title="C进阶思维导图"></a><strong>C进阶思维导图</strong></h5><p><img src="http://www.noobdream.com/media/upload/2019/10/02/cpp.png" srcset="/img/loading.gif" alt="img"></p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;pre&gt;&lt;code class=&quot;hljs subunit&quot;&gt;title: 
-date: 
-&lt;span class=&quot;hljs-keyword&quot;&gt;tags:&lt;/span&gt; C/C++&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h4 id=&quot;导读&quot;&gt;&lt;a href=&quot;#导读&quot; class=&quot;
+        &lt;h4 id=&quot;导读&quot;&gt;&lt;a href=&quot;#导读&quot; class=&quot;headerlink&quot; title=&quot;导读&quot;&gt;&lt;/a&gt;导读&lt;/h4&gt;&lt;h5 id=&quot;C语言知识结构&quot;&gt;&lt;a href=&quot;#C语言知识结构&quot; class=&quot;headerlink&quot; title=&quot;C语言知识结构&quot;&gt;&lt;/
       
     
     </summary>
     
     
+    
+      <category term="C/C++" scheme="http://yoursite.com/tags/C-C/"/>
     
   </entry>
   
@@ -259,24 +241,22 @@ date:
     <link href="http://yoursite.com/2021/02/06/CC++/%E7%BB%AA%E8%AE%BA/"/>
     <id>http://yoursite.com/2021/02/06/CC++/%E7%BB%AA%E8%AE%BA/</id>
     <published>2021-02-06T06:33:57.610Z</published>
-    <updated>2021-03-13T09:27:32.429Z</updated>
+    <updated>2021-03-13T09:41:58.349Z</updated>
     
-    <content type="html"><![CDATA[<pre><code class="hljs subunit">title: date: <span class="hljs-keyword">tags:</span> C/C++</code></pre><h4 id="绪论"><a href="#绪论" class="headerlink" title="绪论"></a>绪论</h4><h5 id="计算机语言简介："><a href="#计算机语言简介：" class="headerlink" title="计算机语言简介："></a>计算机语言简介：</h5><ul><li>计算机语言，英文名Computer Language，或者Programming Language，指的是人与计算机进行交互的一种语言，就如我们学习外语一样的，只是一种形式工具，主要与计算机交流的是我们的思想，将我们自己的思想以计算机能识别的语言赋予它，就形成了程序。</li><li>实现我们的思想的一系列的问题的就是向计算机发送指令，对于通信的双方而言，指令的格式，组成字符，数字数据，语法等一系列的标准就很重要了，而我们学习的就是这一系列的标准，从而能将自己的思想赋予计算机，让计算机能智能化、自动化的为我们服务。</li></ul><h5 id="计算机语言发展历史："><a href="#计算机语言发展历史：" class="headerlink" title="计算机语言发展历史："></a>计算机语言发展历史：</h5><ul><li>1946年，于宾夕法尼亚大学，莫克利(JohnW.Mauchly)和艾克特(J.PresperEckert)发明了世界上第一台通用计算机，命名为“ENIAC”。那时候程序员必须手动控制计算机，当时唯一想到利用程序设计语言来解决问题的人是德国工程师楚泽(konradzuse)。</li><li>计算机是一系列的硬件构成的能完成强大功能的一个结合体，他唯一能够识别的就是逻辑运算，即0和1，所以最初的计算机交互语言是以二进制的机器语言，由于太难理解与记忆，人们就定义了一系列的助记符帮助理解与记忆，就逐渐产生了汇编语言，但是汇编还是不好理解与记忆，就逐渐发展了高级语言。随着C、Fortran等结构化高级语言的诞生，使程序员可以离开机器层次，通过更加抽象的层次来表达自己的思想，同时也诞生的三种重要控制结构，即就是顺序结构、选择结构、循环结构，以及一些基本数据类型都能够很好的让程序员以接近问题本质的方式去描述、抽象问题。但随着需要处理的问题规模的不断扩大，一般的程序设计模型无法克服错误随着代码的扩大而级数般的扩大，这个时候就出现了一种新的思考程序设计方式和程序设计模型，即就是面向对象程序设计，同时也诞生了一批支持这种设计模型的计算机语言，例如C++、Java、Python等。</li><li>简而言之，计算机语言从最初的机器语言（二进制），发展到使用助记符的汇编语言，再到更易理解的高级语言，包括C、C++、Java、C#、Python等等。计算机程序的设计模型从结构化的编程，再到面向对象的编程。当然计算机只能识别二进制语言，那么很明显在其他计算机语言与机器语言之间就有着一个桥梁，起着翻译一样的功能，使得通信双方能够交流，而这个翻译官就是编译器。而由于编译的原理不一样，我们将计算机语言分为编译性语言（例如C、C++）和解释性语言（Shell、Python）。</li></ul><h5 id="C语言发展史与应用："><a href="#C语言发展史与应用：" class="headerlink" title="C语言发展史与应用："></a>C语言发展史与应用：</h5><p><img src="http://www.noobdream.com/media/upload/2019/08/24/006vasdhzy7pitfjv1sbe690.jpg" srcset="/img/loading.gif" alt="img"></p><p><img src="http://www.noobdream.com/media/upload/2019/08/24/006vasdhzy7pitk8kxk28690.jpg" srcset="/img/loading.gif" alt="img"></p><h5 id="选择C语言的理由："><a href="#选择C语言的理由：" class="headerlink" title="选择C语言的理由："></a>选择C语言的理由：</h5><ul><li>自顶向下设计、结构化设计、模块化设计</li><li>高效性包括代码紧凑带来的好处存储空间小、处理速度快速、强大的控制结构、很高的兼容性</li><li>可移植性、移植其他系统中不修改或者稍微修改（调整头文件）</li><li>强大而灵活支持多场景应用处理</li><li>面向程序员的权限全开放的、简洁表达意图</li></ul><h5 id="IDE："><a href="#IDE：" class="headerlink" title="IDE："></a>IDE：</h5><ul><li>编译器是将高级语言编译成能与机器交互的翻译工具，通常包括了编译、连接、执行三个过程。而IDE的全称是集成开发环境，集成了编写C语言全过程的开发工具，包括了编辑器、调试器和编译器三个过程，提高程序开发者的编程效率。</li></ul>]]></content>
+    <content type="html"><![CDATA[<h4 id="绪论"><a href="#绪论" class="headerlink" title="绪论"></a>绪论</h4><h5 id="计算机语言简介："><a href="#计算机语言简介：" class="headerlink" title="计算机语言简介："></a>计算机语言简介：</h5><ul><li>计算机语言，英文名Computer Language，或者Programming Language，指的是人与计算机进行交互的一种语言，就如我们学习外语一样的，只是一种形式工具，主要与计算机交流的是我们的思想，将我们自己的思想以计算机能识别的语言赋予它，就形成了程序。</li><li>实现我们的思想的一系列的问题的就是向计算机发送指令，对于通信的双方而言，指令的格式，组成字符，数字数据，语法等一系列的标准就很重要了，而我们学习的就是这一系列的标准，从而能将自己的思想赋予计算机，让计算机能智能化、自动化的为我们服务。</li></ul><h5 id="计算机语言发展历史："><a href="#计算机语言发展历史：" class="headerlink" title="计算机语言发展历史："></a>计算机语言发展历史：</h5><ul><li>1946年，于宾夕法尼亚大学，莫克利(JohnW.Mauchly)和艾克特(J.PresperEckert)发明了世界上第一台通用计算机，命名为“ENIAC”。那时候程序员必须手动控制计算机，当时唯一想到利用程序设计语言来解决问题的人是德国工程师楚泽(konradzuse)。</li><li>计算机是一系列的硬件构成的能完成强大功能的一个结合体，他唯一能够识别的就是逻辑运算，即0和1，所以最初的计算机交互语言是以二进制的机器语言，由于太难理解与记忆，人们就定义了一系列的助记符帮助理解与记忆，就逐渐产生了汇编语言，但是汇编还是不好理解与记忆，就逐渐发展了高级语言。随着C、Fortran等结构化高级语言的诞生，使程序员可以离开机器层次，通过更加抽象的层次来表达自己的思想，同时也诞生的三种重要控制结构，即就是顺序结构、选择结构、循环结构，以及一些基本数据类型都能够很好的让程序员以接近问题本质的方式去描述、抽象问题。但随着需要处理的问题规模的不断扩大，一般的程序设计模型无法克服错误随着代码的扩大而级数般的扩大，这个时候就出现了一种新的思考程序设计方式和程序设计模型，即就是面向对象程序设计，同时也诞生了一批支持这种设计模型的计算机语言，例如C++、Java、Python等。</li><li>简而言之，计算机语言从最初的机器语言（二进制），发展到使用助记符的汇编语言，再到更易理解的高级语言，包括C、C++、Java、C#、Python等等。计算机程序的设计模型从结构化的编程，再到面向对象的编程。当然计算机只能识别二进制语言，那么很明显在其他计算机语言与机器语言之间就有着一个桥梁，起着翻译一样的功能，使得通信双方能够交流，而这个翻译官就是编译器。而由于编译的原理不一样，我们将计算机语言分为编译性语言（例如C、C++）和解释性语言（Shell、Python）。</li></ul><h5 id="C语言发展史与应用："><a href="#C语言发展史与应用：" class="headerlink" title="C语言发展史与应用："></a>C语言发展史与应用：</h5><p><img src="http://www.noobdream.com/media/upload/2019/08/24/006vasdhzy7pitfjv1sbe690.jpg" srcset="/img/loading.gif" alt="img"></p><p><img src="http://www.noobdream.com/media/upload/2019/08/24/006vasdhzy7pitk8kxk28690.jpg" srcset="/img/loading.gif" alt="img"></p><h5 id="选择C语言的理由："><a href="#选择C语言的理由：" class="headerlink" title="选择C语言的理由："></a>选择C语言的理由：</h5><ul><li>自顶向下设计、结构化设计、模块化设计</li><li>高效性包括代码紧凑带来的好处存储空间小、处理速度快速、强大的控制结构、很高的兼容性</li><li>可移植性、移植其他系统中不修改或者稍微修改（调整头文件）</li><li>强大而灵活支持多场景应用处理</li><li>面向程序员的权限全开放的、简洁表达意图</li></ul><h5 id="IDE："><a href="#IDE：" class="headerlink" title="IDE："></a>IDE：</h5><ul><li>编译器是将高级语言编译成能与机器交互的翻译工具，通常包括了编译、连接、执行三个过程。而IDE的全称是集成开发环境，集成了编写C语言全过程的开发工具，包括了编辑器、调试器和编译器三个过程，提高程序开发者的编程效率。</li></ul>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;pre&gt;&lt;code class=&quot;hljs subunit&quot;&gt;title: 
-date: 
-&lt;span class=&quot;hljs-keyword&quot;&gt;tags:&lt;/span&gt; C/C++&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h4 id=&quot;绪论&quot;&gt;&lt;a href=&quot;#绪论&quot; class=&quot;
+        &lt;h4 id=&quot;绪论&quot;&gt;&lt;a href=&quot;#绪论&quot; class=&quot;headerlink&quot; title=&quot;绪论&quot;&gt;&lt;/a&gt;绪论&lt;/h4&gt;&lt;h5 id=&quot;计算机语言简介：&quot;&gt;&lt;a href=&quot;#计算机语言简介：&quot; class=&quot;headerlink&quot; title=&quot;计算机语言简介：&quot;
       
     
     </summary>
     
     
+    
+      <category term="C/C++" scheme="http://yoursite.com/tags/C-C/"/>
     
   </entry>
   
@@ -334,7 +314,7 @@ date:
     <link href="http://yoursite.com/2020/12/08/Arduino/%E7%A1%AC%E4%BB%B6%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/"/>
     <id>http://yoursite.com/2020/12/08/Arduino/%E7%A1%AC%E4%BB%B6%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/</id>
     <published>2020-12-08T06:04:29.865Z</published>
-    <updated>2020-12-08T06:06:33.482Z</updated>
+    <updated>2021-03-13T09:39:33.899Z</updated>
     
     <content type="html"><![CDATA[<h2 id="单片机硬件基础知识"><a href="#单片机硬件基础知识" class="headerlink" title="单片机硬件基础知识"></a>单片机硬件基础知识</h2><h3 id="固件"><a href="#固件" class="headerlink" title="固件"></a>固件</h3><h4 id="1-固件"><a href="#1-固件" class="headerlink" title="1. 固件"></a>1. 固件</h4><pre><code class="hljs gcode">固件<span class="hljs-comment">(Firmware)</span>就是写入EPROM（可擦写可编程只读存储器）或EEPROM<span class="hljs-comment">(电可擦可编程只读存储器)</span>中的程序。固件是指设备内部保存的设备“驱动程序”，通过固件，操作系统才能按照标准的设备驱动实现特定机器的运行动作，比如光驱、刻录机等都有内部固件。固件是担任着一个系统最基础最底层工作的软件。而在硬件设备中，固件就是硬件设备的灵魂，因为一些硬件设备除了固件以外没有其它软件组成，因此固件也就决定着硬件设备的功能及性能。</code></pre><h4 id="2-工作原理"><a href="#2-工作原理" class="headerlink" title="2. 工作原理"></a>2. 工作原理</h4><pre><code>固件（firmware）一般存储于设备中的电可擦除只读存储器EEPROM(Electrically Erasable Programmable ROM)或FLASH芯片中，一般可由用户通过特定的刷新程序进行升级的程序。一般来说，担任着一个数码产品最基础、最底层工作的软件才可以称之为固件，比如计算机主板上的基本输入/输出系统BIOS（Basic Input/output System)，在以前其实更多的专业人士叫它固件。通常这些硬件内所保存的程序是无法被用户直接读出或修改的。在以前，一般情况下是没有必要对固件进行升级操作的，即使在固件内发现了严重的Bug也必须由专业人员带着写好程序的芯片把原来机器上的更换下来。早期固件芯片一般采用了ROM设计，它的Firmware代码是在生产过程中固化的，用任何手段都无法修改。随着技术的不断发展，修改固件以适应不断更新的硬件环境成了用户们的迫切要求，所以，可重复写入的可编程可擦除只读存储器EPROM（Erasable Programmable ROM)，EEPROM和flash出现了。这些芯片是可以重复刷写的，让固件得以修改和升级。</code></pre><h4 id="3-技术性能"><a href="#3-技术性能" class="headerlink" title="3. 技术性能"></a>3. 技术性能</h4><pre><code>固件可以说是神经中枢，也可以称作COMBO的操作系统，它包括很多模块：驱动、控制、解码、传送、检测……，只有在它的控制下COMBO才能正常工作。同时，固件还带有许多附加功能，如纠错技术、安全刻录技术、播放控制技术等。实际上，COMBO光驱固件中的关键技术就是对各种盘片的识别，而这是通过识别CD、CD-R(W)和DVD盘片在数据凹槽的密度与盘片的化学层的不同完成的。当把盘片放入光驱中，光驱收到操作命令后，含有固件的控制芯片会发出指令，激光头根据指令依次发出DVD读取、CD-ROM读取以及CD-R写入、CD-RW擦写的四种激光试探，如果收到反馈则判断它是何种类别的盘片。按照这一操作程序，一般DVD-ROM盘片需要一次识别，CD盘片需要两次识别，而CD-R和CD-RW则要经过三次。很显然，固件的制作水平决定着COMBO光驱的质量。由COMBO光驱中可以看出，硬件设备的固件与它的硬件有着几乎相等的地位，而在某些程度上来说固件可能更重要一些。因为只有编写出出色的固件程序才可以更加充分、巧妙的发挥硬件的作用，而且优秀的固件还可以弥补一些硬件上的缺陷。</code></pre><h4 id="4-应用"><a href="#4-应用" class="headerlink" title="4. 应用"></a>4. 应用</h4><pre><code>其实任何数码设备都有固件，只是我们有时忽略它的存在而已。先举一些常见的例子：手机、数码相机、mp3、mp4、路由器、电子书、交换机、猫、PSP、PS3、NDS、XBOX、U盘、主板、打印机的BIOS（BIOS就是一种固件）、显卡的BIOS。以上产品的固件也许略有耳闻。但下面设备的固件很多人就没听说过了。鼠标、显示器、光驱、硬盘、键盘、数码卫星接收器、GPS终端、精密的电子仪器（比如核磁共振仪）等。固件既然是软件，就有大小之分。大的可有几百兆，小的也许只有几K，甚至不足1K。为什么很多设备都没听说过有固件的说法呢？因为有些设备，在硬件上会出问题，而在软件上（即固件）永远都不会出问题，而且这些固件对于普通用户是无法更新的（或者更新的技术难度比较大）。它距离我们太遥远，所以被我们忽略掉而已。对于独立可操作的电子产品，固件一般指它的操作系统（“担任着一个数码产品最基础、最底层工作的软件才可以称之为固件”，这和操作系统的定义很一致）。比如PSP的固件，就是指PSP 的操作系统。同理，IPHONE的固件也是其操作系统，路由器的固件就是路由器的操作系统，MP4的固件就是MP4的操作系统等。而对于非独立的电子产品，比如硬盘、鼠标、BIOS、光驱、U盘等设备，固件就是指其最底层的，让设备得以运行的程序代码。</code></pre><h4 id="5-驱动程序和固件的区别"><a href="#5-驱动程序和固件的区别" class="headerlink" title="5. 驱动程序和固件的区别"></a>5. 驱动程序和固件的区别</h4><pre><code>驱动：它是实现高级应用和底层硬件操作的中间模块。在高级系统（如Windows）很明显，可以用安装包来安装。而在低级系统里可能它只是一个函数，嵌入式开发里常见。固件：就是硬件的操作系统，或者是操作系统 + 必要的应用程序。最平常的就是把android和ios都叫做固件（刷固件，升级固件）。人们把嵌入式系统的安装叫做刷固件，把pc和pc以上的硬件叫安装系统。驱动和固件（firmware）都是代码，前者为软件服务，后者为硬件服务。在操作系统概念还不明确的时代，二者是没有明显区别的。但是随着计算机体系结构的发展，硬件的种类开始变多，操作系统的种类也变多了。这个时候，因为各种技术的、商业的原因，硬件厂商希望自己的硬件能被更多的软件厂商使用，所以就需要在硬件之上做一些封装，让自己的硬件操纵起来更容易，这个时候就要有firmware这种东西了，它简化了软件与硬件的交互。但是为什么不把fimware做的很完美，做的不需要驱动支持呢？因为有不同的操作系统。不同的操作系统，对于操作硬件的方式完全不同，在Windows里应用态是无法直接写IO端口的，而在嵌入式系统里，一般都不限制直接操作IO端口。所以，硬件厂商一方面为了自己的硬件能被软件更简单的使用，就需要写firmware，而另一方面为了兼容各种操作系统，又不能把firmware写的太死，必须预留足够的余地让软件自由发挥——软件的自由发挥就是驱动。不同操作系统的驱动是不能兼容的，原因就是驱动是为操作系统服务的，有的操作系统是单线程的，有些操作系统不允许动态申请内存，所以不同的操作系统要操作硬件，就要根据自身的特性编写对应的操作代码，这就是驱动存在的意义——适应系统需要。假如世界上只有一种操作系统，并且版本永远不会改变，那么firmware和驱动就可以融合在一起，但这只能一个不现实的梦想，要知道民用操作系统和工业控制操作系统差别是十分巨大的。硬件安装到电脑上后，必须安装驱动程序，操作系统才能使用和管理硬件。　　Windows系统在设计开发时，是脱离实际硬件的。比如，对Windows系统来说，显卡只有一种。操作系统只对这种抽象的显卡发出操作指令，如显示图像。而驱动程序会接管实际显卡硬件的实际控制，具体按显卡支持的工作方式来运行显卡。打个比方，操作系统是司令部，驱动程序是中下级军官，而硬件则是实际打仗的战士，类似这样的关系。</code></pre><h3 id="理解-TTL-与-CMOS-异同"><a href="#理解-TTL-与-CMOS-异同" class="headerlink" title="理解 TTL 与 CMOS 异同"></a>理解 TTL 与 CMOS 异同</h3><h4 id="1-TTL"><a href="#1-TTL" class="headerlink" title="1. TTL"></a>1. TTL</h4><pre><code>TTL集成电路的主要形式为晶体管-晶体管逻辑门(Transistor-Transistor Logic gate)，TTL采用5V电源。    1. 电平Uoh和输出低电平Uol         Uoh≥2.4V,   Uol≤0.4V         在室温下，一般输出高电平为3.5V    2. 电平Uih和输入低电平Uil        Uih≥2.0V,    Ui≤0.8V    3. 噪声容限0.4V          噪声容限计算：噪声容限=min{高电平噪声容限，低电平噪声容限}          高电平噪声容限=最小输出高电平电压-最小输入高电平电压          低电平噪声容限=最大输入低电平电压-最大输出低电平电压</code></pre><h4 id="2-CMOS"><a href="#2-CMOS" class="headerlink" title="2. CMOS"></a>2. CMOS</h4><pre><code>CMOS电路是电压控制器件，输入电阻极大，对于干扰信号十分敏感，因此不用的输入端不应开路，接到地或者电源上。CMOS电路的优点是噪声容限较宽，静态功耗很小。CMOS采用5~15V电源, 另外, 只有4000系列的CMOS器件可以工作在15V电源下, 74HC,74HCT等都只能工作在5V电源下, 现在已经有工作在3V和2.5V电源下的CMOS逻辑电路芯片了。1. 输出高电平Uoh和输出低电平Uol    Uoh≈VCC,       Uol≈GND2. 输入高电平Uih和输入低电平Uil     Uih≥0.7VCC,   Uol≤0.2VCC   (VCC为电源电压，GND为地)从上面可以看出:在同样5V电源电压情况下，COMS电路可以直接驱动TTL，因为CMOS的输出高电平VCC=5V大于2.0V,输出低电平GND=0V小于0.8V;而TTL电路则不能直接驱动CMOS电路，TTL的输出高电平为大于2.4V，如果落在2.4V～3.5V之间，则CMOS电路就不能检测到高电平，低电平小于0.4V满足要求，所以在TTL电路驱动COMS电路时需要加上拉电阻。如果出现不同电压电源的情况，也可以通过上面的方法进行判断</code></pre><h4 id="3-比较"><a href="#3-比较" class="headerlink" title="3. 比较"></a>3. 比较</h4><pre><code>1. TTL电路是电流控制器件，而CMOS电路是电压控制器件。2. TTL电路的速度快，传输延迟时间短(5-10ns)，但是功耗大。COMS电路的速度慢，传输延迟时间长(25-50ns),但功耗低。COMS电路本身的功耗与输入信号的脉冲频率有关，频率越高，芯片集越热，这是正常现象。3. COMS电路的使用注意事项    1) COMS电路时电压控制器件，它的输入阻抗很大，对干扰信号的捕捉能力很强。所以，不用的管脚不要悬空，要接上拉电阻或者下拉电阻，给它一个恒定的电平。    2) 输入端接低内阻的信号源时，要在输入端和信号源之间要串联限流电阻，使输入的电流限制在1mA之内。    3) 当接长信号传输线时，在COMS电路端接匹配电阻。    4) 当输入端接大电容时，应该在输入端和电容间接保护电阻。电阻值为R=V0/1mA.V0是外界电容上的电压。    5) COMS的输入电流超过1mA，就有可能烧坏COMS。4. TTL门电路中输入端负载特性(输入端带电阻特殊情况的处理)：    1)悬空时相当于输入端接高电平。因为这时可以看作是输入端接一个无穷大的电阻。    2)在门电路输入端串联10K电阻后再输入低电平，输入端出呈现的是高电平而不是低电平。因为由TTL门电路的输入端负载特性可知，只有在输入端接的串联电阻小于910欧时，它输入来的低电平信号才能被门电路识别出来，串联电阻再大的话输入端就一直呈现高电平。这个一定要注意。COMS门电路就不用考虑这些了。</code></pre><h4 id="4-OC门与OD门"><a href="#4-OC门与OD门" class="headerlink" title="4. OC门与OD门"></a>4. OC门与OD门</h4><pre><code>1. OC（Open Collector）门，即集电极开路门电路(Open Collector)，OD(Open Drain)门，即漏极开路门电路，必须外界上拉电阻和电源才能将开关电平作为高低电平用。2. TTL电路有集电极开路OC门，MOS管也有和集电极对应的漏极开路的OD门，它的输出就叫做开漏输出。OC门在截止时有漏电流输出，那就是漏电流，为什么有漏电流呢?那是因为当三极管截止的时候，它的基极电流约等于0，但是并不是真正的为0，经过三极管的集电极的电流也就不是真正的0，而是约0。而这个就是漏电流。3. 开漏输出：OC门的输出就是开漏输出;OD门的输出也是开漏输出。它可以吸收很大的电流，但是不能向外输出的电流。所以，为了能输入和输出电流，它使用的时候要跟电源和上拉电阻一齐用。OD门一般作为输出缓冲/驱动器、电平转换器以及满足吸收大负载电流的需要。4. 为什么引入OC门?实际使用中,有时需要两个或两个以上与非门的输出端连接在同一条导线上，将这些与非门上的数据(状态电平)用同一条导线输送出去。因此，需要一种新的与非门电路–OC门来实现“线与逻辑”。</code></pre><h4 id="4-有关逻辑电平的一些概念"><a href="#4-有关逻辑电平的一些概念" class="headerlink" title="4. 有关逻辑电平的一些概念"></a>4. 有关逻辑电平的一些概念</h4><pre><code>要了解逻辑电平的内容，首先要知道以下几个概念的含义：    输入高电平(Vih)：保证逻辑门的输入为高电平时所允许的最小输入高电平，当输入电平高于Vih时，则认为输入电平为高电平。    输入低电平(Vil)：保证逻辑门的输入为低电平时所允许的最大输入低电平，当输入电平低于Vil时，则认为输入电平为低电平。    输出高电平(Voh)：保证逻辑门的输出为高电平时的输出电平的最小值，逻辑门的输出为高电平时的电平值都必须大于此Voh。    输出低电平(Vol)：保证逻辑门的输出为低电平时的输出电平的最大值，逻辑门的输出为低电平时的电平值都必须小于此Vol。    阀值电平(Vt)：数字电路芯片都存在一个阈值电平，就是电路刚刚勉强能翻转动作时的电平。它是一个界于Vil、Vih之间的电压值，对于CMOS电路的阈值电平，基本上是二分之一的电源电压值，但要保证稳定的输出，则必须要求输入高电平&gt;Vih，输入低电平&lt;Vil对于一般的逻辑电平，以上参数的关系如下：Voh &gt; Vih &gt; Vt &gt; Vil &gt; Vol</code></pre><h3 id="USB转TTL、RS-232、RS-485、UART"><a href="#USB转TTL、RS-232、RS-485、UART" class="headerlink" title="USB转TTL、RS-232、RS-485、UART"></a>USB转TTL、RS-232、RS-485、UART</h3><h4 id="1-原因"><a href="#1-原因" class="headerlink" title="1. 原因"></a>1. 原因</h4><pre><code>单片机和PC机通信需要转换的原因：    单片机通信接口的电平逻辑和PC机通信接口的电平逻辑不同    PC机上的通信接口有USB接口，相应电平逻辑遵照USB原则；还有DB9接口（九针口），相应电平逻辑遵照RS-232原则。而我们的单片机上的串行通信通过单片机的RXD、TXD、VCC、GND四个引脚，相应电平逻辑遵照TTL原则。</code></pre><h4 id="2-USB转TTL：常用于单片机下载程序"><a href="#2-USB转TTL：常用于单片机下载程序" class="headerlink" title="2. USB转TTL：常用于单片机下载程序"></a>2. USB转TTL：常用于单片机下载程序</h4><h4 id="3-RS-232"><a href="#3-RS-232" class="headerlink" title="3. RS-232"></a>3. RS-232</h4><h5 id="1-RS-232"><a href="#1-RS-232" class="headerlink" title="1. RS-232"></a>1. RS-232</h5><pre><code>RS-232是美国电子工业联盟（EIA）制定的串行数据通信的接口标准，原始编号全称是EIA-RS-232（简称232，RS232）。它被广泛用于计算机串行接口外设连接。RS-232C标准，其中EIA（Electronic Industry Association）代表美国电子工业协会，RS（Recommended Standard）代表推荐标准，232是标识号，C代表RS232的第三次修改（1969年），在这之前，还有RS232B、RS232A。目前的最新版本是由美国电信工业协会（TIA, Telecommunications Industry Association，由EIA所分出的一个组织）所发行的TIA-232-F，它同时也是美国国家标准ANSI/TIA-232-F-1997（R2002），此标准于2002年受到再确认。在1997年由TIA/EIA发行当时的编号则是TIA/EIA-232-F与ANSI/TIA/EIA-232-F-1997。在此之前的版本是TIA/EIA-232-E。它规定连接电缆和机械、电气特性、信号功能及发送过程。其他常用电气标准还有EIA-RS-422-A、EIA-RS-423A、EIA-RS-485。目前在IBM PC机上的COM1、COM2接口，就是RS-232C接口。RS-232对电气特性、逻辑电平和各种信号线功能都作了规定。由于RS-232-C的重大影响，即使自IBM PC/AT开始改用9针连接器起，目前已几乎不再使用RS-232中规定的25针连接器。一般人谈到RS-232此一接口时很有可能指的是RS-232-C。</code></pre><h5 id="2-标准的细节"><a href="#2-标准的细节" class="headerlink" title="2. 标准的细节"></a>2. 标准的细节</h5><pre><code>在RS-232标准中，字符是以一串行的位串来一个接一个的串列（serial）方式传输，优点是传输线少，配线简单，发送距离可以较远。最常用的编码格式是异步起停（asynchronous start-stop）格式，它使用一个起始比特后面紧跟7或8个数据比特（bit），然后是可选的奇偶校验比特，最后是一或两个停止比特。所以发送一个字符至少需要10比特，带来的一个好的效果是使全部的传输速率，发送信号的速率以10划分。一个最平常的代替异步起停方式的是使用高级数据链路控制协议（HDLC）。在RS-232标准中定义了逻辑一和逻辑零电压级数，以及标准的传输速率和连接器类型。信号大小在正的和负的3－15v之间。RS-232规定接近零的电平是无效的，逻辑一规定为负电平，有效负电平的信号状态称为传号marking，它的功能意义为OFF，逻辑零规定为正电平，有效正电平的信号状态称为空号spacing，它的功能意义为ON。电平有效范围在±3至±15伏之间。根据设备供电电源的不同，±5、±10、±12和±15这样的电平都是可能的。mark和space是从电传打字机中来的术语。电传打字机原始的通信是一个简单的中断直流电路模式，类似与圆转盘电话拨号的中的信号。Marking状态是指电路是断开的，spacing状态就是指电路是接通的。一个space就表明有一个字符要开始发送了，相应的停止的时候，停止位就是marking。当线路中断的时候，电传打字机不打印任何有效字符，周期性的连续收到全零信号。</code></pre><h4 id="4-RS-485"><a href="#4-RS-485" class="headerlink" title="4. RS-485"></a>4. RS-485</h4><h5 id="1-RS-485"><a href="#1-RS-485" class="headerlink" title="1. RS-485"></a>1. RS-485</h5><pre><code>EIA-485（过去叫做RS-485或者RS485）是隶属于OSI模型物理层的电气特性规定为2线、半双工、平衡传输线多点通信的标准。是由电信行业协会（TIA）及电子工业联盟（EIA）联合发布的标准。实现此标准的数字通信网可以在有电子噪声的环境下进行长距离有效率的通信。在线性多点总线的配置下，可以在一个网络上有多个接收器。因此适用在工业环境中。EIA一开始将RS（Recommended Standard）做为标准的前缀，不过后来为了便于识别标准的来源，已将RS改为EIA/TIA。电子工业联盟（EIA）已结束运作，此标准目前是电信行业协会（TIA）维护，名称为TIA-485，但工程师及应用指南仍继续用RS-485来称呼此一协议。</code></pre><h5 id="2-简介"><a href="#2-简介" class="headerlink" title="2. 简介"></a>2. 简介</h5><pre><code>EIA-485的电气特性和RS-232不一样。EIA-485使用缆线两端的电压差值来表示传递信号，不同的电压差分别标识为逻辑1及逻辑0。两端的电压差最小为0.2V以上时有效，任何不大于12V或者不小于－7V的差值对接受端都被认为是正确的。EIA-485仅仅规定了接受端和发送端的电气特性。它没有规定或推荐任何数据协议。EIA-485可以应用于配置便宜的区域网和采用单机发送，多机接受通信链接，使用和EIA-422类似的差动双绞线。据通信速率（10m时35Mbit/s；1200m时100kbit/s）。有一个有关EIA-485的经验法则，是比特率乘以线长（单位为米）的乘积无法超过108，因此50m的在线速度不会超过2Mbit/s，在特定条件下，其数据通信速率可以到64Mbit/s。EIA-485和EIA-422一样使用双绞线进行高电压差分平衡传输，它可以进行大面积长距离传输（超过4000英尺，1200米）。和EIA-422相对照的是，EIA-422采用不可转换的单发送端，EIA-485的发送端需要设置为发送模式，这使得EIA-485可以使用双线模式实现真正的多点双向通信。EIA-485推荐使用在点对点网络中，线型、总线型，不能是星型、环型网络。假如必须要使用星型网络，可以配合特殊的RS-485 star/hub中继器，可以在多个网络中双向的监听资料，并且将资料再发送到其他的网络上。理想情况下EIA-485需要2个终接电阻，其阻值要求等于传输电缆的特性阻抗（一般而言，双绞线, 没有特性阻抗的话，当所有的设备都静止或者没有能量的时候就会产生噪声，而且线移需要双端的电压差。没有终接电阻的话，会使得较快速的发送端产生多个数据信号的边缘，这其中的一些是不正确的。之所以不能使用星型或者环型的拓扑结构是由于这些结构有不必要的反映，过低或者过高的终接电阻可以产生电磁干扰。有时在一组网络在线。会加上上拉及接地电阻（偏置，若通信在线没有任何设备时，上面的资料可以有失效安全的机制。这样可以让网络在线有固定的偏置电压，节点较不容易在没有任何节点发送资料时，将在线的噪声解读成实际的资料。若没有偏置电阻，通信线处于浮接的状态，在所有节点都未发送资料或未供电时，最容易受到噪声的影响。</code></pre><h4 id="5-UART"><a href="#5-UART" class="headerlink" title="5. UART"></a>5. UART</h4><pre><code>1. 概念：        UART通用异步收发传输器 (Universal Asynchronous Receiver/Transmitter)，通常称作 UART，是一种异步收发传输器，是电脑硬件的一部分。它将要传输的资料在串行通信与并行通信之间加以转换。作为把并行输入信号转成串行输出信号的芯片，UART通常被集成于其他通讯接口的连结上。具体实物表现为独立的模块化芯片，或作为集成于微处理器中的周边设备。    具体实物表现为独立的模组化芯片，或是微处理器中的内部周边装置(peripheral)。一般和RS-232C规格的，类似Maxim的MAX232之类的标准信号幅度变换芯片进行搭配，作为连接外部设备的接口。在UART上追加同步方式的序列信号变换电路的产品，被称为USART(Universal Synchronous Asynchronous Receiver Transmitter)。2. 功能：    在手机设计和测试阶段被用来控制CPU与其余部分的讯息传送    UART是通用异步收发器（异步串行通信口）的英文缩写，它包括了RS232、RS449、RS423、RS422和RS485等接口标准规范和总线标准规范，即UART是异步串行通信口的总称。而RS232、RS449、RS423、RS422和RS485等，是对应各种异步串行通信口的接口标准和总线标准，它规定了通信口的电气特性、传输速率、连接特性和接口的机械特性等内容。实际上是属于通信网络中的物理层（Physical Layer）的概念，与通信协议没有直接关系。而通信协议，是属于通信网络中的数据链路层（Data Link Layer）的概念。COM是PC（个人计算机）上，异步串行通信口的简写。由于历史原因，IBM的PC外部接口配置为RS232，成为实际上的PC界默认标准。所以，现在PC机的COM均为RS232。若配有多个异步串行通信口，则分别称为COM1、COM2... 。3. 原理：     通用异步接受器-发送器(UART)把数据的字节按照比特顺序发送，另一端的UART把比特组装为字节。每个UART包含一个移位寄存器。通过一根线或其他媒介的串行通信比通过多根线的并行通信具有更低成本。    UART通常并不直接产生或接收其他设备的外部信号。独立接口设备用于转换信号的逻辑电平给UART。    通信可以是单工、全双工或半双工。</code></pre><h4 id="6-RS-232-RS-485与UART-COM的区别：UART、串口-COM口-是指的物理接口形式-硬件-；而TTL、RS-232、RS-485是指的电平标准-电信号-。"><a href="#6-RS-232-RS-485与UART-COM的区别：UART、串口-COM口-是指的物理接口形式-硬件-；而TTL、RS-232、RS-485是指的电平标准-电信号-。" class="headerlink" title="6. RS-232 / RS-485与UART / COM的区别：UART、串口(COM口)是指的物理接口形式(硬件)；而TTL、RS-232、RS-485是指的电平标准(电信号)。"></a>6. RS-232 / RS-485与UART / COM的区别：UART、串口(COM口)是指的物理接口形式(硬件)；而TTL、RS-232、RS-485是指的电平标准(电信号)。</h4><pre><code>串行通讯端口( cluster communication port )即COM口，简称串口。微机上的串口通常是9针，也有25针的接口，最大速率115200bps。通常用于连接串口鼠标及通讯设备（如连接外置式调制解调器进行数据通讯或一些工厂的数控机接口）等。一般主板外部只有一个串口，机箱后面和并口一起的那个九孔输出端（梯形），就是COM1口，COM2口一般要从主板上插针引出。但主流的主板一般不带串口，串口已基本被USB口取代。串口的接口标准规范和总线标准规范是RS-232，有时候也叫做RS-232口。RS-232(ANSI/EIA-232标准)是IBM-PC及其兼容机上的串行连接的标准。可用于许多用途，比如连接鼠标、打印机或者调制解调器，同时也可以接工业仪器仪表。用于驱动和连线的改进，实际应用中RS-232的传输长度或者速度常常超过标准的值。RS-232只限于电脑串口和设备间点对点的通信。RS- 232串口通信最远距离是50英尺。COM接口就是遵循RS232标准的物理口。COM口指串口的物理实现，而RS232是一种串口接口标准。通用串行总线（英语：Universal Serial Bus，缩写：USB）是连接计算机系统与外部设备的一种串口总线标准，也是一种输入输出接口的技术规范，被广泛地应用于个人电脑和移动设备等信息通讯产品，并扩展至摄影器材、数字电视（机顶盒）、游戏机等其它相关领域。多媒体电脑刚问世时，外接式设备的传输接口各不相同，如打印机只能接LPT、调制解调器只能接RS232、鼠标键盘只能接PS/2等。繁杂的接口系统，加上必须安装驱动程序并重启才能使用的限制，都会造成用户的困扰。因此，创造出一个统一且支持易插拔的外接式传输接口，便成为无可避免的趋势，USB应运而生。最新一代的USB是USB4，传输速度为40Gbit/s。物理接头USB Type-A、Type-B接头分正反面，新型USB Type-C接头不分正反。</code></pre>]]></content>
     
@@ -348,6 +328,8 @@ date:
     </summary>
     
     
+    
+      <category term="Arduino" scheme="http://yoursite.com/tags/Arduino/"/>
     
   </entry>
   
@@ -379,24 +361,22 @@ date:
     <link href="http://yoursite.com/2020/11/14/git-github-gitlab/Gitlab%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/"/>
     <id>http://yoursite.com/2020/11/14/git-github-gitlab/Gitlab%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/</id>
     <published>2020-11-14T06:24:04.751Z</published>
-    <updated>2021-03-13T09:28:45.400Z</updated>
+    <updated>2021-03-13T09:41:25.402Z</updated>
     
-    <content type="html"><![CDATA[<pre><code class="hljs subunit">title: date: <span class="hljs-keyword">tags:</span> Github/Git/Gitlab</code></pre><h2 id="Gitlab使用指南"><a href="#Gitlab使用指南" class="headerlink" title="Gitlab使用指南"></a>Gitlab使用指南</h2><h3 id=""><a href="#" class="headerlink" title=""></a></h3>]]></content>
+    <content type="html"><![CDATA[<h2 id="Gitlab使用指南"><a href="#Gitlab使用指南" class="headerlink" title="Gitlab使用指南"></a>Gitlab使用指南</h2><h3 id=""><a href="#" class="headerlink" title=""></a></h3>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;pre&gt;&lt;code class=&quot;hljs subunit&quot;&gt;title: 
-date: 
-&lt;span class=&quot;hljs-keyword&quot;&gt;tags:&lt;/span&gt; Github/Git/Gitlab&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&quot;Gitlab使用指南&quot;&gt;&lt;
+        &lt;h2 id=&quot;Gitlab使用指南&quot;&gt;&lt;a href=&quot;#Gitlab使用指南&quot; class=&quot;headerlink&quot; title=&quot;Gitlab使用指南&quot;&gt;&lt;/a&gt;Gitlab使用指南&lt;/h2&gt;&lt;h3 id=&quot;&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;headerlink&quot; 
       
     
     </summary>
     
     
+    
+      <category term="Github/Git/Gitlab" scheme="http://yoursite.com/tags/Github-Git-Gitlab/"/>
     
   </entry>
   
@@ -405,24 +385,22 @@ date:
     <link href="http://yoursite.com/2020/11/14/git-github-gitlab/Github%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97%20/"/>
     <id>http://yoursite.com/2020/11/14/git-github-gitlab/Github%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97%20/</id>
     <published>2020-11-14T06:24:03.138Z</published>
-    <updated>2021-03-13T09:28:32.370Z</updated>
+    <updated>2021-03-13T09:41:33.304Z</updated>
     
-    <content type="html"><![CDATA[<pre><code class="hljs subunit">title: date: <span class="hljs-keyword">tags:</span> Github/Git/Gitlab</code></pre><h2 id="GitHub使用指南"><a href="#GitHub使用指南" class="headerlink" title="GitHub使用指南"></a>GitHub使用指南</h2><h3 id="一、仓库管理"><a href="#一、仓库管理" class="headerlink" title="一、仓库管理"></a>一、仓库管理</h3><h4 id="I-创建、删除远端仓库"><a href="#I-创建、删除远端仓库" class="headerlink" title="I. 创建、删除远端仓库"></a>I. 创建、删除远端仓库</h4><h4 id="II-本地仓库推送到远端仓库"><a href="#II-本地仓库推送到远端仓库" class="headerlink" title="II. 本地仓库推送到远端仓库"></a>II. 本地仓库推送到远端仓库</h4><pre><code class="hljs git">…or create a new repository on the command lineecho &quot;# demo&quot; &gt;&gt; README.mdgit initgit add README.mdgit commit -m &quot;first commit&quot;git branch -M maingit remote add origin https:&#x2F;&#x2F;github.com&#x2F;processingnewage&#x2F;demo.gitgit push -u origin main &#x2F; git push --set-upstream origin master</code></pre><pre><code class="hljs git">…or push an existing repository from the command linegit remote add origin https:&#x2F;&#x2F;github.com&#x2F;processingnewage&#x2F;demo.gitgit branch -M maingit push -u origin main &#x2F; git push --set-upstream origin master</code></pre><h4 id="III-主仓库作为服务器"><a href="#III-主仓库作为服务器" class="headerlink" title="III. 主仓库作为服务器"></a>III. 主仓库作为服务器</h4><p>https:\processingnewage.github.io</p><h4 id="IV-获取远端项目"><a href="#IV-获取远端项目" class="headerlink" title="IV. 获取远端项目"></a>IV. 获取远端项目</h4><ul><li>git clone [远端仓库地址]</li><li>git clone –no–checkout [远端仓库地址]                 [项目文件数量较多时可节省下载时间或自己选择文件checkout的分支]</li><li>git clone –bare [远端仓库地址]                        [只获取裸仓库信息，.git文件信息]</li><li>git clone [本地仓库信息]<pre><code class="hljs css"><span class="hljs-selector-tag">tips</span><span class="hljs-selector-pseudo">:download</span> <span class="hljs-selector-tag">zip</span>下载的文件中不包含<span class="hljs-selector-class">.git</span> <span class="hljs-selector-tag">folder</span>，无法作为本地仓库使用，重新初始化时会重置配置文件</code></pre><h4 id="V-Push详解"><a href="#V-Push详解" class="headerlink" title="V. Push详解"></a>V. Push详解</h4></li><li>git push                    [建立本地分支和远端分支后可直接使用git push]</li><li>git push -u origin [branch name]</li><li>git push –set-upstream origin [branch name]            [建立本地分支和远端分支的连接]</li><li>git push –all        [一次性push所有分支，分别在远端建立与之对应的分支]<pre><code class="hljs git">tips:分支：*master本地分支[可见]GitHub master远端分支[可见]remotes&#x2F;origin&#x2F;master远端追踪分支[看不到内容，连接本地分支和远端分支]</code></pre></li></ul><h4 id="VI-Pull详解"><a href="#VI-Pull详解" class="headerlink" title="VI. Pull详解"></a>VI. Pull详解</h4><ul><li>git pull</li><li>git fetch</li><li>git merge</li></ul><h4 id="VII-删除远端分支、仓库迁移"><a href="#VII-删除远端分支、仓库迁移" class="headerlink" title="VII. 删除远端分支、仓库迁移"></a>VII. 删除远端分支、仓库迁移</h4><pre><code class="hljs git">仓库管理 scene：</code></pre><h3 id="二、SSH连接及部署"><a href="#二、SSH连接及部署" class="headerlink" title="二、SSH连接及部署"></a>二、SSH连接及部署</h3><h4 id="VIII-SSH连接GitHub"><a href="#VIII-SSH连接GitHub" class="headerlink" title="VIII. SSH连接GitHub"></a>VIII. SSH连接GitHub</h4><ul><li>SSH是一种安全协议</li><li>连接客户端和服务端</li><li>ssh <a href="mailto:git@github.com">git@github.com</a></li><li>公钥/私钥</li><li>ssh-keygen</li><li>~/.ssh/id_rsa(Private Key)</li><li>~/.ssh/id_rsa.pub(Public Key)</li><li>将公钥存入服务器的SSH Keys中</li></ul><h4 id="VIIII-自动部署流程"><a href="#VIIII-自动部署流程" class="headerlink" title="VIIII. 自动部署流程"></a>VIIII. 自动部署流程</h4><ul><li>GitHub仓库(部署的项目代码)</li><li>阿里云服务器</li><li>本地项目</li></ul><ol><li>本地项目提交到GitHub仓库</li><li>GitHub仓库打包到阿里云服务器</li><li>阿里云服务器更新</li><li>查看项目地址变化</li></ol><h4 id="X-SSH连接阿里云服务器"><a href="#X-SSH连接阿里云服务器" class="headerlink" title="X. SSH连接阿里云服务器"></a>X. SSH连接阿里云服务器</h4><h4 id="XI-手动部署与自动部署"><a href="#XI-手动部署与自动部署" class="headerlink" title="XI. 手动部署与自动部署"></a>XI. 手动部署与自动部署</h4><ul><li>创建VUE项目</li><li>部署到阿里云服务器<ul><li>手动部署</li><li>自动部署</li></ul></li></ul>]]></content>
+    <content type="html"><![CDATA[<h2 id="GitHub使用指南"><a href="#GitHub使用指南" class="headerlink" title="GitHub使用指南"></a>GitHub使用指南</h2><h3 id="一、仓库管理"><a href="#一、仓库管理" class="headerlink" title="一、仓库管理"></a>一、仓库管理</h3><h4 id="I-创建、删除远端仓库"><a href="#I-创建、删除远端仓库" class="headerlink" title="I. 创建、删除远端仓库"></a>I. 创建、删除远端仓库</h4><h4 id="II-本地仓库推送到远端仓库"><a href="#II-本地仓库推送到远端仓库" class="headerlink" title="II. 本地仓库推送到远端仓库"></a>II. 本地仓库推送到远端仓库</h4><pre><code class="hljs git">…or create a new repository on the command lineecho &quot;# demo&quot; &gt;&gt; README.mdgit initgit add README.mdgit commit -m &quot;first commit&quot;git branch -M maingit remote add origin https:&#x2F;&#x2F;github.com&#x2F;processingnewage&#x2F;demo.gitgit push -u origin main &#x2F; git push --set-upstream origin master</code></pre><pre><code class="hljs git">…or push an existing repository from the command linegit remote add origin https:&#x2F;&#x2F;github.com&#x2F;processingnewage&#x2F;demo.gitgit branch -M maingit push -u origin main &#x2F; git push --set-upstream origin master</code></pre><h4 id="III-主仓库作为服务器"><a href="#III-主仓库作为服务器" class="headerlink" title="III. 主仓库作为服务器"></a>III. 主仓库作为服务器</h4><p>https:\processingnewage.github.io</p><h4 id="IV-获取远端项目"><a href="#IV-获取远端项目" class="headerlink" title="IV. 获取远端项目"></a>IV. 获取远端项目</h4><ul><li>git clone [远端仓库地址]</li><li>git clone –no–checkout [远端仓库地址]                 [项目文件数量较多时可节省下载时间或自己选择文件checkout的分支]</li><li>git clone –bare [远端仓库地址]                        [只获取裸仓库信息，.git文件信息]</li><li>git clone [本地仓库信息]<pre><code class="hljs css"><span class="hljs-selector-tag">tips</span><span class="hljs-selector-pseudo">:download</span> <span class="hljs-selector-tag">zip</span>下载的文件中不包含<span class="hljs-selector-class">.git</span> <span class="hljs-selector-tag">folder</span>，无法作为本地仓库使用，重新初始化时会重置配置文件</code></pre><h4 id="V-Push详解"><a href="#V-Push详解" class="headerlink" title="V. Push详解"></a>V. Push详解</h4></li><li>git push                    [建立本地分支和远端分支后可直接使用git push]</li><li>git push -u origin [branch name]</li><li>git push –set-upstream origin [branch name]            [建立本地分支和远端分支的连接]</li><li>git push –all        [一次性push所有分支，分别在远端建立与之对应的分支]<pre><code class="hljs git">tips:分支：*master本地分支[可见]GitHub master远端分支[可见]remotes&#x2F;origin&#x2F;master远端追踪分支[看不到内容，连接本地分支和远端分支]</code></pre></li></ul><h4 id="VI-Pull详解"><a href="#VI-Pull详解" class="headerlink" title="VI. Pull详解"></a>VI. Pull详解</h4><ul><li>git pull</li><li>git fetch</li><li>git merge</li></ul><h4 id="VII-删除远端分支、仓库迁移"><a href="#VII-删除远端分支、仓库迁移" class="headerlink" title="VII. 删除远端分支、仓库迁移"></a>VII. 删除远端分支、仓库迁移</h4><pre><code class="hljs git">仓库管理 scene：</code></pre><h3 id="二、SSH连接及部署"><a href="#二、SSH连接及部署" class="headerlink" title="二、SSH连接及部署"></a>二、SSH连接及部署</h3><h4 id="VIII-SSH连接GitHub"><a href="#VIII-SSH连接GitHub" class="headerlink" title="VIII. SSH连接GitHub"></a>VIII. SSH连接GitHub</h4><ul><li>SSH是一种安全协议</li><li>连接客户端和服务端</li><li>ssh <a href="mailto:git@github.com">git@github.com</a></li><li>公钥/私钥</li><li>ssh-keygen</li><li>~/.ssh/id_rsa(Private Key)</li><li>~/.ssh/id_rsa.pub(Public Key)</li><li>将公钥存入服务器的SSH Keys中</li></ul><h4 id="VIIII-自动部署流程"><a href="#VIIII-自动部署流程" class="headerlink" title="VIIII. 自动部署流程"></a>VIIII. 自动部署流程</h4><ul><li>GitHub仓库(部署的项目代码)</li><li>阿里云服务器</li><li>本地项目</li></ul><ol><li>本地项目提交到GitHub仓库</li><li>GitHub仓库打包到阿里云服务器</li><li>阿里云服务器更新</li><li>查看项目地址变化</li></ol><h4 id="X-SSH连接阿里云服务器"><a href="#X-SSH连接阿里云服务器" class="headerlink" title="X. SSH连接阿里云服务器"></a>X. SSH连接阿里云服务器</h4><h4 id="XI-手动部署与自动部署"><a href="#XI-手动部署与自动部署" class="headerlink" title="XI. 手动部署与自动部署"></a>XI. 手动部署与自动部署</h4><ul><li>创建VUE项目</li><li>部署到阿里云服务器<ul><li>手动部署</li><li>自动部署</li></ul></li></ul>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;pre&gt;&lt;code class=&quot;hljs subunit&quot;&gt;title: 
-date: 
-&lt;span class=&quot;hljs-keyword&quot;&gt;tags:&lt;/span&gt; Github/Git/Gitlab&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&quot;GitHub使用指南&quot;&gt;&lt;
+        &lt;h2 id=&quot;GitHub使用指南&quot;&gt;&lt;a href=&quot;#GitHub使用指南&quot; class=&quot;headerlink&quot; title=&quot;GitHub使用指南&quot;&gt;&lt;/a&gt;GitHub使用指南&lt;/h2&gt;&lt;h3 id=&quot;一、仓库管理&quot;&gt;&lt;a href=&quot;#一、仓库管理&quot; class=&quot;
       
     
     </summary>
     
     
+    
+      <category term="Github/Git/Gitlab" scheme="http://yoursite.com/tags/Github-Git-Gitlab/"/>
     
   </entry>
   
@@ -431,24 +409,22 @@ date:
     <link href="http://yoursite.com/2020/11/14/git-github-gitlab/Git%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/"/>
     <id>http://yoursite.com/2020/11/14/git-github-gitlab/Git%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/</id>
     <published>2020-11-14T06:23:44.634Z</published>
-    <updated>2021-03-13T09:29:08.859Z</updated>
+    <updated>2021-03-13T09:41:16.845Z</updated>
     
-    <content type="html"><![CDATA[<pre><code class="hljs subunit">title: date: <span class="hljs-keyword">tags:</span> Github/Git/Gitlab</code></pre><h2 id="Git使用指南"><a href="#Git使用指南" class="headerlink" title="Git使用指南"></a>Git使用指南</h2><h3 id="一、为什么要使用Git版本管理工具"><a href="#一、为什么要使用Git版本管理工具" class="headerlink" title="一、为什么要使用Git版本管理工具"></a>一、为什么要使用Git版本管理工具</h3><ul><li><p>完整的记录项目代码变化的过程</p><ul><li>人、时间、地点、物、事</li></ul></li><li><p>备份每一个变化过程的代码版本</p><ul><li>查询历史记录</li><li>复原变更</li><li>比较差异</li></ul></li><li><p>多人协同开发</p><ul><li>分支合并</li><li>克隆提交</li></ul></li><li><p>需要掌握的知识点：</p><ul><li>环境配置</li><li>版本追踪</li><li>GitHub详解</li><li>复原变更</li><li>分支合并</li><li>多人协同开发</li><li>服务器自动部署</li><li>Gitlab详解</li></ul></li></ul><h3 id="二、Git基本使用"><a href="#二、Git基本使用" class="headerlink" title="二、Git基本使用"></a>二、Git基本使用</h3><h4 id="I-环境配置"><a href="#I-环境配置" class="headerlink" title="I. 环境配置"></a>I. 环境配置</h4><ul><li>Mac/Linux/Windows 版本下载</li><li>测试命令：git –version    查看git版本</li><li>常用的bash命令：ls / pwd / clear / touch / mkdir / rm / cd</li></ul><h4 id="II-配置用户名和邮箱-当前项目的追踪"><a href="#II-配置用户名和邮箱-当前项目的追踪" class="headerlink" title="II. 配置用户名和邮箱[当前项目的追踪]"></a>II. 配置用户名和邮箱[当前项目的追踪]</h4><ul><li>命令<ul><li>git config –global user.name “processingnewage”    [配置全局用户名]</li><li>git config –global user.email “<a href="mailto:18955619698@163.com">18955619698@163.com</a>“    [配置全局用户邮箱]</li><li>git config –list        [查看配置]</li><li>git config user.name        [查看用户名]            </li><li>git help        [查看帮助]</li></ul></li></ul><h4 id="III-管理git项目"><a href="#III-管理git项目" class="headerlink" title="III 管理git项目"></a>III 管理git项目</h4><h5 id="1-初始化repo和追踪文件、查看状态"><a href="#1-初始化repo和追踪文件、查看状态" class="headerlink" title="1. 初始化repo和追踪文件、查看状态"></a>1. 初始化repo和追踪文件、查看状态</h5><ul><li>命令<ul><li>git init        [在项目文件夹中创建.git文件，对项目初始化，实现git的版本管控]</li><li>git init [name]        [在指定的文件夹中生成.git文件，若不存在则创建新的空文件夹]</li><li>git add [filename]        [将文件从workspace添加到cached，<strong>追踪文件的变化</strong>]</li><li>git add . / -A        [一次性添加所有文件]</li><li>git status        [查看追踪和提交的状态]</li></ul></li></ul><h5 id="2-放弃追踪"><a href="#2-放弃追踪" class="headerlink" title="2. 放弃追踪"></a>2. 放弃追踪</h5><ul><li>命令<ul><li>git rm –cached [filename]    [取消文件的追踪，将cached中的文件回退到workspace中]</li></ul></li></ul><h5 id="3-提交"><a href="#3-提交" class="headerlink" title="3. 提交"></a>3. 提交</h5><ul><li>命令<ul><li>git commit        [对所有被追踪的文件从cached区中添加到本地repo中]</li><li>git commit -m “描述”        [添加描述]</li><li>git commit -am “描述”        [已经add过的文件修改后使用该命令可以不用重新add，直接commit即可]</li></ul></li></ul><h5 id="4-log追踪"><a href="#4-log追踪" class="headerlink" title="4. log追踪"></a>4. log追踪</h5><ul><li>命令<ul><li>git log</li><li>git log -p -2            [比较最近2次提交的差别]</li><li>git log –author=”processingnewage”        [查看作者]</li><li>git log –oneline        [一行显示]</li><li>git log –graph        [线图显示]</li><li>git log –pretty=oneline                        </li><li>git log –pretty=format</li></ul></li></ul><h5 id="5-追踪文件修改前后的区别"><a href="#5-追踪文件修改前后的区别" class="headerlink" title="5. 追踪文件修改前后的区别"></a>5. 追踪文件修改前后的区别</h5><ul><li>命令<ul><li>git diff        [在add之后无法比较]</li><li>git diff –staged        [可以比较在add后的文件，但在commit后的文件始终无法比较]</li></ul></li></ul><h5 id="6-文件删除、重命名、移动"><a href="#6-文件删除、重命名、移动" class="headerlink" title="6. 文件删除、重命名、移动"></a>6. 文件删除、重命名、移动</h5><ul><li>命令<ul><li>git rm [filename]</li><li>git mv [oldname] [newname]</li><li>git mv [filename] demo/demo.txt(folder)        [rename and move]</li></ul></li></ul><h5 id="7-文件忽略-在项目中不是所有的文件都需要commit，因此需要忽略文件"><a href="#7-文件忽略-在项目中不是所有的文件都需要commit，因此需要忽略文件" class="headerlink" title="7. 文件忽略(在项目中不是所有的文件都需要commit，因此需要忽略文件)"></a>7. 文件忽略(在项目中不是所有的文件都需要commit，因此需要忽略文件)</h5><ul><li>命令<ul><li>.gitignore        [当前目录的根文件夹下]</li><li>/node_modules        [忽略node_modules文件夹下的所有文件]</li><li>*./log            [忽略以.log结尾的所有文件]</li><li>*.zip            [忽略以.zip结尾的所有文件]</li><li>git rm -r –cached ./[filename]        [已追踪的状态无法忽略，需要回退到未追踪的状态][-r 一次性踢出多个文件]</li></ul></li><li><strong>tips: 空的文件夹不会被追踪，空文件会被追踪</strong><pre><code class="hljs .gitignore">.gitignore&#x2F;node_modules*.txt*.zipjq.js</code></pre></li></ul><h5 id="8-项目演练"><a href="#8-项目演练" class="headerlink" title="8. 项目演练"></a>8. 项目演练</h5><ul><li>主要流程<ul><li>git init</li><li>git add .</li><li>git commit -m “描述”</li></ul></li><li>others<ul><li>git status</li><li>.gitignore</li></ul></li></ul><h5 id="9-一键还原"><a href="#9-一键还原" class="headerlink" title="9. 一键还原"></a>9. 一键还原</h5><ul><li>命令<ul><li>git chechout – [filename]        [恢复到上一次的状态][未追踪的文件撤销更改]</li></ul></li></ul><h5 id="10-撤销追踪与文件还原-workspace的文件修改后添加到cached区后，无法直接使用checkout恢复"><a href="#10-撤销追踪与文件还原-workspace的文件修改后添加到cached区后，无法直接使用checkout恢复" class="headerlink" title="10. 撤销追踪与文件还原(workspace的文件修改后添加到cached区后，无法直接使用checkout恢复)"></a>10. 撤销追踪与文件还原(workspace的文件修改后添加到cached区后，无法直接使用checkout恢复)</h5><ul><li>命令<ul><li>git reset HEAD [filename]        [撤销当前文件的追踪]</li><li>git chekout – [filename]</li></ul></li></ul><h5 id="11-版本回退-回到旧版本的同时删除新的版本"><a href="#11-版本回退-回到旧版本的同时删除新的版本" class="headerlink" title="11. 版本回退(回到旧版本的同时删除新的版本)"></a>11. 版本回退(回到旧版本的同时删除新的版本)</h5><ul><li>命令<ul><li>git reset –hard HEAD^                [回退到上个版本]</li><li>git reset –hard HEAD^^                [回退到上上个版本]</li><li>git reset –hard [hash]             [回退到指定hash号的版本]</li><li>git reflog     指针理解:ref(索引) log(日志) 查看指针指向的日志</li></ul></li></ul><h5 id="12-回到旧版本-回到旧版本的同时不删除新的版本"><a href="#12-回到旧版本-回到旧版本的同时不删除新的版本" class="headerlink" title="12. 回到旧版本(回到旧版本的同时不删除新的版本)"></a>12. 回到旧版本(回到旧版本的同时不删除新的版本)</h5><ul><li>命令<ul><li>git log</li><li>git checkout [hash] – [filename]/.        [将某个/所有文件回退到hash值指定的版本并保留中间错误的版本]</li></ul></li></ul><h5 id="13-分支"><a href="#13-分支" class="headerlink" title="13. 分支"></a>13. 分支</h5><h6 id="a-建立切换删除分支（在不同的版本之间切换时要确保原分支-working-tree-clean）"><a href="#a-建立切换删除分支（在不同的版本之间切换时要确保原分支-working-tree-clean）" class="headerlink" title="a. 建立切换删除分支（在不同的版本之间切换时要确保原分支 working tree clean）"></a>a. 建立切换删除分支（在不同的版本之间切换时要确保原分支 working tree clean）</h6><ul><li>命令<ul><li>git branch /[name]        [显示/创建分支]</li><li>git checkout [branch name]        [切换分支]</li><li>git checkout -b [branch name]        [创建并切换分支]</li><li>git branch [name] -d                [删除分支][删除分支前需要merge]</li><li>git branch [name] -D                [强制删除分支]<pre><code class="hljs crmsh">tips:误删<span class="hljs-literal">master</span>分支时git branch <span class="hljs-keyword">master</span> <span class="hljs-title">[hash</span>]重新创建<span class="hljs-literal">master</span>分支，得到的结果和原来的一致</code></pre><h6 id="b-理解分支"><a href="#b-理解分支" class="headerlink" title="b. 理解分支"></a>b. 理解分支</h6></li></ul></li><li>分支概述<ul><li>什么是分支：重新分配一块存储空间，把原来的分支中的内容完整的拷贝一份，包括hash值、log日志等</li><li>分支的作用是什么：在重新创建的分支中可以进行实验性质的操作而不影响原有分支，如添加一个新的功能，测试成功后再合并到原有分支中</li></ul></li></ul><h6 id="c-合并分支"><a href="#c-合并分支" class="headerlink" title="c. 合并分支"></a>c. 合并分支</h6><ul><li>命令<ul><li>git merge [branch name]        [在主分支中合并其他的分支，使得主分支拥有其他分支的功能] </li></ul></li></ul><h6 id="d-解决merge时的冲突问题"><a href="#d-解决merge时的冲突问题" class="headerlink" title="d. 解决merge时的冲突问题"></a>d. 解决merge时的冲突问题</h6><ul><li>解决冲突<ul><li>git merge [branch name]</li><li>git status         [查看冲突原因]</li><li>git merge –abort         [忽略合并]</li><li>手动选择正确的内容</li><li>git commit</li></ul></li></ul><h5 id="14-查看版本线图"><a href="#14-查看版本线图" class="headerlink" title="14. 查看版本线图"></a>14. 查看版本线图</h5><h5 id="15-快转机制"><a href="#15-快转机制" class="headerlink" title="15. 快转机制"></a>15. 快转机制</h5><h5 id="16-更多合并的方法"><a href="#16-更多合并的方法" class="headerlink" title="16. 更多合并的方法"></a>16. 更多合并的方法</h5><h5 id="17-一次性删除不要的分支"><a href="#17-一次性删除不要的分支" class="headerlink" title="17. 一次性删除不要的分支"></a>17. 一次性删除不要的分支</h5>]]></content>
+    <content type="html"><![CDATA[<h2 id="Git使用指南"><a href="#Git使用指南" class="headerlink" title="Git使用指南"></a>Git使用指南</h2><h3 id="一、为什么要使用Git版本管理工具"><a href="#一、为什么要使用Git版本管理工具" class="headerlink" title="一、为什么要使用Git版本管理工具"></a>一、为什么要使用Git版本管理工具</h3><ul><li><p>完整的记录项目代码变化的过程</p><ul><li>人、时间、地点、物、事</li></ul></li><li><p>备份每一个变化过程的代码版本</p><ul><li>查询历史记录</li><li>复原变更</li><li>比较差异</li></ul></li><li><p>多人协同开发</p><ul><li>分支合并</li><li>克隆提交</li></ul></li><li><p>需要掌握的知识点：</p><ul><li>环境配置</li><li>版本追踪</li><li>GitHub详解</li><li>复原变更</li><li>分支合并</li><li>多人协同开发</li><li>服务器自动部署</li><li>Gitlab详解</li></ul></li></ul><h3 id="二、Git基本使用"><a href="#二、Git基本使用" class="headerlink" title="二、Git基本使用"></a>二、Git基本使用</h3><h4 id="I-环境配置"><a href="#I-环境配置" class="headerlink" title="I. 环境配置"></a>I. 环境配置</h4><ul><li>Mac/Linux/Windows 版本下载</li><li>测试命令：git –version    查看git版本</li><li>常用的bash命令：ls / pwd / clear / touch / mkdir / rm / cd</li></ul><h4 id="II-配置用户名和邮箱-当前项目的追踪"><a href="#II-配置用户名和邮箱-当前项目的追踪" class="headerlink" title="II. 配置用户名和邮箱[当前项目的追踪]"></a>II. 配置用户名和邮箱[当前项目的追踪]</h4><ul><li>命令<ul><li>git config –global user.name “processingnewage”    [配置全局用户名]</li><li>git config –global user.email “<a href="mailto:18955619698@163.com">18955619698@163.com</a>“    [配置全局用户邮箱]</li><li>git config –list        [查看配置]</li><li>git config user.name        [查看用户名]            </li><li>git help        [查看帮助]</li></ul></li></ul><h4 id="III-管理git项目"><a href="#III-管理git项目" class="headerlink" title="III 管理git项目"></a>III 管理git项目</h4><h5 id="1-初始化repo和追踪文件、查看状态"><a href="#1-初始化repo和追踪文件、查看状态" class="headerlink" title="1. 初始化repo和追踪文件、查看状态"></a>1. 初始化repo和追踪文件、查看状态</h5><ul><li>命令<ul><li>git init        [在项目文件夹中创建.git文件，对项目初始化，实现git的版本管控]</li><li>git init [name]        [在指定的文件夹中生成.git文件，若不存在则创建新的空文件夹]</li><li>git add [filename]        [将文件从workspace添加到cached，<strong>追踪文件的变化</strong>]</li><li>git add . / -A        [一次性添加所有文件]</li><li>git status        [查看追踪和提交的状态]</li></ul></li></ul><h5 id="2-放弃追踪"><a href="#2-放弃追踪" class="headerlink" title="2. 放弃追踪"></a>2. 放弃追踪</h5><ul><li>命令<ul><li>git rm –cached [filename]    [取消文件的追踪，将cached中的文件回退到workspace中]</li></ul></li></ul><h5 id="3-提交"><a href="#3-提交" class="headerlink" title="3. 提交"></a>3. 提交</h5><ul><li>命令<ul><li>git commit        [对所有被追踪的文件从cached区中添加到本地repo中]</li><li>git commit -m “描述”        [添加描述]</li><li>git commit -am “描述”        [已经add过的文件修改后使用该命令可以不用重新add，直接commit即可]</li></ul></li></ul><h5 id="4-log追踪"><a href="#4-log追踪" class="headerlink" title="4. log追踪"></a>4. log追踪</h5><ul><li>命令<ul><li>git log</li><li>git log -p -2            [比较最近2次提交的差别]</li><li>git log –author=”processingnewage”        [查看作者]</li><li>git log –oneline        [一行显示]</li><li>git log –graph        [线图显示]</li><li>git log –pretty=oneline                        </li><li>git log –pretty=format</li></ul></li></ul><h5 id="5-追踪文件修改前后的区别"><a href="#5-追踪文件修改前后的区别" class="headerlink" title="5. 追踪文件修改前后的区别"></a>5. 追踪文件修改前后的区别</h5><ul><li>命令<ul><li>git diff        [在add之后无法比较]</li><li>git diff –staged        [可以比较在add后的文件，但在commit后的文件始终无法比较]</li></ul></li></ul><h5 id="6-文件删除、重命名、移动"><a href="#6-文件删除、重命名、移动" class="headerlink" title="6. 文件删除、重命名、移动"></a>6. 文件删除、重命名、移动</h5><ul><li>命令<ul><li>git rm [filename]</li><li>git mv [oldname] [newname]</li><li>git mv [filename] demo/demo.txt(folder)        [rename and move]</li></ul></li></ul><h5 id="7-文件忽略-在项目中不是所有的文件都需要commit，因此需要忽略文件"><a href="#7-文件忽略-在项目中不是所有的文件都需要commit，因此需要忽略文件" class="headerlink" title="7. 文件忽略(在项目中不是所有的文件都需要commit，因此需要忽略文件)"></a>7. 文件忽略(在项目中不是所有的文件都需要commit，因此需要忽略文件)</h5><ul><li>命令<ul><li>.gitignore        [当前目录的根文件夹下]</li><li>/node_modules        [忽略node_modules文件夹下的所有文件]</li><li>*./log            [忽略以.log结尾的所有文件]</li><li>*.zip            [忽略以.zip结尾的所有文件]</li><li>git rm -r –cached ./[filename]        [已追踪的状态无法忽略，需要回退到未追踪的状态][-r 一次性踢出多个文件]</li></ul></li><li><strong>tips: 空的文件夹不会被追踪，空文件会被追踪</strong><pre><code class="hljs .gitignore">.gitignore&#x2F;node_modules*.txt*.zipjq.js</code></pre></li></ul><h5 id="8-项目演练"><a href="#8-项目演练" class="headerlink" title="8. 项目演练"></a>8. 项目演练</h5><ul><li>主要流程<ul><li>git init</li><li>git add .</li><li>git commit -m “描述”</li></ul></li><li>others<ul><li>git status</li><li>.gitignore</li></ul></li></ul><h5 id="9-一键还原"><a href="#9-一键还原" class="headerlink" title="9. 一键还原"></a>9. 一键还原</h5><ul><li>命令<ul><li>git chechout – [filename]        [恢复到上一次的状态][未追踪的文件撤销更改]</li></ul></li></ul><h5 id="10-撤销追踪与文件还原-workspace的文件修改后添加到cached区后，无法直接使用checkout恢复"><a href="#10-撤销追踪与文件还原-workspace的文件修改后添加到cached区后，无法直接使用checkout恢复" class="headerlink" title="10. 撤销追踪与文件还原(workspace的文件修改后添加到cached区后，无法直接使用checkout恢复)"></a>10. 撤销追踪与文件还原(workspace的文件修改后添加到cached区后，无法直接使用checkout恢复)</h5><ul><li>命令<ul><li>git reset HEAD [filename]        [撤销当前文件的追踪]</li><li>git chekout – [filename]</li></ul></li></ul><h5 id="11-版本回退-回到旧版本的同时删除新的版本"><a href="#11-版本回退-回到旧版本的同时删除新的版本" class="headerlink" title="11. 版本回退(回到旧版本的同时删除新的版本)"></a>11. 版本回退(回到旧版本的同时删除新的版本)</h5><ul><li>命令<ul><li>git reset –hard HEAD^                [回退到上个版本]</li><li>git reset –hard HEAD^^                [回退到上上个版本]</li><li>git reset –hard [hash]             [回退到指定hash号的版本]</li><li>git reflog     指针理解:ref(索引) log(日志) 查看指针指向的日志</li></ul></li></ul><h5 id="12-回到旧版本-回到旧版本的同时不删除新的版本"><a href="#12-回到旧版本-回到旧版本的同时不删除新的版本" class="headerlink" title="12. 回到旧版本(回到旧版本的同时不删除新的版本)"></a>12. 回到旧版本(回到旧版本的同时不删除新的版本)</h5><ul><li>命令<ul><li>git log</li><li>git checkout [hash] – [filename]/.        [将某个/所有文件回退到hash值指定的版本并保留中间错误的版本]</li></ul></li></ul><h5 id="13-分支"><a href="#13-分支" class="headerlink" title="13. 分支"></a>13. 分支</h5><h6 id="a-建立切换删除分支（在不同的版本之间切换时要确保原分支-working-tree-clean）"><a href="#a-建立切换删除分支（在不同的版本之间切换时要确保原分支-working-tree-clean）" class="headerlink" title="a. 建立切换删除分支（在不同的版本之间切换时要确保原分支 working tree clean）"></a>a. 建立切换删除分支（在不同的版本之间切换时要确保原分支 working tree clean）</h6><ul><li>命令<ul><li>git branch /[name]        [显示/创建分支]</li><li>git checkout [branch name]        [切换分支]</li><li>git checkout -b [branch name]        [创建并切换分支]</li><li>git branch [name] -d                [删除分支][删除分支前需要merge]</li><li>git branch [name] -D                [强制删除分支]<pre><code class="hljs crmsh">tips:误删<span class="hljs-literal">master</span>分支时git branch <span class="hljs-keyword">master</span> <span class="hljs-title">[hash</span>]重新创建<span class="hljs-literal">master</span>分支，得到的结果和原来的一致</code></pre><h6 id="b-理解分支"><a href="#b-理解分支" class="headerlink" title="b. 理解分支"></a>b. 理解分支</h6></li></ul></li><li>分支概述<ul><li>什么是分支：重新分配一块存储空间，把原来的分支中的内容完整的拷贝一份，包括hash值、log日志等</li><li>分支的作用是什么：在重新创建的分支中可以进行实验性质的操作而不影响原有分支，如添加一个新的功能，测试成功后再合并到原有分支中</li></ul></li></ul><h6 id="c-合并分支"><a href="#c-合并分支" class="headerlink" title="c. 合并分支"></a>c. 合并分支</h6><ul><li>命令<ul><li>git merge [branch name]        [在主分支中合并其他的分支，使得主分支拥有其他分支的功能] </li></ul></li></ul><h6 id="d-解决merge时的冲突问题"><a href="#d-解决merge时的冲突问题" class="headerlink" title="d. 解决merge时的冲突问题"></a>d. 解决merge时的冲突问题</h6><ul><li>解决冲突<ul><li>git merge [branch name]</li><li>git status         [查看冲突原因]</li><li>git merge –abort         [忽略合并]</li><li>手动选择正确的内容</li><li>git commit</li></ul></li></ul><h5 id="14-查看版本线图"><a href="#14-查看版本线图" class="headerlink" title="14. 查看版本线图"></a>14. 查看版本线图</h5><h5 id="15-快转机制"><a href="#15-快转机制" class="headerlink" title="15. 快转机制"></a>15. 快转机制</h5><h5 id="16-更多合并的方法"><a href="#16-更多合并的方法" class="headerlink" title="16. 更多合并的方法"></a>16. 更多合并的方法</h5><h5 id="17-一次性删除不要的分支"><a href="#17-一次性删除不要的分支" class="headerlink" title="17. 一次性删除不要的分支"></a>17. 一次性删除不要的分支</h5>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;pre&gt;&lt;code class=&quot;hljs subunit&quot;&gt;title: 
-date: 
-&lt;span class=&quot;hljs-keyword&quot;&gt;tags:&lt;/span&gt; Github/Git/Gitlab&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&quot;Git使用指南&quot;&gt;&lt;a h
+        &lt;h2 id=&quot;Git使用指南&quot;&gt;&lt;a href=&quot;#Git使用指南&quot; class=&quot;headerlink&quot; title=&quot;Git使用指南&quot;&gt;&lt;/a&gt;Git使用指南&lt;/h2&gt;&lt;h3 id=&quot;一、为什么要使用Git版本管理工具&quot;&gt;&lt;a href=&quot;#一、为什么要使用Git版本管理工
       
     
     </summary>
     
     
+    
+      <category term="Github/Git/Gitlab" scheme="http://yoursite.com/tags/Github-Git-Gitlab/"/>
     
   </entry>
   
@@ -479,24 +455,22 @@ date:
     <link href="http://yoursite.com/2020/11/03/basic/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%BF%90%E8%A1%8C%E7%A8%8B%E5%BA%8F%E7%9A%84%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86/"/>
     <id>http://yoursite.com/2020/11/03/basic/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%BF%90%E8%A1%8C%E7%A8%8B%E5%BA%8F%E7%9A%84%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86/</id>
     <published>2020-11-03T07:02:48.945Z</published>
-    <updated>2021-03-13T09:26:03.711Z</updated>
+    <updated>2021-03-13T09:40:27.305Z</updated>
     
-    <content type="html"><![CDATA[<pre><code class="hljs subunit">title: date: <span class="hljs-keyword">tags:</span> Basic</code></pre><h2 id="计算概论-第一讲：计算机的基本原理"><a href="#计算概论-第一讲：计算机的基本原理" class="headerlink" title="计算概论 第一讲：计算机的基本原理"></a>计算概论 第一讲：计算机的基本原理</h2><p><img src="https://i.loli.net/2020/11/03/J2t3dckEavKbDwA.png" srcset="/img/loading.gif" alt="image-20201103180929257"></p><p><img src="C:%5CUsers%5CDELL%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20201103181740926.png" srcset="/img/loading.gif" alt="image-20201103181740926"></p><p><img src="C:%5CUsers%5CDELL%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20201103181835591.png" srcset="/img/loading.gif" alt="image-20201103181835591"></p>]]></content>
+    <content type="html"><![CDATA[<h2 id="计算概论-第一讲：计算机的基本原理"><a href="#计算概论-第一讲：计算机的基本原理" class="headerlink" title="计算概论 第一讲：计算机的基本原理"></a>计算概论 第一讲：计算机的基本原理</h2><p><img src="https://i.loli.net/2020/11/03/J2t3dckEavKbDwA.png" srcset="/img/loading.gif" alt="image-20201103180929257"></p><p><img src="C:%5CUsers%5CDELL%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20201103181740926.png" srcset="/img/loading.gif" alt="image-20201103181740926"></p><p><img src="C:%5CUsers%5CDELL%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20201103181835591.png" srcset="/img/loading.gif" alt="image-20201103181835591"></p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;pre&gt;&lt;code class=&quot;hljs subunit&quot;&gt;title: 
-date: 
-&lt;span class=&quot;hljs-keyword&quot;&gt;tags:&lt;/span&gt; Basic&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&quot;计算概论-第一讲：计算机的基本原理&quot;&gt;&lt;a hre
+        &lt;h2 id=&quot;计算概论-第一讲：计算机的基本原理&quot;&gt;&lt;a href=&quot;#计算概论-第一讲：计算机的基本原理&quot; class=&quot;headerlink&quot; title=&quot;计算概论 第一讲：计算机的基本原理&quot;&gt;&lt;/a&gt;计算概论 第一讲：计算机的基本原理&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;
       
     
     </summary>
     
     
+    
+      <category term="Basic" scheme="http://yoursite.com/tags/Basic/"/>
     
   </entry>
   
@@ -505,24 +479,22 @@ date:
     <link href="http://yoursite.com/2020/11/01/OS/1-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E6%A6%82%E8%BF%B0/"/>
     <id>http://yoursite.com/2020/11/01/OS/1-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E6%A6%82%E8%BF%B0/</id>
     <published>2020-11-01T14:01:19.439Z</published>
-    <updated>2021-03-13T09:34:32.791Z</updated>
+    <updated>2021-03-13T09:43:47.085Z</updated>
     
-    <content type="html"><![CDATA[<pre><code class="hljs subunit">title: date: <span class="hljs-keyword">tags:</span> OS</code></pre><h2 id="第一讲：操作系统概述"><a href="#第一讲：操作系统概述" class="headerlink" title="第一讲：操作系统概述"></a>第一讲：操作系统概述</h2><h3 id="1-1-课程概述"><a href="#1-1-课程概述" class="headerlink" title="1.1 课程概述"></a>1.1 课程概述</h3><ol><li><p>预备课程：<br> 1）计算机组成原理<br> 2）C与汇编<br> 3）数据结构</p></li><li><p>参考书籍<br> 1）操作系统概念（郑扣根等）<br> 2）操作系统——精髓与设计原理（陈向群等）</p><h3 id="1-2-教学安排"><a href="#1-2-教学安排" class="headerlink" title="1.2 教学安排"></a>1.2 教学安排</h3></li><li><p>教学内容<br> 1）<strong>操作系统结构</strong>：操作系统的结构特点<br> 2）<strong>中断及系统调用</strong>：中断是OS和硬件交流的接口，系统调用是OS对上层应用提供的服务接口<br> 3）<strong>内存管理</strong>：协调各个应用对内存的使用<br> 4）<strong>进程及线程</strong>：管理用户程序的执行过程<br> 5）<strong>处理机调度</strong>：多个进程交替使用CPU执行指令<br> 6）<strong>同步互斥</strong>：进程间通信<br> 7）<strong>文件系统</strong>：文件的组织<br> 8）<strong>I/O子系统</strong>：管理外设</p></li><li><p>实验内容：ucore系统</p><h3 id="1-3-什么是操作系统"><a href="#1-3-什么是操作系统" class="headerlink" title="1.3 什么是操作系统"></a>1.3 什么是操作系统</h3></li><li><p>没有公认的精确定义</p></li><li><p>理解：</p><ul><li><strong>操作系统是一个控制程序</strong>：一个系统软件；控制程序的执行过程，防止错误和计算机的不当使用；执行用户程序，给用户程序提供各种服务；方便用户使用计算机</li><li><strong>操作系统是一个资源管理器</strong>：应用程序与硬件之间的中间层；管理各种计算机软硬件资源；提供访问计算机软硬件资源的高效手段；解决资源访问冲突，确保资源公平使用</li></ul></li><li><p>操作系统软件的组成</p><p>1）Kernel：操作系统的内部：执行各种资源管理等功能</p><p>2）Shell：命令行接口：通过键盘操控，方便用户进行命令输入</p><p>3）GUI：图形用户接口：WIMP（视窗window、图标icon、选单menu、指标pointer），直接操作，所见即所得</p></li><li><p>操作系统内核特征</p><p>1）并发：计算机系统中存在多个同时运行的程序，需要OS管理与调度</p><p>2）共享：”同时“访问，互斥共享</p><p>3）虚拟：利用多道程序设计技术，让每个用户都觉得独占计算机资源</p><p>4）异步：程序的执行不是一贯到底，而是走走停停，向前推进的速度不可知；OS保证只要运行环境相同，程序的运行结果也相同</p></li></ol><h3 id="1-4-为什么学习操作系统"><a href="#1-4-为什么学习操作系统" class="headerlink" title="1.4 为什么学习操作系统"></a>1.4 为什么学习操作系统</h3><ul><li>操作系统是计算机系统结构的重要组成部分</li></ul><h3 id="1-5-如何学习操作系统"><a href="#1-5-如何学习操作系统" class="headerlink" title="1.5 如何学习操作系统"></a>1.5 如何学习操作系统</h3><ul><li>基础知识 + 实践</li></ul><h3 id="1-6操作系统实例"><a href="#1-6操作系统实例" class="headerlink" title="1.6操作系统实例"></a>1.6操作系统实例</h3><ul><li>UNIX家族</li><li>Linux家族</li><li>Windows家族</li></ul><h3 id="1-7-操作系统的演变"><a href="#1-7-操作系统的演变" class="headerlink" title="1.7 操作系统的演变"></a>1.7 操作系统的演变</h3><ul><li>单用户系统</li><li>批处理系统（多个程序顺序执行）</li><li>多道程序系统（多个程序同时执行，遇到IO时切换CPU）</li><li>分时系统（多个程序同时执行，定时中断切换CPU）</li><li>个人计算机：单用户单系统（利用率不再是关注重点，用户界面和多媒体功能的发展）</li><li>分布式计算：每个用户多个系统</li></ul><h3 id="1-8-操作系统结构"><a href="#1-8-操作系统结构" class="headerlink" title="1.8 操作系统结构"></a>1.8 操作系统结构</h3><ol><li><p><strong>简单结构</strong></p><p><img src="https://i.loli.net/2021/02/08/LQjwRSr3lPxh7Dq.png" srcset="/img/loading.gif" alt="image-20210208013431980"></p></li><li><p><strong>分层结构</strong></p><p><img src="https://i.loli.net/2021/02/08/VgxzpJ7RYAbZX1f.png" srcset="/img/loading.gif" alt="image-20210208013540242"></p></li><li><p><strong>微内核结构</strong>（Microkernel）</p><p><img src="https://i.loli.net/2021/02/08/7bj5YAVXJPpZCwD.png" srcset="/img/loading.gif" alt="image-20210208013940832"></p></li><li><p><strong>外核结构</strong>（Exokernel）</p><p><img src="C:%5CUsers%5CDELL%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20210208014249384.png" srcset="/img/loading.gif" alt="image-20210208014249384"></p></li><li><p><strong>VMM</strong>（虚拟机管理器）</p><p><img src="https://i.loli.net/2021/02/08/VfeRKiwsmzPIuY8.png" srcset="/img/loading.gif" alt="image-20210208014359502"></p></li></ol>]]></content>
+    <content type="html"><![CDATA[<h2 id="第一讲：操作系统概述"><a href="#第一讲：操作系统概述" class="headerlink" title="第一讲：操作系统概述"></a>第一讲：操作系统概述</h2><h3 id="1-1-课程概述"><a href="#1-1-课程概述" class="headerlink" title="1.1 课程概述"></a>1.1 课程概述</h3><ol><li><p>预备课程：<br> 1）计算机组成原理<br> 2）C与汇编<br> 3）数据结构</p></li><li><p>参考书籍<br> 1）操作系统概念（郑扣根等）<br> 2）操作系统——精髓与设计原理（陈向群等）</p><h3 id="1-2-教学安排"><a href="#1-2-教学安排" class="headerlink" title="1.2 教学安排"></a>1.2 教学安排</h3></li><li><p>教学内容<br> 1）<strong>操作系统结构</strong>：操作系统的结构特点<br> 2）<strong>中断及系统调用</strong>：中断是OS和硬件交流的接口，系统调用是OS对上层应用提供的服务接口<br> 3）<strong>内存管理</strong>：协调各个应用对内存的使用<br> 4）<strong>进程及线程</strong>：管理用户程序的执行过程<br> 5）<strong>处理机调度</strong>：多个进程交替使用CPU执行指令<br> 6）<strong>同步互斥</strong>：进程间通信<br> 7）<strong>文件系统</strong>：文件的组织<br> 8）<strong>I/O子系统</strong>：管理外设</p></li><li><p>实验内容：ucore系统</p><h3 id="1-3-什么是操作系统"><a href="#1-3-什么是操作系统" class="headerlink" title="1.3 什么是操作系统"></a>1.3 什么是操作系统</h3></li><li><p>没有公认的精确定义</p></li><li><p>理解：</p><ul><li><strong>操作系统是一个控制程序</strong>：一个系统软件；控制程序的执行过程，防止错误和计算机的不当使用；执行用户程序，给用户程序提供各种服务；方便用户使用计算机</li><li><strong>操作系统是一个资源管理器</strong>：应用程序与硬件之间的中间层；管理各种计算机软硬件资源；提供访问计算机软硬件资源的高效手段；解决资源访问冲突，确保资源公平使用</li></ul></li><li><p>操作系统软件的组成</p><p>1）Kernel：操作系统的内部：执行各种资源管理等功能</p><p>2）Shell：命令行接口：通过键盘操控，方便用户进行命令输入</p><p>3）GUI：图形用户接口：WIMP（视窗window、图标icon、选单menu、指标pointer），直接操作，所见即所得</p></li><li><p>操作系统内核特征</p><p>1）并发：计算机系统中存在多个同时运行的程序，需要OS管理与调度</p><p>2）共享：”同时“访问，互斥共享</p><p>3）虚拟：利用多道程序设计技术，让每个用户都觉得独占计算机资源</p><p>4）异步：程序的执行不是一贯到底，而是走走停停，向前推进的速度不可知；OS保证只要运行环境相同，程序的运行结果也相同</p></li></ol><h3 id="1-4-为什么学习操作系统"><a href="#1-4-为什么学习操作系统" class="headerlink" title="1.4 为什么学习操作系统"></a>1.4 为什么学习操作系统</h3><ul><li>操作系统是计算机系统结构的重要组成部分</li></ul><h3 id="1-5-如何学习操作系统"><a href="#1-5-如何学习操作系统" class="headerlink" title="1.5 如何学习操作系统"></a>1.5 如何学习操作系统</h3><ul><li>基础知识 + 实践</li></ul><h3 id="1-6操作系统实例"><a href="#1-6操作系统实例" class="headerlink" title="1.6操作系统实例"></a>1.6操作系统实例</h3><ul><li>UNIX家族</li><li>Linux家族</li><li>Windows家族</li></ul><h3 id="1-7-操作系统的演变"><a href="#1-7-操作系统的演变" class="headerlink" title="1.7 操作系统的演变"></a>1.7 操作系统的演变</h3><ul><li>单用户系统</li><li>批处理系统（多个程序顺序执行）</li><li>多道程序系统（多个程序同时执行，遇到IO时切换CPU）</li><li>分时系统（多个程序同时执行，定时中断切换CPU）</li><li>个人计算机：单用户单系统（利用率不再是关注重点，用户界面和多媒体功能的发展）</li><li>分布式计算：每个用户多个系统</li></ul><h3 id="1-8-操作系统结构"><a href="#1-8-操作系统结构" class="headerlink" title="1.8 操作系统结构"></a>1.8 操作系统结构</h3><ol><li><p><strong>简单结构</strong></p><p><img src="https://i.loli.net/2021/02/08/LQjwRSr3lPxh7Dq.png" srcset="/img/loading.gif" alt="image-20210208013431980"></p></li><li><p><strong>分层结构</strong></p><p><img src="https://i.loli.net/2021/02/08/VgxzpJ7RYAbZX1f.png" srcset="/img/loading.gif" alt="image-20210208013540242"></p></li><li><p><strong>微内核结构</strong>（Microkernel）</p><p><img src="https://i.loli.net/2021/02/08/7bj5YAVXJPpZCwD.png" srcset="/img/loading.gif" alt="image-20210208013940832"></p></li><li><p><strong>外核结构</strong>（Exokernel）</p><p><img src="C:%5CUsers%5CDELL%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20210208014249384.png" srcset="/img/loading.gif" alt="image-20210208014249384"></p></li><li><p><strong>VMM</strong>（虚拟机管理器）</p><p><img src="https://i.loli.net/2021/02/08/VfeRKiwsmzPIuY8.png" srcset="/img/loading.gif" alt="image-20210208014359502"></p></li></ol>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;pre&gt;&lt;code class=&quot;hljs subunit&quot;&gt;title: 
-date: 
-&lt;span class=&quot;hljs-keyword&quot;&gt;tags:&lt;/span&gt; OS&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&quot;第一讲：操作系统概述&quot;&gt;&lt;a href=&quot;#第一讲：操作
+        &lt;h2 id=&quot;第一讲：操作系统概述&quot;&gt;&lt;a href=&quot;#第一讲：操作系统概述&quot; class=&quot;headerlink&quot; title=&quot;第一讲：操作系统概述&quot;&gt;&lt;/a&gt;第一讲：操作系统概述&lt;/h2&gt;&lt;h3 id=&quot;1-1-课程概述&quot;&gt;&lt;a href=&quot;#1-1-课程概述&quot; cla
       
     
     </summary>
     
     
+    
+      <category term="OS" scheme="http://yoursite.com/tags/OS/"/>
     
   </entry>
   

@@ -144,7 +144,7 @@
                   
                   <span class="post-meta mr-2">
                     <i class="iconfont icon-chart"></i>
-                    967 字
+                    961 字
                   </span>
                 
 
@@ -183,11 +183,7 @@
           <div class="post-content mx-auto" id="post">
             
             <article class="markdown-body">
-              <pre><code class="hljs subunit">title: 
-date: 
-<span class="hljs-keyword">tags:</span> 嵌入式</code></pre>
-
-<h3 id="51单片机的IO口"><a href="#51单片机的IO口" class="headerlink" title="51单片机的IO口"></a>51单片机的IO口</h3><h4 id="双向口与准双向口："><a href="#双向口与准双向口：" class="headerlink" title="双向口与准双向口："></a>双向口与准双向口：</h4><pre><code class="hljs python"><span class="hljs-comment"># 准双向口是指P1、2、3有固定的内部上拉电阻，当用做输入时被拉高，当外部拉低时（低电平）会拉电流电流（source current, 这里拉电流是电流从单片机往外走），而P0则是真双向口，因为作为输入时它是悬浮的。</span>
+              <h3 id="51单片机的IO口"><a href="#51单片机的IO口" class="headerlink" title="51单片机的IO口"></a>51单片机的IO口</h3><h4 id="双向口与准双向口："><a href="#双向口与准双向口：" class="headerlink" title="双向口与准双向口："></a>双向口与准双向口：</h4><pre><code class="hljs python"><span class="hljs-comment"># 准双向口是指P1、2、3有固定的内部上拉电阻，当用做输入时被拉高，当外部拉低时（低电平）会拉电流电流（source current, 这里拉电流是电流从单片机往外走），而P0则是真双向口，因为作为输入时它是悬浮的。</span>
 <span class="hljs-comment"># C51的说明书上说：”Because Ports 1, 2, and 3 have fixed internal pullups, they are sometimes called quasi-bidirectional ports. When configured as inputs, they pull high and source current (IIL) when externally pulled low. Port 0, on the other hand, is considered truly bidirectional, because it floats when configured as an input. "</span>
 <span class="hljs-comment"># “准”就是“基本上的意思”，也就是“准双向口”不是真正的双向口。</span>
 <span class="hljs-comment"># 其实重点在P0口。P0口是双向指的是它被用作地址/数据端口时，只有在这个时候，P0口才处于两个开关管推挽状态，当两个开关管都关闭时，才会出现高阻状态．当P0口用于一般I/O口时，内部接Vcc的那个开关管是与引脚（端口）脱离联系的，这个时候，只有拉地的那个开关管起作用，P0口作为输出，是必须外接上拉电阻的，不然就无法输出高电平；</span>
@@ -203,6 +199,13 @@ date:
             <div>
               <div class="post-metas mb-3">
                 
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F/">嵌入式</a>
+                    
+                  </div>
                 
               </div>
               
