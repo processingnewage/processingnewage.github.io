@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2021-03-13T09:38:41.059Z</updated>
+  <updated>2021-03-13T09:45:07.638Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://yoursite.com/2021/03/13/CC++/stack%E5%92%8Cheap/"/>
     <id>http://yoursite.com/2021/03/13/CC++/stack%E5%92%8Cheap/</id>
     <published>2021-03-13T07:02:26.244Z</published>
-    <updated>2021-03-13T09:38:41.059Z</updated>
+    <updated>2021-03-13T09:45:07.638Z</updated>
     
     <content type="html"><![CDATA[<ol><li><p>Q：为什么不都设成栈？这样不就不用自己释放内存了（c++）这样要省好多力气呀。我疑惑的是，用c++的时候，什么时候用堆合适什么时候用栈合适。因为平时写作业除非老师要求，用栈感觉完全够了，并没有遇到用堆比用栈更有优势的情况，所以就很疑惑。（我知道有一种情况是如果程序结束之后仍然想要访问那一段数据就要用堆，这个比较好理解，因为堆需要手动释放）</p><p>A：<img src="stack%E5%92%8Cheap.assets/image-20210313151230205.png" srcset="/img/loading.gif" alt="image-20210313151230205"></p><p><img src="stack%E5%92%8Cheap.assets/image-20210313152659429.png" srcset="/img/loading.gif" alt="image-20210313152659429"></p><p><img src="stack%E5%92%8Cheap.assets/image-20210313152755853.png" srcset="/img/loading.gif" alt="image-20210313152755853"></p><ul><li><strong>补充链接</strong>：<a href="http://c.biancheng.net/c/stack/" target="_blank" rel="noopener">http://c.biancheng.net/c/stack/</a></li></ul></li></ol><ul><li><strong>C/C++ 内存结构主要分为 常量池、静态区、全局区、堆、栈</strong><ul><li>不同的区域有不同的特点：根据程序的需要选择不同的存储模型达到最高的存储和执行效率</li></ul></li></ul>]]></content>
     
