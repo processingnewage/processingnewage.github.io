@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" type="image/png" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="">
+  <meta name="author" content="John Doe">
+  <meta name="keywords" content="">
+  <title>嵌入式/51单片机的IO口 - Hexo</title>
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
+<link  rel="stylesheet" href="https://cdn.staticfile.org/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/10.0.0/styles/github-gist.min.css" />
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_fmb4a04yx8h.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_pjno9b9zyxs.css">
+
+
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+<meta name="generator" content="Hexo 4.2.1"><link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+</head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>processing</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/">
+              <i class="iconfont icon-home-fill"></i>
+              Home</a>
+          </li>
+        
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/archives/">
+              <i class="iconfont icon-archive-fill"></i>
+              Archives</a>
+          </li>
+        
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/categories/">
+              <i class="iconfont icon-category-fill"></i>
+              Categories</a>
+          </li>
+        
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/tags/">
+              <i class="iconfont icon-tags-fill"></i>
+              Tags</a>
+          </li>
+        
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/about/">
+              <i class="iconfont icon-user-fill"></i>
+              About</a>
+          </li>
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="view intro-2" id="background" parallax=true
+         style="background: url('/img/default.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="container text-center white-text fadeInUp">
+            <span class="h2" id="subtitle">
+              
+            </span>
+
+            
+              
+                <div class="mt-3 post-meta">
+                  <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+                  <time datetime="2021-02-06 22:05">
+                    February 6, 2021 pm
+                  </time>
+                </div>
+              
+
+              <div class="mt-1">
+                
+                  
+                  <span class="post-meta mr-2">
+                    <i class="iconfont icon-chart"></i>
+                    961 字
+                  </span>
+                
+
+                
+                  
+                  <span class="post-meta mr-2">
+                      <i class="iconfont icon-clock-fill"></i>
+                    
+                    
+                    10
+                     分钟
+                  </span>
+                
+
+                
+              </div>
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-md">
+      <div class="container nopadding-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <div class="post-content mx-auto" id="post">
+            
+            <article class="markdown-body">
+              <h3 id="51单片机的IO口"><a href="#51单片机的IO口" class="headerlink" title="51单片机的IO口"></a>51单片机的IO口</h3><h4 id="双向口与准双向口："><a href="#双向口与准双向口：" class="headerlink" title="双向口与准双向口："></a>双向口与准双向口：</h4><pre><code class="hljs python"><span class="hljs-comment"># 准双向口是指P1、2、3有固定的内部上拉电阻，当用做输入时被拉高，当外部拉低时（低电平）会拉电流电流（source current, 这里拉电流是电流从单片机往外走），而P0则是真双向口，因为作为输入时它是悬浮的。</span>
+<span class="hljs-comment"># C51的说明书上说：”Because Ports 1, 2, and 3 have fixed internal pullups, they are sometimes called quasi-bidirectional ports. When configured as inputs, they pull high and source current (IIL) when externally pulled low. Port 0, on the other hand, is considered truly bidirectional, because it floats when configured as an input. "</span>
+<span class="hljs-comment"># “准”就是“基本上的意思”，也就是“准双向口”不是真正的双向口。</span>
+<span class="hljs-comment"># 其实重点在P0口。P0口是双向指的是它被用作地址/数据端口时，只有在这个时候，P0口才处于两个开关管推挽状态，当两个开关管都关闭时，才会出现高阻状态．当P0口用于一般I/O口时，内部接Vcc的那个开关管是与引脚（端口）脱离联系的，这个时候，只有拉地的那个开关管起作用，P0口作为输出，是必须外接上拉电阻的，不然就无法输出高电平；</span>
+<span class="hljs-comment"># 如果P0口作为输入，则必须先对端口写1，使拉地的开关管断开，这个时候，如果不接上拉电阻，则是高阻状态，就是一个双向口，如果接上拉电阻，则本身输出高电平，对输入信号的逻辑无影响（注意是对逻辑无影响，对实际参数有无影响我不确定，但是我认为是有的）。</span>
+<span class="hljs-comment"># 双向与准双向，根本原则是双向包含了高阻这个状态，而不在于是否需要先写1或者不写，P1~P3口因为有内部上拉电阻，因此无论如何不是双向；P0口内部无上拉电阻，在处于数据/地址功能时，自动完成3态的转换，是双向，处于一般I/O口时，如果不接外部上拉，而且先向端口写了1，那么就处于高阻状态，此时，它也是一个人为的双向口，这与它处于地址/数据功能时的自动双向有区别，以及与P1~P3处于输入时输出锁存器为1是有区别的跟I2C总线上那种漏极开路或者集电极开路结构差不多. 通过上拉电阻(或者下拉电阻)来提供一种电平的驱动.</span>
+当作为输入使用时，就将开关断开，这样就只剩下上拉(或者下拉)电阻，因而阻抗比较高，可以由其它设备驱动该IO口。==准双向口在做为输入使用时，实际上还是一种输出状态==。只是该输出状态的内阻比较大而已。而真正的双向IO口，有方向控制寄存器，作为输入使用时输出部分被断开。
+<span class="hljs-comment"># 双向口与准双向口的区别为双向口有高阻态，输入为真正的外部信号，准双向口内部有上拉，故高电平为内部给出不是真正的外部信号！软件做处理时都要先向口写“1”！</span>
+<span class="hljs-comment"># P0口为真正的双向口，其余为准双向口！说明一点：51的基础是8031，8031的I/O口只有P1口！而P0及P2口为外扩存储器，P3为多功能口！51后来增加了其余口的I/O口功能！</span></code></pre>
+
+<h4 id="单片机应用原理篇之并行IO口结构（P1口）-https-www-bilibili-com-video-BV1Ep4y1Q7C8"><a href="#单片机应用原理篇之并行IO口结构（P1口）-https-www-bilibili-com-video-BV1Ep4y1Q7C8" class="headerlink" title="单片机应用原理篇之并行IO口结构（P1口）[https://www.bilibili.com/video/BV1Ep4y1Q7C8/]"></a>单片机应用原理篇之并行IO口结构（P1口）[<a href="https://www.bilibili.com/video/BV1Ep4y1Q7C8/]" target="_blank" rel="noopener">https://www.bilibili.com/video/BV1Ep4y1Q7C8/]</a></h4><h4 id="单片机应用原理篇之并行IO口结构（P3口）-https-www-bilibili-com-video-BV1a5411s7E8"><a href="#单片机应用原理篇之并行IO口结构（P3口）-https-www-bilibili-com-video-BV1a5411s7E8" class="headerlink" title="单片机应用原理篇之并行IO口结构（P3口）[https://www.bilibili.com/video/BV1a5411s7E8/]"></a>单片机应用原理篇之并行IO口结构（P3口）[<a href="https://www.bilibili.com/video/BV1a5411s7E8/]" target="_blank" rel="noopener">https://www.bilibili.com/video/BV1a5411s7E8/]</a></h4><h4 id="单片机应用原理篇之并行口IO的结构（P0口和P2口-https-www-bilibili-com-video-BV1E5411s7go"><a href="#单片机应用原理篇之并行口IO的结构（P0口和P2口-https-www-bilibili-com-video-BV1E5411s7go" class="headerlink" title="单片机应用原理篇之并行口IO的结构（P0口和P2口)[https://www.bilibili.com/video/BV1E5411s7go/]"></a>单片机应用原理篇之并行口IO的结构（P0口和P2口)[<a href="https://www.bilibili.com/video/BV1E5411s7go/]" target="_blank" rel="noopener">https://www.bilibili.com/video/BV1E5411s7go/]</a></h4>
+            </article>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                
+              </div>
+              
+                <p class="note note-warning">本博客所有文章除特别声明外，均采用 <a href="https://zh.wikipedia.org/wiki/Wikipedia:CC_BY-SA_3.0%E5%8D%8F%E8%AE%AE%E6%96%87%E6%9C%AC" target="_blank" rel="nofollow noopener noopener">CC BY-SA 3.0协议</a> 。转载请注明出处！</p>
+              
+              
+                <div class="post-prevnext row">
+                  <div class="post-prev col-6">
+                    
+                    
+                      <a href="/2021/02/08/OS/2-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%BB%93%E6%9E%84/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">OS/2-操作系统结构</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </div>
+                  <div class="post-next col-6">
+                    
+                    
+                      <a href="/2021/02/06/Java/basic/">
+                        <span class="hidden-mobile">Java/basic</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </div>
+                </div>
+              
+            </div>
+
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;TOC</p>
+  <div id="tocbot"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+  </main>
+
+  
+    <a id="scroll-top-button" href="#" role="button">
+      <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+    </a>
+  
+
+  
+    <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Search</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">keyword</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+  
+
+  
+
+  
+
+  <footer class="mt-5">
+  <div class="text-center py-3">
+    <div>
+      <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a>
+      <i class="iconfont icon-love"></i>
+      <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener">
+        <span>Fluid</span></a>
+    </div>
+    
+
+    
+
+    
+  </div>
+</footer>
+
+<!-- SCRIPTS -->
+<script  src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js" ></script>
+<script  src="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/js/bootstrap.min.js" ></script>
+<script  src="/js/main.js" ></script>
+
+
+  <script  src="/js/lazyload.js" ></script>
+
+
+
+  
+  <script  src="https://cdn.staticfile.org/tocbot/4.11.1/tocbot.min.js" ></script>
+  <script>
+    $(document).ready(function () {
+      var boardCtn = $('#board-ctn');
+      var boardTop = boardCtn.offset().top;
+
+      tocbot.init({
+        tocSelector: '#tocbot',
+        contentSelector: '.post-content',
+        headingSelector: 'h1,h2,h3,h4,h5,h6',
+        linkClass: 'tocbot-link',
+        activeLinkClass: 'tocbot-active-link',
+        listClass: 'tocbot-list',
+        isCollapsedClass: 'tocbot-is-collapsed',
+        collapsibleClass: 'tocbot-is-collapsible',
+        collapseDepth: 0,
+        scrollSmooth: true,
+        headingsOffset: -boardTop
+      });
+      if ($('.toc-list-item').length > 0) {
+        $('#toc').css('visibility', 'visible');
+      }
+    });
+  </script>
+
+
+
+
+
+  <script defer src="https://cdn.staticfile.org/clipboard.js/2.0.6/clipboard.min.js" ></script>
+  <script  src="/js/clipboard-use.js" ></script>
+
+
+
+
+
+
+<!-- Plugins -->
+
+
+
+  <script  src="https://cdn.staticfile.org/typed.js/2.0.11/typed.min.js" ></script>
+  <script>
+    var typed = new Typed('#subtitle', {
+      strings: [
+        '  ',
+        "嵌入式/51单片机的IO口&nbsp;",
+      ],
+      cursorChar: "_",
+      typeSpeed: 70,
+      loop: false,
+    });
+    typed.stop();
+    $(document).ready(function () {
+      $(".typed-cursor").addClass("h2");
+      typed.start();
+    });
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/anchor-js/4.2.2/anchor.min.js" ></script>
+  <script>
+    anchors.options = {
+      placement: "right",
+      visible: "hover",
+      
+    };
+    var el = "h1,h2,h3,h4,h5,h6".split(",");
+    var res = [];
+    for (item of el) {
+      res.push(".markdown-body > " + item)
+    }
+    anchors.add(res.join(", "))
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    var path = "/local-search.xml";
+    var inputArea = document.querySelector("#local-search-input");
+    inputArea.onclick = function () {
+      searchFunc(path, 'local-search-input', 'local-search-result');
+      this.onclick = null
+    }
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+  <script>
+    $('#post img:not(.no-zoom img, img[no-zoom]), img[zoom]').each(
+      function () {
+        var element = document.createElement('a');
+        $(element).attr('data-fancybox', 'images');
+        $(element).attr('href', $(this).attr('src'));
+        $(this).wrap(element);
+      }
+    );
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

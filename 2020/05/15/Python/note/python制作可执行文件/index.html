@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" type="image/png" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="">
+  <meta name="author" content="John Doe">
+  <meta name="keywords" content="">
+  <title>Python/note/python制作可执行文件 - Hexo</title>
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
+<link  rel="stylesheet" href="https://cdn.staticfile.org/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/10.0.0/styles/github-gist.min.css" />
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_fmb4a04yx8h.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_pjno9b9zyxs.css">
+
+
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+<meta name="generator" content="Hexo 4.2.1"><link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+</head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>processing</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/">
+              <i class="iconfont icon-home-fill"></i>
+              Home</a>
+          </li>
+        
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/archives/">
+              <i class="iconfont icon-archive-fill"></i>
+              Archives</a>
+          </li>
+        
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/categories/">
+              <i class="iconfont icon-category-fill"></i>
+              Categories</a>
+          </li>
+        
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/tags/">
+              <i class="iconfont icon-tags-fill"></i>
+              Tags</a>
+          </li>
+        
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/about/">
+              <i class="iconfont icon-user-fill"></i>
+              About</a>
+          </li>
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="view intro-2" id="background" parallax=true
+         style="background: url('/img/default.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="container text-center white-text fadeInUp">
+            <span class="h2" id="subtitle">
+              
+            </span>
+
+            
+              
+                <div class="mt-3 post-meta">
+                  <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+                  <time datetime="2020-05-15 15:52">
+                    May 15, 2020 pm
+                  </time>
+                </div>
+              
+
+              <div class="mt-1">
+                
+                  
+                  <span class="post-meta mr-2">
+                    <i class="iconfont icon-chart"></i>
+                    1.6k 字
+                  </span>
+                
+
+                
+                  
+                  <span class="post-meta mr-2">
+                      <i class="iconfont icon-clock-fill"></i>
+                    
+                    
+                    17
+                     分钟
+                  </span>
+                
+
+                
+              </div>
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-md">
+      <div class="container nopadding-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <div class="post-content mx-auto" id="post">
+            
+            <article class="markdown-body">
+              <h4 id="Python制作可执行文件"><a href="#Python制作可执行文件" class="headerlink" title="Python制作可执行文件"></a>Python制作可执行文件</h4><p>大家都知道Python代码的运行需要解释器<br>如果我们编写了一个Python代码开发的工具，给别人使用的时候，我们需要让别人做如下两步：</p>
+<ol>
+<li>安装Python解释器</li>
+<li>在命令行运行python程序文件，比如： python xxx.py<br>如果别人是一个非IT人士，使用这样的工具，就太麻烦了<br>如果我们能直接让别人直接双击运行我们的程序就好了<br>有几款工具可以把==解释器、Python代码 和 依赖的库==制作到一个目录中，我们只需要双击其中的 可执行程序，就可以运行我们的Python程序了<br>其中<strong>PyInstaller</strong>是目前比较常用的一款<br>PyInstaller 支持 Python 2.7 和 Python 3.3 以后的版本<br>支持在 Windows, Mac OS X, and Linux系统上打包出可执行程序<br>其官方网站在这里： <a href="http://www.pyinstaller.org" target="_blank" rel="noopener">http://www.pyinstaller.org</a><br>下面我们就来看看在Windows系统中使用它制作可执行程序的例子：<h5 id="命令行程序打包"><a href="#命令行程序打包" class="headerlink" title="命令行程序打包"></a>命令行程序打包</h5>首先我们需要安装 PyInstaller， 当然用pip命令安装喽，如下：<pre><code class="hljs cmake">pip <span class="hljs-keyword">install</span> pyinstaller</code></pre>
+
+</li>
+</ol>
+<p>假设我们需要开发一个可以让用户输入数学运算公式，并进行计算的程序<br>我们先创建一个名为 byhy.py 的文件，写入如下代码</p>
+<pre><code class="hljs isbl"><span class="hljs-function"><span class="hljs-title">print</span>(<span class="hljs-variable">welcome</span>)</span>
+
+<span class="hljs-variable"><span class="hljs-keyword">while</span></span> <span class="hljs-variable"><span class="hljs-literal">True</span></span>:
+    <span class="hljs-variable">exp</span> = <span class="hljs-function"><span class="hljs-title">input</span>(<span class="hljs-string">'\n\n请输入一个数学运算式 [输入quit退出]：'</span>)</span>
+    <span class="hljs-variable"><span class="hljs-keyword">if</span></span> <span class="hljs-variable">exp</span> == <span class="hljs-string">'quit'</span>:
+        <span class="hljs-variable">break</span>
+    <span class="hljs-variable"><span class="hljs-keyword">try</span></span>:
+        <span class="hljs-variable"><span class="hljs-class">result</span></span> = <span class="hljs-function"><span class="hljs-title">eval</span>(<span class="hljs-variable">exp</span>)</span>
+    <span class="hljs-variable"><span class="hljs-keyword">except</span></span>:
+        <span class="hljs-function"><span class="hljs-title">print</span>(<span class="hljs-string">'\n！！无效的运算式'</span>)</span>
+        <span class="hljs-variable">continue</span>
+
+    <span class="hljs-function"><span class="hljs-title">print</span>(<span class="hljs-variable">f</span><span class="hljs-string">'结果为: &#123;result&#125;'</span>)</span></code></pre>
+
+<p>然后我们在cmd窗口， cd进入到该代码文件所在的目录下面，执行如下的命令</p>
+<pre><code class="hljs taggerscript">pyinstaller byhy.py --workpath d:<span class="hljs-symbol">\p</span>ybuild  --distpath d:<span class="hljs-symbol">\p</span>ybuild<span class="hljs-symbol">\d</span>ist</code></pre>
+
+<p>注意：<br>参数 –workpath 指定了制作过程中==临时文件的存放目录==<br>参数 –distpath 指定了==最终的可执行文件目录所在的父目录==<br>上面的命令执行结束后，我们进入到 目录 d:\pybuild\dist 中，就会发现有一个目录叫byhy （和我们的入口文件byhy同名），该目录中包含了如下文件<br><img src="http://cdn1.python3.vip/imgs/gh/36257654_40577359-ee4b0fc6-6136-11e8-96b0-e7be9d3f89cd.png" srcset="/img/loading.gif" alt="1"><br>里面有一个可执行文件 就叫 byhy.exe ，和我们的入口文件byhy同名<br><img src="http://cdn1.python3.vip/imgs/gh/36257654_42426250-1f2e1f5e-8359-11e8-98b0-036a5c5b5b5f.png" srcset="/img/loading.gif" alt="2"><br>双击运行它，就可以发现效果和我们在命令行中运行一样<br>但是它却不需要使用Python解释器了。 因为解释器就内置在这个目录中了<br>以后我们要把这个程序给别人使用，只需要把目录 byhy 打包成 zip 文件 发给别人<br>别人收到后，解压，执行里面的 byhy.exe 就可以直接运行了<br>是不是很方便呢 ：)</p>
+<h5 id="将库文件单独存放在目录中"><a href="#将库文件单独存放在目录中" class="headerlink" title="将库文件单独存放在目录中"></a>将库文件单独存放在目录中</h5><p>上面这样操作后，大家可以发现我们只要运行byhy.exe文件，但是该目录下却有很多其他的.dll 之类的库文件<br>这使得我们要寻找并运行程序时，要在这么多文件中找到 .exe 文件，比较费劲<br>我们可以通过如下方法，把这些库文件放到 单独的一个 目录中。 这样.exe所在的目录就显得比较清爽了，也好找到.exe文件了<br>我们添加一个Python代码文件，名为 runtimehook1.py<br>其内容如下</p>
+<pre><code class="hljs lua">import sys
+import <span class="hljs-built_in">os</span>
+
+currentdir = <span class="hljs-built_in">os</span>.<span class="hljs-built_in">path</span>.dirname(sys.argv[<span class="hljs-number">0</span>])
+libdir = <span class="hljs-built_in">os</span>.<span class="hljs-built_in">path</span>.join(currentdir, <span class="hljs-string">"lib"</span>)
+<span class="hljs-built_in">print</span>(currentdir)
+sys.<span class="hljs-built_in">path</span>.append(libdir)
+<span class="hljs-built_in">os</span>.environ[<span class="hljs-string">'path'</span>] += <span class="hljs-string">';./lib'</span></code></pre>
+
+<p>然后我们在cmd窗口， cd进入代码byhy文件所在的目录下面，执行制作exe命令时，加上 参数 –runtime-hook=”runtimehook1.py”<br>如下所示</p>
+<pre><code class="hljs jboss-cli">pyinstaller byhy.py <span class="hljs-params">--workpath</span> d:\pybuild  <span class="hljs-params">--distpath</span> d:\pybuild\dist <span class="hljs-params">--runtime-hook=</span><span class="hljs-string">"runtimehook1.py"</span></code></pre>
+<p>上面的命令指定 生成的.exe运行时，会先执行 runtimehook1.py 里面的代码<br>这样就会指定 .exe 程序所在的目录下面的lib目录为<br>Python库搜索路径，这是由 sys.path.append(libdir) 指定的<br>动态链接库文件的 搜索路径，这是由 os.environ[‘path’] += ‘;./lib’ 指定的<br>上面的命令执行结束后，我们进入到 目录 d:\pybuild\dist\byhy 中，新建一个名为 lib 的目录，把除了下面的几个文件之外的所有其他文件都放到lib目录里面</p>
+<pre><code class="hljs css"><span class="hljs-selector-tag">base_library</span><span class="hljs-selector-class">.zip</span>
+<span class="hljs-selector-tag">byhy</span><span class="hljs-selector-class">.exe</span>
+<span class="hljs-selector-tag">byhy</span><span class="hljs-selector-class">.exe</span><span class="hljs-selector-class">.manifest</span>
+<span class="hljs-selector-tag">python36</span><span class="hljs-selector-class">.dll</span>
+<span class="hljs-selector-tag">tcl</span>文件夹
+<span class="hljs-selector-tag">tk</span>文件夹</code></pre>
+<p>这样，可执行程序的目录就显得清爽多了</p>
+<h5 id="图形界面程序打包"><a href="#图形界面程序打包" class="headerlink" title="图形界面程序打包"></a>图形界面程序打包</h5><p>有时候，我们开发的是一个图形界面的程序，使用类似上面的命令运行的时候，也会有一个console窗口（就是俗称的DOS黑窗口），这样很不美观<br>我们在 执行打包命令的时候，可以加上参数 –noconsole 就可以去掉该窗口<br>比如</p>
+<pre><code class="hljs brainfuck"><span class="hljs-comment">pyinstaller</span> <span class="hljs-comment">guitool</span><span class="hljs-string">.</span><span class="hljs-comment">py</span> --<span class="hljs-comment">noconsole</span> --<span class="hljs-comment">workpath</span> <span class="hljs-comment">d:\pybuild</span>  --<span class="hljs-comment">distpath</span> <span class="hljs-comment">d:\pybuild\dist</span></code></pre>
+
+<h5 id="应用程序图标"><a href="#应用程序图标" class="headerlink" title="应用程序图标"></a>应用程序图标</h5><p>应用程序图标是放在可执行程序里面的资源<br>可以在PyInstaller创建可执行程序时，通过参数 –icon=”logo.ico” 指定<br>比如</p>
+<pre><code class="hljs jboss-cli">pyinstaller httpclient.py <span class="hljs-params">--noconsole</span> <span class="hljs-params">--hidden-import</span> PySide2.QtXml <span class="hljs-params">--icon=</span><span class="hljs-string">"logo.ico"</span></code></pre>
+
+<p>注意参数一定是存在的ico文件，不能是png等图片文件<br>如果你只有png文件，可以通过在线的png转ico文件网站，生成ico，比如下面两个网站<br><a href="https://www.zamzar.com/convert/png-to-ico/" target="_blank" rel="noopener">https://www.zamzar.com/convert/png-to-ico/</a><br><a href="https://www.easyicon.net/covert/" target="_blank" rel="noopener">https://www.easyicon.net/covert/</a></p>
+<h5 id="动态导入的库"><a href="#动态导入的库" class="headerlink" title="动态导入的库"></a>动态导入的库</h5><p>有的时候，我们运行打包好的程序，会出现导入库错误的提示，比如下面</p>
+<pre><code class="hljs xquery">ImportError: could<span class="hljs-built_in"> not</span> <span class="hljs-keyword">import</span> <span class="hljs-keyword">module</span> <span class="hljs-string">'PySide2.QtXml'</span></code></pre>
+
+<p>这意思是PyInstaller打包的时候，没有把 PySide2.QtXml库打包<br>因为PyInstaller是通过分析我们的代码里面的 import 语句，推断我们的程序需要哪些库的<br>但是有些代码，导入库的时候，是动态导入<br>所谓动态导入就是，写代码的时候并不确定要导入什么库，而是在运行的时候才知道<br>这种情况，不是用 import语句，而是用 <strong>import</strong> 或者 exec 、 eval 这样的方式，来导入库<br>PyInstaller对此有说明<br>PyInstaller 没法分析出动态导入的库有哪些，我们可以通过命令行参数 –hidden-import 告诉它<br>比如，如果我们运行出现 could not import module ‘PySide2.QtXml’ 的错误 ， 就可以这样</p>
+<pre><code class="hljs css"><span class="hljs-selector-tag">pyinstaller</span> <span class="hljs-selector-tag">httpclient</span><span class="hljs-selector-class">.py</span>  <span class="hljs-selector-tag">--hidden-import</span> <span class="hljs-selector-tag">PySide2</span><span class="hljs-selector-class">.QtXml</span></code></pre>
+            </article>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/Python/">Python</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">本博客所有文章除特别声明外，均采用 <a href="https://zh.wikipedia.org/wiki/Wikipedia:CC_BY-SA_3.0%E5%8D%8F%E8%AE%AE%E6%96%87%E6%9C%AC" target="_blank" rel="nofollow noopener noopener">CC BY-SA 3.0协议</a> 。转载请注明出处！</p>
+              
+              
+                <div class="post-prevnext row">
+                  <div class="post-prev col-6">
+                    
+                    
+                      <a href="/2020/05/15/Python/note/python%E5%A4%9A%E7%BA%BF%E7%A8%8B/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">Python/note/python多线程</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </div>
+                  <div class="post-next col-6">
+                    
+                    
+                      <a href="/2020/05/15/Others/%E5%85%B3%E4%BA%8E%E4%BF%AE%E6%94%B9UEFI%E5%90%AF%E5%8A%A8%E9%A1%B9%E7%9A%84%E9%97%AE%E9%A2%98/">
+                        <span class="hidden-mobile">Others/关于修改UEFI启动项的问题</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </div>
+                </div>
+              
+            </div>
+
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;TOC</p>
+  <div id="tocbot"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+  </main>
+
+  
+    <a id="scroll-top-button" href="#" role="button">
+      <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+    </a>
+  
+
+  
+    <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Search</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">keyword</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+  
+
+  
+
+  
+
+  <footer class="mt-5">
+  <div class="text-center py-3">
+    <div>
+      <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a>
+      <i class="iconfont icon-love"></i>
+      <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener">
+        <span>Fluid</span></a>
+    </div>
+    
+
+    
+
+    
+  </div>
+</footer>
+
+<!-- SCRIPTS -->
+<script  src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js" ></script>
+<script  src="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/js/bootstrap.min.js" ></script>
+<script  src="/js/main.js" ></script>
+
+
+  <script  src="/js/lazyload.js" ></script>
+
+
+
+  
+  <script  src="https://cdn.staticfile.org/tocbot/4.11.1/tocbot.min.js" ></script>
+  <script>
+    $(document).ready(function () {
+      var boardCtn = $('#board-ctn');
+      var boardTop = boardCtn.offset().top;
+
+      tocbot.init({
+        tocSelector: '#tocbot',
+        contentSelector: '.post-content',
+        headingSelector: 'h1,h2,h3,h4,h5,h6',
+        linkClass: 'tocbot-link',
+        activeLinkClass: 'tocbot-active-link',
+        listClass: 'tocbot-list',
+        isCollapsedClass: 'tocbot-is-collapsed',
+        collapsibleClass: 'tocbot-is-collapsible',
+        collapseDepth: 0,
+        scrollSmooth: true,
+        headingsOffset: -boardTop
+      });
+      if ($('.toc-list-item').length > 0) {
+        $('#toc').css('visibility', 'visible');
+      }
+    });
+  </script>
+
+
+
+
+
+  <script defer src="https://cdn.staticfile.org/clipboard.js/2.0.6/clipboard.min.js" ></script>
+  <script  src="/js/clipboard-use.js" ></script>
+
+
+
+
+
+
+<!-- Plugins -->
+
+
+
+  <script  src="https://cdn.staticfile.org/typed.js/2.0.11/typed.min.js" ></script>
+  <script>
+    var typed = new Typed('#subtitle', {
+      strings: [
+        '  ',
+        "Python/note/python制作可执行文件&nbsp;",
+      ],
+      cursorChar: "_",
+      typeSpeed: 70,
+      loop: false,
+    });
+    typed.stop();
+    $(document).ready(function () {
+      $(".typed-cursor").addClass("h2");
+      typed.start();
+    });
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/anchor-js/4.2.2/anchor.min.js" ></script>
+  <script>
+    anchors.options = {
+      placement: "right",
+      visible: "hover",
+      
+    };
+    var el = "h1,h2,h3,h4,h5,h6".split(",");
+    var res = [];
+    for (item of el) {
+      res.push(".markdown-body > " + item)
+    }
+    anchors.add(res.join(", "))
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    var path = "/local-search.xml";
+    var inputArea = document.querySelector("#local-search-input");
+    inputArea.onclick = function () {
+      searchFunc(path, 'local-search-input', 'local-search-result');
+      this.onclick = null
+    }
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+  <script>
+    $('#post img:not(.no-zoom img, img[no-zoom]), img[zoom]').each(
+      function () {
+        var element = document.createElement('a');
+        $(element).attr('data-fancybox', 'images');
+        $(element).attr('href', $(this).attr('src'));
+        $(this).wrap(element);
+      }
+    );
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

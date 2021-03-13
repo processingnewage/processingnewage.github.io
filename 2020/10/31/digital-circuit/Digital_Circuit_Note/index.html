@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" type="image/png" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="">
+  <meta name="author" content="John Doe">
+  <meta name="keywords" content="">
+  <title>digital-circuit/Digital_Circuit_Note - Hexo</title>
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
+<link  rel="stylesheet" href="https://cdn.staticfile.org/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/10.0.0/styles/github-gist.min.css" />
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_fmb4a04yx8h.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_pjno9b9zyxs.css">
+
+
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+<meta name="generator" content="Hexo 4.2.1"><link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+</head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>processing</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/">
+              <i class="iconfont icon-home-fill"></i>
+              Home</a>
+          </li>
+        
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/archives/">
+              <i class="iconfont icon-archive-fill"></i>
+              Archives</a>
+          </li>
+        
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/categories/">
+              <i class="iconfont icon-category-fill"></i>
+              Categories</a>
+          </li>
+        
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/tags/">
+              <i class="iconfont icon-tags-fill"></i>
+              Tags</a>
+          </li>
+        
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/about/">
+              <i class="iconfont icon-user-fill"></i>
+              About</a>
+          </li>
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="view intro-2" id="background" parallax=true
+         style="background: url('/img/default.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="container text-center white-text fadeInUp">
+            <span class="h2" id="subtitle">
+              
+            </span>
+
+            
+              
+                <div class="mt-3 post-meta">
+                  <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+                  <time datetime="2020-10-31 21:58">
+                    October 31, 2020 pm
+                  </time>
+                </div>
+              
+
+              <div class="mt-1">
+                
+                  
+                  <span class="post-meta mr-2">
+                    <i class="iconfont icon-chart"></i>
+                    3.6k 字
+                  </span>
+                
+
+                
+                  
+                  <span class="post-meta mr-2">
+                      <i class="iconfont icon-clock-fill"></i>
+                    
+                    
+                    39
+                     分钟
+                  </span>
+                
+
+                
+              </div>
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-md">
+      <div class="container nopadding-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <div class="post-content mx-auto" id="post">
+            
+            <article class="markdown-body">
+              <h2 id="数字电路概述"><a href="#数字电路概述" class="headerlink" title="数字电路概述"></a>数字电路概述</h2><h3 id="第一章：数字逻辑基础"><a href="#第一章：数字逻辑基础" class="headerlink" title="第一章：数字逻辑基础"></a>第一章：数字逻辑基础</h3><pre><code class="hljs avrasm"><span class="hljs-symbol">tips:</span>
+	数字电路是数字电路技术的核心，逻辑代数是学习数字电路技术的数学逻辑基础。
+	本章主要介绍逻辑代数的基本概念、编码规则、公式和定理，常用逻辑函数的表示方法及其相互转换，逻辑函数的公式化简法和图形化简法。</code></pre>
+<h4 id="1-1-引论"><a href="#1-1-引论" class="headerlink" title="1.1 引论"></a>1.1 引论</h4><h5 id="1-1-1-数字电路的由来和发展"><a href="#1-1-1-数字电路的由来和发展" class="headerlink" title="1.1.1 数字电路的由来和发展"></a>1.1.1 数字电路的由来和发展</h5><ol>
+<li>布尔代数：布尔代数是用数学符号描述逻辑处理的一种逻辑形式，也称逻辑代数，又叫开关代数。</li>
+<li>随着电子器件的发展，电子整机设备的发展非常迅速，其发展趋势是：向系统集成、大规模、低功耗、高速度、可编程、可测试、多值化等方面发展。<h5 id="1-1-2-模拟-数字信号"><a href="#1-1-2-模拟-数字信号" class="headerlink" title="1.1.2 模拟/数字信号"></a>1.1.2 模拟/数字信号</h5></li>
+<li>在数字电路中数字量常用电位的高低、脉冲的有无等完全对立的两种状态来表示，形式上表现为在极短的时间内发极陡峭变化的电压或电流波形。</li>
+<li>数字信号的传输波形：<br> I. 电位型数字信号：是以一个节拍内信号是高电平还是低电平来表示0、1，NRZ<br> II. 脉冲型数字信号：是以一个节拍内有无脉冲来表示0、1，RZ<h5 id="1-1-3-数字电路的特点"><a href="#1-1-3-数字电路的特点" class="headerlink" title="1.1.3 数字电路的特点"></a>1.1.3 数字电路的特点</h5></li>
+<li>以数字量的形式处理信息的优点如下：<br> 1）精度高<br> 2）可靠性高<br> 3）信息容易处理<br> 4）保密性<br> 5）快速<br> 6）经济性<h5 id="1-1-4-数字集成电路的分类"><a href="#1-1-4-数字集成电路的分类" class="headerlink" title="1.1.4 数字集成电路的分类"></a>1.1.4 数字集成电路的分类</h5></li>
+<li>集成电路：把由各种器件（包括二极管、三极管、电阻等元件）及布线连接成的各类电路制作到一个很小的半导体基片上所构成的电路（IC）。</li>
+<li>数字集成电路（体积小、功耗低、可靠性高） 和 模拟集成电路</li>
+<li>数字集成电路的分类：<br> I. 集成度大小：<pre><code>1. 小规模集成电路（SSIC），逻辑门数目介于10~99
+2. 中规模集成电路（MSIC），逻辑门数目介于100~999
+3. 大规模集成电路（LSIC），逻辑门数目介于1000~9999
+4. 超大规模集成电路（VLSIC），逻辑门数目超过10000</code></pre> II. 应用：<pre><code>1. 通用型集成电路
+2. 专用型集成电路（ASIC）
+3. 可编程逻辑器件（PLD）</code></pre> III. 有源器件和工艺类型：<pre><code>1. 双极型晶体管集成电路（TTL、ECL等），工作速度快、驱动能力强、但功耗大、集成度低
+2. 单极型MOS集成电路（NMOS、PMOS、CMOS），集成度高、功耗低、速度快、噪声小
+3. 双极与MOS混合集成电路（BiMOS集成电路）</code></pre><h4 id="1-2-数制与编码"><a href="#1-2-数制与编码" class="headerlink" title="1.2 数制与编码"></a>1.2 数制与编码</h4><h5 id="1-2-1-数制"><a href="#1-2-1-数制" class="headerlink" title="1.2.1 数制"></a>1.2.1 数制</h5></li>
+<li>十进制</li>
+<li>二进制</li>
+<li>八进制和十六进制<h5 id="1-2-2-不同数制间的转换"><a href="#1-2-2-不同数制间的转换" class="headerlink" title="1.2.2 不同数制间的转换"></a>1.2.2 不同数制间的转换</h5></li>
+<li>R进制数转换为十进制数：位权展开</li>
+<li>十进制数转换为R进制数：整数：连除取余法（短除法）    小数：连乘取整法（不精确的）</li>
+<li>二进制、八进制、十六进制间的相互转换<h5 id="1-2-3-常用编码"><a href="#1-2-3-常用编码" class="headerlink" title="1.2.3 常用编码"></a>1.2.3 常用编码</h5><pre><code class="hljs angelscript">tips:二进制数不仅可以表示数值大小，而且可以表示一定的信息，代表信息的<span class="hljs-number">0</span>/<span class="hljs-number">1</span>称为二进制码元，将若干个二进制码元顺序排列在一起，称为二元码序列，建立二元码序列和信息之间的一一对应的关系的过程称为编码，经过编码后代表一个确定信息的二元码序列称为代码。</code></pre></li>
+<li>自然二进制代码（有权码）</li>
+<li>可靠性编码：为减少错误的发生，或者在发生错误后能迅速地发现和纠正。能够检测信息传输错误的代码称为检错码（Error Detection Code），能够纠正信息传输错误的代码称为纠错码（Correction Code）。<br> 1）循环码<br> 2）奇偶校验码</li>
+<li>二-十进制代码（BCD码）：用以表示十进制数0~9的二进制代码称为二-十进制代码（Binary Coded Decimal，BCD）</li>
+<li>ASCII码<h4 id="1-3-逻辑代数"><a href="#1-3-逻辑代数" class="headerlink" title="1.3 逻辑代数"></a>1.3 逻辑代数</h4><pre><code class="hljs angelscript">tips：逻辑代数（布尔代数）是描述客观事物逻辑关系的数学方法，是数字电路分析和设计时所使用的主要数学工具。逻辑代数中只用<span class="hljs-number">0</span>/<span class="hljs-number">1</span>两个数字，用来描述两种完全相反的逻辑状态，不代表具体数值。如高低电平、开关的闭合与断开等。</code></pre>
+<h5 id="1-3-1-3种基本逻辑关系"><a href="#1-3-1-3种基本逻辑关系" class="headerlink" title="1.3.1 3种基本逻辑关系"></a>1.3.1 3种基本逻辑关系</h5></li>
+<li>与逻辑/与运算</li>
+<li>或逻辑/或运算</li>
+<li>非逻辑/非运算<h5 id="1-3-2-复合逻辑和复合运算"><a href="#1-3-2-复合逻辑和复合运算" class="headerlink" title="1.3.2 复合逻辑和复合运算"></a>1.3.2 复合逻辑和复合运算</h5></li>
+<li>与非</li>
+<li>或非</li>
+<li>与或非</li>
+<li>同或</li>
+<li>异或<h5 id="1-3-3-逻辑代数的基本公式、三个规则、常用公式"><a href="#1-3-3-逻辑代数的基本公式、三个规则、常用公式" class="headerlink" title="1.3.3 逻辑代数的基本公式、三个规则、常用公式"></a>1.3.3 逻辑代数的基本公式、三个规则、常用公式</h5></li>
+<li>基本公式</li>
+<li>三个规则：代入定理、反演规则、对偶规则</li>
+<li>常用公式<h5 id="1-3-4-逻辑函数及其表示方法"><a href="#1-3-4-逻辑函数及其表示方法" class="headerlink" title="1.3.4 逻辑函数及其表示方法"></a>1.3.4 逻辑函数及其表示方法</h5></li>
+<li>逻辑函数的建立：<strong>输出1连乘得到与或式，输出0连加得到或与式</strong></li>
+<li>表示方法：<strong>真值表</strong>、<strong>逻辑函数表达式</strong>、<strong>逻辑电路图</strong>、<strong>卡诺图</strong>、<strong>波形图</strong>等</li>
+<li>逻辑函数表达式的基本形式：<br> 1）与或式<br> 2）或与式<br> 3）与非-与非式<br> 4）或非-或非式<br> 5）与或非式</li>
+<li>逻辑函数表达式的标准形式：最小项表达式 和 最大项表达式</li>
+<li>正逻辑与负逻辑<h5 id="1-3-5-逻辑函数的化简方法"><a href="#1-3-5-逻辑函数的化简方法" class="headerlink" title="1.3.5 逻辑函数的化简方法"></a>1.3.5 逻辑函数的化简方法</h5><pre><code class="hljs plain">tips：化简的意义在于简化逻辑电路，减少元器件数量，降低成本，提高可靠性。简化的目标是获得最简与或表达式。</code></pre></li>
+<li>代数化简法</li>
+<li>卡诺图化简法<br> tips：<pre><code>约束项：规定了变量的取值范围，即有些情况取不到值
+任意项：取值对原约束不起作用，可取任意值
+不含约束项和任意项的逻辑函数称为完全描述逻辑函数，反之为非完全描述逻辑函数</code></pre></li>
+</ol>
+<h3 id="第二章：逻辑门电路"><a href="#第二章：逻辑门电路" class="headerlink" title="第二章：逻辑门电路"></a>第二章：逻辑门电路</h3><pre><code class="hljs angelscript">tips:
+	在数字电路中，输入量与输出量之间能满足某种逻辑关系的逻辑运算电路被称为逻辑门电路，逻辑门电路是数字集成电路中最基本的逻辑单元，也是实现逻辑运算的基本单元。对应于逻辑代数中的与、或、非、与非、或非、与或非、异或和同或<span class="hljs-number">8</span>种逻辑运算。
+	本章主要介绍晶体三极管反相器、TTL逻辑门电路和CMOS逻辑门电路，对于每一种电路，除了阐述工作原理和逻辑功能外，还将介绍其作为电子器件的电气特性和衡量性能的电气参数，重点是逻辑功能和外部特性。</code></pre>
+<h4 id="2-1-基本逻辑门电路"><a href="#2-1-基本逻辑门电路" class="headerlink" title="2.1 基本逻辑门电路"></a>2.1 基本逻辑门电路</h4><h5 id="2-1-1-二极管与门-或门"><a href="#2-1-1-二极管与门-或门" class="headerlink" title="2.1.1 二极管与门/或门"></a>2.1.1 二极管与门/或门</h5><h5 id="2-1-2-晶体三极管反相器"><a href="#2-1-2-晶体三极管反相器" class="headerlink" title="2.1.2 晶体三极管反相器"></a>2.1.2 晶体三极管反相器</h5><h4 id="2-2-TTL集成逻辑门"><a href="#2-2-TTL集成逻辑门" class="headerlink" title="2.2 TTL集成逻辑门"></a>2.2 TTL集成逻辑门</h4><pre><code class="hljs armasm"><span class="hljs-symbol">tips</span>：晶体管-晶体管逻辑电路（<span class="hljs-meta">TTL</span>），使用双极型晶体管实现逻辑功能，是目前数字集成电路中用的最多的一种。<span class="hljs-meta">TTL</span>具有低价格、高速度和良好的驱动能力等优点。</code></pre>
+<h5 id="2-2-1-TTL与非门的典型电路和工作原理"><a href="#2-2-1-TTL与非门的典型电路和工作原理" class="headerlink" title="2.2.1 TTL与非门的典型电路和工作原理"></a>2.2.1 TTL与非门的典型电路和工作原理</h5><ol>
+<li>电路结构</li>
+<li>基本工作原理</li>
+<li>带负载能力和工作速度的分析<br> 1）带负载能力<br> 2）工作速度<h5 id="2-2-2-TTL与非门的主要外部特性和参数"><a href="#2-2-2-TTL与非门的主要外部特性和参数" class="headerlink" title="2.2.2 TTL与非门的主要外部特性和参数"></a>2.2.2 TTL与非门的主要外部特性和参数</h5></li>
+<li>电压传输特性</li>
+<li>输入特性</li>
+<li>输入负载特性</li>
+<li>输出特性</li>
+<li>传输时延特性<h5 id="2-2-3-TTL集成门电路使用注意事项"><a href="#2-2-3-TTL集成门电路使用注意事项" class="headerlink" title="2.2.3 TTL集成门电路使用注意事项"></a>2.2.3 TTL集成门电路使用注意事项</h5></li>
+<li>输出端连接<br> 1）输出端不能直接接地<br> 2）输出端不能直接接电源Vcc<br> 3）输出端<strong>不能线与</strong></li>
+<li>输入端连接<br> notes：TTL电路输入端允许悬空，相当于接逻辑高电平，但容易引入干扰，所以一般不允许TTL集成电路输入端悬空。</li>
+<li>电源要求及其他注意事项<br> notes：为防止由电源引入的各种干扰，必须对电源进行滤波。<h5 id="2-2-4-TTL与非门的改进电路"><a href="#2-2-4-TTL与非门的改进电路" class="headerlink" title="2.2.4 TTL与非门的改进电路"></a>2.2.4 TTL与非门的改进电路</h5></li>
+<li>集电极开路门（OC门）（解决了不能线与的问题）</li>
+<li>三态输出门电路（Three Sate Logic，TSL）：主要特点是有3种状态，即逻辑高电平、逻辑低电平和高阻态。TSL门除了在系统的总线结构和计算机的外围电路等方面有广泛的应用外，在仪器、仪表和自动控制等多个领域也得到广泛的应用。<h5 id="2-2-5-其他类型的TTL门电路"><a href="#2-2-5-其他类型的TTL门电路" class="headerlink" title="2.2.5 其他类型的TTL门电路"></a>2.2.5 其他类型的TTL门电路</h5></li>
+<li>74H高速系列</li>
+<li>74S肖特基系列</li>
+<li>74LS低功耗肖特基系列<h4 id="2-3-发射极耦合逻辑门（Emitter-Coupled-Logic，ECL）"><a href="#2-3-发射极耦合逻辑门（Emitter-Coupled-Logic，ECL）" class="headerlink" title="2.3 发射极耦合逻辑门（Emitter Coupled Logic，ECL）"></a>2.3 发射极耦合逻辑门（Emitter Coupled Logic，ECL）</h4><pre><code class="hljs armasm"><span class="hljs-symbol">tips</span>：ECL门是非饱和型的双极型逻辑电路，也称电流开关逻辑（Current <span class="hljs-keyword">Switching </span>Logic，CSL）门，从根本上改变了饱和型电路的工作方式，在这种电路种，三极管工作在放大和截止两种工作状态，由于不工作在饱和区，防止了饱和时的存储效应，使逻辑电路的开关速度大大提高，是目前各类数字电路中速度最快的一种。</code></pre>
+<h5 id="2-3-1-电路的基本结构"><a href="#2-3-1-电路的基本结构" class="headerlink" title="2.3.1 电路的基本结构"></a>2.3.1 电路的基本结构</h5><h5 id="2-3-2-ECL门的工作特点"><a href="#2-3-2-ECL门的工作特点" class="headerlink" title="2.3.2 ECL门的工作特点"></a>2.3.2 ECL门的工作特点</h5><h4 id="2-4-MOS集成门"><a href="#2-4-MOS集成门" class="headerlink" title="2.4 MOS集成门"></a>2.4 MOS集成门</h4><pre><code class="hljs avrasm"><span class="hljs-symbol">tips:</span>
+	以金属氧化半导体场效应管(MOSFET)为基础的数字集成电路</code></pre>
+<pre><code class="hljs yaml"><span class="hljs-attr">notes:</span>
+	<span class="hljs-string">半导体三极管的分类：</span>
+		<span class="hljs-number">1</span><span class="hljs-string">）双极型三极管（半导体三极管、晶体管、双极结型（PN结）三极管（Bipolar</span> <span class="hljs-string">Junction</span> <span class="hljs-string">Transistor（BJT））），（简称为三极管）：参与导电的有两种载流子，既有多数载流子，又有少数载流子，有NPN，PNP型等；</span>
+		<span class="hljs-number">2</span><span class="hljs-string">）单极型三极管：只有一种极性的载流子（多数载流子）参与导电，又因为这种管子是利用电场效应来控制电流的，所以也称场效应三极管（Field</span> <span class="hljs-string">Effect</span> <span class="hljs-string">Transistor，FET），简称场效应管。</span>
+	<span class="hljs-string">FET的分类：</span>
+		<span class="hljs-number">1</span><span class="hljs-string">）结型场效应管(Juncion</span> <span class="hljs-string">Field</span> <span class="hljs-string">Effect</span> <span class="hljs-string">Transistor，JFET)</span>
+			<span class="hljs-number">1</span><span class="hljs-string">）N沟道耗尽型</span>
+			<span class="hljs-number">2</span><span class="hljs-string">）P沟道耗尽型</span>
+		<span class="hljs-number">2</span><span class="hljs-string">）绝缘栅型场效应管</span>
+		<span class="hljs-string">tips:绝缘栅型场效应管有金属、氧化物和半导体制成，所以称为MOS管（Metal-Oxide-Semiconductor</span> <span class="hljs-string">Field</span> <span class="hljs-string">Effect</span> <span class="hljs-string">Transistor，MOSFET）。</span>
+			<span class="hljs-number">1</span><span class="hljs-string">）N沟道</span>
+				<span class="hljs-number">1</span><span class="hljs-string">）增强型</span>
+				<span class="hljs-number">2</span><span class="hljs-string">）耗尽型</span>
+			<span class="hljs-number">2</span><span class="hljs-string">）P沟道</span>
+				<span class="hljs-number">1</span><span class="hljs-string">）增强型</span>
+				<span class="hljs-number">2</span><span class="hljs-string">）耗尽型</span>
+		<span class="hljs-string">notes：如果Ugs</span> <span class="hljs-string">=</span> <span class="hljs-number">0</span><span class="hljs-string">时，drain和source之间已经存在导电沟道，称为耗尽型；如果不存在，则称为增强型。</span></code></pre>
+<h5 id="2-4-1-MOS反相器"><a href="#2-4-1-MOS反相器" class="headerlink" title="2.4.1 MOS反相器"></a>2.4.1 MOS反相器</h5></li>
+<li>MOS管分类<br> 1）N沟道增强型<br> 2）P沟道增强型<br> 3）N沟道耗尽型<br> 4）P沟道耗尽型</li>
+<li>MOS反相器<h5 id="2-4-2-NMOS电路"><a href="#2-4-2-NMOS电路" class="headerlink" title="2.4.2 NMOS电路"></a>2.4.2 NMOS电路</h5></li>
+<li>NMOS反相器</li>
+<li>NMOS与非门</li>
+<li>NMOS或非门<h5 id="2-4-3-CMOS电路"><a href="#2-4-3-CMOS电路" class="headerlink" title="2.4.3 CMOS电路"></a>2.4.3 CMOS电路</h5></li>
+<li>CMOS反相器</li>
+<li>CMOS与非门</li>
+<li>CMOS或非门</li>
+<li>带缓冲的CMOS与非门</li>
+<li>CMOS传输门</li>
+<li>CMOS与TTL电路的相连接<h5 id="2-4-4-CMOS集成电路使用注意事项"><a href="#2-4-4-CMOS集成电路使用注意事项" class="headerlink" title="2.4.4 CMOS集成电路使用注意事项"></a>2.4.4 CMOS集成电路使用注意事项</h5></li>
+<li>输出端的正确连接<br> 1）不能接地<br> 2）不能接电源<br> 3）<strong>不能线与</strong></li>
+<li>输入端的连接</li>
+</ol>
+<h4 id="SUM"><a href="#SUM" class="headerlink" title="SUM"></a>SUM</h4><pre><code class="hljs angelscript"><span class="hljs-number">1.</span> 逻辑门电路是数字电路的最基本单元，实现逻辑运算的最基本单元
+<span class="hljs-number">2.</span> TTL电路：双极型三极管所构成的逻辑门电路
+<span class="hljs-number">3.</span> CMOS电路：互补MOS管所构成的逻辑门电路
+	<span class="hljs-number">1</span>）NMOS负责下拉部分，得到低电平
+	<span class="hljs-number">2</span>）PMOS负责上拉部分，得到高电平
+<span class="hljs-number">4.</span> 数字电路利用了半导体器件的开关特性（作为一个小压降的开关），CMOS电路只能实现非门，反相器是其最基本的电路
+<span class="hljs-number">5.</span> OC门、OD门、TSL均能实现线与，MOS电路的OD门与TTL电路的OC门相对应</code></pre>
+
+
+
+<h3 id="第三章：组合逻辑电路"><a href="#第三章：组合逻辑电路" class="headerlink" title="第三章：组合逻辑电路"></a>第三章：组合逻辑电路</h3><pre><code class="hljs avrasm"><span class="hljs-symbol">tips:</span>
+	在数字系统中，常包含着许多数字逻辑电路，数字逻辑电路按其逻辑功能的不同可分为：组合逻辑电路和时序逻辑电路
+	组合逻辑电路（Combination Logic Circuit）一般仅有若干个逻辑门组成，不包含触发器
+	结构特点：
+		电路只有从输入端到输出端的直接通路，没有从输出端到输入端的反馈回路
+	逻辑特点：
+		任何时刻组合逻辑电路的输出仅仅取决于当时的输入信号，而与该时刻输入信号作用之前电路的历史状态无关，电路没有记忆功能，即输出仅是输入变量的函数
+	组合逻辑电路分析（Analysis）是从逻辑图开始，进而得到该电路功能的形式描述，如真值表或逻辑表达式（逻辑函数）
+	组合逻辑电路设计（Synthesis）则相反，是从形式描述开始，进而得到逻辑图
+	组合逻辑电路在数字系统中得到广泛的应用，不仅能独立完成各种功能复杂的逻辑操作，而且也是时序逻辑电路的组成部分
+	典型的中规模集成组合逻辑电路：编码器、译码器、数据选择器、数据分配器、运算电路、数值比较器和奇偶校验电路等
+	本章介绍组合逻辑电路的基本概念，阐述组合逻辑电路的分析设计方法，在此基础上探讨组合逻辑电路设计中的实际问题及解决的办法</code></pre>
+<h4 id="3-1-小规模组合逻辑电路的分析与设计"><a href="#3-1-小规模组合逻辑电路的分析与设计" class="headerlink" title="3.1 小规模组合逻辑电路的分析与设计"></a>3.1 小规模组合逻辑电路的分析与设计</h4><h5 id="3-1-1-组合逻辑电路分析"><a href="#3-1-1-组合逻辑电路分析" class="headerlink" title="3.1.1 组合逻辑电路分析"></a>3.1.1 组合逻辑电路分析</h5><h5 id="3-1-2-组合逻辑电路设计"><a href="#3-1-2-组合逻辑电路设计" class="headerlink" title="3.1.2 组合逻辑电路设计"></a>3.1.2 组合逻辑电路设计</h5><h4 id="3-2-常见组合逻辑中规模集成电路"><a href="#3-2-常见组合逻辑中规模集成电路" class="headerlink" title="3.2 常见组合逻辑中规模集成电路"></a>3.2 常见组合逻辑中规模集成电路</h4><h5 id="3-2-1-编码器"><a href="#3-2-1-编码器" class="headerlink" title="3.2.1 编码器"></a>3.2.1 编码器</h5><h5 id="3-2-2-译码器"><a href="#3-2-2-译码器" class="headerlink" title="3.2.2 译码器"></a>3.2.2 译码器</h5><h5 id="3-2-3-数据选择器"><a href="#3-2-3-数据选择器" class="headerlink" title="3.2.3 数据选择器"></a>3.2.3 数据选择器</h5><h5 id="3-2-4-数据分配器"><a href="#3-2-4-数据分配器" class="headerlink" title="3.2.4 数据分配器"></a>3.2.4 数据分配器</h5><h5 id="3-2-5-运算电路"><a href="#3-2-5-运算电路" class="headerlink" title="3.2.5 运算电路"></a>3.2.5 运算电路</h5><h5 id="3-2-6-数值比较器"><a href="#3-2-6-数值比较器" class="headerlink" title="3.2.6 数值比较器"></a>3.2.6 数值比较器</h5><h5 id="3-2-7-奇偶校验器"><a href="#3-2-7-奇偶校验器" class="headerlink" title="3.2.7 奇偶校验器"></a>3.2.7 奇偶校验器</h5><h4 id="3-3-组合逻辑电路中的竞争冒险现象"><a href="#3-3-组合逻辑电路中的竞争冒险现象" class="headerlink" title="3.3 组合逻辑电路中的竞争冒险现象"></a>3.3 组合逻辑电路中的竞争冒险现象</h4><h5 id="3-3-1-产生竞争冒险的原因"><a href="#3-3-1-产生竞争冒险的原因" class="headerlink" title="3.3.1 产生竞争冒险的原因"></a>3.3.1 产生竞争冒险的原因</h5><h5 id="3-3-2-消除竞争冒险的方法"><a href="#3-3-2-消除竞争冒险的方法" class="headerlink" title="3.3.2 消除竞争冒险的方法"></a>3.3.2 消除竞争冒险的方法</h5><h3 id="第四章：集成触发器"><a href="#第四章：集成触发器" class="headerlink" title="第四章：集成触发器"></a>第四章：集成触发器</h3><h4 id="基本RS触发器"><a href="#基本RS触发器" class="headerlink" title="基本RS触发器"></a>基本RS触发器</h4><h4 id="钟控触发器（电平触发）"><a href="#钟控触发器（电平触发）" class="headerlink" title="钟控触发器（电平触发）"></a>钟控触发器（电平触发）</h4><h4 id="主从JK触发器（脉冲触发）"><a href="#主从JK触发器（脉冲触发）" class="headerlink" title="主从JK触发器（脉冲触发）"></a>主从JK触发器（脉冲触发）</h4><h4 id="边沿触发器"><a href="#边沿触发器" class="headerlink" title="边沿触发器"></a>边沿触发器</h4><h3 id="第五章：时序逻辑电路"><a href="#第五章：时序逻辑电路" class="headerlink" title="第五章：时序逻辑电路"></a>第五章：时序逻辑电路</h3><h3 id="第六章：半导体存储器"><a href="#第六章：半导体存储器" class="headerlink" title="第六章：半导体存储器"></a>第六章：半导体存储器</h3><h3 id="第七章：可编程逻辑器件"><a href="#第七章：可编程逻辑器件" class="headerlink" title="第七章：可编程逻辑器件"></a>第七章：可编程逻辑器件</h3><h3 id="第八章：A-D转换"><a href="#第八章：A-D转换" class="headerlink" title="第八章：A/D转换"></a>第八章：A/D转换</h3><h3 id="第九章：脉冲发生电路"><a href="#第九章：脉冲发生电路" class="headerlink" title="第九章：脉冲发生电路"></a>第九章：脉冲发生电路</h3><h3 id="Others"><a href="#Others" class="headerlink" title="Others"></a>Others</h3>
+            </article>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                
+              </div>
+              
+                <p class="note note-warning">本博客所有文章除特别声明外，均采用 <a href="https://zh.wikipedia.org/wiki/Wikipedia:CC_BY-SA_3.0%E5%8D%8F%E8%AE%AE%E6%96%87%E6%9C%AC" target="_blank" rel="nofollow noopener noopener">CC BY-SA 3.0协议</a> 。转载请注明出处！</p>
+              
+              
+                <div class="post-prevnext row">
+                  <div class="post-prev col-6">
+                    
+                    
+                      <a href="/2020/11/01/OS/1-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E6%A6%82%E8%BF%B0/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">OS/1-操作系统概述</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </div>
+                  <div class="post-next col-6">
+                    
+                    
+                      <a href="/2020/10/07/Linux/WSL%E8%B8%A9%E5%9D%91/">
+                        <span class="hidden-mobile">Linux/WSL踩坑</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </div>
+                </div>
+              
+            </div>
+
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;TOC</p>
+  <div id="tocbot"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+  </main>
+
+  
+    <a id="scroll-top-button" href="#" role="button">
+      <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+    </a>
+  
+
+  
+    <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Search</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">keyword</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+  
+
+  
+
+  
+
+  <footer class="mt-5">
+  <div class="text-center py-3">
+    <div>
+      <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a>
+      <i class="iconfont icon-love"></i>
+      <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener">
+        <span>Fluid</span></a>
+    </div>
+    
+
+    
+
+    
+  </div>
+</footer>
+
+<!-- SCRIPTS -->
+<script  src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js" ></script>
+<script  src="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/js/bootstrap.min.js" ></script>
+<script  src="/js/main.js" ></script>
+
+
+  <script  src="/js/lazyload.js" ></script>
+
+
+
+  
+  <script  src="https://cdn.staticfile.org/tocbot/4.11.1/tocbot.min.js" ></script>
+  <script>
+    $(document).ready(function () {
+      var boardCtn = $('#board-ctn');
+      var boardTop = boardCtn.offset().top;
+
+      tocbot.init({
+        tocSelector: '#tocbot',
+        contentSelector: '.post-content',
+        headingSelector: 'h1,h2,h3,h4,h5,h6',
+        linkClass: 'tocbot-link',
+        activeLinkClass: 'tocbot-active-link',
+        listClass: 'tocbot-list',
+        isCollapsedClass: 'tocbot-is-collapsed',
+        collapsibleClass: 'tocbot-is-collapsible',
+        collapseDepth: 0,
+        scrollSmooth: true,
+        headingsOffset: -boardTop
+      });
+      if ($('.toc-list-item').length > 0) {
+        $('#toc').css('visibility', 'visible');
+      }
+    });
+  </script>
+
+
+
+
+
+  <script defer src="https://cdn.staticfile.org/clipboard.js/2.0.6/clipboard.min.js" ></script>
+  <script  src="/js/clipboard-use.js" ></script>
+
+
+
+
+
+
+<!-- Plugins -->
+
+
+
+  <script  src="https://cdn.staticfile.org/typed.js/2.0.11/typed.min.js" ></script>
+  <script>
+    var typed = new Typed('#subtitle', {
+      strings: [
+        '  ',
+        "digital-circuit/Digital_Circuit_Note&nbsp;",
+      ],
+      cursorChar: "_",
+      typeSpeed: 70,
+      loop: false,
+    });
+    typed.stop();
+    $(document).ready(function () {
+      $(".typed-cursor").addClass("h2");
+      typed.start();
+    });
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/anchor-js/4.2.2/anchor.min.js" ></script>
+  <script>
+    anchors.options = {
+      placement: "right",
+      visible: "hover",
+      
+    };
+    var el = "h1,h2,h3,h4,h5,h6".split(",");
+    var res = [];
+    for (item of el) {
+      res.push(".markdown-body > " + item)
+    }
+    anchors.add(res.join(", "))
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    var path = "/local-search.xml";
+    var inputArea = document.querySelector("#local-search-input");
+    inputArea.onclick = function () {
+      searchFunc(path, 'local-search-input', 'local-search-result');
+      this.onclick = null
+    }
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+  <script>
+    $('#post img:not(.no-zoom img, img[no-zoom]), img[zoom]').each(
+      function () {
+        var element = document.createElement('a');
+        $(element).attr('data-fancybox', 'images');
+        $(element).attr('href', $(this).attr('src'));
+        $(this).wrap(element);
+      }
+    );
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
