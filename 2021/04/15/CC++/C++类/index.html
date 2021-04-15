@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" type="image/png" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="">
+  <meta name="author" content="John Doe">
+  <meta name="keywords" content="">
+  <title>CC++/C++类 - Hexo</title>
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
+<link  rel="stylesheet" href="https://cdn.staticfile.org/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/10.0.0/styles/github-gist.min.css" />
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_fmb4a04yx8h.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_pjno9b9zyxs.css">
+
+
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+<meta name="generator" content="Hexo 4.2.1"><link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+</head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>processing</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/">
+              <i class="iconfont icon-home-fill"></i>
+              Home</a>
+          </li>
+        
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/archives/">
+              <i class="iconfont icon-archive-fill"></i>
+              Archives</a>
+          </li>
+        
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/categories/">
+              <i class="iconfont icon-category-fill"></i>
+              Categories</a>
+          </li>
+        
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/tags/">
+              <i class="iconfont icon-tags-fill"></i>
+              Tags</a>
+          </li>
+        
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/about/">
+              <i class="iconfont icon-user-fill"></i>
+              About</a>
+          </li>
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="view intro-2" id="background" parallax=true
+         style="background: url('/img/default.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="container text-center white-text fadeInUp">
+            <span class="h2" id="subtitle">
+              
+            </span>
+
+            
+              
+                <div class="mt-3 post-meta">
+                  <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+                  <time datetime="2021-04-15 20:00">
+                    April 15, 2021 pm
+                  </time>
+                </div>
+              
+
+              <div class="mt-1">
+                
+                  
+                  <span class="post-meta mr-2">
+                    <i class="iconfont icon-chart"></i>
+                    2.9k 字
+                  </span>
+                
+
+                
+                  
+                  <span class="post-meta mr-2">
+                      <i class="iconfont icon-clock-fill"></i>
+                    
+                    
+                    30
+                     分钟
+                  </span>
+                
+
+                
+              </div>
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-md">
+      <div class="container nopadding-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <div class="post-content mx-auto" id="post">
+            
+            <article class="markdown-body">
+              <h2 id="类和对象"><a href="#类和对象" class="headerlink" title="类和对象"></a>类和对象</h2><p>面向对象的三大特性：封装、继承、多态</p>
+<h3 id="1-封装"><a href="#1-封装" class="headerlink" title="1. 封装"></a>1. 封装</h3><ol>
+<li>意义：<ul>
+<li>将属性和行为作为一个整体，表现生活中的事物</li>
+<li>将属性和行为加以权限控制<ul>
+<li>public : 公共权限: 类 内外均可访问</li>
+<li>protected : 保护权限: 类中可访问, 类外不可访问, 可继承</li>
+<li>private : 私有权限: 类中可访问, 类外不可访问, 不可继承</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>struct 和 class 的区别 : 默认的访问权限不同</li>
+<li>属性和方法称为成员, 分别叫做 成员属性/变量 和 成员函数/方法</li>
+<li>note: 一般将成员属性设为私有, 可以自己控制读写权限, 对于写权限, 我们可以检测数据的有效性, 同时在公有函数中添加set和get方法</li>
+</ol>
+<h3 id="2-构造函数和析构函数"><a href="#2-构造函数和析构函数" class="headerlink" title="2. 构造函数和析构函数"></a>2. 构造函数和析构函数</h3><ol>
+<li>C++中的面向对象来源于生活, 每个对象也都会有初始设置 以及 对象销毁前的清理数据的设置</li>
+<li>一个对象或者变量没有初始状态, 对其使用后果是未知; 同样的使用完一个对象或变量, 没有及时清理, 也会造成一定的安全问题</li>
+<li>c++利用了构造函数和析构函数解决上述问题, 这两个函数将会被编译器自动调用, 完成对象初始化和清理工作</li>
+<li>对象的初始化和清理工作是编译器强制要我们做的事情，因此如果我们不提供构造和析构，编译器会提供, <strong>编译器提供的构造函数和析构函数是空实现</strong><ul>
+<li>构造函数: 主要作用在于创建对象时为<strong>对象的成员属性赋值</strong>，==构造函数解决了结构体需要初始化的难点==, 构造函数由编译器自动调用，无须手动调用</li>
+<li>析构函数: 主要作用在于对象销毁前系统自动调用，执行一些清理工作</li>
+</ul>
+</li>
+<li>构造函数和析构函数的注意事项: <ul>
+<li>构造函数: 有参可重载, 程序在调用对象时候会自动调用构造, 无须手动调用,而且只会调用一次</li>
+<li>析构函数: 无参不重载, 程序在对象销毁前会自动调用析构, 无须手动调用, 而且只会调用一次</li>
+</ul>
+</li>
+<li>==函数重载== : 函数名相同, 可提高程序的复用性<ul>
+<li>条件: 同一个作用域下, 名称相同, 但函数 <strong>参数类型不同</strong>  或者 <strong>个数不同</strong> 或者 <strong>顺序不同</strong>, 注意: 函数的返回值不可以作为函数重载的条件 [调用方式相同]</li>
+<li>注意事项: <ul>
+<li>引用作为重载条件: int &amp;a 和 const int &amp;a 是不一样的</li>
+<li>函数重载碰到函数默认参数: 传参时有歧义</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>构造函数的==分类== : 有参构造 和 无参构造 ; 普通构造 和 拷贝构造</li>
+<li>拷贝函数的==调用== : 括号法, 显示法, 隐式转换法</li>
+<li>拷贝构造函数的==调用时机== : <ul>
+<li>使用一个创建完毕的对象来初始化一个新对象</li>
+<li>值传递的方式给函数参数传值</li>
+<li>以值的方式返回局部对象</li>
+</ul>
+</li>
+<li>构造函数==调用规则== :<br>默认情况下，c++编译器至少给一个类添加3个函数<ul>
+<li>1．默认构造函数(无参，函数体为空)</li>
+<li>2．默认析构函数(无参，函数体为空)</li>
+<li>3．默认拷贝构造函数，对属性进行值拷贝<br>构造函数调用规则如下：</li>
+<li>如果用户定义有参构造函数，c++不在提供默认无参构造，但是会提供默认拷贝构造</li>
+<li>如果用户定义拷贝构造函数，c++不会再提供其他构造函数</li>
+</ul>
+</li>
+<li>深浅拷贝 : <ul>
+<li>浅拷贝：简单的赋值拷贝操作</li>
+<li>深拷贝：在堆区重新申请空间，进行拷贝操作</li>
+<li>在成员属性中涉及到在堆区申请内存时, 使用拷贝构造创建的对象和原对象中指向的是同一块内存,在析构时会出现重复释放的问题</li>
+<li>解决方案: 改写拷贝构造函数利用深拷贝在堆区重新申请不一样的内存</li>
+</ul>
+</li>
+<li>初始化列表 : Person(int a, int b, int c) :m_A(a), m_B(b), m_C(c) {}</li>
+<li>类对象作为类成员 :<ul>
+<li>构造的顺序是 ：先调用对象成员的构造，再调用本类构造</li>
+<li>析构顺序与构造相反</li>
+</ul>
+</li>
+<li>静态成员<br>静态成员就是在成员变量和成员函数前加上关键字static，称为静态成员<br>静态成员分为：<ul>
+<li><strong>静态成员变量</strong><ul>
+<li>所有对象共享同一份数据</li>
+<li>在编译阶段分配内存</li>
+<li>类内声明，类外初始化</li>
+</ul>
+</li>
+<li><strong>静态成员函数</strong><ul>
+<li>所有对象共享同一个函数</li>
+<li>静态成员函数只能访问静态成员变量: 所有的对象共享一个函数,无法区分不同的对象之间的区别,所以只能访问静态成员变量</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h3 id="3-C-对象模型和this指针"><a href="#3-C-对象模型和this指针" class="headerlink" title="3.  C++对象模型和this指针"></a>3.  C++对象模型和this指针</h3><ol>
+<li>成员函数和成员变量 分开存储, <strong>只有非静态成员变量才属于类的对象上</strong>, 非静态 成员函数和 静态成员 都不属于对象的栈上</li>
+<li>this 指针 : 每一个非静态成员函数只会诞生一份函数实例，也就是说多个同类型的对象会共用一块代码</li>
+<li>c++通过提供特殊的对象指针，this指针，解决上述问题, <strong>this指针指向被调用的成员函数所属的对象</strong></li>
+<li><strong>this指针是隐含在每一个非静态成员函数内的一种指针</strong>,  this指针不需要定义, 直接使用即可</li>
+<li>this指针的用途：<ul>
+<li>当形参和成员变量同名时，可用this指针来区分</li>
+<li>在类的非静态成员函数中返回对象本身，可使用return *this</li>
+<li><strong>this指针实际上是一个指针常量，指向是不变的【Person *const this】</strong></li>
+</ul>
+</li>
+<li>空指针访问成员函数</li>
+<li>const修饰成员函数<ul>
+<li>常函数： 常函数修饰的实际上是this 指针,也就是this指针指向的内容是不变的，所以不可以修改成员属性，<strong>【const Person *const this - 所指向的内容是不变的】</strong>，成员属性声明时加关键字mutable后，在常函数中依然可以修改</li>
+<li>常对象：声明对象前加const称该对象为常对象，常对象只能调用常函数</li>
+</ul>
+</li>
+<li>友元函数<ul>
+<li>在程序里, 有些私有属性也想让类外特殊的一些函数或者类进行访问, 就需要用到友元的技术</li>
+<li>友元的目的就是让一个函数或者类访问另一个类中私有成员</li>
+<li>友元的关键字为  friend</li>
+<li>友元的三种实现<ul>
+<li>全局函数做友元</li>
+<li>类做友元</li>
+<li>成员函数做友元</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h3 id="4-运算符重载"><a href="#4-运算符重载" class="headerlink" title="4. 运算符重载"></a>4. 运算符重载</h3><ol>
+<li>运算符重载概念：对已有的运算符重新进行定义，赋予其另一种功能，以适应不同的数据类型，主要针对自定义的数据类型</li>
+<li>对于内置的数据类型，编译器知道怎么使用运算符，运算符和内置数据类型是绑定的，运算符重载旨在扩展运算符的用途</li>
+<li>常量引用：const引用的目的是，<strong>禁止通过修改引用值来改变被引用的对象</strong><br> 1）const int &amp; e 相当于 const int * const e<br> 2）普通引用 相当于 int *const e<br> 3）当使用常量（字面量）对const引用进行初始化时，C++编译器会为常量值<br>分配空间，并将引用名作为这段空间的别名（编译器的优化）<br> 4）使用字面量对const引用初始化后，将生成一个只读变量</li>
+<li><strong>加法运算符</strong>的重载：成员函数 和 全局函数</li>
+<li><strong>左移运算符</strong>的重载：只能利用全局函数，成员函数输出是cout/cin在右边</li>
+<li>输入输出流 也是 链式编程</li>
+<li><strong>递增运算符</strong>重载：注意区分前置++ 和 后置++</li>
+<li><strong>赋值运算符</strong>重载：成员属性有在堆区申请内存时，涉及到深浅拷贝的问题，深拷贝解决问题：在赋值时重新在堆区申请内存</li>
+<li><strong>关系运算符</strong>重载：判断对象是否相等</li>
+<li><strong>调用运算符</strong>重载：（）【仿函数】</li>
+</ol>
+<h3 id="5-继承"><a href="#5-继承" class="headerlink" title="5. 继承"></a>5. 继承</h3><ol>
+<li>继承的优点：减少重复代码，子类或派生类    父类或基类</li>
+<li>继承方式：public/protected/private，父类中私有成员属性不可继承，继承方式决定的是公共属性和保护属性在子类中的权限</li>
+<li>父类中所有非静态的成员属性都会被子类继承下去，父类中私有的成员属性被编译器隐藏，访问不到但是会被继承下去，也就是说<strong>在求sizeof()子类大小时会包括从父类中继承过来的私有成员属性</strong></li>
+<li><strong>父类的static变量和函数在派生类中依然可用，但是受访问性控制</strong>（比如，父类的private域中的就不可访问），而且对static变量来说，派生类和父类中的static变量是共用空间的，这点在利用static变量进行引用计数的时候要特别注意，static函数没有“虚函数”一说，因为static函数实际上是“加上了访问控制的全局函数”</li>
+<li>继承中的构造与析构：父类的构造函数–&gt;子类的构造函数–&gt;子类的析构函数–&gt;父类的析构函数</li>
+<li>子类与父类中同名成员的处理：子类中直接访问，父类中加作用域访问；静态成员的访问和非静态成员的访问一致，增加了一种通过类名访问的模式</li>
+<li>多继承</li>
+<li>菱形继承<br> 菱形继承概念： 两个派生类继承同一个基类，又有某个类同时继承着两个派生类这种继承被称为菱形继承，或者钻石继承<br> 通过作用域可以访问父类的属性，但不能确定自己的属性<br> 虚继承：virtual，孙子类使用两个儿子类之中的属性，最终得到的值以后赋值的为准，儿子类中的属性虚继承父类，得到vbptr指针，指向后赋值的属性值<br> class Animal {};<br> class Sheep : virtual public Animal {};<br> class Tuo   : virtual public Animal {};<br> class SheepTuo : public Sheep, public Tuo {};</li>
+</ol>
+<h3 id="6-多态"><a href="#6-多态" class="headerlink" title="6. 多态"></a>6. 多态</h3><ol>
+<li>多态：相同的东西可以有多种形态</li>
+<li>静态多态：函数重载 和 运算符重载；对函数名和运算符名的复用</li>
+<li>动态多态：派生类和虚函数实现runtime多态</li>
+<li>静态·多态 和 动态多态的区别：<ul>
+<li>静态多态实现编译时确定函数地址—早绑定</li>
+<li>动态多态实现运行时确定函数地址—晚绑定</li>
+</ul>
+</li>
+<li>函数重写：函数所有的特征全部相同</li>
+<li>动态多态的实现：父类中的函数加上virtual关键字，变成虚函数，在编译时不能确定函数地址，在子类中重写该函数，使用父类引用或指针指向子类对象，子类就会调用子类中重写的函数而不会调用父类中的同名函数</li>
+<li>底层原理：虚函数表【vftable】/ 虚函数(表)指针【vfptr】：<br><img src="https://i.loli.net/2020/10/02/E6dukgLif3SF2jX.png" srcset="/img/loading.gif" alt="825001@1601619204@2"></li>
+<li></li>
+</ol>
+
+            </article>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                
+              </div>
+              
+                <p class="note note-warning">本博客所有文章除特别声明外，均采用 <a href="https://zh.wikipedia.org/wiki/Wikipedia:CC_BY-SA_3.0%E5%8D%8F%E8%AE%AE%E6%96%87%E6%9C%AC" target="_blank" rel="nofollow noopener noopener">CC BY-SA 3.0协议</a> 。转载请注明出处！</p>
+              
+              
+                <div class="post-prevnext row">
+                  <div class="post-prev col-6">
+                    
+                    
+                  </div>
+                  <div class="post-next col-6">
+                    
+                    
+                      <a href="/2021/04/15/Java/%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95/">
+                        <span class="hidden-mobile">Java/单元测试</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </div>
+                </div>
+              
+            </div>
+
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;TOC</p>
+  <div id="tocbot"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+  </main>
+
+  
+    <a id="scroll-top-button" href="#" role="button">
+      <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+    </a>
+  
+
+  
+    <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Search</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">keyword</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+  
+
+  
+
+  
+
+  <footer class="mt-5">
+  <div class="text-center py-3">
+    <div>
+      <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a>
+      <i class="iconfont icon-love"></i>
+      <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener">
+        <span>Fluid</span></a>
+    </div>
+    
+
+    
+
+    
+  </div>
+</footer>
+
+<!-- SCRIPTS -->
+<script  src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js" ></script>
+<script  src="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/js/bootstrap.min.js" ></script>
+<script  src="/js/main.js" ></script>
+
+
+  <script  src="/js/lazyload.js" ></script>
+
+
+
+  
+  <script  src="https://cdn.staticfile.org/tocbot/4.11.1/tocbot.min.js" ></script>
+  <script>
+    $(document).ready(function () {
+      var boardCtn = $('#board-ctn');
+      var boardTop = boardCtn.offset().top;
+
+      tocbot.init({
+        tocSelector: '#tocbot',
+        contentSelector: '.post-content',
+        headingSelector: 'h1,h2,h3,h4,h5,h6',
+        linkClass: 'tocbot-link',
+        activeLinkClass: 'tocbot-active-link',
+        listClass: 'tocbot-list',
+        isCollapsedClass: 'tocbot-is-collapsed',
+        collapsibleClass: 'tocbot-is-collapsible',
+        collapseDepth: 0,
+        scrollSmooth: true,
+        headingsOffset: -boardTop
+      });
+      if ($('.toc-list-item').length > 0) {
+        $('#toc').css('visibility', 'visible');
+      }
+    });
+  </script>
+
+
+
+
+
+  <script defer src="https://cdn.staticfile.org/clipboard.js/2.0.6/clipboard.min.js" ></script>
+  <script  src="/js/clipboard-use.js" ></script>
+
+
+
+
+
+
+<!-- Plugins -->
+
+
+
+  <script  src="https://cdn.staticfile.org/typed.js/2.0.11/typed.min.js" ></script>
+  <script>
+    var typed = new Typed('#subtitle', {
+      strings: [
+        '  ',
+        "CC++/C++类&nbsp;",
+      ],
+      cursorChar: "_",
+      typeSpeed: 70,
+      loop: false,
+    });
+    typed.stop();
+    $(document).ready(function () {
+      $(".typed-cursor").addClass("h2");
+      typed.start();
+    });
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/anchor-js/4.2.2/anchor.min.js" ></script>
+  <script>
+    anchors.options = {
+      placement: "right",
+      visible: "hover",
+      
+    };
+    var el = "h1,h2,h3,h4,h5,h6".split(",");
+    var res = [];
+    for (item of el) {
+      res.push(".markdown-body > " + item)
+    }
+    anchors.add(res.join(", "))
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    var path = "/local-search.xml";
+    var inputArea = document.querySelector("#local-search-input");
+    inputArea.onclick = function () {
+      searchFunc(path, 'local-search-input', 'local-search-result');
+      this.onclick = null
+    }
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+  <script>
+    $('#post img:not(.no-zoom img, img[no-zoom]), img[zoom]').each(
+      function () {
+        var element = document.createElement('a');
+        $(element).attr('data-fancybox', 'images');
+        $(element).attr('href', $(this).attr('src'));
+        $(this).wrap(element);
+      }
+    );
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

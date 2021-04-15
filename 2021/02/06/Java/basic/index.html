@@ -144,7 +144,7 @@
                   
                   <span class="post-meta mr-2">
                     <i class="iconfont icon-chart"></i>
-                    637 字
+                    534 字
                   </span>
                 
 
@@ -154,7 +154,7 @@
                       <i class="iconfont icon-clock-fill"></i>
                     
                     
-                    6
+                    5
                      分钟
                   </span>
                 
@@ -183,56 +183,55 @@
           <div class="post-content mx-auto" id="post">
             
             <article class="markdown-body">
-              <h3 id="java基础语法"><a href="#java基础语法" class="headerlink" title="java基础语法"></a>java基础语法</h3><ol>
-<li><p>一个 Java 程序可以认为是<strong>一系列对象的集合，而这些对象通过调用彼此的方法来协同工作</strong>。</p>
+              <h4 id="基础语法："><a href="#基础语法：" class="headerlink" title="基础语法："></a>基础语法：</h4><ul>
+<li><p>一个 Java 程序可以认为是<strong>一系列对象的集合，而这些对象通过调用彼此的方法来协同工作</strong></p>
 </li>
-<li><p>编写 Java 程序时，应注意以下几点：</p>
-<ul>
-<li><strong>大小写敏感</strong>：Java 是大小写敏感的，这就意味着标识符 Hello 与 hello 是不同的。</li>
-<li><strong>类名</strong>：对于所有的类来说，类名的首字母应该大写。如果类名由若干单词组成，那么每个单词的首字母应该大写，例如 <strong>MyFirstJavaClass</strong> （python相同）。</li>
-<li><strong>方法名</strong>：所有的方法名都应该以小写字母开头。如果方法名含有若干单词，则后面的每个单词首字母大写。（小驼峰）</li>
-<li><strong>源文件名</strong>：源文件名必须和类名相同（大驼峰）。<strong>当保存文件的时候，你应该使用类名作为文件名保存（切记 Java 是大小写敏感的），文件名的后缀为 **.java</strong>。（如果文件名和类名不相同则会导致编译错误）。</li>
-<li><strong>主方法入口</strong>：所有的 Java 程序由 <strong>public static void main(String[] args)</strong> 方法开始执行。</li>
-</ul>
-</li>
-<li><p>Java 所有的组成部分都需要名字。类名、变量名以及方法名都被称为标识符。</p>
-<p>关于 Java 标识符，有以下几点需要注意：</p>
-<ul>
-<li><p>所有的标识符都应该以字母（A-Z 或者 a-z）,美元符（$）、或者下划线（_）开始</p>
-</li>
-<li><p>首字符之后可以是字母（A-Z 或者 a-z）,美元符（$）、下划线（_）或数字的任何字符组合</p>
-</li>
-<li><p>关键字不能用作标识符</p>
-</li>
-<li><p>标识符是大小写敏感的</p>
-</li>
-<li><p>合法标识符举例：age、$salary、_value、__1_value</p>
-</li>
-<li><p>非法标识符举例：123abc、-salary</p>
-</li>
-</ul>
-</li>
-<li><p>像其他语言一样，Java可以使用修饰符来修饰类中方法和属性。主要有两类修饰符：</p>
-<ul>
-<li>访问控制修饰符 : default, public , protected, private</li>
-<li>非访问控制修饰符 : final, abstract, static, synchronized</li>
-</ul>
-</li>
-<li><p>Java 变量<br> Java 中主要有如下几种类型的变量</p>
-<ul>
-<li>局部变量<ul>
-<li>类变量（静态变量）</li>
-<li>成员变量（非静态变量）</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>Java 数组</p>
-<pre><code>数组是储存在堆上的对象，可以保存多个同类型变量。</code></pre></li>
-<li><p>Java 枚举</p>
-<pre><code>Java 5.0引入了枚举，枚举限制变量只能是预先设定好的值。使用枚举可以减少代码中的 bug。例如，我们为果汁店设计一个程序，它将限制果汁j为小杯、中杯、大杯。这就意味着它不允许顾客点除了这三种尺寸外的果汁。</code></pre></li>
-<li></li>
+<li><p>命名规则：</p>
+<blockquote>
+<ol>
+<li><strong>大小写敏感</strong>：Java 是大小写敏感的，这就意味着标识符 Hello 与 hello 是不同的</li>
+<li><strong>包名</strong>：全小写字母，以目录形式管理多层包结构</li>
+<li><strong>类名</strong>：对于所有的类来说，类名的首字母应该大写。如果类名由若干单词组成，那么每个单词的首字母应该大写</li>
+<li><strong>方法名/变量名</strong>：应该以小写字母开头。如果方法名含有若干单词，则后面的每个单词首字母大写</li>
+<li><strong>源文件名</strong>：源文件名必须和类名相同（大驼峰）。当保存文件的时候，你应该使用类名作为文件名保存（切记 Java 是大小写敏感的），文件名的后缀为<code>.java</code>（如果文件名和类名不相同则会导致编译错误）</li>
 </ol>
+<p><img src="https://raw.githubusercontent.com/processingnewage/MarkdownPic/main/img/20210321194131.png" srcset="/img/loading.gif" alt="1"></p>
+</blockquote>
+</li>
+<li><p>两类修饰符：</p>
+<blockquote>
+<ol>
+<li><strong>访问控制修饰符</strong> : default, public , protected, private</li>
+<li><strong>非访问控制修饰符</strong> : final, abstract, static, synchronized</li>
+</ol>
+</blockquote>
+</li>
+<li><p>变量的分类：</p>
+<p><img src="https://raw.githubusercontent.com/processingnewage/MarkdownPic/main/img/20210319173042.png" srcset="/img/loading.gif" alt="image-20210319173035519"></p>
+<p><img src="https://raw.githubusercontent.com/processingnewage/MarkdownPic/main/img/20210319173225.png" srcset="/img/loading.gif" alt="image-20210319173225139"></p>
+</li>
+</ul>
+<ul>
+<li><p>变量初始化的含义：<strong>本质上是分配内存空间</strong></p>
+<pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">InitTest</span> </span>&#123;
+    	<span class="hljs-keyword">int</span>[] arrrs;    <span class="hljs-comment">// 成员变量初始化：对于成员变量，初始化不需要赋值或调用new()方法，默认初始化机制保证不会报错</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;
+  		<span class="hljs-comment">// 对于局部变量：需要显式初始化，否则会报"The local variable a may not have been initialized"错误</span>
+        <span class="hljs-comment">// 引用数据类型初始化：分配内存空间，调用new()方法[动态初始化] 或 直接赋值[静态初始化]</span>
+        <span class="hljs-comment">// 基本数据类型初始化：分配内存空间，赋具体的值</span>
+        <span class="hljs-comment">// 总结：无论是什么数据类型，初始化的含义都是分配内存空间，只不过对于基本数据类型和引用数据类型来说，分配内存空间的方法和表现形式不同，具体见上一条</span>
+        <span class="hljs-keyword">int</span>[] arrs = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[<span class="hljs-number">2</span>];
+        <span class="hljs-keyword">int</span> a = <span class="hljs-number">1</span>;
+        String b = <span class="hljs-string">"hello world"</span>;
+        System.out.println(arrs[<span class="hljs-number">0</span>]);
+        System.out.println(a);
+        System.out.println(b);
+    &#125;
+&#125;</code></pre>
+
+
+</li>
+</ul>
 
             </article>
             <hr>

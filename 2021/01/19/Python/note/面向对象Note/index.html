@@ -282,7 +282,12 @@ stu4_obj = Student(<span class="hljs-string">'lili'</span>, <span class="hljs-nu
 <span class="hljs-comment"># 绑定方法的调用</span>
 stu4_obj.bind_obj(<span class="hljs-string">"lili"</span>)  <span class="hljs-comment"># 通过对象的绑定方法调用，实例化对象时已经建立对象与类的关联，自动传入对象名作为第一个参数</span>
 Student.bind_obj(stu4_obj, <span class="hljs-string">"lili"</span>)		<span class="hljs-comment"># 通过类调用，传入对象名</span></code></pre>
+
+
+
 </li>
+</ul>
+<ul>
 <li><p><strong>属性查找：</strong></p>
 <ul>
 <li><strong>对象的名称空间里只存放着对象独有的属性，而对象们相似的属性是存放于类中的</strong>。对象在访问属性时，会优先从对象本身的<strong>dict</strong>中查找，未找到，则去类的<strong>dict</strong>中查找<ul>
@@ -414,6 +419,8 @@ obj.name		<span class="hljs-comment"># 获取name属性</span>
 obj.name = <span class="hljs-string">"lili"</span>		<span class="hljs-comment"># 设置name属性</span>
 <span class="hljs-keyword">del</span> obj.name			<span class="hljs-comment"># 删除name属性</span>
 <span class="hljs-comment"># 类的设计者应该保证在如何修改内部代码的情况下都不改变外部使用者的习惯</span></code></pre>
+
+
 
 
 <ul>
@@ -624,9 +631,15 @@ teacher1.birth.tell_birth()
 <span class="hljs-comment"># 重用Course类的功能</span>
 <span class="hljs-keyword">for</span> obj <span class="hljs-keyword">in</span> teacher1.courses: 
     obj.tell_info()</code></pre>
+
+
+
+
 </li>
 </ul>
 </li>
+</ul>
+<ul>
 <li><p><strong>多态</strong></p>
 <ul>
 <li><p><strong>什么是多态：同一种事物的多种形态</strong>（水：水蒸气、冰、液态水等）（<strong>继承背景之下的编程思想</strong>）</p>
@@ -650,69 +663,81 @@ my_len(&#123;<span class="hljs-string">'a'</span>: <span class="hljs-number">1</
 
 <span class="hljs-comment"># 实际上len()函数正是python提供的统一访问的接口</span>
 len(<span class="hljs-string">"hello"</span>)
-...</code></pre></li>
+...</code></pre>
+</li>
 <li><p><strong>多态性的好处在于增强了程序的灵活性和可扩展性</strong></p>
 </li>
 <li><p><strong>总结</strong>：</p>
 <ul>
 <li>多态性的本质<strong>在于不同的类中定义有相同的方法名</strong>，这样我们就可以不考虑类而统一用一种方式去适用对象，可以通过在父类中引入抽象类（<strong>并不需要实现功能</strong>，<strong>更多的是规范标准</strong>）的概念来硬性限制子类必须拥有某些方法名</li>
 </ul>
-<pre><code class="hljs python"><span class="hljs-keyword">import</span> abc
-<span class="hljs-comment"># 指定metaclass属性将类设置为抽象类，抽象类本身只是用来约束子类的，不能被实例化</span>
-<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Animal</span><span class="hljs-params">(metaclass=abc.ABCMeta)</span>:</span>
-<span class="hljs-meta">    @abc.abstractmethod # 该装饰器限制子类必须定义有一个名为talk的方法</span>
-    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">talk</span><span class="hljs-params">(self)</span>:</span> <span class="hljs-comment"># 抽象方法中无需实现具体的功能，更多的是做标准的规范</span>
+<pre><code class="hljs python">  <span class="hljs-keyword">import</span> abc
+  <span class="hljs-comment"># 指定metaclass属性将类设置为抽象类，抽象类本身只是用来约束子类的，不能被实例化</span>
+  <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Animal</span><span class="hljs-params">(metaclass=abc.ABCMeta)</span>:</span>
+<span class="hljs-meta">      @abc.abstractmethod # 该装饰器限制子类必须定义有一个名为talk的方法</span>
+      <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">talk</span><span class="hljs-params">(self)</span>:</span> <span class="hljs-comment"># 抽象方法中无需实现具体的功能，更多的是做标准的规范</span>
+          <span class="hljs-keyword">pass</span>
+      
+  <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Cat</span><span class="hljs-params">(Animal)</span>:</span> <span class="hljs-comment"># 但凡继承Animal的子类都必须遵循Animal规定的标准</span>
+      <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">talk</span><span class="hljs-params">(self)</span>:</span>
+          <span class="hljs-keyword">pass</span>
+cat = Cat() <span class="hljs-comment"># 若子类中没有一个名为talk的方法则会抛出异常TypeError，无法实例化</span></code></pre>
+
+<ul>
+<li><strong>python中的多态实现：</strong></li>
+<li>但其实我们完全可以<strong>不依赖于继承</strong>，只需要制造出<strong>外观和行为相同对象</strong>，同样可以实现<strong>不考虑对象类型而使用对象</strong>，这正是Python崇尚的“<strong>鸭子类型</strong>”（duck typing）：“如果看起来像、叫声像而且走起路来像鸭子，那么它就是鸭子”。比起继承的方式，<strong>鸭子类型在某种程度上实现了程序的松耦合度</strong></li>
+</ul>
+<pre><code class="hljs python"><span class="hljs-comment"># python习惯性从代码规范的角度实现某些特性，并不做严格的限制</span>
+<span class="hljs-comment"># 类比：Linux中一切皆文件的理念，对硬件抽象出统一的接口</span>
+<span class="hljs-comment"># 二者看起来都像文件，因而就可以当文件一样去用，然而它们并没有直接的关系</span>
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Txt</span>:</span> <span class="hljs-comment"># Txt类有两个与文件类型同名的方法，即read和write</span>
+	<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">read</span><span class="hljs-params">(self)</span>:</span>
+		<span class="hljs-keyword">pass</span>
+	<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">write</span><span class="hljs-params">(self)</span>:</span>
+		<span class="hljs-keyword">pass</span>
+  
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Disk</span>:</span> <span class="hljs-comment"># Disk类也有两个与文件类型同名的方法：read和write</span>
+	<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">read</span><span class="hljs-params">(self)</span>:</span>
+        <span class="hljs-keyword">pass</span>
+	<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">write</span><span class="hljs-params">(self)</span>:</span>
         <span class="hljs-keyword">pass</span></code></pre>
 
-<p>class Cat(Animal): # 但凡继承Animal的子类都必须遵循Animal规定的标准<br>  def talk(self):</p>
-<pre><code>pass</code></pre></li>
-</ul>
-<p>cat = Cat() # 若子类中没有一个名为talk的方法则会抛出异常TypeError，无法实例化</p>
-<pre><code class="hljs angelscript">* **python中的多态实现：**
-  
-  * 但其实我们完全可以**不依赖于继承**，只需要制造出**外观和行为相同对象**，同样可以实现**不考虑对象类型而使用对象**，这正是Python崇尚的“**鸭子类型**”（duck typing）：“如果看起来像、叫声像而且走起路来像鸭子，那么它就是鸭子”。比起继承的方式，**鸭子类型在某种程度上实现了程序的松耦合度**
-  
-  ```python
-  # python习惯性从代码规范的角度实现某些特性，并不做严格的限制
-  # 类比：Linux中一切皆文件的理念，对硬件抽象出统一的接口
-  # 二者看起来都像文件，因而就可以当文件一样去用，然而它们并没有直接的关系
-  <span class="hljs-keyword">class</span> <span class="hljs-symbol">Txt: </span># <span class="hljs-symbol">Txt</span>类有两个与文件类型同名的方法，即<span class="hljs-symbol">read</span>和<span class="hljs-symbol">write</span>
-      <span class="hljs-symbol">def</span> <span class="hljs-symbol">read</span>(<span class="hljs-symbol">self</span>):
-          <span class="hljs-symbol">pass</span>
-      <span class="hljs-symbol">def</span> <span class="hljs-symbol">write</span>(<span class="hljs-symbol">self</span>):
-          <span class="hljs-symbol">pass</span>
-  
-  <span class="hljs-symbol">class</span> <span class="hljs-symbol">Disk: </span># <span class="hljs-symbol">Disk</span>类也有两个与文件类型同名的方法：<span class="hljs-symbol">read</span>和<span class="hljs-symbol">write</span>
-      <span class="hljs-symbol">def</span> <span class="hljs-symbol">read</span>(<span class="hljs-symbol">self</span>):
-          <span class="hljs-symbol">pass</span>
-      <span class="hljs-symbol">def</span> <span class="hljs-symbol">write</span>(<span class="hljs-symbol">self</span>):
-          <span class="hljs-symbol">pass</span></code></pre>
+
+
+
 </li>
+</ul>
+</li>
+</ul>
+<ul>
 <li><p><strong>绑定方法与非绑定方法[classmethod/staticmethod]</strong></p>
+<ul>
+<li><p>绑定方法：特殊之处在于将调用者作为第一个参数自动传入</p>
+<ul>
+<li>绑定给对象的方法：调用者是对象，自动传入的是对象</li>
+<li>绑定给类的方法：调用者是类，自动传入的是类</li>
+</ul>
+</li>
+<li><p><strong>区分：根据函数体中的代码确定绑定给对象还是绑定给类</strong></p>
+</li>
+<li><p>总结:</p>
+<p>​        绑定方法与非绑定方法的使用：若类中需要一个功能，该功能的实现代码中需要引用对象则将其定义成对象方法、需要引用类则将其定义成类方法、无需引用类或对象则将其定义成静态方法(该方法不与类或对象绑定，类与对象都可以来调用它)</p>
+<p>参考博客：<a href="https://zhuanlan.zhihu.com/p/109335443" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/109335443</a></p>
 </li>
 </ul>
-<pre><code>* 绑定方法：特殊之处在于将调用者作为第一个参数自动传入
-
-    * 绑定给对象的方法：调用者是对象，自动传入的是对象
-    * 绑定给类的方法：调用者是类，自动传入的是类
-* **区分：根据函数体中的代码确定绑定给对象还是绑定给类**
-
-<pre><code class="hljs python"><span class="hljs-comment"># 总结:</span>
-	绑定方法与非绑定方法的使用：若类中需要一个功能，该功能的实现代码中需要引用对象则将其定义成对象方法、需要引用类则将其定义成类方法、无需引用类或对象则将其定义成静态方法(该方法不与类或对象绑定，类与对象都可以来调用它)
-<span class="hljs-comment"># 参考博客：https://zhuanlan.zhihu.com/p/109335443</span></code></pre></code></pre><ul>
-<li><strong>反射、内置方法</strong></li>
+</li>
 </ul>
 <ul>
-<li><p>python是<strong>开源</strong>、<strong>强类型</strong>、<strong>动态</strong>、<strong>解释性</strong>语言</p>
+<li><p><strong>反射</strong></p>
 <ul>
+<li>python是<strong>开源</strong>、<strong>强类型</strong>、<strong>动态</strong>、<strong>解释性</strong>语言<ul>
 <li>动态：在程序运行时才检查变量的类型（“事先不知道”）</li>
 </ul>
 </li>
-<li><p>什么是反射：<strong>指的是在程序运行过程中可以动态的获取对象和类的信息</strong></p>
-</li>
-<li><p>为什么需要反射：动态语言的特性（<strong>直到程序运行时才获取对象、类、变量的信息</strong>）</p>
-</li>
-<li><p>如何实现反射（怎么在程序运行时才能获取对象、类、变量中的信息）：</p>
+<li>什么是反射：<strong>指的是在程序运行过程中可以动态的获取对象和类的信息</strong></li>
+<li>为什么需要反射：动态语言的特性（<strong>直到程序运行时才获取对象、类、变量的信息</strong>）</li>
+<li>如何实现反射（怎么在程序运行时才能获取对象、类、变量中的信息）：</li>
+</ul>
 <pre><code class="hljs python"><span class="hljs-comment"># 实现反射的步骤</span>
 	<span class="hljs-comment"># 1. 先通过dir，查看某一对象下的属性字典（字符串作键值）</span>
 	<span class="hljs-comment"># 2. 通过字符串反射到真正的属性上，得到属性值</span>
@@ -723,8 +748,13 @@ len(<span class="hljs-string">"hello"</span>)
         	<span class="hljs-comment"># getattr()	获取属性</span>
         	<span class="hljs-comment"># setattr() 赋值属性</span>
         	<span class="hljs-comment"># delattr() 删除属性</span></code></pre>
+
+
+
 </li>
-<li><p><strong>内置方法</strong>（<strong>魔法方法</strong>）</p>
+</ul>
+<ul>
+<li><p><strong>内置方法（魔法方法）</strong></p>
 <pre><code class="hljs python"><span class="hljs-comment"># 1. 什么是内置方法</span>
 	<span class="hljs-comment"># 定义在类内部，以__xxx__形式出现的方法</span>
     <span class="hljs-comment"># 特点：在某些条件下会自动出发执行</span>
@@ -746,6 +776,8 @@ len(<span class="hljs-string">"hello"</span>)
 			self.age = age    
 	<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__del__</span><span class="hljs-params">(self)</span>:</span>
         <span class="hljs-comment"># 当对象占据操作系统资源时，GC机制只解决了程序运行垃圾回收，此时需要提示操作系统回收相关资源</span></code></pre>
+
+
 
 </li>
 </ul>
