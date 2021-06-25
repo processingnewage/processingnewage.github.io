@@ -219,9 +219,9 @@
 <p>–distpath：指定了最终的可执行文件目录所在的父目录</p>
 </blockquote>
 <p>上面的命令执行结束后，我们进入到目录 d:\pybuild\dist 中，就会发现有一个目录叫byhy(和我们的入口文件byhy同名)，该目录中包含了如下文件：</p>
-<p><img src="http://cdn1.python3.vip/imgs/gh/36257654_40577359-ee4b0fc6-6136-11e8-96b0-e7be9d3f89cd.png" srcset="/img/loading.gif" alt="1"></p>
+<p><img src="https://gitee.com/processingnewage/mark-down-pic/raw/master/img/20210625151213.png" srcset="/img/loading.gif" alt="1"></p>
 <p>里面有一个可执行文件就叫<strong>byhy.exe</strong>，和我们的入口文件byhy同名：</p>
-<p><img src="http://cdn1.python3.vip/imgs/gh/36257654_42426250-1f2e1f5e-8359-11e8-98b0-036a5c5b5b5f.png" srcset="/img/loading.gif" alt="2"></p>
+<p><img src="https://gitee.com/processingnewage/mark-down-pic/raw/master/img/20210625151215.png" srcset="/img/loading.gif" alt="2"></p>
 <p>双击运行它，就可以发现效果和我们在命令行中运行一样。但是它却不需要使用Python解释器了，因为解释器就内置在这个目录中了<br>。以后我们要把这个程序给别人使用，只需要把<strong>目录 byhy</strong> 打包成<strong>zip 文件</strong>发给别人，别人收到后，解压，执行里面的byhy.exe就可以直接运行了，是不是很方便呢 ：)</p>
 <h5 id="将库文件单独存放在目录中"><a href="#将库文件单独存放在目录中" class="headerlink" title="将库文件单独存放在目录中"></a>将库文件单独存放在目录中</h5><p>上面这样操作后，大家可以发现我们只要运行byhy.exe文件，但是该目录下却有很多其他的.dll 之类的库文件，这使得我们要寻找并运行程序时，要在这么多文件中找到 <strong>.exe 文件</strong>，比较费劲。我们可以通过如下方法，把这些库文件放到单独的一个目录中。这样.exe所在的目录就显得比较清爽了，也好找到.exe文件了。我们添加一个Python代码文件，名为 runtimehook1.py。其内容如下：</p>
 <pre><code class="hljs python"><span class="hljs-keyword">import</span> sys

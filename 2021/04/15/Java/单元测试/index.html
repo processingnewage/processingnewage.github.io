@@ -239,9 +239,9 @@
 <p>使用JUnit编写单元测试的好处在于，我们可以非常简单地组织测试代码，并随时运行它们，JUnit就会给出成功的测试和失败的测试，还可以生成测试报告，不仅包含测试的成功率，还可以统计测试的代码覆盖率，即被测试的代码本身有多少经过了测试。对于高质量的代码来说，测试覆盖率应该在80%以上。</p>
 <p>此外，几乎所有的<strong>IDE工具</strong>都集成了JUnit，这样我们就可以直接在IDE中编写并运行JUnit测试。JUnit目前最新版本是5。</p>
 <p>以Eclipse为例，当我们已经编写了一个<code>Factorial.java</code>文件后，我们想对其进行测试，需要编写一个对应的<code>FactorialTest.java</code>文件，以<code>Test</code>为后缀是一个惯例，并分别将其放入<code>src</code>和<code>test</code>目录中。最后，在<code>Project</code> - <code>Properties</code> - <code>Java Build Path</code> - <code>Libraries</code>中添加<code>JUnit 5</code>的库：</p>
-<p><img src="https://www.liaoxuefeng.com/files/attachments/1304076771917890/l" srcset="/img/loading.gif" alt="pic1"></p>
+<p><img src="https://gitee.com/processingnewage/mark-down-pic/raw/master/img/20210625150312.png" srcset="/img/loading.gif" alt="pic1"></p>
 <p>整个项目结构如下：</p>
-<p><img src="https://www.liaoxuefeng.com/files/attachments/1304076140675137/l" srcset="/img/loading.gif" alt="junit-test-structure"></p>
+<p><img src="https://gitee.com/processingnewage/mark-down-pic/raw/master/img/20210625150316.png" srcset="/img/loading.gif" alt="junit-test-structure"></p>
 <p>我们来看一下<code>FactorialTest.java</code>的内容：</p>
 <pre><code class="hljs java">&gt;<span class="hljs-keyword">package</span> com.itranswarp.learnjava;
 
@@ -268,9 +268,9 @@
 <li>…</li>
 </ul>
 <p>运行单元测试非常简单。选中<code>FactorialTest.java</code>文件，点击<code>Run</code> - <code>Run As</code> - <code>JUnit Test</code>，Eclipse会自动运行这个JUnit测试，并显示结果：</p>
-<p><img src="https://www.liaoxuefeng.com/files/attachments/1304081469538370/l" srcset="/img/loading.gif" alt="junit-test-ok"></p>
+<p><img src="https://gitee.com/processingnewage/mark-down-pic/raw/master/img/20210625150321.png" srcset="/img/loading.gif" alt="junit-test-ok"></p>
 <p>如果测试结果与预期不符，<code>assertEquals()</code>会抛出异常，我们就会得到一个测试失败的结果：</p>
-<p><img src="https://www.liaoxuefeng.com/files/attachments/1304081566007362/l" srcset="/img/loading.gif" alt="junit-test-failed"></p>
+<p><img src="https://gitee.com/processingnewage/mark-down-pic/raw/master/img/20210625150324.png" srcset="/img/loading.gif" alt="junit-test-failed"></p>
 <p>在Failure Trace中，JUnit会告诉我们详细的错误结果：</p>
 <pre><code class="hljs java">&gt;org.opentest4j.AssertionFailedError: expected: &lt;<span class="hljs-number">3628800</span>&gt; but was: &lt;<span class="hljs-number">362880</span>&gt;
 at org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:<span class="hljs-number">55</span>)
@@ -521,7 +521,7 @@ at ...</code></pre>
 &gt;&#125;</code></pre>
 
 <p>当我们在JUnit中运行所有测试的时候，JUnit会给出执行的结果。在IDE中，我们能很容易地看到没有执行的测试：</p>
-<p><img src="https://www.liaoxuefeng.com/files/attachments/1304094455103553/l" srcset="/img/loading.gif" alt="junit-conditional-test"></p>
+<p><img src="https://gitee.com/processingnewage/mark-down-pic/raw/master/img/20210625150333.png" srcset="/img/loading.gif" alt="junit-conditional-test"></p>
 <p>带有⊘标记的测试方法表示没有执行。</p>
 <p><strong>小结</strong></p>
 <p>条件测试是根据某些注解在运行期让JUnit自动忽略某些测试。</p>
@@ -635,8 +635,8 @@ at ...</code></pre>
                   <div class="post-next col-6">
                     
                     
-                      <a href="/2021/04/02/%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95%E5%AE%9E%E7%8E%B0-java/%E5%B8%B8%E7%94%A8%E7%9A%84%E7%AE%97%E6%B3%95%E6%80%BB%E7%BB%93/">
-                        <span class="hidden-mobile">基本数据结构和算法实现-java/常用的算法总结</span>
+                      <a href="/2021/04/02/%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95%E5%AE%9E%E7%8E%B0-java/12.%20%E5%B8%B8%E7%94%A8%E7%9A%84%E7%AE%97%E6%B3%95%E6%80%BB%E7%BB%93/">
+                        <span class="hidden-mobile">基本数据结构和算法实现-java/12. 常用的算法总结</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>

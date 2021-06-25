@@ -299,7 +299,7 @@
 <h3 id="4-运算符重载"><a href="#4-运算符重载" class="headerlink" title="4. 运算符重载"></a>4. 运算符重载</h3><ol>
 <li>运算符重载概念：对已有的运算符重新进行定义，赋予其另一种功能，以适应不同的数据类型，主要针对自定义的数据类型</li>
 <li>对于内置的数据类型，编译器知道怎么使用运算符，运算符和内置数据类型是绑定的，运算符重载旨在扩展运算符的用途</li>
-<li>常量引用：const引用的目的是，<strong>禁止通过修改引用值来改变被引用的对象</strong><br> 1）const int &amp; e 相当于 const int * const e<br> 2）普通引用 相当于 int *const e<br> 3）当使用常量（字面量）对const引用进行初始化时，C++编译器会为常量值<br>分配空间，并将引用名作为这段空间的别名（编译器的优化）<br> 4）使用字面量对const引用初始化后，将生成一个只读变量</li>
+<li>常量引用：const引用的目的是，<strong>禁止通过修改引用值来改变被引用的对象</strong><br> 1）const int &amp; e 相当于 const int * const e<br> 2）普通引用 相当于 int *const e<br> 3）当使用常量（字面量）对const引用进行初始化时，C++编译器会为常量值<br> 分配空间，并将引用名作为这段空间的别名（编译器的优化）<br> 4）使用字面量对const引用初始化后，将生成一个只读变量</li>
 <li><strong>加法运算符</strong>的重载：成员函数 和 全局函数</li>
 <li><strong>左移运算符</strong>的重载：只能利用全局函数，成员函数输出是cout/cin在右边</li>
 <li>输入输出流 也是 链式编程</li>
@@ -329,7 +329,7 @@
 </li>
 <li>函数重写：函数所有的特征全部相同</li>
 <li>动态多态的实现：父类中的函数加上virtual关键字，变成虚函数，在编译时不能确定函数地址，在子类中重写该函数，使用父类引用或指针指向子类对象，子类就会调用子类中重写的函数而不会调用父类中的同名函数</li>
-<li>底层原理：虚函数表【vftable】/ 虚函数(表)指针【vfptr】：<br><img src="https://i.loli.net/2020/10/02/E6dukgLif3SF2jX.png" srcset="/img/loading.gif" alt="825001@1601619204@2"></li>
+<li>底层原理：虚函数表【vftable】/ 虚函数(表)指针【vfptr】：<br><img src="https://gitee.com/processingnewage/mark-down-pic/raw/master/img/20210625145823.png" srcset="/img/loading.gif" alt="image-20210625145823685"></li>
 <li></li>
 </ol>
 
@@ -347,6 +347,12 @@
                 <div class="post-prevnext row">
                   <div class="post-prev col-6">
                     
+                    
+                      <a href="/2021/04/19/%E5%B5%8C%E5%85%A5%E5%BC%8F/STM32%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E6%89%AB%E7%9B%B2/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">嵌入式/STM32基础知识扫盲</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
                     
                   </div>
                   <div class="post-next col-6">

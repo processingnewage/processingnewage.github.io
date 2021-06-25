@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" type="image/png" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="">
+  <meta name="author" content="John Doe">
+  <meta name="keywords" content="">
+  <title>Git/Git使用指南 - Hexo</title>
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
+<link  rel="stylesheet" href="https://cdn.staticfile.org/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/10.0.0/styles/github-gist.min.css" />
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_fmb4a04yx8h.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_pjno9b9zyxs.css">
+
+
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+<meta name="generator" content="Hexo 4.2.1"><link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+</head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>processing</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/">
+              <i class="iconfont icon-home-fill"></i>
+              Home</a>
+          </li>
+        
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/archives/">
+              <i class="iconfont icon-archive-fill"></i>
+              Archives</a>
+          </li>
+        
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/categories/">
+              <i class="iconfont icon-category-fill"></i>
+              Categories</a>
+          </li>
+        
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/tags/">
+              <i class="iconfont icon-tags-fill"></i>
+              Tags</a>
+          </li>
+        
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/about/">
+              <i class="iconfont icon-user-fill"></i>
+              About</a>
+          </li>
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="view intro-2" id="background" parallax=true
+         style="background: url('/img/default.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="container text-center white-text fadeInUp">
+            <span class="h2" id="subtitle">
+              
+            </span>
+
+            
+              
+                <div class="mt-3 post-meta">
+                  <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+                  <time datetime="2020-11-14 14:23">
+                    November 14, 2020 pm
+                  </time>
+                </div>
+              
+
+              <div class="mt-1">
+                
+                  
+                  <span class="post-meta mr-2">
+                    <i class="iconfont icon-chart"></i>
+                    1.3k 字
+                  </span>
+                
+
+                
+                  
+                  <span class="post-meta mr-2">
+                      <i class="iconfont icon-clock-fill"></i>
+                    
+                    
+                    15
+                     分钟
+                  </span>
+                
+
+                
+              </div>
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-md">
+      <div class="container nopadding-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <div class="post-content mx-auto" id="post">
+            
+            <article class="markdown-body">
+              <h2 id="Git使用指南"><a href="#Git使用指南" class="headerlink" title="Git使用指南"></a>Git使用指南</h2><h3 id="一、为什么要使用Git版本管理工具"><a href="#一、为什么要使用Git版本管理工具" class="headerlink" title="一、为什么要使用Git版本管理工具"></a>一、为什么要使用Git版本管理工具</h3><ul>
+<li><p>完整的记录项目代码变化的过程</p>
+<ul>
+<li>人、时间、地点、物、事</li>
+</ul>
+</li>
+<li><p>备份每一个变化过程的代码版本</p>
+<ul>
+<li>查询历史记录</li>
+<li>复原变更</li>
+<li>比较差异</li>
+</ul>
+</li>
+<li><p>多人协同开发</p>
+<ul>
+<li>分支合并</li>
+<li>克隆提交</li>
+</ul>
+</li>
+<li><p>需要掌握的知识点：</p>
+<ul>
+<li>环境配置</li>
+<li>版本追踪</li>
+<li>GitHub详解</li>
+<li>复原变更</li>
+<li>分支合并</li>
+<li>多人协同开发</li>
+<li>服务器自动部署</li>
+<li>Gitlab详解</li>
+</ul>
+</li>
+</ul>
+<h3 id="二、Git基本使用"><a href="#二、Git基本使用" class="headerlink" title="二、Git基本使用"></a>二、Git基本使用</h3><h4 id="I-环境配置"><a href="#I-环境配置" class="headerlink" title="I. 环境配置"></a>I. 环境配置</h4><ul>
+<li>Mac/Linux/Windows 版本下载</li>
+<li>测试命令：git –version    查看git版本</li>
+<li>常用的bash命令：ls / pwd / clear / touch / mkdir / rm / cd</li>
+</ul>
+<h4 id="II-配置用户名和邮箱-当前项目的追踪"><a href="#II-配置用户名和邮箱-当前项目的追踪" class="headerlink" title="II. 配置用户名和邮箱[当前项目的追踪]"></a>II. 配置用户名和邮箱[当前项目的追踪]</h4><ul>
+<li>命令<ul>
+<li>git config –global user.name “processingnewage”    [配置全局用户名]</li>
+<li>git config –global user.email “<a href="mailto:18955619698@163.com">18955619698@163.com</a>“    [配置全局用户邮箱]</li>
+<li>git config –list        [查看配置]</li>
+<li>git config user.name        [查看用户名]            </li>
+<li>git help        [查看帮助]</li>
+</ul>
+</li>
+</ul>
+<h4 id="III-管理git项目"><a href="#III-管理git项目" class="headerlink" title="III 管理git项目"></a>III 管理git项目</h4><h5 id="1-初始化repo和追踪文件、查看状态"><a href="#1-初始化repo和追踪文件、查看状态" class="headerlink" title="1. 初始化repo和追踪文件、查看状态"></a>1. 初始化repo和追踪文件、查看状态</h5><ul>
+<li>命令<ul>
+<li>git init        [在项目文件夹中创建.git文件，对项目初始化，实现git的版本管控]</li>
+<li>git init [name]        [在指定的文件夹中生成.git文件，若不存在则创建新的空文件夹]</li>
+<li>git add [filename]        [将文件从workspace添加到cached，<strong>追踪文件的变化</strong>]</li>
+<li>git add . / -A        [一次性添加所有文件]</li>
+<li>git status        [查看追踪和提交的状态]</li>
+</ul>
+</li>
+</ul>
+<h5 id="2-放弃追踪"><a href="#2-放弃追踪" class="headerlink" title="2. 放弃追踪"></a>2. 放弃追踪</h5><ul>
+<li>命令<ul>
+<li>git rm –cached [filename]    [取消文件的追踪，将cached中的文件回退到workspace中]</li>
+</ul>
+</li>
+</ul>
+<h5 id="3-提交"><a href="#3-提交" class="headerlink" title="3. 提交"></a>3. 提交</h5><ul>
+<li>命令<ul>
+<li>git commit        [对所有被追踪的文件从cached区中添加到本地repo中]</li>
+<li>git commit -m “描述”        [添加描述]</li>
+<li>git commit -am “描述”        [已经add过的文件修改后使用该命令可以不用重新add，直接commit即可]</li>
+</ul>
+</li>
+</ul>
+<h5 id="4-log追踪"><a href="#4-log追踪" class="headerlink" title="4. log追踪"></a>4. log追踪</h5><ul>
+<li>命令<ul>
+<li>git log</li>
+<li>git log -p -2            [比较最近2次提交的差别]</li>
+<li>git log –author=”processingnewage”        [查看作者]</li>
+<li>git log –oneline        [一行显示]</li>
+<li>git log –graph        [线图显示]</li>
+<li>git log –pretty=oneline                        </li>
+<li>git log –pretty=format</li>
+</ul>
+</li>
+</ul>
+<h5 id="5-追踪文件修改前后的区别"><a href="#5-追踪文件修改前后的区别" class="headerlink" title="5. 追踪文件修改前后的区别"></a>5. 追踪文件修改前后的区别</h5><ul>
+<li>命令<ul>
+<li>git diff        [在add之后无法比较]</li>
+<li>git diff –staged        [可以比较在add后的文件，但在commit后的文件始终无法比较]</li>
+</ul>
+</li>
+</ul>
+<h5 id="6-文件删除、重命名、移动"><a href="#6-文件删除、重命名、移动" class="headerlink" title="6. 文件删除、重命名、移动"></a>6. 文件删除、重命名、移动</h5><ul>
+<li>命令<ul>
+<li>git rm [filename]</li>
+<li>git mv [oldname] [newname]</li>
+<li>git mv [filename] demo/demo.txt(folder)        [rename and move]</li>
+</ul>
+</li>
+</ul>
+<h5 id="7-文件忽略-在项目中不是所有的文件都需要commit，因此需要忽略文件"><a href="#7-文件忽略-在项目中不是所有的文件都需要commit，因此需要忽略文件" class="headerlink" title="7. 文件忽略(在项目中不是所有的文件都需要commit，因此需要忽略文件)"></a>7. 文件忽略(在项目中不是所有的文件都需要commit，因此需要忽略文件)</h5><ul>
+<li>命令<ul>
+<li>.gitignore        [当前目录的根文件夹下]</li>
+<li>/node_modules        [忽略node_modules文件夹下的所有文件]</li>
+<li>*./log            [忽略以.log结尾的所有文件]</li>
+<li>*.zip            [忽略以.zip结尾的所有文件]</li>
+<li>git rm -r –cached ./[filename]        [已追踪的状态无法忽略，需要回退到未追踪的状态][-r 一次性踢出多个文件]</li>
+</ul>
+</li>
+<li><strong>tips: 空的文件夹不会被追踪，空文件会被追踪</strong><pre><code class="hljs .gitignore">.gitignore
+&#x2F;node_modules
+*.txt
+*.zip
+jq.js</code></pre>
+
+</li>
+</ul>
+<h5 id="8-项目演练"><a href="#8-项目演练" class="headerlink" title="8. 项目演练"></a>8. 项目演练</h5><ul>
+<li>主要流程<ul>
+<li>git init</li>
+<li>git add .</li>
+<li>git commit -m “描述”</li>
+</ul>
+</li>
+<li>others<ul>
+<li>git status</li>
+<li>.gitignore</li>
+</ul>
+</li>
+</ul>
+<h5 id="9-一键还原"><a href="#9-一键还原" class="headerlink" title="9. 一键还原"></a>9. 一键还原</h5><ul>
+<li>命令<ul>
+<li>git chechout – [filename]        [恢复到上一次的状态][未追踪的文件撤销更改]</li>
+</ul>
+</li>
+</ul>
+<h5 id="10-撤销追踪与文件还原-workspace的文件修改后添加到cached区后，无法直接使用checkout恢复"><a href="#10-撤销追踪与文件还原-workspace的文件修改后添加到cached区后，无法直接使用checkout恢复" class="headerlink" title="10. 撤销追踪与文件还原(workspace的文件修改后添加到cached区后，无法直接使用checkout恢复)"></a>10. 撤销追踪与文件还原(workspace的文件修改后添加到cached区后，无法直接使用checkout恢复)</h5><ul>
+<li>命令<ul>
+<li>git reset HEAD [filename]        [撤销当前文件的追踪]</li>
+<li>git chekout – [filename]</li>
+</ul>
+</li>
+</ul>
+<h5 id="11-版本回退-回到旧版本的同时删除新的版本"><a href="#11-版本回退-回到旧版本的同时删除新的版本" class="headerlink" title="11. 版本回退(回到旧版本的同时删除新的版本)"></a>11. 版本回退(回到旧版本的同时删除新的版本)</h5><ul>
+<li>命令<ul>
+<li>git reset –hard HEAD^                [回退到上个版本]</li>
+<li>git reset –hard HEAD^^                [回退到上上个版本]</li>
+<li>git reset –hard [hash]             [回退到指定hash号的版本]</li>
+<li>git reflog     指针理解:ref(索引) log(日志) 查看指针指向的日志</li>
+</ul>
+</li>
+</ul>
+<h5 id="12-回到旧版本-回到旧版本的同时不删除新的版本"><a href="#12-回到旧版本-回到旧版本的同时不删除新的版本" class="headerlink" title="12. 回到旧版本(回到旧版本的同时不删除新的版本)"></a>12. 回到旧版本(回到旧版本的同时不删除新的版本)</h5><ul>
+<li>命令<ul>
+<li>git log</li>
+<li>git checkout [hash] – [filename]/.        [将某个/所有文件回退到hash值指定的版本并保留中间错误的版本]</li>
+</ul>
+</li>
+</ul>
+<h5 id="13-分支"><a href="#13-分支" class="headerlink" title="13. 分支"></a>13. 分支</h5><h6 id="a-建立切换删除分支（在不同的版本之间切换时要确保原分支-working-tree-clean）"><a href="#a-建立切换删除分支（在不同的版本之间切换时要确保原分支-working-tree-clean）" class="headerlink" title="a. 建立切换删除分支（在不同的版本之间切换时要确保原分支 working tree clean）"></a>a. 建立切换删除分支（在不同的版本之间切换时要确保原分支 working tree clean）</h6><ul>
+<li>命令<ul>
+<li>git branch /[name]        [显示/创建分支]</li>
+<li>git checkout [branch name]        [切换分支]</li>
+<li>git checkout -b [branch name]        [创建并切换分支]</li>
+<li>git branch [name] -d                [删除分支][删除分支前需要merge]</li>
+<li>git branch [name] -D                [强制删除分支]<pre><code class="hljs crmsh">tips:误删<span class="hljs-literal">master</span>分支时
+git branch <span class="hljs-keyword">master</span> <span class="hljs-title">[hash</span>]
+重新创建<span class="hljs-literal">master</span>分支，得到的结果和原来的一致</code></pre>
+<h6 id="b-理解分支"><a href="#b-理解分支" class="headerlink" title="b. 理解分支"></a>b. 理解分支</h6></li>
+</ul>
+</li>
+<li>分支概述<ul>
+<li>什么是分支：重新分配一块存储空间，把原来的分支中的内容完整的拷贝一份，包括hash值、log日志等</li>
+<li>分支的作用是什么：在重新创建的分支中可以进行实验性质的操作而不影响原有分支，如添加一个新的功能，测试成功后再合并到原有分支中</li>
+</ul>
+</li>
+</ul>
+<h6 id="c-合并分支"><a href="#c-合并分支" class="headerlink" title="c. 合并分支"></a>c. 合并分支</h6><ul>
+<li>命令<ul>
+<li>git merge [branch name]        [在主分支中合并其他的分支，使得主分支拥有其他分支的功能] </li>
+</ul>
+</li>
+</ul>
+<h6 id="d-解决merge时的冲突问题"><a href="#d-解决merge时的冲突问题" class="headerlink" title="d. 解决merge时的冲突问题"></a>d. 解决merge时的冲突问题</h6><ul>
+<li>解决冲突<ul>
+<li>git merge [branch name]</li>
+<li>git status         [查看冲突原因]</li>
+<li>git merge –abort         [忽略合并]</li>
+<li>手动选择正确的内容</li>
+<li>git commit</li>
+</ul>
+</li>
+</ul>
+<h5 id="14-查看版本线图"><a href="#14-查看版本线图" class="headerlink" title="14. 查看版本线图"></a>14. 查看版本线图</h5><h5 id="15-快转机制"><a href="#15-快转机制" class="headerlink" title="15. 快转机制"></a>15. 快转机制</h5><h5 id="16-更多合并的方法"><a href="#16-更多合并的方法" class="headerlink" title="16. 更多合并的方法"></a>16. 更多合并的方法</h5><h5 id="17-一次性删除不要的分支"><a href="#17-一次性删除不要的分支" class="headerlink" title="17. 一次性删除不要的分支"></a>17. 一次性删除不要的分支</h5>
+            </article>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/Github-Git-Gitlab/">Github/Git/Gitlab</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">本博客所有文章除特别声明外，均采用 <a href="https://zh.wikipedia.org/wiki/Wikipedia:CC_BY-SA_3.0%E5%8D%8F%E8%AE%AE%E6%96%87%E6%9C%AC" target="_blank" rel="nofollow noopener noopener">CC BY-SA 3.0协议</a> 。转载请注明出处！</p>
+              
+              
+                <div class="post-prevnext row">
+                  <div class="post-prev col-6">
+                    
+                    
+                      <a href="/2020/11/14/Git/Github%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97%20/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">Git/Github使用指南 </span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </div>
+                  <div class="post-next col-6">
+                    
+                    
+                      <a href="/2020/11/12/Python/note/%E5%85%B3%E4%BA%8E%E5%87%BD%E6%95%B0%E5%8F%82%E6%95%B0%E7%9A%84%E9%97%AE%E9%A2%98/">
+                        <span class="hidden-mobile">Python/note/关于函数参数的问题</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </div>
+                </div>
+              
+            </div>
+
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;TOC</p>
+  <div id="tocbot"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+  </main>
+
+  
+    <a id="scroll-top-button" href="#" role="button">
+      <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+    </a>
+  
+
+  
+    <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Search</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">keyword</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+  
+
+  
+
+  
+
+  <footer class="mt-5">
+  <div class="text-center py-3">
+    <div>
+      <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a>
+      <i class="iconfont icon-love"></i>
+      <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener">
+        <span>Fluid</span></a>
+    </div>
+    
+
+    
+
+    
+  </div>
+</footer>
+
+<!-- SCRIPTS -->
+<script  src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js" ></script>
+<script  src="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/js/bootstrap.min.js" ></script>
+<script  src="/js/main.js" ></script>
+
+
+  <script  src="/js/lazyload.js" ></script>
+
+
+
+  
+  <script  src="https://cdn.staticfile.org/tocbot/4.11.1/tocbot.min.js" ></script>
+  <script>
+    $(document).ready(function () {
+      var boardCtn = $('#board-ctn');
+      var boardTop = boardCtn.offset().top;
+
+      tocbot.init({
+        tocSelector: '#tocbot',
+        contentSelector: '.post-content',
+        headingSelector: 'h1,h2,h3,h4,h5,h6',
+        linkClass: 'tocbot-link',
+        activeLinkClass: 'tocbot-active-link',
+        listClass: 'tocbot-list',
+        isCollapsedClass: 'tocbot-is-collapsed',
+        collapsibleClass: 'tocbot-is-collapsible',
+        collapseDepth: 0,
+        scrollSmooth: true,
+        headingsOffset: -boardTop
+      });
+      if ($('.toc-list-item').length > 0) {
+        $('#toc').css('visibility', 'visible');
+      }
+    });
+  </script>
+
+
+
+
+
+  <script defer src="https://cdn.staticfile.org/clipboard.js/2.0.6/clipboard.min.js" ></script>
+  <script  src="/js/clipboard-use.js" ></script>
+
+
+
+
+
+
+<!-- Plugins -->
+
+
+
+  <script  src="https://cdn.staticfile.org/typed.js/2.0.11/typed.min.js" ></script>
+  <script>
+    var typed = new Typed('#subtitle', {
+      strings: [
+        '  ',
+        "Git/Git使用指南&nbsp;",
+      ],
+      cursorChar: "_",
+      typeSpeed: 70,
+      loop: false,
+    });
+    typed.stop();
+    $(document).ready(function () {
+      $(".typed-cursor").addClass("h2");
+      typed.start();
+    });
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/anchor-js/4.2.2/anchor.min.js" ></script>
+  <script>
+    anchors.options = {
+      placement: "right",
+      visible: "hover",
+      
+    };
+    var el = "h1,h2,h3,h4,h5,h6".split(",");
+    var res = [];
+    for (item of el) {
+      res.push(".markdown-body > " + item)
+    }
+    anchors.add(res.join(", "))
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    var path = "/local-search.xml";
+    var inputArea = document.querySelector("#local-search-input");
+    inputArea.onclick = function () {
+      searchFunc(path, 'local-search-input', 'local-search-result');
+      this.onclick = null
+    }
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+  <script>
+    $('#post img:not(.no-zoom img, img[no-zoom]), img[zoom]').each(
+      function () {
+        var element = document.createElement('a');
+        $(element).attr('data-fancybox', 'images');
+        $(element).attr('href', $(this).attr('src'));
+        $(this).wrap(element);
+      }
+    );
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

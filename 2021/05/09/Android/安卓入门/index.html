@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" type="image/png" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="">
+  <meta name="author" content="John Doe">
+  <meta name="keywords" content="">
+  <title>Android/安卓入门 - Hexo</title>
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
+<link  rel="stylesheet" href="https://cdn.staticfile.org/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/10.0.0/styles/github-gist.min.css" />
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_fmb4a04yx8h.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_pjno9b9zyxs.css">
+
+
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+<meta name="generator" content="Hexo 4.2.1"><link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+</head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>processing</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/">
+              <i class="iconfont icon-home-fill"></i>
+              Home</a>
+          </li>
+        
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/archives/">
+              <i class="iconfont icon-archive-fill"></i>
+              Archives</a>
+          </li>
+        
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/categories/">
+              <i class="iconfont icon-category-fill"></i>
+              Categories</a>
+          </li>
+        
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/tags/">
+              <i class="iconfont icon-tags-fill"></i>
+              Tags</a>
+          </li>
+        
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/about/">
+              <i class="iconfont icon-user-fill"></i>
+              About</a>
+          </li>
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="view intro-2" id="background" parallax=true
+         style="background: url('/img/default.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="container text-center white-text fadeInUp">
+            <span class="h2" id="subtitle">
+              
+            </span>
+
+            
+              
+                <div class="mt-3 post-meta">
+                  <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+                  <time datetime="2021-05-09 21:24">
+                    May 9, 2021 pm
+                  </time>
+                </div>
+              
+
+              <div class="mt-1">
+                
+                  
+                  <span class="post-meta mr-2">
+                    <i class="iconfont icon-chart"></i>
+                    862 字
+                  </span>
+                
+
+                
+                  
+                  <span class="post-meta mr-2">
+                      <i class="iconfont icon-clock-fill"></i>
+                    
+                    
+                    9
+                     分钟
+                  </span>
+                
+
+                
+              </div>
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-md">
+      <div class="container nopadding-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <div class="post-content mx-auto" id="post">
+            
+            <article class="markdown-body">
+              <h4 id="安卓版本问题"><a href="#安卓版本问题" class="headerlink" title="安卓版本问题"></a>安卓版本问题</h4><p>​        安卓系统版本和安卓SDK版本是相同的，再对应于API版本</p>
+<h4 id="Gradle版本下载失败解决方案"><a href="#Gradle版本下载失败解决方案" class="headerlink" title="Gradle版本下载失败解决方案"></a>Gradle版本下载失败解决方案</h4><p>​        在Gradle目录中的gradle-wrapper.properties文件中修改gradle版本为all，手动在gradle官网下载对应版本的压缩包，解压后放在<code>C:\Users\DELL\.gradle\wrapper\dists</code>目录下，在Android Studio中重新同步工程即可</p>
+<h4 id="安卓UI控件"><a href="#安卓UI控件" class="headerlink" title="安卓UI控件"></a>安卓UI控件</h4><ol>
+<li>UI控件的组织方式取决于上层的布局管理器，主要就是相对布局和线性布局</li>
+<li>UI界面最外层的是屏幕，内部的布局管理器可以包含布局管理器和控件</li>
+</ol>
+<h4 id="事件处理机制"><a href="#事件处理机制" class="headerlink" title="事件处理机制"></a>事件处理机制</h4><p>​        当用户在应用界面上执行各种操作时，应用程序需要为用户的动作提供响应，这种响应的过程就是事件处理</p>
+<h5 id="基于监听的事件处理机制"><a href="#基于监听的事件处理机制" class="headerlink" title="基于监听的事件处理机制"></a>基于监听的事件处理机制</h5><ul>
+<li><p>监听三要素：Event Source(事件源)、Event(事件)、Event Listener(事件监听器)</p>
+</li>
+<li><p>实现监听事件的方法：</p>
+<ul>
+<li>通过内部类实现</li>
+<li>通过内部匿名类实现</li>
+<li>通过事件源所在类实现</li>
+<li>通过外部类实现</li>
+<li>布局文件中onClick属性（针对点击事件）</li>
+</ul>
+<pre><code class="hljs hsp">给一个事件源（监听对象）添加多个监听事件会发生什么？
+		只会执行最后一个事件监听器（对于<span class="hljs-keyword">Button</span>设置的<span class="hljs-keyword">onClick</span>属性，认为是最先设置的一个监听器，所以在存在其他监听器的情况下是不会被执行的）</code></pre>
+
+
+
+</li>
+</ul>
+<h5 id="基于回调的事件处理机制"><a href="#基于回调的事件处理机制" class="headerlink" title="基于回调的事件处理机制"></a>基于回调的事件处理机制</h5><ul>
+<li><p>监听和回调的区别</p>
+<pre><code class="hljs asciidoc"><span class="hljs-bullet">* </span>监听：事件源和事件监听器是分开来的，手动的去为一个事件设置监听器
+<span class="hljs-bullet">* </span>回调：在事件源内部有回调方法，事件源和事件监听器是在一起的，通过继承重写回调方法实现事件处理</code></pre>
+</li>
+<li><p>事件处理传播机制：事件由控件向外传播，在回调方法中返回true则终止传播</p>
+</li>
+<li><p><strong>监听和回调同时使用时：监听优先于回调</strong></p>
+</li>
+</ul>
+<h4 id="View的事件分发"><a href="#View的事件分发" class="headerlink" title="View的事件分发"></a>View的事件分发</h4><blockquote>
+<p>对于一个View控件，其处理的事件有：</p>
+<ul>
+<li>触摸</li>
+<li>滑动</li>
+<li>点击</li>
+<li>长按</li>
+</ul>
+<p>View的事件分发：由dispatchTouchEvent(入口) -&gt; setOnTouchlistener(监听) -&gt; onTouchEvent(回调)</p>
+<ul>
+<li>onClick和onLongClick来自onTouchEvent的处理</li>
+</ul>
+<p>具体的分发流程是：根据触摸事件判断：</p>
+<ul>
+<li>若触摸时间&lt;100ms离开控件则认为是滑动事件</li>
+<li>若触摸时间&gt;100ms但是&lt;500ms则认为是点击事件（在判断点击事件后继续等待400ms判断是否是长按事件）</li>
+<li>若触摸时间&gt;500ms则认为是长按事件</li>
+</ul>
+</blockquote>
+<h4 id="Handler消息处理"><a href="#Handler消息处理" class="headerlink" title="Handler消息处理"></a>Handler消息处理</h4><ul>
+<li>未来某时做某事</li>
+<li>线程间通信</li>
+</ul>
+<h4 id="数据存储"><a href="#数据存储" class="headerlink" title="数据存储"></a>数据存储</h4><ul>
+<li><p>安卓存储的概念</p>
+<blockquote>
+<ul>
+<li>安卓存储分为<ul>
+<li>内部存储（internal storage）（随应用卸载被删除）</li>
+<li>外部存储（external storage）<ul>
+<li>公有目录：downloads、pictures等</li>
+<li>私有目录（随应用卸载而被删除）</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>内部存储<ul>
+<li>/data/data/<applicationId>/shared_prefs</li>
+<li>/data/data/<applicationId>/databases</li>
+<li>/data/data/<applicationId>/files</li>
+<li>/data/data/<applicationId>/cache</li>
+</ul>
+</li>
+<li>外部存储<ul>
+<li>公有目录：downloads、pictures、musics等</li>
+<li>私有目录：<ul>
+<li>/mnt/sdcard/Android/data/data/<applicationId>/cache</li>
+<li>/mnt/sdcard/Android/data/data/<applicationId>/files</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+</li>
+<li><p>数据存储方式有三种</p>
+<ul>
+<li>sharedPreferences轻量级数据存储（配置性质的信息）</li>
+</ul>
+<blockquote>
+<ul>
+<li>xml文件形式，K-V形式</li>
+<li>SharedPreferences(read)</li>
+<li>SharedPreferences.Editor(write)</li>
+</ul>
+</blockquote>
+<ul>
+<li>File文件存储</li>
+</ul>
+<blockquote>
+<ul>
+<li>Java的I/O流的知识向安卓的硬件磁盘上进行读写的操作</li>
+<li>File内部存储：<ul>
+<li>FileOutputStream</li>
+<li>FileInputStream</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<ul>
+<li>Sqlite数据库存储</li>
+</ul>
+</li>
+</ul>
+
+            </article>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                
+              </div>
+              
+                <p class="note note-warning">本博客所有文章除特别声明外，均采用 <a href="https://zh.wikipedia.org/wiki/Wikipedia:CC_BY-SA_3.0%E5%8D%8F%E8%AE%AE%E6%96%87%E6%9C%AC" target="_blank" rel="nofollow noopener noopener">CC BY-SA 3.0协议</a> 。转载请注明出处！</p>
+              
+              
+                <div class="post-prevnext row">
+                  <div class="post-prev col-6">
+                    
+                    
+                      <a href="/2021/05/09/Android/%E5%B8%83%E5%B1%80%E7%AE%A1%E7%90%86%E5%99%A8/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">Android/布局管理器</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </div>
+                  <div class="post-next col-6">
+                    
+                    
+                      <a href="/2021/04/19/%E5%B5%8C%E5%85%A5%E5%BC%8F/STM32%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E6%89%AB%E7%9B%B2/">
+                        <span class="hidden-mobile">嵌入式/STM32基础知识扫盲</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </div>
+                </div>
+              
+            </div>
+
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;TOC</p>
+  <div id="tocbot"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+  </main>
+
+  
+    <a id="scroll-top-button" href="#" role="button">
+      <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+    </a>
+  
+
+  
+    <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Search</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">keyword</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+  
+
+  
+
+  
+
+  <footer class="mt-5">
+  <div class="text-center py-3">
+    <div>
+      <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a>
+      <i class="iconfont icon-love"></i>
+      <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener">
+        <span>Fluid</span></a>
+    </div>
+    
+
+    
+
+    
+  </div>
+</footer>
+
+<!-- SCRIPTS -->
+<script  src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js" ></script>
+<script  src="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/js/bootstrap.min.js" ></script>
+<script  src="/js/main.js" ></script>
+
+
+  <script  src="/js/lazyload.js" ></script>
+
+
+
+  
+  <script  src="https://cdn.staticfile.org/tocbot/4.11.1/tocbot.min.js" ></script>
+  <script>
+    $(document).ready(function () {
+      var boardCtn = $('#board-ctn');
+      var boardTop = boardCtn.offset().top;
+
+      tocbot.init({
+        tocSelector: '#tocbot',
+        contentSelector: '.post-content',
+        headingSelector: 'h1,h2,h3,h4,h5,h6',
+        linkClass: 'tocbot-link',
+        activeLinkClass: 'tocbot-active-link',
+        listClass: 'tocbot-list',
+        isCollapsedClass: 'tocbot-is-collapsed',
+        collapsibleClass: 'tocbot-is-collapsible',
+        collapseDepth: 0,
+        scrollSmooth: true,
+        headingsOffset: -boardTop
+      });
+      if ($('.toc-list-item').length > 0) {
+        $('#toc').css('visibility', 'visible');
+      }
+    });
+  </script>
+
+
+
+
+
+  <script defer src="https://cdn.staticfile.org/clipboard.js/2.0.6/clipboard.min.js" ></script>
+  <script  src="/js/clipboard-use.js" ></script>
+
+
+
+
+
+
+<!-- Plugins -->
+
+
+
+  <script  src="https://cdn.staticfile.org/typed.js/2.0.11/typed.min.js" ></script>
+  <script>
+    var typed = new Typed('#subtitle', {
+      strings: [
+        '  ',
+        "Android/安卓入门&nbsp;",
+      ],
+      cursorChar: "_",
+      typeSpeed: 70,
+      loop: false,
+    });
+    typed.stop();
+    $(document).ready(function () {
+      $(".typed-cursor").addClass("h2");
+      typed.start();
+    });
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/anchor-js/4.2.2/anchor.min.js" ></script>
+  <script>
+    anchors.options = {
+      placement: "right",
+      visible: "hover",
+      
+    };
+    var el = "h1,h2,h3,h4,h5,h6".split(",");
+    var res = [];
+    for (item of el) {
+      res.push(".markdown-body > " + item)
+    }
+    anchors.add(res.join(", "))
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    var path = "/local-search.xml";
+    var inputArea = document.querySelector("#local-search-input");
+    inputArea.onclick = function () {
+      searchFunc(path, 'local-search-input', 'local-search-result');
+      this.onclick = null
+    }
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+  <script>
+    $('#post img:not(.no-zoom img, img[no-zoom]), img[zoom]').each(
+      function () {
+        var element = document.createElement('a');
+        $(element).attr('data-fancybox', 'images');
+        $(element).attr('href', $(this).attr('src'));
+        $(this).wrap(element);
+      }
+    );
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

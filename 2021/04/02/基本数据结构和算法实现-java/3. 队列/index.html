@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" type="image/png" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="">
+  <meta name="author" content="John Doe">
+  <meta name="keywords" content="">
+  <title>基本数据结构和算法实现-java/3. 队列 - Hexo</title>
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
+<link  rel="stylesheet" href="https://cdn.staticfile.org/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/10.0.0/styles/github-gist.min.css" />
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_fmb4a04yx8h.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_pjno9b9zyxs.css">
+
+
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+<meta name="generator" content="Hexo 4.2.1"><link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+</head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>processing</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/">
+              <i class="iconfont icon-home-fill"></i>
+              Home</a>
+          </li>
+        
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/archives/">
+              <i class="iconfont icon-archive-fill"></i>
+              Archives</a>
+          </li>
+        
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/categories/">
+              <i class="iconfont icon-category-fill"></i>
+              Categories</a>
+          </li>
+        
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/tags/">
+              <i class="iconfont icon-tags-fill"></i>
+              Tags</a>
+          </li>
+        
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/about/">
+              <i class="iconfont icon-user-fill"></i>
+              About</a>
+          </li>
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="view intro-2" id="background" parallax=true
+         style="background: url('/img/default.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="container text-center white-text fadeInUp">
+            <span class="h2" id="subtitle">
+              
+            </span>
+
+            
+              
+                <div class="mt-3 post-meta">
+                  <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+                  <time datetime="2021-04-02 19:31">
+                    April 2, 2021 pm
+                  </time>
+                </div>
+              
+
+              <div class="mt-1">
+                
+                  
+                  <span class="post-meta mr-2">
+                    <i class="iconfont icon-chart"></i>
+                    2.8k 字
+                  </span>
+                
+
+                
+                  
+                  <span class="post-meta mr-2">
+                      <i class="iconfont icon-clock-fill"></i>
+                    
+                    
+                    35
+                     分钟
+                  </span>
+                
+
+                
+              </div>
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-md">
+      <div class="container nopadding-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <div class="post-content mx-auto" id="post">
+            
+            <article class="markdown-body">
+              <h3 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h3><p>​        队列，和栈一样，也是一种对数据的”存”和”取”有严格要求的线性存储结构。</p>
+<h3 id="队列的概念"><a href="#队列的概念" class="headerlink" title="队列的概念"></a>队列的概念</h3><p>​        与栈结构不同的是，队列的两端都”开口”，要求数据只能从一端进，从另一端出，如图所示：</p>
+<p><img src="https://gitee.com/processingnewage/mark-down-pic/raw/master/img/20210625151643.gif" srcset="/img/loading.gif" alt="队列存储结构"></p>
+<p>​        通常，称进数据的一端为 “队尾”，出数据的一端为 “队头”，数据元素进队列的过程称为 “入队”，出队列的过程称为 “出队”。</p>
+<p>​        不仅如此，队列中数据的进出要<strong>遵循 “先进先出” （FIFO）的原则</strong>，即最先进队列的数据元素，同样要最先出队列。拿图中的队列来说，从数据在队列中的存储状态可以分析出，元素 1 最先进队，其次是元素 2，最后是元素 3。此时如果将元素 3 出队，根据队列 “先进先出” 的特点，元素 1 要先出队列，元素 2 再出队列，最后才轮到元素 3 出队列。</p>
+<p>​        栈和队列不要混淆，栈结构是一端封口，特点是”先进后出”；而队列的两端全是开口，特点是”先进先出”。</p>
+<p>​        <strong>因此，数据从表的一端进，从另一端出，且遵循 “先进先出” 原则的线性存储结构就是队列。</strong></p>
+<p><img src="https://gitee.com/processingnewage/mark-down-pic/raw/master/img/20210625151647.png" srcset="/img/loading.gif" alt="image-20200705160945310"></p>
+<ul>
+<li>front：队首，队列头部（实际指向第一个元素的前一个位置）</li>
+<li>rear：队尾，队列尾部（实际指向最后一个元素的实际位置）</li>
+<li>左图：队列初始化的两个变量值</li>
+<li>中图：存入数据后，的首位变化</li>
+<li>右图：取数据时，从队首取，队首的变量指向也在发生变化</li>
+</ul>
+<h3 id="队列的实现"><a href="#队列的实现" class="headerlink" title="队列的实现"></a>队列的实现</h3><p>​        队列存储结构的实现有以下两种方式：</p>
+<ol>
+<li><p><strong>顺序队列</strong>：在<strong>顺序表</strong>的基础上实现的队列结构；</p>
+</li>
+<li><p><strong>链队列</strong>：在链表的基础上实现的队列结构；</p>
+<p>两者的区别仅是顺序表和链表的区别，即在实际的物理空间中，数据集中存储的队列是顺序队列，分散存储的队列是链队列。</p>
+</li>
+</ol>
+<h4 id="数组模拟队列（顺序队列）"><a href="#数组模拟队列（顺序队列）" class="headerlink" title="数组模拟队列（顺序队列）"></a>数组模拟队列（顺序队列）</h4><p>队列本身是<strong>有序列表</strong>，使用数组结构来存储队列的数据，则如前面基本介绍中的示意图一样。</p>
+<p>​    声明 4 个变量：</p>
+<pre><code>1. arr：用来存储数据的数组
+2. maxSize：该队列的最大容量
+3. front：队首下标，随着数据输出而改变
+4. rear：队尾下标，随着数据输入而改变</code></pre><p>队列中常用操作分析，以 add，把数据存入队列为例，思路分析：</p>
+<ol>
+<li><p>将尾指针往后移：rear + 1，前提是<strong>当 <code>front == rear</code> 时，队列是空的</strong></p>
+</li>
+<li><p>若尾指针 rear &lt; maxSize -1：</p>
+<ul>
+<li><p>则将数据存入 rear 所指的数组元素中，</p>
+</li>
+<li><p>否则无法存入数据。<strong><code>rear = maxSize -1</code> 表示队列满</strong></p>
+</li>
+</ul>
+</li>
+<li><p><strong><code>rear - front</code> 表示队列当前存储的元素的个数</strong></p>
+</li>
+</ol>
+<p>以上思路是一个最基本的实现（不是完美的，看完代码就明白了）。代码实现如下</p>
+<pre><code class="hljs java"><span class="hljs-keyword">package</span> queue;
+
+<span class="hljs-keyword">import</span> java.util.Scanner;
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ArrayQueueTest</span> </span>&#123;
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;
+        ArrayQueue queue = <span class="hljs-keyword">new</span> ArrayQueue(<span class="hljs-number">3</span>);
+        <span class="hljs-keyword">char</span> key = <span class="hljs-string">' '</span>;
+        Scanner scanner = <span class="hljs-keyword">new</span> Scanner(System.in);
+        <span class="hljs-keyword">boolean</span> loop = <span class="hljs-keyword">true</span>;
+
+        <span class="hljs-keyword">while</span>(loop) &#123;
+            System.out.println(<span class="hljs-string">"s(show): 显示队列"</span>);
+            System.out.println(<span class="hljs-string">"e(exit): 退出程序"</span>);
+            System.out.println(<span class="hljs-string">"a(add): 添加数据到队列"</span>);
+            System.out.println(<span class="hljs-string">"g(get): 从队列取出数据"</span>);
+            System.out.println(<span class="hljs-string">"h(head): 查看队列头的数据"</span>);
+            key = scanner.next().charAt(<span class="hljs-number">0</span>);
+            <span class="hljs-keyword">switch</span> (key) &#123;
+                <span class="hljs-keyword">case</span> <span class="hljs-string">'s'</span>:
+                    queue.showQueue();
+                    <span class="hljs-keyword">break</span>;
+                <span class="hljs-keyword">case</span> <span class="hljs-string">'a'</span>:
+                    System.out.println(<span class="hljs-string">"输出一个数："</span>);
+                    <span class="hljs-keyword">int</span> value = scanner.nextInt();
+                    queue.addQueue(value);
+                    <span class="hljs-keyword">break</span>;
+                <span class="hljs-keyword">case</span> <span class="hljs-string">'g'</span>:
+                    <span class="hljs-keyword">int</span> res = queue.getQueue();
+                    System.out.printf(<span class="hljs-string">"取出的数据是%d\n"</span>, res);
+                    <span class="hljs-keyword">break</span>;
+                <span class="hljs-keyword">case</span> <span class="hljs-string">'h'</span>:
+                    <span class="hljs-keyword">int</span> ress = queue.headQueue();
+                    System.out.printf(<span class="hljs-string">"队列头的数据是%d\n"</span>, ress);
+                    <span class="hljs-keyword">break</span>;
+                <span class="hljs-keyword">case</span> <span class="hljs-string">'e'</span>:
+                    scanner.close();
+                    loop = <span class="hljs-keyword">false</span>;
+                    <span class="hljs-keyword">break</span>;
+            &#125;
+        &#125;
+        System.out.println(<span class="hljs-string">"程序退出~~"</span>);
+    &#125;
+&#125;
+
+
+<span class="hljs-comment">// 使用数组模拟队列：编写一个ArrayQueue类</span>
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ArrayQueue</span> </span>&#123;
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> maxSize; <span class="hljs-comment">// 表示数组的最大容量</span>
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> front; <span class="hljs-comment">// 头指针：指向队列头部的前一个位置</span>
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> rear; <span class="hljs-comment">// 尾指针：指向队列的最后一个数据</span>
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span>[] array; <span class="hljs-comment">// 数组：模拟队列(默认初始化：空指针)</span>
+
+    <span class="hljs-comment">// 队列构造器</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">ArrayQueue</span><span class="hljs-params">(<span class="hljs-keyword">int</span> arrayMaxSize)</span> </span>&#123;
+        <span class="hljs-keyword">this</span>.maxSize = arrayMaxSize;
+        <span class="hljs-keyword">this</span>.array = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[maxSize];
+        <span class="hljs-keyword">this</span>.front = <span class="hljs-keyword">this</span>.rear = -<span class="hljs-number">1</span>;
+    &#125;
+
+    <span class="hljs-comment">// 队列的常用方法：</span>
+    <span class="hljs-comment">// 判断队列是否为满</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">boolean</span> <span class="hljs-title">isFull</span><span class="hljs-params">()</span> </span>&#123;
+        <span class="hljs-keyword">return</span> rear == maxSize - <span class="hljs-number">1</span>;
+    &#125;
+
+    <span class="hljs-comment">// 判断队列是否为空</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">boolean</span> <span class="hljs-title">isEmpty</span><span class="hljs-params">()</span> </span>&#123;
+        <span class="hljs-keyword">return</span> front == rear;
+    &#125;
+
+    <span class="hljs-comment">// 添加数据到队列：入队</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">addQueue</span><span class="hljs-params">(<span class="hljs-keyword">int</span> n)</span> </span>&#123;
+        <span class="hljs-comment">// 添加数据到队列的第一步应该是判断队列是否为满</span>
+        <span class="hljs-keyword">if</span> (isFull()) &#123;
+            System.out.println(<span class="hljs-string">"队列为满，不能添加数据"</span>);
+        &#125;
+        rear++; <span class="hljs-comment">// 尾指针后移</span>
+        array[rear] = n;
+    &#125;
+
+    <span class="hljs-comment">// 获取队列的数据：出队</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">getQueue</span><span class="hljs-params">()</span> </span>&#123;
+        <span class="hljs-comment">// 获取队列数据的第一步应该是判断队列是否为空</span>
+        <span class="hljs-keyword">if</span> (isEmpty()) &#123;
+            System.out.println(<span class="hljs-string">"队列为空，不能获取数据"</span>);
+            <span class="hljs-keyword">return</span> -<span class="hljs-number">20000</span>;      <span class="hljs-comment">// 返回一个足够大的数表明队列为空，不能获取数字</span>
+        &#125;
+        front++; <span class="hljs-comment">// 头指针后移</span>
+        <span class="hljs-keyword">return</span> array[front];
+    &#125;
+
+    <span class="hljs-comment">// 显示队列所有数据：遍历</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">showQueue</span><span class="hljs-params">()</span> </span>&#123;
+        <span class="hljs-comment">// 遍历的第一步应该是判断队列是否为空</span>
+        <span class="hljs-keyword">if</span>(isEmpty()) &#123;
+            System.out.println(<span class="hljs-string">"队列为空，无数据遍历"</span>);
+            <span class="hljs-keyword">return</span>;
+        &#125;
+        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt;array.length; i++) &#123;
+            System.out.printf(<span class="hljs-string">"array[%d] = %d\n"</span>, i, array[i]);
+        &#125;
+    &#125;
+
+    <span class="hljs-comment">// 显示队列的头部数据，注意不是取出数据：得到头部数据但头指针不上移</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">headQueue</span><span class="hljs-params">()</span> </span>&#123;
+        <span class="hljs-comment">// 显示头部数据的第一步是判断队列是否为空</span>
+        <span class="hljs-keyword">if</span> (isEmpty()) &#123;
+            System.out.println(<span class="hljs-string">"队列为空，无法显示"</span>);
+            <span class="hljs-keyword">return</span> -<span class="hljs-number">20000</span>;      <span class="hljs-comment">// 返回一个足够大的数表明队列为空，不能获取数字</span>
+        &#125;
+        <span class="hljs-comment">// 注意区分：少了头指针上移这一步</span>
+        <span class="hljs-keyword">return</span> array[front + <span class="hljs-number">1</span>];
+    &#125;
+&#125;</code></pre>
+
+<h4 id="链式队列"><a href="#链式队列" class="headerlink" title="链式队列"></a>链式队列</h4><h3 id="环形队列的概念"><a href="#环形队列的概念" class="headerlink" title="环形队列的概念"></a>环形队列的概念</h3><p>​        将向量空间想象为一个首尾相接的圆环，并称这种向量为循环向量。 … 存储在其中的队列称为循环队列（Circular Queue）。 循环队列是把顺序队列首尾相连，把存储队列元素的表从逻辑上看成一个环，成为循环队列。</p>
+<h3 id="环形队列的实现"><a href="#环形队列的实现" class="headerlink" title="环形队列的实现"></a>环形队列的实现</h3><p>​        队列存储结构的实现有以下两种方式：</p>
+<ol>
+<li><p><strong>顺序队列</strong>：在<strong>顺序表</strong>的基础上实现的队列结构；</p>
+</li>
+<li><p><strong>链队列</strong>：在链表的基础上实现的队列结构；</p>
+<p>两者的区别仅是顺序表和链表的区别，即在实际的物理空间中，数据集中存储的队列是顺序队列，分散存储的队列是链队列。</p>
+</li>
+</ol>
+<h4 id="数组模拟环形队列"><a href="#数组模拟环形队列" class="headerlink" title="数组模拟环形队列"></a>数组模拟环形队列</h4><p>思路分析：</p>
+<p><img src="https://gitee.com/processingnewage/mark-down-pic/raw/master/img/20210625151655.png" srcset="/img/loading.gif" alt="image-20200705160945310"></p>
+<ol>
+<li><p>front：含义调整    表示：<strong>队列的第一个元素</strong>，也就是说 <code>arr[front]</code> 就是队列的第一个元素    初始值：0</p>
+</li>
+<li><p>rear：含义调整     表示：<strong>队列的最后一个元素的下一个位置</strong>(也就是说，<strong>rear所在位置永远为空</strong>)    初始值：0</p>
+<p>这个很重要，是一个小思路，能更方便的实现我们的环形队列（<strong>相对于非环形队列，front和rear的值都加上了1</strong>）</p>
+</li>
+<li><p>队列 <strong>满</strong> 计算公式：<code>(rear + 1) % maxSize == front</code></p>
+</li>
+<li><p>队列 <strong>空</strong> 计算公式：<code>rear == front</code></p>
+</li>
+<li><p>队列中 <strong>有效元素个数</strong> 计算公式：<code>(rear + maxSize - front) % maxSize</code></p>
+</li>
+<li><p>计算公式中都有<code>maxSize</code>的原因是：<strong>rear 和 front在循环后取值仍然只在[0, maxSize - 1]之间，所以<code>rear - front</code>有可能是负数</strong></p>
+</li>
+</ol>
+<p>为了能更清晰这个算法，下面画图来演示队列中元素个数，关键变量的值</p>
+<p><img src="https://gitee.com/processingnewage/mark-down-pic/raw/master/img/20210625151659.png" srcset="/img/loading.gif" alt="image-20200705231038781"></p>
+<ul>
+<li>代码实现</li>
+</ul>
+<pre><code class="hljs java"><span class="hljs-keyword">package</span> queue;
+
+<span class="hljs-keyword">import</span> java.util.Scanner;
+
+<span class="hljs-comment">// 数组模拟环形队列</span>
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">CycleArrayQueue</span> </span>&#123;
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;
+        CircleQueue queue = <span class="hljs-keyword">new</span> CircleQueue(<span class="hljs-number">3</span>);
+
+        <span class="hljs-comment">// 为了测试方便，写一个控制台输入的小程序</span>
+        Scanner scanner = <span class="hljs-keyword">new</span> Scanner(System.in);
+        <span class="hljs-keyword">boolean</span> loop = <span class="hljs-keyword">true</span>;
+        <span class="hljs-keyword">char</span> key = <span class="hljs-string">' '</span>; <span class="hljs-comment">// 接受用户输入指令</span>
+        System.out.println(<span class="hljs-string">"s(show): 显示队列"</span>);
+        System.out.println(<span class="hljs-string">"e(exit): 退出程序"</span>);
+        System.out.println(<span class="hljs-string">"a(add): 添加数据到队列"</span>);
+        System.out.println(<span class="hljs-string">"g(get): 从队列取出数据"</span>);
+        System.out.println(<span class="hljs-string">"h(head): 查看队列头的数据"</span>);
+        System.out.println(<span class="hljs-string">"t(tail): 查看队列尾的数据"</span>);
+        System.out.println(<span class="hljs-string">"p(isEmpty): 队列是否为空"</span>);
+        <span class="hljs-keyword">while</span> (loop) &#123;
+            key = scanner.next().charAt(<span class="hljs-number">0</span>);
+            <span class="hljs-keyword">switch</span> (key) &#123;
+                <span class="hljs-keyword">case</span> <span class="hljs-string">'s'</span>:
+                    queue.show();
+                    <span class="hljs-keyword">break</span>;
+                <span class="hljs-keyword">case</span> <span class="hljs-string">'e'</span>:
+                    loop = <span class="hljs-keyword">false</span>;
+                    scanner.close();
+                    <span class="hljs-keyword">break</span>;
+                <span class="hljs-keyword">case</span> <span class="hljs-string">'a'</span>:
+                    System.out.println(<span class="hljs-string">"请输入要添加到队列的整数："</span>);
+                    <span class="hljs-keyword">int</span> value = scanner.nextInt();
+                    queue.add(value);
+                    <span class="hljs-keyword">break</span>;
+                <span class="hljs-keyword">case</span> <span class="hljs-string">'g'</span>:
+                    <span class="hljs-keyword">try</span> &#123;
+                        <span class="hljs-keyword">int</span> res = queue.get();
+                        System.out.printf(<span class="hljs-string">"取出的数据是：%d\n"</span>, res);
+                    &#125; <span class="hljs-keyword">catch</span> (Exception e) &#123;
+                        System.out.println(e.getMessage());
+                    &#125;
+                    <span class="hljs-keyword">break</span>;
+                <span class="hljs-keyword">case</span> <span class="hljs-string">'h'</span>:
+                    <span class="hljs-keyword">try</span> &#123;
+                        <span class="hljs-keyword">int</span> res = queue.head();
+                        System.out.printf(<span class="hljs-string">"队首数据：%d\n"</span>, res);
+                    &#125; <span class="hljs-keyword">catch</span> (Exception e) &#123;
+                        System.out.println(e.getMessage());
+                    &#125;
+                    <span class="hljs-keyword">break</span>;
+                <span class="hljs-keyword">case</span> <span class="hljs-string">'t'</span>:
+                    <span class="hljs-keyword">try</span> &#123;
+                        <span class="hljs-keyword">int</span> res = queue.tail();
+                        System.out.printf(<span class="hljs-string">"队尾数据：%d\n"</span>, res);
+                    &#125; <span class="hljs-keyword">catch</span> (Exception e) &#123;
+                        System.out.println(e.getMessage());
+                    &#125;
+                    <span class="hljs-keyword">break</span>;
+                <span class="hljs-keyword">case</span> <span class="hljs-string">'p'</span>:
+                    System.out.printf(<span class="hljs-string">"队列是否为空：%s"</span>, queue.isEmpty());
+                    <span class="hljs-keyword">break</span>;
+            &#125;
+        &#125;
+    &#125;
+&#125;
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">CircleQueue</span> </span>&#123;
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> maxSize; <span class="hljs-comment">// 队列最大容量</span>
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> front; <span class="hljs-comment">// 队列头，指向队头的元素</span>
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> rear; <span class="hljs-comment">// 队列尾，指向队尾的下一个元素，rear的位置始终为空</span>
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> arr[]; <span class="hljs-comment">// 用于存储数据，模拟队列</span>
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">CircleQueue</span><span class="hljs-params">(<span class="hljs-keyword">int</span> arrMaxSize)</span> </span>&#123;
+        maxSize = arrMaxSize;
+        arr = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[maxSize];
+        front = <span class="hljs-number">0</span>;
+        rear = <span class="hljs-number">0</span>;
+    &#125;
+	
+    <span class="hljs-comment">// 环形队列常见方法：</span>
+    <span class="hljs-comment">// 队列是否已满</span>
+    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">boolean</span> <span class="hljs-title">isFull</span><span class="hljs-params">()</span> </span>&#123;
+        <span class="hljs-keyword">return</span> (rear + <span class="hljs-number">1</span>) % maxSize == front;
+    &#125;
+
+    <span class="hljs-comment">// 队列是否为空</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">boolean</span> <span class="hljs-title">isEmpty</span><span class="hljs-params">()</span> </span>&#123;
+        <span class="hljs-keyword">return</span> rear == front;
+    &#125;
+
+    <span class="hljs-comment">// 有效个数</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">size</span><span class="hljs-params">()</span> </span>&#123;
+        <span class="hljs-keyword">return</span> (rear + maxSize - front) % maxSize;
+    &#125;
+
+    <span class="hljs-comment">// 取出队列元素：出队</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">get</span><span class="hljs-params">()</span> </span>&#123;
+        <span class="hljs-keyword">if</span> (isEmpty()) &#123;
+            <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> RuntimeException(<span class="hljs-string">"队列空"</span>);
+        &#125;
+        <span class="hljs-comment">// front 指向的是队首的位置</span>
+        <span class="hljs-keyword">int</span> value = arr[front];
+        <span class="hljs-comment">// 需要向后移动，但是由于是环形，同样需要使用取模的方式来计算</span>
+        front = (front + <span class="hljs-number">1</span>) % maxSize;
+        <span class="hljs-keyword">return</span> value;
+    &#125;
+
+    <span class="hljs-comment">// 往队列存储数据：入队</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">add</span><span class="hljs-params">(<span class="hljs-keyword">int</span> n)</span> </span>&#123;
+        <span class="hljs-keyword">if</span> (isFull()) &#123;
+            System.out.println(<span class="hljs-string">"队列已满"</span>);
+            <span class="hljs-keyword">return</span>;
+        &#125;
+        arr[rear] = n;
+        <span class="hljs-comment">// rear 指向的是下一个位置</span>
+        <span class="hljs-comment">// 由于是环形队列,需要使用取模的形式来到他的下一个位置</span>
+        rear = (rear + <span class="hljs-number">1</span>) % maxSize;
+    &#125;
+
+    <span class="hljs-comment">// 显示队列中的数据</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">show</span><span class="hljs-params">()</span> </span>&#123;
+        <span class="hljs-keyword">if</span> (isEmpty()) &#123;
+            System.out.println(<span class="hljs-string">"队列为空"</span>);
+            <span class="hljs-keyword">return</span>;
+        &#125;
+        <span class="hljs-comment">// 打印的时候，需要从队首开始打印</span>
+        <span class="hljs-comment">// 打印的次数则是：有效的元素个数</span>
+        <span class="hljs-comment">// 获取数据的下标：由于是环形的，需要使用取模的方式来获取</span>
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = front; i &lt; front + size(); i++) &#123;
+            <span class="hljs-keyword">int</span> index = i % maxSize;
+            System.out.printf(<span class="hljs-string">"arr[%d] = %d \n"</span>, index, arr[index]);
+        &#125;
+    &#125;
+
+    <span class="hljs-comment">// 获得头部数据，注意：只是得到值，不对队列做改动</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">head</span><span class="hljs-params">()</span> </span>&#123;
+        <span class="hljs-keyword">if</span> (isEmpty()) &#123;
+            <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> RuntimeException(<span class="hljs-string">"队列空"</span>);
+        &#125;
+        <span class="hljs-keyword">return</span> arr[front];
+    &#125;
+
+    <span class="hljs-comment">// 查看队尾数据，注意：只是得到值，不对队列做改动</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">tail</span><span class="hljs-params">()</span> </span>&#123;
+        <span class="hljs-keyword">if</span> (isEmpty()) &#123;
+            <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> RuntimeException(<span class="hljs-string">"队列空"</span>);
+        &#125;
+        <span class="hljs-comment">// rear - 1 是队尾数据，但是如果是环形首尾相接的时候</span>
+        <span class="hljs-comment">// 那么 0 -1 就是 -1 了，负数时，则是数组的最后一个元素</span>
+        <span class="hljs-keyword">return</span> rear - <span class="hljs-number">1</span> &lt; <span class="hljs-number">0</span> ? arr[maxSize - <span class="hljs-number">1</span>] : arr[rear - <span class="hljs-number">1</span>];
+    &#125;
+&#125;</code></pre>
+
+<h4 id="链式环形队列"><a href="#链式环形队列" class="headerlink" title="链式环形队列"></a>链式环形队列</h4><h3 id="队列的实际应用"><a href="#队列的实际应用" class="headerlink" title="队列的实际应用"></a>队列的实际应用</h3><p>​        实际生活中，队列的应用随处可见，比如<strong>排队买 XXX、医院的挂号系统等</strong>，采用的都是队列的结构。</p>
+<p>​        拿排队买票来说，所有的人排成一队，先到者排的就靠前，后到者只能从队尾排队等待，队中的每个人都必须等到自己前面的所有人全部买票成功并从队头出队后，才轮到自己买票。这就不是典型的队列结构吗？</p>
+
+            </article>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/">基本数据结构与算法</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">本博客所有文章除特别声明外，均采用 <a href="https://zh.wikipedia.org/wiki/Wikipedia:CC_BY-SA_3.0%E5%8D%8F%E8%AE%AE%E6%96%87%E6%9C%AC" target="_blank" rel="nofollow noopener noopener">CC BY-SA 3.0协议</a> 。转载请注明出处！</p>
+              
+              
+                <div class="post-prevnext row">
+                  <div class="post-prev col-6">
+                    
+                    
+                      <a href="/2021/04/02/%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95%E5%AE%9E%E7%8E%B0-java/4.%20%E9%93%BE%E8%A1%A8/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">基本数据结构和算法实现-java/4. 链表</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </div>
+                  <div class="post-next col-6">
+                    
+                    
+                      <a href="/2021/04/02/%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95%E5%AE%9E%E7%8E%B0-java/2.%20%E7%A8%80%E7%96%8F%E6%95%B0%E7%BB%84/">
+                        <span class="hidden-mobile">基本数据结构和算法实现-java/2. 稀疏数组</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </div>
+                </div>
+              
+            </div>
+
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;TOC</p>
+  <div id="tocbot"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+  </main>
+
+  
+    <a id="scroll-top-button" href="#" role="button">
+      <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+    </a>
+  
+
+  
+    <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Search</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">keyword</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+  
+
+  
+
+  
+
+  <footer class="mt-5">
+  <div class="text-center py-3">
+    <div>
+      <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a>
+      <i class="iconfont icon-love"></i>
+      <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener">
+        <span>Fluid</span></a>
+    </div>
+    
+
+    
+
+    
+  </div>
+</footer>
+
+<!-- SCRIPTS -->
+<script  src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js" ></script>
+<script  src="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/js/bootstrap.min.js" ></script>
+<script  src="/js/main.js" ></script>
+
+
+  <script  src="/js/lazyload.js" ></script>
+
+
+
+  
+  <script  src="https://cdn.staticfile.org/tocbot/4.11.1/tocbot.min.js" ></script>
+  <script>
+    $(document).ready(function () {
+      var boardCtn = $('#board-ctn');
+      var boardTop = boardCtn.offset().top;
+
+      tocbot.init({
+        tocSelector: '#tocbot',
+        contentSelector: '.post-content',
+        headingSelector: 'h1,h2,h3,h4,h5,h6',
+        linkClass: 'tocbot-link',
+        activeLinkClass: 'tocbot-active-link',
+        listClass: 'tocbot-list',
+        isCollapsedClass: 'tocbot-is-collapsed',
+        collapsibleClass: 'tocbot-is-collapsible',
+        collapseDepth: 0,
+        scrollSmooth: true,
+        headingsOffset: -boardTop
+      });
+      if ($('.toc-list-item').length > 0) {
+        $('#toc').css('visibility', 'visible');
+      }
+    });
+  </script>
+
+
+
+
+
+  <script defer src="https://cdn.staticfile.org/clipboard.js/2.0.6/clipboard.min.js" ></script>
+  <script  src="/js/clipboard-use.js" ></script>
+
+
+
+
+
+
+<!-- Plugins -->
+
+
+
+  <script  src="https://cdn.staticfile.org/typed.js/2.0.11/typed.min.js" ></script>
+  <script>
+    var typed = new Typed('#subtitle', {
+      strings: [
+        '  ',
+        "基本数据结构和算法实现-java/3. 队列&nbsp;",
+      ],
+      cursorChar: "_",
+      typeSpeed: 70,
+      loop: false,
+    });
+    typed.stop();
+    $(document).ready(function () {
+      $(".typed-cursor").addClass("h2");
+      typed.start();
+    });
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/anchor-js/4.2.2/anchor.min.js" ></script>
+  <script>
+    anchors.options = {
+      placement: "right",
+      visible: "hover",
+      
+    };
+    var el = "h1,h2,h3,h4,h5,h6".split(",");
+    var res = [];
+    for (item of el) {
+      res.push(".markdown-body > " + item)
+    }
+    anchors.add(res.join(", "))
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    var path = "/local-search.xml";
+    var inputArea = document.querySelector("#local-search-input");
+    inputArea.onclick = function () {
+      searchFunc(path, 'local-search-input', 'local-search-result');
+      this.onclick = null
+    }
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+  <script>
+    $('#post img:not(.no-zoom img, img[no-zoom]), img[zoom]').each(
+      function () {
+        var element = document.createElement('a');
+        $(element).attr('data-fancybox', 'images');
+        $(element).attr('href', $(this).attr('src'));
+        $(this).wrap(element);
+      }
+    );
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

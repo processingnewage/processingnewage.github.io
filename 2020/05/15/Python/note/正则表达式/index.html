@@ -250,8 +250,8 @@ p = re.compile(<span class="hljs-string">r'([\d.]+)万/每&#123;0,1&#125;月'</s
 <p>运行一下看看，结果是一样的<br>但是代码却简单多了<br>正则表达式，是一种语法，用来描述你想搜索的字符串的特征<br>下面这行代码指定了一个正则表达式</p>
 <pre><code class="hljs python">p = re.compile(<span class="hljs-string">r'([\d.]+)万/每&#123;0,1&#125;月'</span>)</code></pre>
 <p>compile 函数的参数，就是正则表达式字符串<br>上面的例子里面指定了 搜索子串的特征 是==([\d.]+)万/每{0,1}月==<br>为什么这么写？ 我们后面再介绍<br>这个函数返回一个compile对象<br>compile对象的 findall 方法返回所有匹配的子串，放在一个列表中<br>从上面的例子可以看出， 用正则表达式关键的地方在于， ==如何写出正确的表达式语法==<br>正则表达式非常强大，语法非常复杂，本教程会给大家介绍一些常见的正则表达式语法</p>
-<h4 id="在线验证"><a href="#在线验证" class="headerlink" title="在线验证"></a>在线验证</h4><p>怎么验证你写的表达式是否能正确匹配到要搜索的字符串呢？<br>大家可以访问这个网址： <a href="https://regex101.com/" target="_blank" rel="noopener">https://regex101.com/</a><br>按照下面的示意图片输入搜索文本和表达式，查看你的表达式是否能正确匹配到字符串<br><img src="http://cdn1.python3.vip/imgs/gh/36462795_52932905-5ff76e80-338c-11e9-960a-23643b082af8.png" srcset="/img/loading.gif" alt="1"></p>
-<h4 id="常见语法"><a href="#常见语法" class="headerlink" title="常见语法"></a>常见语法</h4><p>写在正则表达式里面的普通字符都是表示： 直接匹配它们<br>比如你下面的文本中，如果你要找所有的test， 正则表达式就非常简单，直接输入test即可<br>如下所示：<br><img src="http://cdn1.python3.vip/imgs/gh/36462795_52953502-9e0f8500-33c2-11e9-9371-4801227c1f98.png" srcset="/img/loading.gif" alt="2"><br>汉字也是一样，要寻找汉字，直接写在正则表达式里面就可以了</p>
+<h4 id="在线验证"><a href="#在线验证" class="headerlink" title="在线验证"></a>在线验证</h4><p>怎么验证你写的表达式是否能正确匹配到要搜索的字符串呢？<br>大家可以访问这个网址： <a href="https://regex101.com/" target="_blank" rel="noopener">https://regex101.com/</a><br>按照下面的示意图片输入搜索文本和表达式，查看你的表达式是否能正确匹配到字符串<br><img src="https://gitee.com/processingnewage/mark-down-pic/raw/master/img/20210625151043.png" srcset="/img/loading.gif" alt="1"></p>
+<h4 id="常见语法"><a href="#常见语法" class="headerlink" title="常见语法"></a>常见语法</h4><p>写在正则表达式里面的普通字符都是表示： 直接匹配它们<br>比如你下面的文本中，如果你要找所有的test， 正则表达式就非常简单，直接输入test即可<br>如下所示：<br><img src="https://gitee.com/processingnewage/mark-down-pic/raw/master/img/20210625151048.png" srcset="/img/loading.gif" alt="2"><br>汉字也是一样，要寻找汉字，直接写在正则表达式里面就可以了</p>
 <hr>
 <p>但是有些特殊的字符，术语叫 ==metacharacters==（元字符）<br>它们出现在正则表达式字符串中，不是表示直接匹配他们， 而是表达一些特别的含义<br>这些特殊的元字符包括下面这些：</p>
 <pre><code class="hljs tex">. * + ? <span class="hljs-tag">\<span class="hljs-name"> </span><span class="hljs-string">[ ]</span></span> ^ <span class="hljs-formula">$ &#123; &#125; | ( )</span></code></pre>
@@ -260,7 +260,7 @@ p = re.compile(<span class="hljs-string">r'([\d.]+)万/每&#123;0,1&#125;月'</s
 橙子是橙色的
 香蕉是黄色的
 乌鸦是黑色的</code></pre>
-<p>也就是要找到所有以==色==结尾，并且包括前面的一个字符的词语<br>就可以这样写正则表达式 ==.色==<br>其中点代表了任意的一个字符， 注意是一个字符<br>==.色==合起来就表示要找任意一个字符后面是 色 这个字， 合起来两个字的字符串<br>验证一下，如下图所示<br><img src="http://cdn1.python3.vip/imgs/gh/36462795_52954564-81288100-33c5-11e9-84a7-27b990bea671.png" srcset="/img/loading.gif" alt="3"><br>只要表达式正确，就可以写在Python代码中，如下所示</p>
+<p>也就是要找到所有以==色==结尾，并且包括前面的一个字符的词语<br>就可以这样写正则表达式 ==.色==<br>其中点代表了任意的一个字符， 注意是一个字符<br>==.色==合起来就表示要找任意一个字符后面是 色 这个字， 合起来两个字的字符串<br>验证一下，如下图所示<br><img src="https://gitee.com/processingnewage/mark-down-pic/raw/master/img/20210625151052.png" srcset="/img/loading.gif" alt="3"><br>只要表达式正确，就可以写在Python代码中，如下所示</p>
 <pre><code class="hljs python">content = <span class="hljs-string">'''苹果是绿色的</span>
 <span class="hljs-string">橙子是橙色的</span>
 <span class="hljs-string">香蕉是黄色的</span>
@@ -283,7 +283,7 @@ p = re.compile(<span class="hljs-string">r'.色'</span>)
 猴子，</code></pre>
 <p>就可以这样写正则表达式 ==，.*== </p>
 <ul>
-<li>紧跟在 . 后面， 表示任意字符可以出现任意次， 所以整个表达式的意思就是在逗号后面的所有字符，包括逗号<br>验证一下，如下图所示<br><img src="http://cdn1.python3.vip/imgs/gh/36462795_52955690-4411be00-33c8-11e9-9ac2-d88b3b84f8aa.png" srcset="/img/loading.gif" alt="4"><br>特别是最后一行，猴子逗号后面没有其它字符了，但是*表示可以匹配0次， 所以表达式也是成立的<br>只要表达式正确，就可以写在Python代码中，如下所示<pre><code class="hljs python">content = <span class="hljs-string">'''苹果，是绿色的</span>
+<li>紧跟在 . 后面， 表示任意字符可以出现任意次， 所以整个表达式的意思就是在逗号后面的所有字符，包括逗号<br>验证一下，如下图所示<br><img src="https://gitee.com/processingnewage/mark-down-pic/raw/master/img/20210625151056.png" srcset="/img/loading.gif" alt="4"><br>特别是最后一行，猴子逗号后面没有其它字符了，但是*表示可以匹配0次， 所以表达式也是成立的<br>只要表达式正确，就可以写在Python代码中，如下所示<pre><code class="hljs python">content = <span class="hljs-string">'''苹果，是绿色的</span>
 <span class="hljs-string">橙子，是橙色的</span>
 <span class="hljs-string">香蕉，是黄色的</span>
 <span class="hljs-string">乌鸦，是黑色的</span>
@@ -306,7 +306,7 @@ p = re.compile(<span class="hljs-string">r'，.*'</span>)
 香蕉，是黄色的
 乌鸦，是黑色的
 猴子，</code></pre>
-就可以这样写正则表达式 ==，.+==<br>验证一下，如下图所示<br><img src="http://cdn1.python3.vip/imgs/gh/36462795_52956085-504a4b00-33c9-11e9-86af-66b4d4f9a1f1.png" srcset="/img/loading.gif" alt="6"><br>最后一行，猴子逗号后面没有其它字符了，==+==表示至少匹配1次， 所以最后一行没有子串选中</li>
+就可以这样写正则表达式 ==，.+==<br>验证一下，如下图所示<br><img src="https://gitee.com/processingnewage/mark-down-pic/raw/master/img/20210625151059.png" srcset="/img/loading.gif" alt="6"><br>最后一行，猴子逗号后面没有其它字符了，==+==表示至少匹配1次， 所以最后一行没有子串选中</li>
 </ul>
 <h4 id="问号-匹配0-1次"><a href="#问号-匹配0-1次" class="headerlink" title="问号-匹配0-1次"></a>问号-匹配0-1次</h4><p>==?==表示匹配前面的子表达式0次或1次<br>比如，还是上面的例子，你要从文本中，选择每行逗号后面的1个字符，也包括逗号本身</p>
 <pre><code class="hljs plain">苹果，绿色的
@@ -314,10 +314,10 @@ p = re.compile(<span class="hljs-string">r'，.*'</span>)
 香蕉，黄色的
 乌鸦，黑色的
 猴子，</code></pre>
-<p>就可以这样写正则表达式 ==，.?==<br>验证一下，如下图所示<br><img src="http://cdn1.python3.vip/imgs/gh/36462795_52956624-b1bee980-33ca-11e9-99eb-fbf45bb41ac3.png" srcset="/img/loading.gif" alt="7"><br>最后一行，猴子逗号后面没有其它字符了，但是==?==表示匹配1次或0次， 所以最后一行也选中了一个逗号字符</p>
+<p>就可以这样写正则表达式 ==，.?==<br>验证一下，如下图所示<br><img src="https://gitee.com/processingnewage/mark-down-pic/raw/master/img/20210625151102.png" srcset="/img/loading.gif" alt="7"><br>最后一行，猴子逗号后面没有其它字符了，但是==?==表示匹配1次或0次， 所以最后一行也选中了一个逗号字符</p>
 <h4 id="花括号-匹配指定次数"><a href="#花括号-匹配指定次数" class="headerlink" title="花括号-匹配指定次数"></a>花括号-匹配指定次数</h4><p>花括号表示前面的字符匹配==指定的次数==<br>比如 ，下面的文本</p>
 <pre><code class="hljs plain">红彤彤，绿油油，黑乎乎，绿油油油油</code></pre>
-<p>表达式 ==油{3}== 就表示匹配 连续的 油 字 3次<br>表达式 ==油{3,4}== 就表示匹配 连续的 油 字 至少3次，至多 4 次<br>就只能匹配 后面的，如下所示：<br><img src="http://cdn1.python3.vip/imgs/gh/36462795_53021674-b8b22e80-3494-11e9-8cea-75de569a924e.png" srcset="/img/loading.gif" alt="8"></p>
+<p>表达式 ==油{3}== 就表示匹配 连续的 油 字 3次<br>表达式 ==油{3,4}== 就表示匹配 连续的 油 字 至少3次，至多 4 次<br>就只能匹配 后面的，如下所示：<br><img src="https://gitee.com/processingnewage/mark-down-pic/raw/master/img/20210625151106.png" srcset="/img/loading.gif" alt="8"></p>
 <h4 id="贪婪模式和非贪婪模式"><a href="#贪婪模式和非贪婪模式" class="headerlink" title="贪婪模式和非贪婪模式"></a>贪婪模式和非贪婪模式</h4><p>我们要把下面的字符串中的所有==html==标签都提取出来，</p>
 <pre><code class="hljs python">source = <span class="hljs-string">'&lt;html&gt;&lt;head&gt;&lt;title&gt;Title&lt;/title&gt;'</span></code></pre>
 <p>得到这样的一个列表</p>
@@ -416,12 +416,12 @@ p = re.compile(<span class="hljs-string">r'\d+$'</span>, re.MULTILINE)
 <p>如果，去掉compile的第二个参数 re.MULTILINE， 运行结果如下</p>
 <pre><code class="hljs angelscript"><span class="hljs-number">80</span></code></pre>
 <p>就只有最后一行了<br>因为单行模式下，$ 只会匹配整个文本的结束位置</p>
-<h4 id="竖线-匹配两者之一"><a href="#竖线-匹配两者之一" class="headerlink" title="竖线-匹配两者之一"></a>竖线-匹配两者之一</h4><p>竖线表示 匹配 前者 或 后者<br>比如<br><img src="http://cdn1.python3.vip/imgs/gh/36462795_53060289-ec24a580-34f4-11e9-83e6-1f5ce2e0454d.png" srcset="/img/loading.gif" alt="9"><br>特别要注意的是， 竖线在正则表达式的优先级是最低的， 这就意味着，竖线隔开的部分是一个整体<br>比如 ==绿色|橙== 表示 要匹配是 ==绿色== 或者 ==橙==<br>而不是 ==绿色== 或者 ==绿橙==</p>
+<h4 id="竖线-匹配两者之一"><a href="#竖线-匹配两者之一" class="headerlink" title="竖线-匹配两者之一"></a>竖线-匹配两者之一</h4><p>竖线表示 匹配 前者 或 后者<br>比如<br><img src="https://gitee.com/processingnewage/mark-down-pic/raw/master/img/20210625151112.png" srcset="/img/loading.gif" alt="9"><br>特别要注意的是， 竖线在正则表达式的优先级是最低的， 这就意味着，竖线隔开的部分是一个整体<br>比如 ==绿色|橙== 表示 要匹配是 ==绿色== 或者 ==橙==<br>而不是 ==绿色== 或者 ==绿橙==</p>
 <h4 id="括号-分组"><a href="#括号-分组" class="headerlink" title="括号-分组"></a>括号-分组</h4><p>括号称之为正则表达式的组选择<br>==组== 就是把正则表达式匹配的内容里面==其中的某些部分==标记为某个组<br>我们可以在正则表达式中标记==多个==组<br>为什么要有组的概念呢？因为我们往往需要提取已经匹配的内容里面的某些部分的信心<br>前面，我们有个例子，从下面的文本中，选择每行逗号<strong>前面</strong>的字符串，也==包括逗号本身==</p>
 <pre><code class="hljs plain">苹果，苹果是绿色的
 橙子，橙子是橙色的
 香蕉，香蕉是黄色的</code></pre>
-<p>就可以这样写正则表达式 ==^.*,==<br>但是，如果我们要求不要包括逗号呢？<br>当然不能直接这样写 ==^.*==<br>因为最后的逗号是特征所在，如果去掉它，就没法找逗号前面的了<br>但是把逗号放在正则表达式中，又会包含逗号<br>解决问题的方法就是使用组选择符 ： 括号<br>我们这样写 ==^(.*)，== 结果如下<br><img src="http://cdn1.python3.vip/imgs/gh/36462795_53064975-ba1b3f80-3504-11e9-936a-d86f5808aa95.png" srcset="/img/loading.gif" alt="10"><br>大家可以发现，我们把要从整个表达式中提取的部分放在括号中，这样水果的名字就被单独的放在组group中了<br>对应的Python代码如下</p>
+<p>就可以这样写正则表达式 ==^.*,==<br>但是，如果我们要求不要包括逗号呢？<br>当然不能直接这样写 ==^.*==<br>因为最后的逗号是特征所在，如果去掉它，就没法找逗号前面的了<br>但是把逗号放在正则表达式中，又会包含逗号<br>解决问题的方法就是使用组选择符 ： 括号<br>我们这样写 ==^(.*)，== 结果如下<br><img src="https://gitee.com/processingnewage/mark-down-pic/raw/master/img/20210625151116.png" srcset="/img/loading.gif" alt="10"><br>大家可以发现，我们把要从整个表达式中提取的部分放在括号中，这样水果的名字就被单独的放在组group中了<br>对应的Python代码如下</p>
 <pre><code class="hljs python">content = <span class="hljs-string">'''苹果，苹果是绿色的</span>
 <span class="hljs-string">橙子，橙子是橙色的</span>
 <span class="hljs-string">香蕉，香蕉是黄色的'''</span>
