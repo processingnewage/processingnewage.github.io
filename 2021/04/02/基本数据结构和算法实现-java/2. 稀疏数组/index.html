@@ -183,15 +183,15 @@
           <div class="post-content mx-auto" id="post">
             
             <article class="markdown-body">
-              <h3 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h3><p>​        数据压缩方面，我们往往可以通过稀疏数组来保存有效数据，节省存储空间。</p>
-<h3 id="稀疏数组的概念"><a href="#稀疏数组的概念" class="headerlink" title="稀疏数组的概念"></a>稀疏数组的概念</h3><p>​        稀疏数组也是一种数组（一般是二维的），<strong>是一种多维数组的数组压缩技术</strong>。当一个数组中大部分元素是0，或为同一个值的时候，可以使用稀疏数组来保存数组。它是一个十分有效的存储结构，便于节省存储空间。它的处理方式是：</p>
+              <h3 id="一、引言"><a href="#一、引言" class="headerlink" title="一、引言"></a>一、引言</h3><p>​        数据压缩方面，我们往往可以通过稀疏数组来保存有效数据，节省存储空间。</p>
+<h3 id="二、稀疏数组"><a href="#二、稀疏数组" class="headerlink" title="二、稀疏数组"></a>二、稀疏数组</h3><p>​        稀疏数组也是一种数组（一般是二维的），<strong>是一种多维数组的数组压缩技术</strong>。当一个数组中大部分元素是0，或为同一个值的时候，可以使用稀疏数组来保存数组。它是一个十分有效的存储结构，便于节省存储空间。它的处理方式是：</p>
 <ul>
 <li><p>记录数组一共有<strong>几行几列</strong>，<strong>有多少不同的值</strong>； </p>
 </li>
 <li><p>把具有不同值的元素的<strong>行、列及值</strong>记录在一个<strong>小规模二维数组</strong>中（稀疏数组），从而缩存储数据的规模</p>
 </li>
 </ul>
-<h3 id="稀疏数组的存储结构"><a href="#稀疏数组的存储结构" class="headerlink" title="稀疏数组的存储结构"></a>稀疏数组的存储结构</h3><p>​        稀疏数组实际上是一个典型的二维数组，它描述的是一个标准二维数组的有效数据，如果标准二维数组的内容如下所示的话：</p>
+<h4 id="1-稀疏数组的存储结构"><a href="#1-稀疏数组的存储结构" class="headerlink" title="1. 稀疏数组的存储结构"></a>1. 稀疏数组的存储结构</h4><p>​        稀疏数组实际上是一个典型的二维数组，它描述的是一个标准二维数组的有效数据，如果标准二维数组的内容如下所示的话：</p>
 <p><img src="https://gitee.com/processingnewage/mark-down-pic/raw/master/img/20210625151623.png" srcset="/img/loading.gif" alt="pic1"></p>
 <p>那么这个标准二维数组对应的稀疏数组的结构就如下图所示：</p>
 <p><img src="https://gitee.com/processingnewage/mark-down-pic/raw/master/img/20210625151627.png" srcset="/img/loading.gif" alt="pic2"></p>
@@ -201,7 +201,7 @@
 <blockquote>
 <p><strong>【扩展】</strong>稀疏数组可以描述二维数组，但同时，我认为它也可以描述更高维的数组，比如三维空间数组，那么相应稀疏数组结构也会有所变化。所以稀疏数组并不是只能描述一个二维数组，凡是可以只保存原始数组有效数据的都可以是稀疏数组，只不过二维数组对应的稀疏数组更有代表性。</p>
 </blockquote>
-<h3 id="五子棋盘实现"><a href="#五子棋盘实现" class="headerlink" title="五子棋盘实现"></a>五子棋盘实现</h3><p>​        使用稀疏数组保留类似前面的二维数组（如棋盘、地图等等的场景），把稀疏数组存盘，并且可以重新恢复原来的二维数组。</p>
+<h3 id="三、五子棋盘实现"><a href="#三、五子棋盘实现" class="headerlink" title="三、五子棋盘实现"></a>三、五子棋盘实现</h3><p>​        使用稀疏数组保留类似前面的二维数组（如棋盘、地图等等的场景），把稀疏数组存盘，并且可以重新恢复原来的二维数组。</p>
 <ul>
 <li>稀疏数组与二维数组的互转</li>
 </ul>
@@ -331,7 +331,7 @@
 <span class="hljs-number">0</span>  <span class="hljs-number">0</span>  <span class="hljs-number">0</span>  <span class="hljs-number">0</span>  <span class="hljs-number">0</span>  <span class="hljs-number">0</span>  <span class="hljs-number">0</span>  <span class="hljs-number">0</span>  <span class="hljs-number">0</span>  <span class="hljs-number">0</span>  <span class="hljs-number">0</span>
 <span class="hljs-number">0</span>  <span class="hljs-number">0</span>  <span class="hljs-number">0</span>  <span class="hljs-number">0</span>  <span class="hljs-number">0</span>  <span class="hljs-number">0</span>  <span class="hljs-number">0</span>  <span class="hljs-number">0</span>  <span class="hljs-number">0</span>  <span class="hljs-number">0</span>  <span class="hljs-number">0</span></code></pre>
 
-<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>​        稀疏数组总体来说还是比较简单的一个数据结构的利用，其中并未涉及任何算法，唯一的难点，可能就是二维数组转稀疏数组时的一些数组下标的思考和转化，不过通过画图也可以轻易地找出准确值。</p>
+<h3 id="四、总结"><a href="#四、总结" class="headerlink" title="四、总结"></a>四、总结</h3><p>​        稀疏数组总体来说还是比较简单的一个数据结构的利用，其中并未涉及任何算法，唯一的难点，可能就是二维数组转稀疏数组时的一些数组下标的思考和转化，不过通过画图也可以轻易地找出准确值。</p>
 
             </article>
             <hr>

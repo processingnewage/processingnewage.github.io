@@ -144,7 +144,7 @@
                   
                   <span class="post-meta mr-2">
                     <i class="iconfont icon-chart"></i>
-                    862 字
+                    1.1k 字
                   </span>
                 
 
@@ -154,7 +154,7 @@
                       <i class="iconfont icon-clock-fill"></i>
                     
                     
-                    9
+                    11
                      分钟
                   </span>
                 
@@ -188,11 +188,24 @@
 <h4 id="安卓UI控件"><a href="#安卓UI控件" class="headerlink" title="安卓UI控件"></a>安卓UI控件</h4><ol>
 <li>UI控件的组织方式取决于上层的布局管理器，主要就是相对布局和线性布局</li>
 <li>UI界面最外层的是屏幕，内部的布局管理器可以包含布局管理器和控件</li>
+<li>相对布局的常用属性：</li>
+</ol>
+<img src="C:\Users\DELL\AppData\Roaming\Typora\typora-user-images\image-20210701154321339.png" srcset="/img/loading.gif" alt="image-20210701154321339" style="zoom: 50%;" />
+
+<ol start="4">
+<li>gravity属性：<ul>
+<li>android:gravity：这个是<strong>针对控件里的元素</strong>来说的，用来控制元素在该控件里的显示位置。例如，在一个Button按钮控件中设置如下两个属性，android:gravity=”left”和android:text=”提交”，这时Button上的文字“提交”将会位于Button的左部。</li>
+<li>android:layout_gravity：这个是<strong>针对控件本身而言</strong>，用来控制该控件在包含该控件的父控件中的位置。同样，当我们在Button按钮控件中设置android:layout_gravity=”left”属性时，表示该Button按钮将位于界面的左部。</li>
+</ul>
+</li>
 </ol>
 <h4 id="事件处理机制"><a href="#事件处理机制" class="headerlink" title="事件处理机制"></a>事件处理机制</h4><p>​        当用户在应用界面上执行各种操作时，应用程序需要为用户的动作提供响应，这种响应的过程就是事件处理</p>
 <h5 id="基于监听的事件处理机制"><a href="#基于监听的事件处理机制" class="headerlink" title="基于监听的事件处理机制"></a>基于监听的事件处理机制</h5><ul>
-<li><p>监听三要素：Event Source(事件源)、Event(事件)、Event Listener(事件监听器)</p>
-</li>
+<li>监听三要素：Event Source(事件源)、Event(事件)、Event Listener(事件监听器)</li>
+</ul>
+<img src="https://gitee.com/processingnewage/mark-down-pic/raw/master/img/20210701195048.png" srcset="/img/loading.gif" alt="image-20210701195048396" style="zoom:50%;" />
+
+<ul>
 <li><p>实现监听事件的方法：</p>
 <ul>
 <li>通过内部类实现</li>
@@ -213,7 +226,7 @@
 <pre><code class="hljs asciidoc"><span class="hljs-bullet">* </span>监听：事件源和事件监听器是分开来的，手动的去为一个事件设置监听器
 <span class="hljs-bullet">* </span>回调：在事件源内部有回调方法，事件源和事件监听器是在一起的，通过继承重写回调方法实现事件处理</code></pre>
 </li>
-<li><p>事件处理传播机制：事件由控件向外传播，在回调方法中返回true则终止传播</p>
+<li><p>事件处理传播机制：事件由控件向外传播（多个控件都可能对事件做出响应），在回调方法中返回true则终止传播</p>
 </li>
 <li><p><strong>监听和回调同时使用时：监听优先于回调</strong></p>
 </li>
@@ -234,7 +247,7 @@
 <ul>
 <li>若触摸时间&lt;100ms离开控件则认为是滑动事件</li>
 <li>若触摸时间&gt;100ms但是&lt;500ms则认为是点击事件（在判断点击事件后继续等待400ms判断是否是长按事件）</li>
-<li>若触摸时间&gt;500ms则认为是长按事件</li>
+<li>若触摸时间&gt;500ms则认为是长按事件（在大于500ms的情况下，若长按return false，则会继续执行点击事件）</li>
 </ul>
 </blockquote>
 <h4 id="Handler消息处理"><a href="#Handler消息处理" class="headerlink" title="Handler消息处理"></a>Handler消息处理</h4><ul>

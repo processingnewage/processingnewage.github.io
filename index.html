@@ -158,6 +158,144 @@
     
     
     <div class="col-12 col-md-12 mx-auto index-info">
+      <a class="index-header" href="/2021/08/08/CC++/Static/">CC++/Static</a>
+
+      <a href="/2021/08/08/CC++/Static/" class="index-excerpt">
+        
+        
+          
+        
+        <div>
+什么是static?
+
+
+static 是 C/C++ 中很常用的修饰符，它被用来控制变量的存储方式和可见性。
+
+
+static 的引入
+
+
+​        我们知道在函数内部定义的变量，当程序执行到它的定义处时，编译器为它在栈上分配空间，函数在栈上分配的空间在此函数执行结束时会释放掉，这样就产生了一个问题：如果想将函数中此变量的值保存至下一次调用时，如何实现？ 最容易想到的方法是定义为全局的</div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>&nbsp;2021-08-08
+          </div>
+        
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/C-C/">C/C++</a>
+            
+          </div>
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <div class="col-12 col-md-12 mx-auto index-info">
+      <a class="index-header" href="/2021/08/04/CC++/%E5%86%85%E5%AD%98%E5%AF%B9%E9%BD%90/">CC++/内存对齐</a>
+
+      <a href="/2021/08/04/CC++/%E5%86%85%E5%AD%98%E5%AF%B9%E9%BD%90/" class="index-excerpt">
+        
+        
+          
+        
+        <div>
+内存对齐
+
+内存对齐的概念
+
+
+​    现代计算机中内存空间都是按照 byte 划分的，从理论上讲似乎对任何类型的变量的访问可以从任何地址开始，但是实际的计算机系统对基本类型数据在内存中存放的位置有限制，它们会要求这些数据的首地址的值是某个数k（通常它为4或8）的倍数，这就是所谓的内存对齐。
+
+
+为什么需要内存对齐
+
+
+​    尽管内存是以字节为单位，但是大部分处理器并不是按字节块来存取内存</div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>&nbsp;2021-08-04
+          </div>
+        
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/C-C/">C/C++</a>
+            
+          </div>
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <div class="col-12 col-md-12 mx-auto index-info">
+      <a class="index-header" href="/2021/08/01/CC++/C++%E5%9F%BA%E7%A1%80/">CC++/C++基础</a>
+
+      <a href="/2021/08/01/CC++/C++%E5%9F%BA%E7%A1%80/" class="index-excerpt">
+        
+        
+          
+        
+        <div>对编程的理解
+
+
+
+编译过程：
+预处理（preprocessing）
+编译（compile）
+链接（link）
+执行（execute）
+
+
+
+
+
+
+头文件中包含函数的声明部分，而具体的实现在其他的cpp源文件中；
+因此预处理部分包含头文件相当于包含函数声明；
+链接程序将所有的库文件和自定义源程序的目标文件，会将前面编译好的.o文件、系统库的.o文件和库文件彼此相连接，把某个目标文件中引用的符号同另</div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>&nbsp;2021-08-01
+          </div>
+        
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/C-C/">C/C++</a>
+            
+          </div>
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <div class="col-12 col-md-12 mx-auto index-info">
       <a class="index-header" href="/2021/06/23/Others/%E5%85%B3%E4%BA%8ETypora%E4%B8%8A%E4%BC%A0%E5%9B%BE%E7%89%87Github%E5%9B%BE%E5%BA%8A%E4%BD%86%E5%9C%A8MarkDown%E6%96%87%E6%9C%AC%E6%97%A0%E6%B3%95%E6%98%BE%E7%A4%BA%E7%9A%84%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/">Others/关于Typora上传图片Github图床但在MarkDown文本无法显示的问题解决</a>
 
       <a href="/2021/06/23/Others/%E5%85%B3%E4%BA%8ETypora%E4%B8%8A%E4%BC%A0%E5%9B%BE%E7%89%87Github%E5%9B%BE%E5%BA%8A%E4%BD%86%E5%9C%A8MarkDown%E6%96%87%E6%9C%AC%E6%97%A0%E6%B3%95%E6%98%BE%E7%A4%BA%E7%9A%84%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/" class="index-excerpt">
@@ -380,84 +518,6 @@ part2：配置环境
       <a class="index-header" href="/2021/05/09/Android/Intent%20and%20Filter/">Android/Intent and Filter</a>
 
       <a href="/2021/05/09/Android/Intent%20and%20Filter/" class="index-excerpt">
-        
-        
-          
-        
-        <div></div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>&nbsp;2021-05-09
-          </div>
-        
-        
-        
-      </div>
-    </div>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <div class="col-12 col-md-12 mx-auto index-info">
-      <a class="index-header" href="/2021/05/09/Android/Fragment/">Android/Fragment</a>
-
-      <a href="/2021/05/09/Android/Fragment/" class="index-excerpt">
-        
-        
-          
-        
-        <div></div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>&nbsp;2021-05-09
-          </div>
-        
-        
-        
-      </div>
-    </div>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <div class="col-12 col-md-12 mx-auto index-info">
-      <a class="index-header" href="/2021/05/09/Android/Content%20Provider/">Android/Content Provider</a>
-
-      <a href="/2021/05/09/Android/Content%20Provider/" class="index-excerpt">
-        
-        
-          
-        
-        <div></div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>&nbsp;2021-05-09
-          </div>
-        
-        
-        
-      </div>
-    </div>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <div class="col-12 col-md-12 mx-auto index-info">
-      <a class="index-header" href="/2021/05/09/Android/Broadcast%20Receivers/">Android/Broadcast Receivers</a>
-
-      <a href="/2021/05/09/Android/Broadcast%20Receivers/" class="index-excerpt">
         
         
           
