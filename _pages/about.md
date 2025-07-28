@@ -8,12 +8,3 @@ redirect_from:
 ---
 
 I am 
-
----
-permalink: /
-title: "News"
-author_profile: true
-redirect_from: 
-  - /about/
-  - /about.html
----
