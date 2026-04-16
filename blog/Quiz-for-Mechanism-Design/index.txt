@@ -1,16 +1,16 @@
 1:"$Sreact.fragment"
-3:I[3719,["17","static/chunks/17-9c04c9413a9f9f1f.js","874","static/chunks/874-6cc630662f3664af.js","539","static/chunks/539-21dd4bf678d7cd83.js","177","static/chunks/app/layout-36bb326801b552c2.js"],"ThemeProvider"]
-4:I[310,["17","static/chunks/17-9c04c9413a9f9f1f.js","874","static/chunks/874-6cc630662f3664af.js","539","static/chunks/539-21dd4bf678d7cd83.js","177","static/chunks/app/layout-36bb326801b552c2.js"],"LocaleProvider"]
-5:I[4574,["17","static/chunks/17-9c04c9413a9f9f1f.js","874","static/chunks/874-6cc630662f3664af.js","539","static/chunks/539-21dd4bf678d7cd83.js","177","static/chunks/app/layout-36bb326801b552c2.js"],"default"]
+3:I[3719,["444","static/chunks/444-514986c7bcaa627f.js","874","static/chunks/874-6cc630662f3664af.js","946","static/chunks/946-c2d3540290e78644.js","177","static/chunks/app/layout-b3b9cf6120ed26c0.js"],"ThemeProvider"]
+4:I[310,["444","static/chunks/444-514986c7bcaa627f.js","874","static/chunks/874-6cc630662f3664af.js","946","static/chunks/946-c2d3540290e78644.js","177","static/chunks/app/layout-b3b9cf6120ed26c0.js"],"LocaleProvider"]
+5:I[4574,["444","static/chunks/444-514986c7bcaa627f.js","874","static/chunks/874-6cc630662f3664af.js","946","static/chunks/946-c2d3540290e78644.js","177","static/chunks/app/layout-b3b9cf6120ed26c0.js"],"default"]
 6:I[7555,[],""]
 7:I[1295,[],""]
-8:I[2548,["17","static/chunks/17-9c04c9413a9f9f1f.js","874","static/chunks/874-6cc630662f3664af.js","539","static/chunks/539-21dd4bf678d7cd83.js","177","static/chunks/app/layout-36bb326801b552c2.js"],"default"]
+8:I[2548,["444","static/chunks/444-514986c7bcaa627f.js","874","static/chunks/874-6cc630662f3664af.js","946","static/chunks/946-c2d3540290e78644.js","177","static/chunks/app/layout-b3b9cf6120ed26c0.js"],"default"]
 a:I[9665,[],"MetadataBoundary"]
 c:I[9665,[],"OutletBoundary"]
 f:I[4911,[],"AsyncMetadataOutlet"]
 11:I[9665,[],"ViewportBoundary"]
 13:I[6614,[],""]
-:HL["/_next/static/css/7c2e98129693c0cf.css","style"]
+:HL["/_next/static/css/8f12a34c092ae4b0.css","style"]
 2:T579,
     try {
       const cfg = {"enabled":false,"locales":["en"],"defaultLocale":"en","mode":"auto","fixedLocale":"en","persist":true,"switcher":true,"labels":{"en":"en"}};
@@ -55,70 +55,72 @@ f:I[4911,[],"AsyncMetadataOutlet"]
       root.lang = 'en';
       root.setAttribute('data-locale', 'en');
     }
-  0:{"P":null,"b":"-83dFGco_71oW5TPU7jiM","p":"","c":["","blog","Quiz-for-Mechanism-Design",""],"i":false,"f":[[["",{"children":["blog",{"children":[["slug","Quiz-for-Mechanism-Design","d"],{"children":["__PAGE__",{}]}]}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/7c2e98129693c0cf.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"en","className":"scroll-smooth","suppressHydrationWarning":true,"children":[["$","head",null,{"children":[["$","link",null,{"rel":"icon","href":"/favicon.svg","type":"image/svg+xml"}],["$","link",null,{"rel":"dns-prefetch","href":"https://jialeliu.com"}],["$","link",null,{"rel":"preconnect","href":"https://jialeliu.com","crossOrigin":""}],["$","link",null,{"rel":"preload","as":"font","type":"font/woff2","href":"https://jialeliu.com/fonts/georgiab.woff2","crossOrigin":""}],["$","link",null,{"rel":"stylesheet","href":"https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css"}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"\n              try {\n                const theme = localStorage.getItem('theme-storage');\n                const parsed = theme ? JSON.parse(theme) : null;\n                const setting = parsed?.state?.theme || 'system';\n                const prefersDark = typeof window !== 'undefined' && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;\n                const effective = setting === 'dark' ? 'dark' : (setting === 'light' ? 'light' : (prefersDark ? 'dark' : 'light'));\n                var root = document.documentElement;\n                root.classList.add(effective);\n                root.setAttribute('data-theme', effective);\n              } catch (e) {\n                var root = document.documentElement;\n                root.classList.add('light');\n                root.setAttribute('data-theme', 'light');\n              }\n            "}}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"$2"}}]]}],["$","body",null,{"className":"font-sans antialiased","children":["$","$L3",null,{"children":["$","$L4",null,{"config":{"enabled":false,"locales":["en"],"defaultLocale":"en","mode":"auto","fixedLocale":"en","persist":true,"switcher":true,"labels":{"en":"en"}},"children":[["$","$L5",null,{"items":[{"title":"About","type":"page","target":"about","href":"/"},{"title":"Publications","type":"page","target":"publications","href":"/publications"},{"title":"Blog","type":"page","target":"blog","href":"/blog"},{"title":"CV","type":"page","target":"cv","href":"/cv"}],"siteTitle":"Homepage","enableOnePageMode":false,"i18n":"$0:f:0:1:1:props:children:1:props:children:1:props:children:props:children:props:config","itemsByLocale":{"en":[{"title":"About","type":"page","target":"about","href":"/"},{"title":"Publications","type":"page","target":"publications","href":"/publications"},{"title":"Blog","type":"page","target":"blog","href":"/blog"},{"title":"CV","type":"page","target":"cv","href":"/cv"}]},"siteTitleByLocale":{"en":"Homepage"}}],["$","main",null,{"className":"min-h-screen pt-16 lg:pt-20","children":["$","$L6",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L7",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}],["$","$L8",null,{"lastUpdated":"March 11, 2026","lastUpdatedByLocale":{"en":"March 11, 2026"},"defaultLocale":"en"}]]}]}]}]]}]]}],{"children":["blog",["$","$1","c",{"children":[null,["$","$L6",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L7",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["slug","Quiz-for-Mechanism-Design","d"],["$","$1","c",{"children":[null,["$","$L6",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L7",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":["__PAGE__",["$","$1","c",{"children":["$L9",["$","$La",null,{"children":"$Lb"}],null,["$","$Lc",null,{"children":["$Ld","$Le",["$","$Lf",null,{"promise":"$@10"}]]}]]}],{},null,false]},null,false]},null,false]},null,false],["$","$1","h",{"children":[null,["$","$1","8dl5doXeo-NlMX_TO1Let",{"children":[["$","$L11",null,{"children":"$L12"}],null]}],null]}],false]],"m":"$undefined","G":["$13","$undefined"],"s":false,"S":true}
+  0:{"P":null,"b":"U9ao0ElPVamQJOhg2GTkC","p":"","c":["","blog","Quiz-for-Mechanism-Design",""],"i":false,"f":[[["",{"children":["blog",{"children":[["slug","Quiz-for-Mechanism-Design","d"],{"children":["__PAGE__",{}]}]}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/8f12a34c092ae4b0.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"en","className":"scroll-smooth","suppressHydrationWarning":true,"children":[["$","head",null,{"children":[["$","link",null,{"rel":"icon","href":"/favicon.svg","type":"image/svg+xml"}],["$","link",null,{"rel":"dns-prefetch","href":"https://jialeliu.com"}],["$","link",null,{"rel":"preconnect","href":"https://jialeliu.com","crossOrigin":""}],["$","link",null,{"rel":"preload","as":"font","type":"font/woff2","href":"https://jialeliu.com/fonts/georgiab.woff2","crossOrigin":""}],["$","link",null,{"rel":"stylesheet","href":"https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css"}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"\n              try {\n                const theme = localStorage.getItem('theme-storage');\n                const parsed = theme ? JSON.parse(theme) : null;\n                const setting = parsed?.state?.theme || 'system';\n                const prefersDark = typeof window !== 'undefined' && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;\n                const effective = setting === 'dark' ? 'dark' : (setting === 'light' ? 'light' : (prefersDark ? 'dark' : 'light'));\n                var root = document.documentElement;\n                root.classList.add(effective);\n                root.setAttribute('data-theme', effective);\n              } catch (e) {\n                var root = document.documentElement;\n                root.classList.add('light');\n                root.setAttribute('data-theme', 'light');\n              }\n            "}}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"$2"}}]]}],["$","body",null,{"className":"font-sans antialiased","children":["$","$L3",null,{"children":["$","$L4",null,{"config":{"enabled":false,"locales":["en"],"defaultLocale":"en","mode":"auto","fixedLocale":"en","persist":true,"switcher":true,"labels":{"en":"en"}},"children":[["$","$L5",null,{"items":[{"title":"About","type":"page","target":"about","href":"/"},{"title":"Publications","type":"page","target":"publications","href":"/publications"},{"title":"Blog","type":"page","target":"blog","href":"/blog"},{"title":"CV","type":"page","target":"cv","href":"/cv"}],"siteTitle":"Homepage","enableOnePageMode":false,"i18n":"$0:f:0:1:1:props:children:1:props:children:1:props:children:props:children:props:config","itemsByLocale":{"en":[{"title":"About","type":"page","target":"about","href":"/"},{"title":"Publications","type":"page","target":"publications","href":"/publications"},{"title":"Blog","type":"page","target":"blog","href":"/blog"},{"title":"CV","type":"page","target":"cv","href":"/cv"}]},"siteTitleByLocale":{"en":"Homepage"}}],["$","main",null,{"className":"min-h-screen pt-16 lg:pt-20","children":["$","$L6",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L7",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}],["$","$L8",null,{"lastUpdated":"March 11, 2026","lastUpdatedByLocale":{"en":"March 11, 2026"},"defaultLocale":"en"}]]}]}]}]]}]]}],{"children":["blog",["$","$1","c",{"children":[null,["$","$L6",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L7",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["slug","Quiz-for-Mechanism-Design","d"],["$","$1","c",{"children":[null,["$","$L6",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L7",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":["__PAGE__",["$","$1","c",{"children":["$L9",["$","$La",null,{"children":"$Lb"}],null,["$","$Lc",null,{"children":["$Ld","$Le",["$","$Lf",null,{"promise":"$@10"}]]}]]}],{},null,false]},null,false]},null,false]},null,false],["$","$1","h",{"children":[null,["$","$1","TF2iyQ3oiPDlopuaoAA5x",{"children":[["$","$L11",null,{"children":"$L12"}],null]}],null]}],false]],"m":"$undefined","G":["$13","$undefined"],"s":false,"S":true}
 14:"$Sreact.suspense"
 15:I[4911,[],"AsyncMetadata"]
-17:I[9345,["330","static/chunks/d3ac728e-8e0e183fb1ce436a.js","721","static/chunks/721-30d4bbc65c0bc52d.js","953","static/chunks/app/blog/%5Bslug%5D/page-c48d07dbbd5d3ef8.js"],"default"]
+17:I[9345,["330","static/chunks/d3ac728e-8e0e183fb1ce436a.js","738","static/chunks/738-fee1ae8969762e29.js","953","static/chunks/app/blog/%5Bslug%5D/page-148a745ce759fe71.js"],"default"]
 b:["$","$14",null,{"fallback":null,"children":["$","$L15",null,{"promise":"$@16"}]}]
-18:Tb16,
+18:Tb27,
 #### 1. Problem Statement
 
-Consider that a crowdsourcing platform needs multiple computing devices to complete a microtask (e.g., labeling images). Each device has a private cost per task (depending on skill/effort) and can produce output of a certain quality. The platform must assign tasks and decide payments to ensure high-quality results. Please formulate this as a mechanism design problem. You do not need to solve the mechanism or prove properties, but only model it mathematically (using notations defined by yourselves).
+Consider that a crowdsourcing platform needs multiple computing devices to complete a microtask (e.g., labeling images). Each device has a private cost per task (depending on skill/effort) and can produce output of a certain quality. The platform must assign tasks and decide payments to ensure high-quality results. Please formulate this as a mechanism design problem. You do not need to solve the mechanism or prove properties, but only model it mathematically (using notations defined by yourselves). **Instructions:**
 
-**Instructions:**
+1\. Define the set of computing devices and their corresponding types;
 
-* Define the set of computing devices and their corresponding types;
-* Specify the decisions;
-* Indicate the utility function of each computing device (assuming that it is quasi-linear);
-* Formulate the objective function (either social welfare or revenue maximization);
-* Write the full optimization problem (including decision variables, objective, constraints).
+2\. Specify the decisions;
+
+3\. Indicate the utility function of each computing device (assuming that it is quasi-linear);
+
+4\. Formulate the objective function (either social welfare or revenue maximization);
+
+5\. Write the full optimization problem (including decision variables, objective, constraints).
 
 #### 2. 众包平台任务分配与支付机制建模（Reverse Auction）
 
 在信息不对称（设备成本和质量为私有信息）条件下，设计满足激励相容与个体理性的分配与支付规则。
 
-- 平台：Quality-Cost Pareto Efficiency
-- 设备：Incentive-Compatible Profit Maximization
+* 平台：Quality-Cost Pareto Efficiency
+* 设备：Incentive-Compatible Profit Maximization
 
 设计算设备集合为 $\mathbf{N}=\{1,2,\cdots,N\}$，每个设备 $i$ 的类型为 $\theta_i=(c_i,q_i)$，其中 $c_i$ 为成本，$q_i$ 为质量。
 
 **平台决策：**
 
-- 任务分配 $x_i \in \{0,1\}$（1表示分配任务，0表示不分配任务）
-- 支付 $p_i$
+* 任务分配 $x_i \in \{0,1\}$（1表示分配任务，0表示不分配任务）
+* 支付 $p_i$
 
 任务分配决策向量化表示为 $\mathbf{x}=\{x_1,x_2,\cdots,x_N\}^T$，支付决策向量化表示为 $\mathbf{p}=\{p_1,p_2,\cdots,p_N\}^T$。
 
 **效用函数：**
 
-- 设备 $i$ 的效用：$u_i = p_i - c_i x_i$
-- 平台的收益：$u_p = \sum_{i \in \mathbf{N}} q_i x_i - p_i$
+* 设备 $i$ 的效用：$u_i = p_i - c_i x_i$
+* 平台的收益：$u_p = \sum_{i \in \mathbf{N}} q_i x_i - p_i$
 
 **目标函数：**
 
-- 最大化平台收益
-  
+* 最大化平台收益
+
 $$\max_{\mathbf{x},\mathbf{p}} u_p = \max_{\mathbf{x},\mathbf{p}} \sum_{i \in \mathbf{N}} q_i x_i - p_i$$
 
-- 最大化社会福利
+* 最大化社会福利
 
 $$\max_{\mathbf{x},\mathbf{p}} (u_p + \sum_{i \in \mathbf{N}} u_i) = \max_{\mathbf{x},\mathbf{p}} \sum_{i \in \mathbf{N}} q_i x_i - c_i x_i$$
 
 **约束条件：**
 
-* IC（Incentive Compatibility，激励相容：真实申报自己的成本 $c_i$ 和质量 $q_i$）
+1\. IC（Incentive Compatibility，激励相容：真实申报自己的成本 $c_i$ 和质量 $q_i$）
 
 $$u_i(c_i, q_i, c_{-i}, q_{-i}) \geq u_i(c_i', q_i', c_{-i}, q_{-i}), \quad \forall i \in \mathbf{N}$$
 
-* IR（Individual Rationality，个体理性：设备参与效用非负）
-  
+2\. IR（Individual Rationality，个体理性：设备参与效用非负）
+
 $$p_i - c_i x_i \geq 0, \quad \forall i \in \mathbf{N}$$
 
-* 任务数量约束（至少 $k$ 个设备被分配任务）
+3\. 任务数量约束（至少 $k$ 个设备被分配任务）
 
 $$\sum_{i \in \mathbf{N}} x_i \geq k$$
 
-* 二元变量约束
+4\. 二元变量约束
 
 $$x_i \in \{0, 1\}, \quad \forall i \in \mathbf{N}$$
 
